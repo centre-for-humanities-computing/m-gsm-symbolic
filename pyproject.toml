@@ -1,0 +1,21 @@
+[project]
+name = "m-gsm-symbolic"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Kenneth Enevoldsen", email = "kennethcenevoldsen@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "litellm>=1.61.16",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.9.7",
+]
