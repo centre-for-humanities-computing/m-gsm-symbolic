@@ -4,10 +4,11 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 authors = [
-    { name = "Kenneth Enevoldsen", email = "kennethcenevoldsen@gmail.com" }
+    { name = "Kenneth Enevoldsen", email = "kennethcenevoldsen@gmail.com" },
 ]
 requires-python = ">=3.13"
 dependencies = [
+    "ipykernel>=6.29.5",
     "litellm>=1.61.16",
 ]
 
@@ -16,6 +17,4 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [dependency-groups]
-dev = [
-    "ruff>=0.9.7",
-]
+dev = ["ruff>=0.9.7"]
