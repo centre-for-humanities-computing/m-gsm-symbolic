@@ -44,15 +44,13 @@ def translate_all(read_dir: Path, save_dir: Path, target_langauge: str, model: s
         with write_path.open("w") as f:
             f.write(trl_content)
 
-        break
-
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
 
     repo_path = Path(__file__).parent.parent
     read_path = repo_path / "data" / "templates" / "eng" / "symbolic"
-    write_path = repo_path / "data" / "templates" / "dan" / "symbolic"
+    write_path = repo_path / "data" / "templates" / "dan" / "symbolic-translated"
 
     model = "openai/gpt-4o"
     target_language = "Danish"
