@@ -1,3 +1,10 @@
+# /// script
+# requires-python = ">=3.13"
+# dependencies = [
+#     "litellm>=1.61.16",
+# ]
+# ///
+
 import logging
 from pathlib import Path
 from typing import cast

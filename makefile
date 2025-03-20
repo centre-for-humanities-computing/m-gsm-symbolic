@@ -6,7 +6,7 @@ add-uv:
 
 install:
 	@echo "--- 🚀 Installing project ---"
-	uv sync --extra dev --extra docs --extra tests
+	uv sync
 
 lint:
 	@echo "--- 🧹 Running linters ---"
@@ -17,4 +17,8 @@ lint-check:
 	@echo "--- 🧹 Check is project is linted ---"
 	uv run ruff format . --check						    # running ruff formatting
 	uv run ruff check **/*.py 						        # running ruff linting
+
+do-translation:
+	@echo "--- Perform initial translation of the data ---"
+	uv run src/scripts/initial_translation.py
 
