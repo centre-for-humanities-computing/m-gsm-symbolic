@@ -55,7 +55,9 @@ uv run scr/scripts/initial_translation.py
 - implement naive parser (for gsm8k, gsm-dan)
 - implement symbolic variant parser (for *-variants)
 
-4) Convert Kænguruen (not completed)
+4) Convert Kænguruen (partially completed)
+
+- Converted 2024, 8-9th grade
 
 5) Build Training setup (partially completed)
 
