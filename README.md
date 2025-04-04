@@ -57,7 +57,11 @@ uv run scr/scripts/initial_translation.py
 
 4) Convert Kænguruen (partially completed)
 
-- Converted 2024, 8-9th grade
+- Converted 2024, 8-9th grade, 6-7 grade, and 4-5 grade
+- Converted 2023, 8-9th grade, and 6-7 grade (note, for all grade levels: only includes "percentage correct")
+- Converted 2022, 8-9th grade, and 6-7 grade (note, for all grade levels: only includes "percentage correct")
+- Converted 2021, 8-9th grade (neither "solution description" nor "percentage correct"), and 6-7 grade (only including "percentage correct")
+- Converted 2020, 8-9th grade (neither "solution description" nor "percentage correct"), and 6-7 grade (only including "percentage correct")
 
 5) Build Training setup (partially completed)
 
