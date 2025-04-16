@@ -38,6 +38,9 @@ Where degree of generalization is as follows:
 4) Generalization to Danish as well as unseen samples, but similar distribution
 5) Generalization to Danish, unseen samples and under a novel distribution
 
+Potentially generalization to other languages using [mgsm](https://huggingface.co/datasets/juletxara/mgsm).
+
+
 ## Process
 
 1) Initial translation with using chatgpt 4o (completed)
