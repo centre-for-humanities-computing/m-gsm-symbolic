@@ -4,6 +4,7 @@ import re
 from dataclasses import dataclass
 from typing import Self
 
+
 functions = {
     "range": lambda start, stop, step=1: range(start, stop, step), # step default 1, so it can handle 2 and 3 arguments
     "sample": lambda items, n = 2: random.sample(items, n), # trying to make the dict handle multiple items 
