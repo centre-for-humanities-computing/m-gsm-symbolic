@@ -3,13 +3,10 @@ import random
 import pytest
 from m_gsm_symbolic.sofie_test_parser import AnnotatedQuestion, eval_expressions, GeneratedQuestion
 
-
 # if true, the test case passes
 # if it returns false, it means the test case fails
 
-
 ##### setting up test ! #####
-
 names = ["Sofie", "Andrea", "Freja", "Ida", "Clara", "Anna"]
 multiple_ice = [2, 3]
 multi_times = [2, 3]
