@@ -143,7 +143,7 @@ class AnnotatedQuestion:
         return self.question_annotated, self.answer_annotated
     
 
-    # TEST TEST TEST
+    # TEST
     def generate_question(self,
                           names: list[str],
                           multiple_ice: list[int],
