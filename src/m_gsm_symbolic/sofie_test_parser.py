@@ -5,6 +5,8 @@ from dataclasses import dataclass
 from typing import Self, Any, Callable
 import logging
 
+# test
+
 logger = logging.getLogger(__name__)
 
 functions = {"range": lambda start, stop, step = 1: range(start, stop, step),
@@ -73,7 +75,7 @@ class AnnotatedQuestion(Question):
 
     @staticmethod
     def remove_calculations(text: str) -> str:
-        """remove calculations from the text. re.sub() "replaces" the calculations with noting"""
+        """remove calculations from the text. re.sub() replaces the calculations with noting"""
         return re.sub(r"<<.*?>>", "", text)  
     
     def apply_init_rules(self,
