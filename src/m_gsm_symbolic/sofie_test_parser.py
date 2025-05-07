@@ -5,8 +5,6 @@ from dataclasses import dataclass
 from typing import Self, Any, Callable
 import logging
 
-# test
-
 logger = logging.getLogger(__name__)
 
 functions = {"range": lambda start, stop, step = 1: range(start, stop, step),
@@ -84,7 +82,7 @@ class AnnotatedQuestion(Question):
         """apply init rules to generate new variable values"""
 
         new_values = {}
-        combined = {**default_replacements, **replacements, "functions": functions}
+        combined = {**replacements, "functions": functions}
 
         for line in self.init.strip().splitlines(): # split str into seperate lines at line break "\n"
             line = line.lstrip("-").strip() # remove the leading "-" character + space
@@ -144,43 +142,3 @@ class AnnotatedQuestion(Question):
                         answer = self.remove_calculations(a_final),
                         id_orig = self.id_orig,
                         id_shuffled = self.id_shuffled)
-    
-
-
-def main(json_input):
-
-    # Create the AnnotatedQuestion object
-    question = AnnotatedQuestion.from_json(json_input)
-
-    # Print values using the dataclass
-    logger.critical(f"Question:\n {question.question}")
-    logger.critical(f"\nInit section:\n {question.init}")
-    logger.critical(f"\nDefault values: {question.default_values}")
-    #logger.critical(f"\nAnswer witout calculations:\n {question.remove_calculations(question.answer)}")
-
-    # Sample new values using the init rules and save in a dict
-    new_values = question.apply_init_rules(default_replacements)
-    logger.critical(f"New values: {new_values}")
-
-    # replace the default values
-    question.replace_values(new_values)
-
-    #print("\nUpdated annotated question:")
-    logger.critical(question.question_annotated)
-
-    #print("\nUpdated annotated answer:")
-    logger.critical(question.answer_annotated)
-
-    # calculate result
-    question.answer_annotated = eval_expressions(question.answer_annotated, new_values)
-    logger.critical(question.answer_annotated)
-
-    ## TEST - generate question function
-    logger.critical("\n\nTEST, generated question func")
-
-    generated_question = question.generate_question(default_replacements)
-    logger.critical(f"Generated question: {generated_question.question}")
-    logger.critical(f"Generated answer: {generated_question.answer}")
-
-if __name__ == "__main__":
-    main(json_input)
