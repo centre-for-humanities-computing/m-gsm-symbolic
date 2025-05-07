@@ -47,6 +47,7 @@ def main():
                     # load as txt instead
                     default_replacements = {
                         "names": ["Sofie", "Andrea", "Freja", "Ida", "Clara", "Anna"],
+                        "names_male": ["Christian", "Ole", "Erik", "Niels", "Kasper"],
                         "multiple_ice": [2, 3],
                         "multi_times": [2, 3],
                     }
@@ -55,8 +56,8 @@ def main():
                     generated_question_dict = asdict(generated_question) # Convert dataclass to dict
 
                     # Save the dict as JSON file to specified folder 
-                    with open(f"{output_dir}/{input_id}_var_{i+1}.json", "w") as output_file:
-                        json.dump(generated_question_dict, output_file)
+                    with open(f"{output_dir}/{input_id}_var_{i+1}.json", "w", encoding = 'utf-8') as output_file:
+                        json.dump(generated_question_dict, output_file, ensure_ascii = False)
 
 if __name__ == "__main__":
     main()
