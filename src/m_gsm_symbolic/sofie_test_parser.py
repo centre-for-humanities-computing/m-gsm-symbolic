@@ -8,7 +8,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 functions = {"range": lambda start, stop, step = 1: range(start, stop, step),
-             "sample": lambda items, n = 2: random.sample(items, n),
+             "sample": lambda items, n = 2: random.sample(items, min(len(items), n)),
              "divides": lambda a, b: a % b == 0,}
 
 default_replacements = {"names": ["Sofie", "Andrea", "Freja", "Ida", "Clara", "Anna"],
@@ -33,7 +33,7 @@ def eval_expressions(text: str, new_values: dict[str, str]) -> str:
     for i, v in new_values.items():
         try:
             num_values[i] = int(v) # Try converting the value to an integer
-        except ValueError:
+        except (ValueError, TypeError):
             pass  # Skip non-numeric values like names    
     text = re.sub(r"\{([^,{}][^{}]*)\}", lambda match: eval_braces(match, num_values), text)
     return text
@@ -86,7 +86,9 @@ class AnnotatedQuestion(Question):
 
         for line in self.init.strip().splitlines(): # split str into seperate lines at line break "\n"
             line = line.lstrip("-").strip() # remove the leading "-" character + space
-            var, rule = line.split("=") # split var (left side of =) and "rule" (right side of =) by "="
+            if "=" not in line:
+                continue
+            var, rule = line.split("=", 1) # split var (left side of =) and "rule" (right side of =) by "="
             var = var.strip().lstrip("$") # remove space at the beginning + chr $ in front of the variables
             rule = rule.strip() # again, remove space at the beginning of the string
 
@@ -100,7 +102,9 @@ class AnnotatedQuestion(Question):
                     new_values[var] = str(random.choice(combined["functions"]["range"](start, stop, step)))
 
             elif "sample" in rule:
-                match_list = re.search(r"sample\((.+?)\)", rule)
+                match_list = re.search(r"sample\((.*)\)", rule)
+                if not match_list:
+                    continue
                 sample_expression = match_list.group(1)
                 sampled_arguments = eval(f"functions['sample']({sample_expression})", combined)
                 var_arguments = [v.strip() for v in var.split(",")]
