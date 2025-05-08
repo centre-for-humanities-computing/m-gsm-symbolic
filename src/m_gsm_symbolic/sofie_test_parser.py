@@ -11,10 +11,6 @@ functions = {"range": lambda start, stop, step = 1: range(start, stop, step),
              "sample": lambda items, n = 2: random.sample(items, min(len(items), n)),
              "divides": lambda a, b: a % b == 0,}
 
-default_replacements = {"names": ["Sofie", "Andrea", "Freja", "Ida", "Clara", "Anna"],
-                        "multiple_ice": [2, 3],
-                        "multi_times": [2, 3],}
-
 def eval_braces(match, num_values):
     """ Helper function to evalulate the expressions inside the {}"""
     expr = match.group(1)  # Get the expression inside the {}
