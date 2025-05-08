@@ -6,6 +6,7 @@ import logging
 
 os.chdir("..")
 from m_gsm_symbolic.sofie_test_parser import AnnotatedQuestion
+from m_gsm_symbolic.replacements_list import default_replacements
 
 logger = logging.getLogger(__name__)
 
@@ -43,14 +44,6 @@ def main():
                 for i in range(args.nvariations):
 
                     logger.critical(f"Generating variation: {i+1}")
-
-                    # load as txt instead
-                    default_replacements = {
-                        "names": ["Sofie", "Andrea", "Freja", "Ida", "Clara", "Anna"],
-                        "names_male": ["Christian", "Ole", "Erik", "Niels", "Kasper"],
-                        "multiple_ice": [2, 3],
-                        "multi_times": [2, 3],
-                    }
 
                     generated_question = question.generate_question(default_replacements)
                     generated_question_dict = asdict(generated_question) # Convert dataclass to dict
