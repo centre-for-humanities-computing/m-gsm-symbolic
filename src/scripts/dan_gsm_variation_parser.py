@@ -19,6 +19,12 @@ def parser():
                         required = False,
                         default = 3,
                         help = "Number of variations to generate per input (return int)")
+    parser.add_argument("--attempts",
+                        "-a",
+                        type = int,
+                        required = False,
+                        default = 3,
+                        help = "Number of attempts to ensure unique variations (return int)")
     args = parser.parse_args()
     return args
 
@@ -34,23 +40,20 @@ def main():
             file_path = os.path.join(input_dir, filename)
 
             with open(file_path, "r") as f:
-                json_data = f.read() # read file as str
+                json_data = f.read()
+
+            for i in range(args.nvariations):
+                
                 question = AnnotatedQuestion.from_json(json_data)
 
-                input_id = question.id_shuffled # id of specific json input
-                logger.critical(f"Processing question ID: {input_id}")
+                input_id = question.id_shuffled
+                logger.critical(f"Generating variation number {i+1} for question {input_id}")
 
-                # Generate N variations
-                for i in range(args.nvariations):
+                generated_question = question.generate_question(default_replacements)
+                generated_question_dict = asdict(generated_question)
 
-                    logger.critical(f"Generating variation: {i+1}")
-
-                    generated_question = question.generate_question(default_replacements)
-                    generated_question_dict = asdict(generated_question) # Convert dataclass to dict
-
-                    # Save the dict as JSON file to specified folder 
-                    with open(f"{output_dir}/{input_id}_var_{i+1}.json", "w", encoding = 'utf-8') as output_file:
-                        json.dump(generated_question_dict, output_file, ensure_ascii = False)
+                with open(f"{output_dir}/00_{input_id}_v{i+1}_HEYY.json", "w", encoding = 'utf-8') as output_file:
+                    json.dump(generated_question_dict, output_file, ensure_ascii = False)
 
 if __name__ == "__main__":
     main()
