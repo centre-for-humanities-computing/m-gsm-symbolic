@@ -23,7 +23,7 @@ def parser():
                         "-a",
                         type = int,
                         required = False,
-                        default = 3,
+                        default = 5,
                         help = "Number of attempts to ensure unique variations (return int)")
     args = parser.parse_args()
     return args
