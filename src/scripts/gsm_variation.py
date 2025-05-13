@@ -3,21 +3,30 @@ import json
 from dataclasses import asdict
 import argparse
 import logging
+from pathlib import Path
 
 os.chdir("..")
-from m_gsm_symbolic.sofie_test_parser import AnnotatedQuestion
-from m_gsm_symbolic.replacements_list import default_replacements
+from m_gsm_symbolic.gsm_variation_parser import AnnotatedQuestion
+from m_gsm_symbolic.replacements_list import replacements
 
 logger = logging.getLogger(__name__)
+
+repo_root = Path("./scripts/dan_gsm_variations.py").parent.parent
 
 def parser():
     """ The user can specify how many variations should be generated of one JSON input """
     parser = argparse.ArgumentParser()
+    parser.add_argument("--input_dir",
+                        "-i",
+                        type = str,
+                        required = False,
+                        default = "../data/templates/dan/symbolic",
+                        help = "Provide input directory containing JSON data")
     parser.add_argument("--nvariations",
                         "-n",
                         type = int,
                         required = False,
-                        default = 3,
+                        default = 2,
                         help = "Number of variations to generate per input (return int)")
     parser.add_argument("--attempts",
                         "-a",
@@ -28,32 +37,40 @@ def parser():
     args = parser.parse_args()
     return args
 
+
 def main():
 
     args = parser()
 
-    input_dir = "../data/templates/dan/symbolic"
-    output_dir = "../data/templates/dan/symbolic-variations"
+    input_dir = Path(args.input_dir)
 
-    for filename in os.listdir(input_dir):
-        if filename.endswith(".json"):
-            file_path = os.path.join(input_dir, filename)
+    if not input_dir.exists() and input_dir.is_dir():
+        raise ValueError(f"Input dir: '{input_dir}' does not exist")
 
-            with open(file_path, "r") as f:
-                json_data = f.read()
+    output_dir = input_dir.parent / f"{input_dir.name}-variants"
+    output_dir.mkdir(parents = True, exist_ok = True)
 
-            for i in range(args.nvariations):
-                
-                question = AnnotatedQuestion.from_json(json_data)
+    for filename in input_dir.glob("*.json"):
+        with filename.open("r", encoding = "utf-8") as f:
+            json_data = f.read()
 
-                input_id = question.id_shuffled
-                logger.critical(f"Generating variation number {i+1} for question {input_id}")
+    #create_variants(n_variants, attempts, input_dir)
 
-                generated_question = question.generate_question(default_replacements)
-                generated_question_dict = asdict(generated_question)
 
-                with open(f"{output_dir}/00_{input_id}_v{i+1}_HEYY.json", "w", encoding = 'utf-8') as output_file:
-                    json.dump(generated_question_dict, output_file, ensure_ascii = False)
+        for i in range(args.nvariations):
+            
+            question = AnnotatedQuestion.from_json(json_data)
+
+            input_id = question.id_shuffled
+            logger.critical(f"Generating variation number {i+1} for question {input_id}")
+
+            generated_question = question.generate_question(replacements)
+            generated_question_dict = asdict(generated_question)
+
+            with open(output_dir / f"{input_id}_{i+1}.json", "w", encoding = 'utf-8') as output_file:
+                json.dump(generated_question_dict, output_file, ensure_ascii = False)
+                logger.critical(f"Saved variation {i+1} for question {input_id} to {output_file.name}")
+
 
 if __name__ == "__main__":
     main()
