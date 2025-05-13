@@ -2,7 +2,7 @@ import json
 import logging
 import random
 import re
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 from typing import Any, Callable, Self
 
 logger = logging.getLogger(__name__)
@@ -40,9 +40,7 @@ def eval_expressions(text: str, new_values: dict[str, str]) -> str:
             num_values[i] = int(v)  # Try converting the value to an integer
         except (ValueError, TypeError):
             pass  # Skip non-numeric values like names
-    text = re.sub(
-        r"\{([^,{}][^{}]*)\}", lambda match: eval_braces(match, num_values), text
-    )
+    text = re.sub(r"\{([^,{}][^{}]*)\}", lambda match: eval_braces(match, num_values), text)
     return text
 
 
@@ -53,21 +51,31 @@ class Question:
     id_orig: int
     id_shuffled: int
 
+    def to_json(self, filepath: Path) -> None:
+        with filepath.open("w", encoding = "utf-8") as f:
+            json.dump(asdict(self), f, ensure_ascii = False)
 
 @dataclass
 class AnnotatedQuestion(Question):
     question_annotated: str
     answer_annotated: str
 
-    @classmethod
-    def from_json(cls, json_data: str) -> Self:
-        data = json.loads(json_data)
+     @classmethod
+    def from_json(cls, filepath: Path) -> Self:
+        with filepath.open("r", encoding = "utf-8") as f:
+            data = json.load(f)
         return cls(**data)
 
     @property
     def init(self) -> str:
         """extract init section from question_annotated"""
         return self.question_annotated.split("#init:")[1].split("#conditions:")[0]
+
+    @property
+    def condition(self) -> list[str]:
+        """extract condition section from question_annotated"""
+        condition_block = self.question_annotated.split("#conditions:")[1].split("#answer:")[0].strip().splitlines()
+        return [line.strip("-") for line in condition_block]
 
     @property
     def default_values(self) -> dict[str, str]:
@@ -87,53 +95,39 @@ class AnnotatedQuestion(Question):
         """remove calculations from the text. re.sub() replaces the calculations with noting"""
         return re.sub(r"<<.*?>>", "", text)
 
-    def apply_init_rules(
-        self,
-        replacements: dict[str, Any] = {},
-        functions: dict[str, Callable] = functions,
-    ) -> dict[str, str]:
+    def apply_init_rules(self,
+                        replacements: dict[str, Any] = {},
+                        functions: dict[str, Callable] = functions,) -> dict[str, str]:
         """apply init rules to generate new variable values"""
 
         new_values = {}
         combined = {**replacements, "functions": functions}
 
         for line in (
-            self.init.strip().splitlines()
-        ):  # split str into seperate lines at line break "\n"
+            self.init.strip().splitlines()):  # split str into seperate lines at line break "\n"
             line = line.lstrip("-").strip()  # remove the leading "-" character + space
             if "=" not in line:
                 continue
-            var, rule = line.split(
-                "=", 1
-            )  # split var (left side of =) and "rule" (right side of =) by "="
-            var = var.strip().lstrip(
-                "$"
-            )  # remove space at the beginning + chr $ in front of the variables
+            var, rule = line.split("=", 1)  # split var (left side of =) and "rule" (right side of =) by "="
+            var = var.strip().lstrip("$")  # remove space at the beginning + chr $ in front of the variables
             rule = rule.strip()  # again, remove space at the beginning of the string
 
             if "range" in rule:
-                range_arguments = list(
-                    map(int, re.findall(r"\d+", rule))
-                )  # find range of values, digit chr
+                range_arguments = list(map(int, re.findall(r"\d+", rule)))  # find range of values, digit chr
                 if len(range_arguments) == 2:
                     start, stop = range_arguments
-                    new_values[var] = str(
-                        random.choice(combined["functions"]["range"](start, stop))
-                    )
+                    new_values[var] = str(random.choice(combined["functions"]["range"](start, stop)))
                 elif len(range_arguments) == 3:
                     start, stop, step = range_arguments
                     new_values[var] = str(
-                        random.choice(combined["functions"]["range"](start, stop, step))
-                    )
+                        random.choice(combined["functions"]["range"](start, stop, step)))
 
             elif "sample" in rule:
                 match_list = re.search(r"sample\((.*)\)", rule)
                 if not match_list:
                     continue
                 sample_expression = match_list.group(1)
-                sampled_arguments = eval(
-                    f"functions['sample']({sample_expression})", combined
-                )
+                sampled_arguments = eval(f"functions['sample']({sample_expression})", combined)
                 var_arguments = [v.strip() for v in var.split(",")]
 
                 for var_sample, val_sample in zip(var_arguments, sampled_arguments):
@@ -147,28 +141,18 @@ class AnnotatedQuestion(Question):
         for var, default_value in self.default_values.items():
             new_value = new_values.get(var, default_value)
 
-            self.question_annotated = re.sub(
-                f"{{{var},{default_value}}}", str(new_value), self.question_annotated
-            )
-            self.answer_annotated = re.sub(
-                f"{{{var},{default_value}}}", str(new_value), self.answer_annotated
-            )
+            self.question_annotated = re.sub(f"{{{var},{default_value}}}", str(new_value), self.question_annotated)
+            self.answer_annotated = re.sub(f"{{{var},{default_value}}}", str(new_value), self.answer_annotated)
 
         for var, new_value in new_values.items():
-            self.question_annotated = re.sub(
-                rf"\{{{var}\}}", str(new_value), self.question_annotated
-            )
-            self.answer_annotated = re.sub(
-                rf"\{{{var}\}}", str(new_value), self.answer_annotated
-            )
+            self.question_annotated = re.sub(rf"\{{{var}\}}", str(new_value), self.question_annotated)
+            self.answer_annotated = re.sub(rf"\{{{var}\}}", str(new_value), self.answer_annotated)
 
         return self.question_annotated, self.answer_annotated
 
-    def generate_question(
-        self,
-        replacements: dict[str, Any] = {},
-        functions: dict[str, Callable] = functions,
-    ) -> Question:
+    def generate_question(self,
+                        replacements: dict[str, Any] = {},
+                        functions: dict[str, Callable] = functions,) -> Question:
         """
         The function should take the "original question", then sample new values using the apply_init_rules,
         replace the default values using the replace_values function, evaluate any embedded math expressions,
@@ -177,9 +161,7 @@ class AnnotatedQuestion(Question):
         new_values = self.apply_init_rules(replacements, functions)
         q_annotated, a_annotated = self.replace_values(new_values)
         a_final = eval_expressions(a_annotated, new_values)
-        return Question(
-            question=self.remove_calculations(q_annotated),
-            answer=self.remove_calculations(a_final),
-            id_orig=self.id_orig,
-            id_shuffled=self.id_shuffled,
-        )
+        return Question(question = self.remove_calculations(q_annotated),
+                        answer = self.remove_calculations(a_final),
+                        id_orig = self.id_orig,
+                        id_shuffled = self.id_shuffled,)
