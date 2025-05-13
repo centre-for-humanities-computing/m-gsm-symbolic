@@ -1,5 +1,6 @@
 import json
 import logging
+from pathlib import Path
 import random
 
 import pytest
@@ -89,3 +90,17 @@ def test_generate_question(annotated_question):
         isinstance(generated_question.answer, str) and generated_question.answer != ""
     )
     assert generated_question.id_orig == annotated_question.id_orig
+
+
+def test_generate_from_sample():
+    file_path = Path(__file__).parent / "test_samples" / "0000.json"
+    with file_path.open("r", encoding="utf-8") as f:
+        json_data = f.read()
+    aq = AnnotatedQuestion.from_json(json_data)
+
+    replacements = {"names": ["Sofie"]}
+    generated_question = aq.generate_question(replacements)
+
+    correct_answer = "Sofie så en 5 meter lang haj med 9 markeringer 50 cm på hver på siden. Hvor mange procent af hajens kropslængde udgør den samlede længde af markeringerne?"
+
+    assert correct_answer == generated_question.question 

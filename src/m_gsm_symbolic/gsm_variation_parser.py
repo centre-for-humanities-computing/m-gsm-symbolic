@@ -1,9 +1,9 @@
 import json
+import logging
 import random
 import re
 from dataclasses import dataclass
-from typing import Self, Any, Callable
-import logging
+from typing import Any, Callable, Self
 
 logger = logging.getLogger(__name__)
 
@@ -12,6 +12,11 @@ functions = {
     "sample": lambda items, n=2: random.sample(items, min(len(items), n)),
     "divides": lambda a, b: a % b == 0,
 }
+
+
+def divides(a, b):
+    """Check if a divides b"""
+    return a % b == 0
 
 
 def eval_braces(match, num_values):
