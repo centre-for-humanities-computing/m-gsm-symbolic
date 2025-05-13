@@ -1,5 +1,5 @@
 
-default_replacements = {
+replacements = {
     "names": ["Sofie", "Andrea", "Freja", "Ida", "Clara", "Anna", "Astrid", "Laura", "Frida",
               "Alma", "Emma", "Olivia", "Agnes", "Ella", "Maja", "Esther", "Alberte", "Mathilde",
               "Signe", "Ellen", "Ingrid", "Christian", "Ole", "Niels", "Erik", "Kasper", "Carl",
