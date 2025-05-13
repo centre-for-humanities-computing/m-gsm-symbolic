@@ -28,7 +28,6 @@ def parser():
 
 def create_variants(args):
     # take args parser argument and make sure it will stay as it was defined
-    # so n_variations fx will stay int
     return
 
 
