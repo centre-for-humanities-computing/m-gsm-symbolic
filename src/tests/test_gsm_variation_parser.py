@@ -1,17 +1,19 @@
 import json
-import re
-import random
-import pytest
-from typing import Self, Any, Callable
 import logging
+from pathlib import Path
+import random
 
-from m_gsm_symbolic.sofie_test_parser import AnnotatedQuestion, eval_expressions
+import pytest
+
+from m_gsm_symbolic.gsm_variation_parser import AnnotatedQuestion, eval_expressions
 
 logger = logging.getLogger(__name__)
 
-functions = {"range": lambda start, stop, step = 1: range(start, stop, step),
-             "sample": lambda items, n = 2: random.sample(items, n),
-             "divides": lambda a, b: a % b == 0,}
+functions = {
+    "range": lambda start, stop, step=1: range(start, stop, step),
+    "sample": lambda items, n=2: random.sample(items, n),
+    "divides": lambda a, b: a % b == 0,
+}
 
 
 json_data = r"""
@@ -40,7 +42,12 @@ def test_load_from_json():
 
 def test_default_values_extraction(annotated_question):
     """test the extraction of default values"""
-    assert annotated_question.default_values == {'age_diff': '16', 'name1': 'Mia', 'name2': 'Emma', 'age1': '40'}
+    assert annotated_question.default_values == {
+        "age_diff": "16",
+        "name1": "Mia",
+        "name2": "Emma",
+        "age1": "40",
+    }
     assert "age_diff" in annotated_question.default_values
     assert "age1" in annotated_question.default_values
 
@@ -75,6 +82,25 @@ def test_generate_question(annotated_question):
     assert "Sofie" in generated_question.question
     assert "Kenneth" in generated_question.question
 
-    assert isinstance(generated_question.question, str) and generated_question.question  != ""  
-    assert isinstance(generated_question.answer, str) and generated_question.answer != ""  
+    assert (
+        isinstance(generated_question.question, str)
+        and generated_question.question != ""
+    )
+    assert (
+        isinstance(generated_question.answer, str) and generated_question.answer != ""
+    )
     assert generated_question.id_orig == annotated_question.id_orig
+
+
+def test_generate_from_sample():
+    file_path = Path(__file__).parent / "test_samples" / "0000.json"
+    with file_path.open("r", encoding="utf-8") as f:
+        json_data = f.read()
+    aq = AnnotatedQuestion.from_json(json_data)
+
+    replacements = {"names": ["Sofie"]}
+    generated_question = aq.generate_question(replacements)
+
+    correct_answer = "Sofie så en 5 meter lang haj med 9 markeringer 50 cm på hver på siden. Hvor mange procent af hajens kropslængde udgør den samlede længde af markeringerne?"
+
+    assert correct_answer == generated_question.question 

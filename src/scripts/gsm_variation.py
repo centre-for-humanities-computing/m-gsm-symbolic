@@ -8,7 +8,7 @@ from m_gsm_symbolic.replacements_list import replacements
 logger = logging.getLogger(__name__)
 
 def parser():
-    """ The user can specify how many variations should be generated of one JSON input """
+    """The user can specify how many variations should be generated of one JSON input"""
     parser = argparse.ArgumentParser()
     parser.add_argument("--input_dir",
                         "-i",
@@ -32,7 +32,6 @@ def create_variants(args):
 
 
 def main():
-
     args = parser()
     #create_variants(input_dir = args.input_dir, n_variants = args.n_variants) #???
 
@@ -42,14 +41,16 @@ def main():
         raise ValueError(f"Input dir: '{input_dir}' does not exist")
 
     output_dir = input_dir.parent / f"{input_dir.name}-variants"
-    output_dir.mkdir(parents = True, exist_ok = True)
+    output_dir.mkdir(parents=True, exist_ok=True)
 
     for filename in input_dir.glob("*.json"):
         for i in range(args.nvariations):
             question = AnnotatedQuestion.from_json(filename)
 
             input_id = question.id_shuffled
-            logger.critical(f"Generating variation number {i+1} for question {input_id}")
+            logger.critical(
+                f"Generating variation number {i + 1} for question {input_id}"
+            )
 
             generated_question = question.generate_question(replacements)
 
