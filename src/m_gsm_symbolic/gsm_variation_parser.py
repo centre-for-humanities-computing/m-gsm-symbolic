@@ -4,6 +4,7 @@ import random
 import re
 from dataclasses import dataclass, asdict
 from typing import Any, Callable, Self
+from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
@@ -59,8 +60,8 @@ class Question:
 class AnnotatedQuestion(Question):
     question_annotated: str
     answer_annotated: str
-
-     @classmethod
+    
+    @classmethod
     def from_json(cls, filepath: Path) -> Self:
         with filepath.open("r", encoding = "utf-8") as f:
             data = json.load(f)
