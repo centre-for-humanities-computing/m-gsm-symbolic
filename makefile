@@ -22,3 +22,6 @@ do-translation:
 	@echo "--- Perform initial translation of the data ---"
 	uv run src/scripts/initial_translation.py
 
+do-post-training:
+	@echo "--- Perform post training using GRPO ---"
+	uv run src/scripts/post_training.py

@@ -1,13 +1,20 @@
 [project]
 name = "m-gsm-symbolic"
-version = "0.1.0"
-description = "Add your description here"
+version = "0.0.1"
+description = "Evaluating cross-lingual reasoning transfert"
 readme = "README.md"
 authors = [
     { name = "Kenneth Enevoldsen", email = "kennethcenevoldsen@gmail.com" },
+    { name = "Nicolas Legrand", email = "nicolas.legrand@cas.au.dk" },
 ]
-requires-python = ">=3.13"
-dependencies = ["ipykernel>=6.29.5"]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "ipykernel>=6.29.5",
+    "torch",
+    "unsloth",
+    "vllm>=0.8.5",
+    "wandb>=0.19.11",
+]
 
 [build-system]
 requires = ["hatchling"]
@@ -16,6 +23,6 @@ build-backend = "hatchling.build"
 [dependency-groups]
 dev = [
     "ruff>=0.9.7",
- "ipykernel>=6.29.5",
- "pytest>=8.3.5",
+    "ipykernel>=6.29.5",
+    "pytest>=8.3.5",
 ]
