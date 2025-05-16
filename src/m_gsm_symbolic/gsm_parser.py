@@ -40,12 +40,12 @@ class AnnotatedQuestion(Question):
         return self.question_annotated.splitlines()[0].strip()
 
     @property
-    def vars(self) -> list[str]:
+    def variables(self) -> list[str]:
         """extract variable names from question_annotated"""
         init_block = self.question_annotated.split("#init:")[1].split("#conditions:")[0].strip().splitlines()
-        linevars = [extract_vars_from_init_line(line) for line in init_block if "=" in line]
-        varsets = [set(var) for var in linevars]
-        return reduce(set.union, varsets)
+        variables_per_line = [extract_variables_from_init_line(line) for line in init_block if "=" in line]
+        variable_sets = [set(v) for v in variables_per_line]
+        return reduce(set.union, variable_sets)
 
     @property
     def init(self) -> list[str]:
@@ -60,21 +60,31 @@ class AnnotatedQuestion(Question):
         return [line.strip("- ") for line in condition_block]
     
     @property
-    def constrained_vars(self) -> list[str]:
+    def constrained_variables(self) -> list[str]:
         """extract variable names from conditions"""
-        return [var for var in self.vars if is_variable_mentioned(var, self.conditions)]
+        return [v for v in self.variables if is_variable_mentioned(v, self.conditions)]
     
-def extract_vars_from_init_line(line: str) -> list[str]: 
+    @property
+    def unconstrained_lines(self) -> list[str]:
+        """extract unconstrained lines from question_annotated"""
+        return [line for line in self.init if not is_init_line_constrained(line, self.constrained_variables)]
+    
+    @property
+    def constrained_lines(self) -> list[str]:
+        """extract constrained lines from question_annotated"""
+        return [line for line in self.init if is_init_line_constrained(line, self.constrained_variables)]
+    
+def extract_variables_from_init_line(line: str) -> list[str]: 
     """extract variable names from a line"""
-    vars = line.split("=")[0].strip("- ").strip("$").split(",")
-    return [var.strip() for var in vars]
+    variables = line.split("=")[0].strip("- ").strip("$").split(",")
+    return [v.strip() for v in variables]
     
-def is_init_line_constrained(line: str, constrained_vars: list[str]) -> bool:
+def is_init_line_constrained(line: str, constrained_variables: list[str]) -> bool:
     """check if a line is constrained"""
-    return any(var in extract_vars_from_init_line(line) for var in constrained_vars)
+    return any(v in extract_variables_from_init_line(line) for v in constrained_variables)
 
-def is_int(val):
-    return isinstance(val, int) or (isinstance(val, float) and val.is_integer())
+def is_int(value):
+    return isinstance(value, int) or (isinstance(value, float) and value.is_integer())
 
 def divides(a, b):
     if not (isinstance(a, (int, float)) and isinstance(b, (int, float))):
@@ -147,23 +157,23 @@ def evaluate_unconstrained_init_line(init_line):
     #  If the line is unconstrained, we evaluate it directly since no other variables depend on it.
     logger.debug(f"Evaluating unconstrained init line: {init_line}")
     assignments = {}
-    var_part, definition_part = init_line.split("=", 1)
-    vars = strip_elements(var_part.strip("$").split(","))
+    variable_part, definition_part = init_line.split("=", 1)
+    variables = strip_elements(variable_part.strip("$").split(","))
     definition_part = definition_part.strip()
 
     if definition_part.startswith("range(") or definition_part.startswith("list(range("):
         definition_part = "sample(" + definition_part + ")"
     try:
-        vals = list(eval(definition_part, {"__builtins__": {}}, EVAL_CONTEXT_HELPERS | replacements))
-        logger.debug(f"Variables: {vars}, Definition part: {definition_part}, Evaluated values: {vals}")
+        values = list(eval(definition_part, {"__builtins__": {}}, EVAL_CONTEXT_HELPERS | replacements))
+        logger.debug(f"Variables: {variables}, Definition part: {definition_part}, Evaluated values: {values}")
     except Exception as e:
-        logger.error(f"Error evaluating assignment for {var_part}: {definition_part} -> {e}")
+        logger.error(f"Error evaluating assignment for {variable_part}: {definition_part} -> {e}")
         raise e
-    if isinstance(vals, list) and len(vals) == len(vars):
-        for var, val in zip(vars, vals):
+    if isinstance(values, list) and len(values) == len(variables):
+        for var, val in zip(variables, values):
             assignments[var] = val
     else:
-        logger.warning(f"Warning: {vars} and {vals} are incompatible for line {init_line}.")
+        logger.warning(f"Warning: {variables} and {values} are incompatible for line {init_line}.")
     
     return assignments
 
@@ -171,59 +181,56 @@ def evaluate_constrained_init_lines(init_lines, conditions):
     """ Returns a list of valid combinations of values for the constrained init lines."""
     
     possible_assignments = get_all_possible_assignments(init_lines)
-
     all_combinations = get_all_combinations(possible_assignments)
-    logger.debug(f"Number of combinations: {len(all_combinations)}")
-
     return filter_invalid_combinations(all_combinations, conditions)
 
 def get_all_possible_assignments(init_lines):
     possible_assignments = {}
     for line in init_lines:
-        var_part, definition_part = line.split("=", 1)
-        vars = strip_elements(var_part.strip("$").split(","))
+        variable_part, definition_part = line.split("=", 1)
+        variables = strip_elements(variable_part.strip("$").split(","))
         definition_part = definition_part.strip()
-        logger.debug(f"Variables: {vars}, Definition part: {definition_part}")
-        if len(vars) == 1:
-            var_name = vars[0].strip()
+        logger.debug(f"Variables: {variables}, Definition part: {definition_part}")
+        if len(variables) == 1:
+            variable_name = variables[0].strip()
             try:
                 possible_values = eval(definition_part, {"__builtins__": {}}, COMBINATION_HELPERS | replacements)
                 # Save as a list of tuples to make it easier to generate combinations
-                possible_assignments[var_name] = list(zip([var_name] * len(possible_values), possible_values))
+                possible_assignments[variable_name] = list(zip([variable_name] * len(possible_values), possible_values))
             except Exception as e:
                 logger.error(f"Error evaluating line '{line}': {e}")
                 raise e
         else:
-            logger.warning(f"Constrained init line '{line}' has more than 1 variable.")
+            logger.warning(f"Constrained init line '{line}' has more than 1 variable. Skipping...")
 
     return possible_assignments
 
 def get_all_combinations(possibilities):
     all_combinations = list(itertools.product(*possibilities.values()))
-    combination_dicts = [{k:v for k,v in combo} for combo in all_combinations]
+    combination_dicts = [{k:v for k,v in combination} for combination in all_combinations]
     return combination_dicts
 
 def filter_invalid_combinations(combinations, conditions):
     valid_combinations = []
-    for combo in combinations:
-        valid = True
+    for combination in combinations:
+        is_valid = True
         for cond in conditions:
-            temp_combo = combo | {k: v[1] for k, v in combo.items() if isinstance(v, tuple)}
-            if not eval(cond, {"__builtins__": {}}, EVAL_CONTEXT_HELPERS | temp_combo):
-                valid = False
+            temp_combination = combination | {k: v[1] for k, v in combination.items() if isinstance(v, tuple)}
+            if not eval(cond, {"__builtins__": {}}, EVAL_CONTEXT_HELPERS | temp_combination):
+                is_valid = False
                 break
 
-        if valid:
-            valid_combinations.append(combo)
+        if is_valid:
+            valid_combinations.append(combination)
 
     logger.debug(f"Number of valid combinations: {len(valid_combinations)}")
     return valid_combinations
 
 def format_question(question_template_text, combination):
     def replace_placeholder(match):
-        var_name = match.group(1)
-        if var_name in combination:
-            value = combination[var_name]
+        variable_name = match.group(1)
+        if variable_name in combination:
+            value = combination[variable_name]
             return str(value[0]) if isinstance(value, tuple) else str(value)
         return match.group(0)
     return re.sub(r"\{(\w+),\s*([^}]+)\}", replace_placeholder, question_template_text)
@@ -236,12 +243,12 @@ def format_answer(answer_annotated_template, combination, ):
         expr_str = match.group(1)
         logger.debug(f"Evaluating expression: {expr_str}")
         try:
-            val = eval(expr_str, {"__builtins__": {}}, eval_env)
-            logger.debug(f"Evaluated value: {val}")
+            value = eval(expr_str, {"__builtins__": {}}, eval_env)
+            logger.debug(f"Evaluated value: {value}")
             # Convert integer-like floats to integers for display
-            if isinstance(val, float) and val.is_integer():
-                val = int(val)
-            return str(val)
+            if isinstance(value, float) and value.is_integer():
+                value = int(value)
+            return str(value)
         except Exception as e:
             logger.error(f"Error evaluating expression '{expr_str}': {e}")
             raise e
@@ -252,15 +259,10 @@ def format_answer(answer_annotated_template, combination, ):
 
 def generate_question(template_path: Path) -> Question:
     question = AnnotatedQuestion.from_json(template_path)
-    logger.debug(f"Vars: {question.vars}")
-    logger.debug(f"Init lines: {question.init}")
-    logger.debug(f"Conditions: {question.conditions}")
-    logger.debug(f"Constrained vars: {question.constrained_vars}")
-    unconstrained_lines = [line for line in question.init if not is_init_line_constrained(line, question.constrained_vars)]
-    constrained_lines = [line for line in question.init if is_init_line_constrained(line, question.constrained_vars)]
-    unconstrained_assignments = [evaluate_unconstrained_init_line(line) for line in unconstrained_lines]
+    logger.debug(f"Annotated question: {question}")
+    unconstrained_assignments = [evaluate_unconstrained_init_line(line) for line in question.unconstrained_lines]
     logger.debug(f"Unconstrained assignments: {unconstrained_assignments}")
-    constrained_assignments = random.choice(evaluate_constrained_init_lines(constrained_lines, question.conditions))
+    constrained_assignments = random.choice(evaluate_constrained_init_lines(question.constrained_lines, question.conditions))
     logger.debug(f"Constrained assignments: {constrained_assignments}")
     all_assignments = constrained_assignments | reduce(lambda x, y: x | y, unconstrained_assignments)
     logger.debug(f"All assignments: {all_assignments}")
