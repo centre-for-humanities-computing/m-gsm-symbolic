@@ -4,12 +4,13 @@ from pathlib import Path
 import re
 import itertools
 import random
-import ast
 import argparse
-import os
+import logging
 from functools import reduce
 from typing import Self
-from m_gsm_symbolic.replacements_list import replacements
+
+# Set up logger
+logger = logging.getLogger(__name__)
 
 @dataclass
 class Question:
@@ -108,13 +109,13 @@ def is_variable_mentioned(variable_name, text_list):
     return False
 
 def range_possibilities(start, end, step=1):
-    """Generate a list of numbers from start to end with a given step."""
+    """Return possibilities for given range statement."""
     if start > end:
         return []
     return list(range(start, end + 1, step))
 
 def sample_possibilities(items, n=1):
-    """Sample a list of items."""
+    """Return possibilities for given sample statement."""
     return items
 
 def strip_elements(lst):
@@ -144,7 +145,7 @@ COMBINATION_HELPERS = {
 def evaluate_unconstrained_init_line(init_line):
     """ Evaluate a single unconstrained init line and return the assignments."""
     #  If the line is unconstrained, we evaluate it directly since no other variables depend on it.
-    print(f"Evaluating unconstrained init line: {init_line}")
+    logger.debug(f"Evaluating unconstrained init line: {init_line}")
     assignments = {}
     var_part, definition_part = init_line.split("=", 1)
     vars = strip_elements(var_part.strip("$").split(","))
@@ -154,15 +155,15 @@ def evaluate_unconstrained_init_line(init_line):
         definition_part = "sample(" + definition_part + ")"
     try:
         vals = list(eval(definition_part, {"__builtins__": {}}, EVAL_CONTEXT_HELPERS | replacements))
-        print(f"Variables: {vars}, Definition part: {definition_part}, Evaluated values: {vals}")
+        logger.debug(f"Variables: {vars}, Definition part: {definition_part}, Evaluated values: {vals}")
     except Exception as e:
-        print(f"Error evaluating assignment for {var_part}: {definition_part} -> {e}")
+        logger.error(f"Error evaluating assignment for {var_part}: {definition_part} -> {e}")
         raise e
     if isinstance(vals, list) and len(vals) == len(vars):
         for var, val in zip(vars, vals):
             assignments[var] = val
     else:
-        print(f"Warning: {vars} and {vals} are incompatible for line {init_line}.")
+        logger.warning(f"Warning: {vars} and {vals} are incompatible for line {init_line}.")
     
     return assignments
 
@@ -172,7 +173,7 @@ def evaluate_constrained_init_lines(init_lines, conditions):
     possible_assignments = get_all_possible_assignments(init_lines)
 
     all_combinations = get_all_combinations(possible_assignments)
-    print(f"Number of combinations: {len(all_combinations)}")
+    logger.debug(f"Number of combinations: {len(all_combinations)}")
 
     return filter_invalid_combinations(all_combinations, conditions)
 
@@ -182,7 +183,7 @@ def get_all_possible_assignments(init_lines):
         var_part, definition_part = line.split("=", 1)
         vars = strip_elements(var_part.strip("$").split(","))
         definition_part = definition_part.strip()
-        print(f"Variables: {vars}, Definition part: {definition_part}")
+        logger.debug(f"Variables: {vars}, Definition part: {definition_part}")
         if len(vars) == 1:
             var_name = vars[0].strip()
             try:
@@ -190,10 +191,10 @@ def get_all_possible_assignments(init_lines):
                 # Save as a list of tuples to make it easier to generate combinations
                 possible_assignments[var_name] = list(zip([var_name] * len(possible_values), possible_values))
             except Exception as e:
-                print(f"Error evaluating line '{line}': {e}")
+                logger.error(f"Error evaluating line '{line}': {e}")
                 raise e
         else:
-            print(f"Warning: Constrained init line '{line}' has more than 1 variable.")
+            logger.warning(f"Constrained init line '{line}' has more than 1 variable.")
 
     return possible_assignments
 
@@ -215,7 +216,7 @@ def filter_invalid_combinations(combinations, conditions):
         if valid:
             valid_combinations.append(combo)
 
-    print(f"Number of valid combinations: {len(valid_combinations)}")
+    logger.debug(f"Number of valid combinations: {len(valid_combinations)}")
     return valid_combinations
 
 def format_question(question_template_text, combination):
@@ -228,49 +229,103 @@ def format_question(question_template_text, combination):
     return re.sub(r"\{(\w+),\s*([^}]+)\}", replace_placeholder, question_template_text)
 
 def format_answer(answer_annotated_template, combination, ):
-    eval_env = {**EVAL_CONTEXT_HELPERS, **combination}
+    # Handle tuples in the combination
+    eval_env = EVAL_CONTEXT_HELPERS | combination | {k: v[1] for k, v in combination.items() if isinstance(v, tuple)}
 
     def eval_curly_expr(match):
         expr_str = match.group(1)
+        logger.debug(f"Evaluating expression: {expr_str}")
         try:
             val = eval(expr_str, {"__builtins__": {}}, eval_env)
+            logger.debug(f"Evaluated value: {val}")
             # Convert integer-like floats to integers for display
             if isinstance(val, float) and val.is_integer():
                 val = int(val)
             return str(val)
-        except Exception:
-            return match.group(0) 
+        except Exception as e:
+            logger.error(f"Error evaluating expression '{expr_str}': {e}")
+            raise e
 
     processed_text = re.sub(r"\{([^}]+)\}", eval_curly_expr, answer_annotated_template)
             
     return processed_text
 
-def generate_question(template_filepath):
-
-    question = AnnotatedQuestion.from_json(Path(template_filepath))
-    print(f"Vars: {question.vars}")
-    print(f"Init lines: {question.init}")
-    print(f"Conditions: {question.conditions}")
-    print(f"Constrained vars: {question.constrained_vars}")
+def generate_question(template_path: Path) -> Question:
+    question = AnnotatedQuestion.from_json(template_path)
+    logger.debug(f"Vars: {question.vars}")
+    logger.debug(f"Init lines: {question.init}")
+    logger.debug(f"Conditions: {question.conditions}")
+    logger.debug(f"Constrained vars: {question.constrained_vars}")
     unconstrained_lines = [line for line in question.init if not is_init_line_constrained(line, question.constrained_vars)]
     constrained_lines = [line for line in question.init if is_init_line_constrained(line, question.constrained_vars)]
     unconstrained_assignments = [evaluate_unconstrained_init_line(line) for line in unconstrained_lines]
-    print(f"Unconstrained assignments: {unconstrained_assignments}")
+    logger.debug(f"Unconstrained assignments: {unconstrained_assignments}")
     constrained_assignments = random.choice(evaluate_constrained_init_lines(constrained_lines, question.conditions))
-    print(f"Constrained assignments: {constrained_assignments}")
+    logger.debug(f"Constrained assignments: {constrained_assignments}")
     all_assignments = constrained_assignments | reduce(lambda x, y: x | y, unconstrained_assignments)
-    print(f"All assignments: {all_assignments}")
+    logger.debug(f"All assignments: {all_assignments}")
     formatted_question = format_question(question.question_template, all_assignments)
-    print(f"Formatted question: {formatted_question}")
+    logger.info(f"Formatted question: {formatted_question}")
     formatted_answer = format_answer(question.answer_annotated, all_assignments)
-    print(f"Formatted answer: {formatted_answer}")
+    logger.info(f"Formatted answer: {formatted_answer}")
+    
+    # TODO: Set id_shuffled to something meaningful
+    return Question(formatted_question, formatted_answer, template_path.stem, 0)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate samples from annotated JSON templates.")
-    parser.add_argument("template_filepath", help="Path to the JSON template file.")
-    parser.add_argument("num_samples", type=int, help="Number of samples to generate.")
-    parser.add_argument("-o", "--output", help="Path to the output JSON file (optional). Prints to stdout if not provided.")
+    parser.add_argument("template_path", help="Path to the JSON template file(s).")
+    parser.add_argument("num_samples", type=int, help="Number of samples to generate for each template.")
+    parser.add_argument("language", help="Language code for the template (e.g., 'en', 'da').")
+    parser.add_argument("-o", "--output", help="Output directory.")
+    parser.add_argument("-q", "--quiet", action="store_true", help="Suppress all output except errors and warnings.")
+    parser.add_argument("-d", "--debug", action="store_true", help="Enable debug output (debug level logging)")
     
     args = parser.parse_args()
+    
+    if args.language == "da":
+        from m_gsm_symbolic.replacements_list_da import replacements
+    else:
+        from m_gsm_symbolic.replacements_list_en import replacements
 
-    generate_question(args.template_filepath)
+    # Configure logging
+    if args.quiet:
+        log_level = logging.WARNING
+    elif args.debug:
+        log_level = logging.DEBUG
+    else:
+        log_level = logging.INFO
+
+    
+    logging.basicConfig(
+        level=log_level,
+        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    )
+    logger.info("Starting sample generation...")
+    # Check if the template path is a directory or a file
+    template_path = Path(args.template_path)
+    if template_path.is_dir():
+        template_files = list(template_path.glob("*.json"))
+        if not template_files:
+            logger.error(f"No JSON files found in directory: {template_path}")
+            exit(1)
+    elif template_path.is_file():
+        template_files = [template_path]
+    else:
+        logger.error(f"Invalid path: {template_path}")
+        exit(1)
+    for template_file in template_files:
+        logger.info(f"Processing template file: {template_file}")
+        # Generate samples for each template file
+        for i in range(args.num_samples):
+            # Generate a sample
+            logger.info(f"Generating question {i + 1}/{args.num_samples}")
+            question = generate_question(template_file)
+            if args.output:
+                output_dir = Path(args.output)
+                output_dir.mkdir(parents=True, exist_ok=True)
+                output_file = output_dir / f"{template_file.stem}_{i + 1}.json"
+                question.to_json(output_file)
+                logger.info(f"Sample saved to: {output_file}")
+
+

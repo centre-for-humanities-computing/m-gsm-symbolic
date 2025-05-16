@@ -172,7 +172,7 @@ replacements = {
     "weights_sm": ["kilo", "kilogram", "kg", "gram", "g"],
     "currencies_sym": ["kroner", "kr"],
     "length_lg": ["m", "meter", "km", "kilometer"],
-    "multiple_ice": [2, 3],
+    "multiple_ice": ["to gange", "tre gange"],
     "multiple": [1, 2, 3],
     "multi_times": [2, 3],
     "fraction_nums": [1 / 2, 1 / 3, 1 / 4, 1 / 5],
