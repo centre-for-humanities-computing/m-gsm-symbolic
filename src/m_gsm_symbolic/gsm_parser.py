@@ -9,7 +9,6 @@ import logging
 from functools import reduce
 from typing import Self
 
-# Set up logger
 logger = logging.getLogger(__name__)
 
 @dataclass
