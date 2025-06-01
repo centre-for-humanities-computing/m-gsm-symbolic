@@ -8,7 +8,11 @@ authors = [
 ]
 
 requires-python = ">=3.10,<3.13"
-dependencies = ["pydantic>=2.11.4"]
+dependencies = [
+    "pydantic>=2.11.4",
+    "pydantic-ai>=0.2.12",
+    "pydantic-evals>=0.2.12",
+]
 
 [build-system]
 requires = ["hatchling"]
@@ -16,3 +20,6 @@ build-backend = "hatchling.build"
 
 [dependency-groups]
 dev = ["ruff>=0.9.7", "ipykernel>=6.29.5", "pytest>=8.3.5"]
+
+[tool.uv.sources]
+pydantic-ai = { git = "https://github.com/pydantic/pydantic-ai.git" } # TODO: Currenly required for https://github.com/pydantic/pydantic-ai/pulls?q=is%3Apr+include_expected_output+is%3Aclosed
