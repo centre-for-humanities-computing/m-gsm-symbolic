@@ -49,6 +49,12 @@ report = ds.evaluate_sync(answer_question)
 report.print(include_input=True, include_output=True, include_durations=True)
 
 case_rep = report.cases[0]
-case_rep.output  #
+case_rep.output 
 case_rep.expected_output
 case_rep.assertions
+
+# Problem:
+# Using the gpt4o model, to evaluate the answer of the gpt-4.1-nano model leads to the answer being correct (even if it is not).
+# I suspect that this is a two way problem:
+# the gpt4o is biased towards the answer of the gpt-4.1-nano model, and
+# the llm judge is badly prompted - we could likely to better with final answer extraction and then comparing if the two outputs are equal using an LLM judge
