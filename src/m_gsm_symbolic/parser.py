@@ -105,4 +105,3 @@ if __name__ == "__main__":
     )
     assert question.question == question.generate_question(default=True)
     assert question.answer == question.generate_answer(default=True)
-
