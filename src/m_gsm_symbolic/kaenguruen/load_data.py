@@ -97,7 +97,7 @@ def _parse_text_file(filepath: str | Path) -> KaenguruenProblem:
     if percentage_correct:
         percent_correct = float(percentage_correct) / 100
     else:
-        percent_correct = None
+percent_correct = float(percentage_correct) / 100 if percentage_correct else None
 
     # Create a dictionary to hold the parsed data
     problem_data = KaenguruenProblem(
