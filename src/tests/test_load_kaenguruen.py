@@ -10,6 +10,8 @@ def test_load_kaenguruen():
 
     # test conversion to case
     for sample in samples:
+        if sample.solution is not None:
+            assert sample.solution != "", "Solution should not be empty"
         assert isinstance(sample, KaenguruenProblem), (
             "Sample should be of type KaenguruenProblem"
         )

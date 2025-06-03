@@ -23,7 +23,7 @@ class KaenguruenProblem(BaseModel):
     question: str
     options: str
     answer: str
-    solution: str
+    solution: str | None
     percentage_correct: float | None
     filepath: Path
 
@@ -94,17 +94,14 @@ def _parse_text_file(filepath: str | Path) -> KaenguruenProblem:
         percent_correct.replace("Procent rigtige:", "").replace("%", "").strip()
     )
 
-    if percentage_correct:
-        percent_correct = float(percentage_correct) / 100
-    else:
-percent_correct = float(percentage_correct) / 100 if percentage_correct else None
+    percent_correct = float(percentage_correct) / 100 if percentage_correct else None
 
     # Create a dictionary to hold the parsed data
     problem_data = KaenguruenProblem(
         question=question,
         options=options,
         answer=answer,
-        solution=solution,
+        solution=solution if solution else None,
         percentage_correct=percent_correct,
         filepath=filepath,
     )

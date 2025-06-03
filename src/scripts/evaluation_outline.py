@@ -49,7 +49,7 @@ report = ds.evaluate_sync(answer_question)
 report.print(include_input=True, include_output=True, include_durations=True)
 
 case_rep = report.cases[0]
-case_rep.output 
+case_rep.output
 case_rep.expected_output
 case_rep.assertions
 
