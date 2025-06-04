@@ -31,11 +31,11 @@ def sample_sequential(items, n):
     start_idx = random.randint(0, len(items) - 1)
     return [items[(start_idx + i) % len(items)] for i in range(n)]
 
-def np_arange_sample(start, end, step=1):
+def arange_sample(start, end, step=1):
     """Sample an item from a numpy arange"""
     if start > end:
         return []
-    return random.choice(np.arange(start, end, step).tolist())
+    return str(random.choice(np.linspace(start, end, round((end-start)/step) + 1)))
 
 def frac_format(value):
     """Format a value as a fraction if it is a float, otherwise return as is."""
@@ -73,13 +73,13 @@ def range_possibilities_str(start, end, step, numbers):
     possible_number_names = [numbers[i-1] for i in possible_numbers]
     if not possible_numbers:
         return []
-    return list(zip(possible_numbers, possible_number_names))
+    return list(zip(possible_number_names, map(str, possible_numbers)))
 
-def np_arange_possibilities(start, end, step=1):
+def arange_possibilities(start, end, step=1):
     """Return possibilities for given numpy arange statement."""
     if start > end:
         return []
-    return np.arange(start, end, step).tolist()
+    return list(map(str,np.linspace(start, end, round((end-start)/step) + 1)))
 
 def sample_possibilities(items, n=1):
     """Return possibilities for given sample statement."""
@@ -101,14 +101,14 @@ EVAL_CONTEXT_HELPERS = {
     "sample_sequential": sample_sequential,
     "list": list,
     "range": range,
-    "np.arange": np_arange_sample,
+    "arange": arange_sample,
     "Fraction": frac_format,
 }
 
 COMBINATION_HELPERS = {
     "range": range_possibilities,
     "range_str": range_possibilities_str,
-    "np.arange": np_arange_possibilities, 
+    "arange": arange_possibilities, 
     "sample": sample_possibilities,
     "list": list,
 }
@@ -220,12 +220,20 @@ class AnnotatedQuestion:
     @property
     def conditions(self) -> list[str]:
         """extract conditions from question_annotated"""
-        condition_block = self.question_annotated.split("#conditions:")[1].split("#answer:")[0].strip().splitlines()
-        return [line.strip("- ") for line in condition_block]
+        if "#conditions:" not in self.question_annotated:
+            return []
+        
+        try:
+            condition_block = self.question_annotated.split("#conditions:")[1].split("#answer:")[0].strip().splitlines()
+            return [line.strip("- ") for line in condition_block if line.strip()]
+        except IndexError:
+            return []
     
     @property
     def constrained_variables(self) -> list[str]:
         """extract variable names from conditions"""
+        if not self.conditions:
+            return []
         return [v for v in self.variables if is_variable_mentioned(v, self.conditions)]
     
     @property
@@ -239,7 +247,7 @@ class AnnotatedQuestion:
         return [line for line in self.init if self._is_init_line_constrained(line, self.constrained_variables)]
     
     @property
-    def example_assignments(self) -> dict:
+    def default_assignments(self) -> dict:
         """extract example assignments from question_annotated"""
         assignment_tuples = re.findall(r"\{(\w+),\s*([^}]+)\}", self.question_template)
         def parse_value(val):
@@ -271,12 +279,7 @@ class AnnotatedQuestion:
                     match = re.search(pattern1, assignment_line)
                     if not match:
                         match = re.search(pattern2, assignment_line)
-                    
-                    print(f"Pattern 1: {pattern1}")
-                    print(f"Pattern 2: {pattern2}")
-                    print(f"Assignment line: {assignment_line}")
-                    print(f"Other variable: {other_var}")
-                    print(f"Match: {match}")
+
                     try:
                         assignments[var] = match.group(1)
                     except AttributeError:
@@ -341,7 +344,7 @@ class AnnotatedQuestion:
                     # Save as a list of tuples to make it easier to generate combinations
                     possible_assignments[variable_name] = list(zip([variable_name] * len(possible_values), possible_values))
                 except Exception as e:
-                    logger.error(f"Error evaluating line '{line}': {e}")
+                    logger.error(f"Error evaluating line '{line}': {e} for file {self.id_shuffled}")
                     raise e
             else:
                 logger.warning(f"Constrained init line '{line}' has more than 1 variable. Skipping...")
