@@ -145,147 +145,104 @@ class TestGetAllPossibleAssignments:
         assert result == expected
 
 
-def test_template_formatting_matches_original():
-    """
-    Test that format_question and format_answer with example_assignments 
-    match the original question and answer for all template files.
-    """
-    # Find all template files
+def get_template_files():
     base_dir = Path(__file__).parent.parent.parent
     template_dirs = [
         base_dir / "data" / "templates" / "dan" / "symbolic",
         base_dir / "data" / "templates" / "eng" / "symbolic"
     ]
     
-    
+    template_files = []
     for template_dir in template_dirs:
-        template_files = []
         if template_dir.exists():
-            template_files.extend(list(template_dir.glob("**/*.json")))
+            for template_file in template_dir.glob("**/*.json"):
+                language = "dan" if "dan" in str(template_dir) else "eng"
+                template_files.append((template_file, language))
     
-        language = "dan" if "dan" in str(template_dir) else "eng"
-        # Skip test if no template files found
-        if not template_files:
-            pytest.skip("No template files found in directory: " + str(template_dir))
-        
-        # Test each template file
-        for template_file in template_files:
-            # Load the annotated question
-            annotated_question = AnnotatedQuestion.from_json(template_file)
-            
-            # Get example assignments
-            example_assignments = annotated_question.default_assignments
-            
-            # Format question and answer using example assignments
-            formatted_question = annotated_question.format_question(example_assignments, language=language)
-            formatted_answer = annotated_question.format_answer(example_assignments, language=language)
+    return template_files
 
-            # Check if formatted outputs match the original
-            assert formatted_question == annotated_question.question, \
-                f"Formatted question doesn't match original for {template_file.name}"
-            
-            assert formatted_answer == annotated_question.answer, \
-                f"Formatted answer doesn't match original for {template_file.name}"
-            
-def test_example_assignments_are_valid():
-    """
-    Test that example_assignments from template files are found in possible assignments
-    and pass the conditions validation.
-    """
-    # Find all template files
-    base_dir = Path(__file__).parent.parent.parent
-    template_dirs = [
-        base_dir / "data" / "templates" / "dan" / "symbolic",
-        base_dir / "data" / "templates" / "eng" / "symbolic"
-    ]
+
+@pytest.mark.parametrize("template_file,language", get_template_files())
+def test_template_formatting_matches_original(template_file, language):
+    annotated_question = AnnotatedQuestion.from_json(template_file)
+    example_assignments = annotated_question.default_assignments
     
-    for template_dir in template_dirs:
-        
-        template_files = []
-        if template_dir.exists():
-            template_files.extend(list(template_dir.glob("**/*.json")))
+    formatted_question = annotated_question.format_question(example_assignments, language=language)
+    formatted_answer = annotated_question.format_answer(example_assignments, language=language)
+
+    assert formatted_question == annotated_question.question, \
+        f"Formatted question doesn't match original for {template_file.name}"
     
-        # Skip test if no template files found
-        if not template_files:
-            pytest.skip("No template files found in directory: " + str(template_dir))
+    assert formatted_answer == annotated_question.answer, \
+        f"Formatted answer doesn't match original for {template_file.name}"
+
+
+@pytest.mark.parametrize("template_file,language", get_template_files())
+def test_default_assignments_are_valid(template_file, language):
+    annotated_question = AnnotatedQuestion.from_json(template_file)
+    example_assignments = annotated_question.default_assignments
+    constrained_lines = annotated_question.constrained_lines
+    conditions = annotated_question.conditions
+    
+    if not constrained_lines:
+        return
         
-        replacements = load_replacements("dan" if "dan" in str(template_dir) else "eng")
-        # Test each template file
-        for template_file in template_files:
-            # Load the annotated question
-            annotated_question = AnnotatedQuestion.from_json(template_file)
+    replacements = load_replacements(language)
+    possible_assignments = annotated_question._get_all_possible_assignments(constrained_lines, replacements)
+    
+    # Check example values are in possible assignments
+    for var_name, possible_values in possible_assignments.items():
+        if var_name not in example_assignments:
+            continue
             
-            # Get example assignments
-            example_assignments = annotated_question.default_assignments
-            
-            # Get constrained and unconstrained lines
-            constrained_lines = annotated_question.constrained_lines
-            unconstrained_lines = annotated_question.unconstrained_lines
-            conditions = annotated_question.conditions
-            
-            # Test constrained variables if they exist
-            if constrained_lines:
-                # Get all possible assignments for constrained variables
-                possible_assignments = annotated_question._get_all_possible_assignments(constrained_lines, replacements)
-                
-                # Check that each constrained variable's example value is in possible assignments
-                for var_name, possible_values in possible_assignments.items():
-                    if var_name in example_assignments:
-                        example_value = example_assignments[var_name]
-                        # Extract just the values from the tuples for comparison
-                        possible_value_set = {val[1] for val in possible_values}
-                        
-                        # Handle tuple values (like ("value1", "value2"))
-                        if isinstance(example_value, tuple):
-                            # For tuple values, first check if the exact tuple is in possible values
-                            # Then check if the tuple as a string representation is in possible values
-                            example_value = tuple(int(component) if str(component).isnumeric() else str(component) for component in example_value)
-                            tuple_of_strings = tuple(str(component) for component in example_value)
-                            tuple_as_string = f"({', '.join(tuple_of_strings)})"
-                            assert (example_value in possible_value_set or
-                                    tuple_of_strings in possible_value_set or
-                                    tuple_as_string in possible_value_set), \
-                                f"Example assignment {var_name}={example_value} not found in possible values {possible_value_set} for {template_file.name}"
-                        else:
-                            if str(example_value).isnumeric():
-                                # If the example value is numeric, convert it and possible values to float for comparison
-                                example_value = float(example_value)
-                                assert example_value in list(map(float,possible_value_set)), \
-                                    f"Example assignment {var_name}={example_value} not found in possible values {possible_value_set} for {template_file.name}"
-                            else:
-                                assert example_value in possible_value_set, \
-                                    f"Example assignment {var_name}={example_value} not found in possible values {possible_value_set} for {template_file.name}"
-                            
-                # Test that example assignments satisfy conditions
-                if conditions and any(cond.strip() != "True" for cond in conditions):
-                    # Create a combination dict similar to what _filter_invalid_combinations expects
-                    example_combination = {}
-                    for var_name in possible_assignments.keys():
-                        if var_name in example_assignments:
-                            example_value = example_assignments[var_name]
-                            # Handle tuple values - use the numeric part for evaluation
-                            if isinstance(example_value, tuple):
-                                # Try to find a numeric value in the tuple
-                                numeric_val = None
-                                for component in example_value:
-                                    try:
-                                        numeric_val = float(component) if '.' in str(component) else int(component)
-                                        break
-                                    except (ValueError, TypeError):
-                                        continue
-                                example_combination[var_name] = (var_name, numeric_val if numeric_val is not None else example_value[0])
-                            else:
-                                example_combination[var_name] = (var_name, example_value)
+        example_value = example_assignments[var_name]
+        possible_value_set = {val[1] for val in possible_values}
+        
+        if isinstance(example_value, tuple):
+            example_value = tuple(int(c) if str(c).isnumeric() else str(c) for c in example_value)
+            tuple_of_strings = tuple(str(c) for c in example_value)
+            tuple_as_string = f"({', '.join(tuple_of_strings)})"
+            assert (example_value in possible_value_set or
+                    tuple_of_strings in possible_value_set or
+                    tuple_as_string in possible_value_set), \
+                f"Example assignment {var_name}={example_value} not found in {possible_value_set} for {template_file.name}"
+        else:
+            if str(example_value).isnumeric():
+                example_value = float(example_value)
+                assert example_value in list(map(float, possible_value_set)), \
+                    f"Example assignment {var_name}={example_value} not found in {possible_value_set} for {template_file.name}"
+            else:
+                assert example_value in possible_value_set, \
+                    f"Example assignment {var_name}={example_value} not found in {possible_value_set} for {template_file.name}"
                     
-                    # Validate against conditions using the same logic as _filter_invalid_combinations
-                    for cond in conditions:
-                        if cond.strip() != "True":  # Skip trivial conditions
-                            temp_combination = example_combination | {k: v[1] for k, v in example_combination.items() if isinstance(v, tuple)}
-                            try:
-                                condition_result = eval(cond, {"__builtins__": {}}, EVAL_CONTEXT_HELPERS | temp_combination)
-                                assert condition_result, \
-                                    f"Example assignments {example_assignments} failed condition '{cond}' for {template_file.name}"
-                            except Exception as e:
-                                # Some conditions might reference variables not in example_assignments
-                                # This is acceptable as long as the core constraint variables are valid
-                                pass
+    # Check conditions are satisfied
+    if not conditions or all(cond.strip() == "True" for cond in conditions):
+        return
+        
+    example_combination = {}
+    for var_name in possible_assignments.keys():
+        if var_name in example_assignments:
+            example_value = example_assignments[var_name]
+            if isinstance(example_value, tuple):
+                numeric_val = None
+                for component in example_value:
+                    try:
+                        numeric_val = float(component) if '.' in str(component) else int(component)
+                        break
+                    except (ValueError, TypeError):
+                        continue
+                example_combination[var_name] = (var_name, numeric_val if numeric_val is not None else example_value[0])
+            else:
+                example_combination[var_name] = (var_name, example_value)
+    
+    for cond in conditions:
+        if cond.strip() == "True":
+            continue
+            
+        temp_combination = example_combination | {k: v[1] for k, v in example_combination.items() if isinstance(v, tuple)}
+        try:
+            condition_result = eval(cond, {"__builtins__": {}}, EVAL_CONTEXT_HELPERS | temp_combination)
+            assert condition_result, \
+                f"Example assignments {example_assignments} failed condition '{cond}' for {template_file.name}"
+        except Exception:
+            pass  # Some conditions reference variables not in example_assignments
