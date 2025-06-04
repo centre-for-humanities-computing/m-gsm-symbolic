@@ -8,14 +8,32 @@ from m_gsm_symbolic.load_data import load_replacements
 logger = logging.getLogger(__name__)
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Generate samples from annotated JSON templates.")
+    parser = argparse.ArgumentParser(
+        description="Generate samples from annotated JSON templates."
+    )
     parser.add_argument("template_path", help="Path to the JSON template file(s).")
-    parser.add_argument("num_samples", type=int, help="Number of samples to generate for each template.")
-    parser.add_argument("language", choices=["dan", "eng"], help="Language code for the template (e.g., 'eng', 'dan').")
+    parser.add_argument(
+        "num_samples", type=int, help="Number of samples to generate for each template."
+    )
+    parser.add_argument(
+        "language",
+        choices=["dan", "eng"],
+        help="Language code for the template (e.g., 'eng', 'dan').",
+    )
     parser.add_argument("-o", "--output", help="Output directory.")
-    parser.add_argument("-q", "--quiet", action="store_true", help="Suppress all output except errors and warnings.")
-    parser.add_argument("-d", "--debug", action="store_true", help="Enable debug output (debug level logging)")
-    
+    parser.add_argument(
+        "-q",
+        "--quiet",
+        action="store_true",
+        help="Suppress all output except errors and warnings.",
+    )
+    parser.add_argument(
+        "-d",
+        "--debug",
+        action="store_true",
+        help="Enable debug output (debug level logging)",
+    )
+
     args = parser.parse_args()
 
     if args.quiet:
@@ -25,14 +43,12 @@ if __name__ == "__main__":
     else:
         log_level = logging.INFO
 
-    
     logging.basicConfig(
-        level=log_level,
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+        level=log_level, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
     )
 
     replacements = load_replacements(args.language)
-    
+
     logger.info("Starting sample generation...")
     # Check if the template path is a directory or a file
     template_path = Path(args.template_path)
