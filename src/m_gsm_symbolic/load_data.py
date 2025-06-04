@@ -7,11 +7,9 @@ from m_gsm_symbolic.gsm_parser import AnnotatedQuestion
 logger = logging.getLogger(__name__)
 
 def load_replacements(language):
-    if language == "dan":
-        with open("data/templates/dan/replacements.json", "r", encoding="utf-8") as f:
-            return json.load(f)
-    elif language == "eng":
-        with open("data/templates/eng/replacements.json", "r", encoding="utf-8") as f:
+    root = Path(__file__).parents[3]
+    replacement_path = root / "data"/"templates"/f"{language}"/"replacements.json"
+     with replacement_path.open("r", encoding="utf-8") as f:
             return json.load(f)
     else:
         raise ValueError(f"No replacements file found for language: {language}")
