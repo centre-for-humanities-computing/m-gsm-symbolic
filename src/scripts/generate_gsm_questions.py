@@ -7,7 +7,8 @@ from m_gsm_symbolic.load_data import load_replacements
 
 logger = logging.getLogger(__name__)
 
-if __name__ == "__main__":
+
+def create_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description="Generate samples from annotated JSON templates."
     )
@@ -33,9 +34,45 @@ if __name__ == "__main__":
         action="store_true",
         help="Enable debug output (debug level logging)",
     )
+    return parser
 
+
+def main(language: str, template_path: Path, num_samples: int, output: Path | None):
+    replacements = load_replacements(language)
+
+    logger.info("Starting sample generation...")
+    # Check if the template path is a directory or a file
+    if template_path.is_dir():
+        template_files = list(template_path.glob("*.json"))
+        if not template_files:
+            raise FileNotFoundError(
+                f"No JSON files found in directory: {template_path}"
+            )
+    elif template_path.is_file():
+        template_files = [template_path]
+    else:
+        raise ValueError(
+            f"Invalid path: {template_path} - must be a file or directory."
+        )
+
+    for template_file in template_files:
+        logger.info(f"Processing template file: {template_file}")
+        question_template = AnnotatedQuestion.from_json(template_file)
+        questions = question_template.generate_questions(
+            num_samples, language=language, replacements=replacements
+        )
+        if output:
+            for i, question in enumerate(questions):
+                output_dir = output
+                output_dir.mkdir(parents=True, exist_ok=True)
+                output_file = output_dir / f"{template_file.stem}_{i + 1}.json"
+                question.to_json(output_file)
+                logger.info(f"Sample saved to: {output_file}")
+
+
+if __name__ == "__main__":
+    parser = create_parser()
     args = parser.parse_args()
-
     if args.quiet:
         log_level = logging.WARNING
     elif args.debug:
@@ -47,30 +84,9 @@ if __name__ == "__main__":
         level=log_level, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
     )
 
-    replacements = load_replacements(args.language)
-
-    logger.info("Starting sample generation...")
-    # Check if the template path is a directory or a file
-    template_path = Path(args.template_path)
-    if template_path.is_dir():
-        template_files = list(template_path.glob("*.json"))
-        if not template_files:
-            logger.error(f"No JSON files found in directory: {template_path}")
-            exit(1)
-    elif template_path.is_file():
-        template_files = [template_path]
-    else:
-        logger.error(f"Invalid path: {template_path}")
-        exit(1)
-
-    for template_file in template_files:
-        logger.info(f"Processing template file: {template_file}")
-        question_template = AnnotatedQuestion.from_json(template_file)
-        questions = question_template.generate_questions(args.num_samples, replacements)
-        if args.output:
-            for i, question in enumerate(questions):
-                output_dir = Path(args.output)
-                output_dir.mkdir(parents=True, exist_ok=True)
-                output_file = output_dir / f"{template_file.stem}_{i + 1}.json"
-                question.to_json(output_file)
-                logger.info(f"Sample saved to: {output_file}")
+    main(
+        language=args.language,
+        template_path=Path(args.template_path),
+        num_samples=args.num_samples,
+        output=Path(args.output) if args.output else None,
+    )
