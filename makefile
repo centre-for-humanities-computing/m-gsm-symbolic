@@ -22,6 +22,7 @@ do-translation:
 	@echo "--- Perform initial translation of the data ---"
 	uv run src/scripts/initial_translation.py
 
-make test:
+test:
 	@echo "--- 🧪 Running tests ---"
-	uv run pytest
+	uv run pytest -vv
+
