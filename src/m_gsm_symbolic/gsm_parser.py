@@ -529,7 +529,7 @@ class AnnotatedQuestion:
                     EVAL_CONTEXT_HELPERS
                     | assignments
                     | {
-                        k: int(v[1]) if v[1].isnumeric() else v[1]
+                        k: int(v[1]) if str(v[1]).isnumeric() else v[1]
                         for k, v in assignments.items()
                         if isinstance(v, tuple)
                     }
