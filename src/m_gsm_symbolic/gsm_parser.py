@@ -27,6 +27,8 @@ def divides(a, b):
 
 def sample(items, n=1):
     """Sample n items from the list"""
+    if n == 1:
+        return random.choice(items)
     return random.sample(items, n)
 
 
