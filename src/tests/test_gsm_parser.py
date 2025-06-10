@@ -214,7 +214,7 @@ def test_default_assignments_are_valid(template_file, language):
             continue
 
         example_value = example_assignments[var_name]
-        possible_value_set = {val[1] for val in possible_values}
+        possible_value_list = [val[1] for val in possible_values]
 
         if isinstance(example_value, tuple):
             example_value = tuple(
@@ -223,21 +223,21 @@ def test_default_assignments_are_valid(template_file, language):
             tuple_of_strings = tuple(str(c) for c in example_value)
             tuple_as_string = f"({', '.join(tuple_of_strings)})"
             assert (
-                example_value in possible_value_set
-                or tuple_of_strings in possible_value_set
-                or tuple_as_string in possible_value_set
+                example_value in possible_value_list
+                or tuple_of_strings in possible_value_list
+                or tuple_as_string in possible_value_list
             ), (
-                f"Example assignment {var_name}={example_value} not found in {possible_value_set} for {template_file.name}"
+                f"Example assignment {var_name}={example_value} not found in {possible_value_list} for {template_file.name}"
             )
         else:
             if str(example_value).isnumeric():
                 example_value = float(example_value)
-                assert example_value in list(map(float, possible_value_set)), (
-                    f"Example assignment {var_name}={example_value} not found in {possible_value_set} for {template_file.name}"
+                assert example_value in list(map(float, possible_value_list)), (
+                    f"Example assignment {var_name}={example_value} not found in {possible_value_list} for {template_file.name}"
                 )
             else:
-                assert example_value in possible_value_set, (
-                    f"Example assignment {var_name}={example_value} not found in {possible_value_set} for {template_file.name}"
+                assert example_value in possible_value_list, (
+                    f"Example assignment {var_name}={example_value} not found in {possible_value_list} for {template_file.name}"
                 )
 
     # Check conditions are satisfied
