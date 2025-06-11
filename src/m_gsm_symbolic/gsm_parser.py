@@ -32,6 +32,17 @@ def sample(items, n=1):
     return random.sample(items, n)
 
 
+def range_str(start, end, step, numbers):
+    """Return a string representation of a range statement."""
+    if start > end:
+        return ""
+    number_range = range(start, end + 1, step)
+    possible_numbers = [
+        (i, numbers[i - 1]) for i in number_range if i > 0 and i <= len(numbers)
+    ]
+    return random.choice(possible_numbers)
+
+
 def sample_sequential(items, n):
     """Sample n sequential items from the list"""
     start_idx = random.randint(0, len(items) - 1)
@@ -79,16 +90,13 @@ def range_possibilities(start, end, step=1):
     """Return possibilities for given range statement."""
     if start > end:
         return []
-    return list(range(start, end + 1, step))
+    return list(range(start, end, step))
 
 
 def range_possibilities_str(start, end, step, numbers):
     """Return possibilities for given range statement."""
     possible_numbers = range_possibilities(start, end, step)
-    possible_number_names = [numbers[i - 1] for i in possible_numbers]
-    if not possible_numbers:
-        return []
-    return list(zip(possible_number_names, map(str, possible_numbers)))
+    return [(numbers[i - 1], i) for i in possible_numbers]
 
 
 def arange_possibilities(start, end, step=1):
@@ -120,6 +128,7 @@ EVAL_CONTEXT_HELPERS = {
     "sample_sequential": sample_sequential,
     "list": list,
     "range": range,
+    "range_str": range_str,
     "arange": arange_sample,
     "Fraction": frac_format,
 }
@@ -134,7 +143,7 @@ COMBINATION_HELPERS = {
 
 
 def try_parse_float(value):
-    """Try to parse a value as float, return None if it fails."""
+    """Try to parse a string as float, return string if it fails."""
     if not isinstance(value, str):
         return value
     try:
@@ -144,7 +153,7 @@ def try_parse_float(value):
 
 
 def try_parse_fraction(value):
-    """Try to parse a value as a fraction, return None if it fails."""
+    """Try to parse a string as a fraction, return string if it fails."""
     if not isinstance(value, str):
         return value
     if "/" in value:
@@ -232,15 +241,10 @@ class AnnotatedQuestion:
     @property
     def variables(self) -> list[str]:
         """extract variable names from question_annotated"""
-        init_block = (
-            self.question_annotated.split("#init:")[1]
-            .split("#conditions:")[0]
-            .strip()
-            .splitlines()
-        )
+
         variables_per_line = [
             self._extract_variables_from_init_line(line)
-            for line in init_block
+            for line in self.init
             if "=" in line
         ]
         variable_sets = [set(v) for v in variables_per_line]
@@ -251,6 +255,7 @@ class AnnotatedQuestion:
         """extract variable definitions from question_annotated"""
         init_block = (
             self.question_annotated.split("#init:")[1]
+            .split("#answer:")[0]
             .split("#conditions:")[0]
             .strip()
             .splitlines()
@@ -299,26 +304,28 @@ class AnnotatedQuestion:
             if self._is_init_line_constrained(line, self.constrained_variables)
         ]
 
-    @property
-    def default_assignments(self) -> dict:
+    def get_default_assignments(self, replacements: dict) -> dict:
         """extract example assignments from question_annotated"""
         assignment_tuples = re.findall(r"\{(\w+),\s*([^}]+)\}", self.question_template)
 
+        # Convert value to int, float, or fraction if possible
         def parse_value(val):
-            if val.isnumeric():
+            if (
+                isinstance(val, str)
+                and val.isnumeric()
+                or isinstance(val, float)
+                and val.is_integer()
+            ):
                 return int(val)
-            elif val.startswith("(") and val.endswith(")"):
-                v1, v2 = strip_elements(list(val[1:-1].split(",")))
-                return v1, v2
-            return val
+            return try_parse_fraction(try_parse_float(val))
 
         assignments = {var: parse_value(val) for var, val in assignment_tuples}
-        answer_vars = re.findall(r"\{(\w+)\}", self.answer_annotated)
+
         # Ensure that all variables in the answer are also in the question template
-        for var in answer_vars:
+        for var in self.variables:
             if var not in assignments:
-                print(
-                    f"Warning: Variable {var} found in answer but not in question template. Attempting to derive value from other variables. In question {self.id_shuffled}."
+                logger.debug(
+                    f"Variable {var} found in answer but not in question template. Attempting to derive value from other variables. In question {self.id_shuffled}."
                 )
                 assignment_line = next(
                     (
@@ -329,25 +336,35 @@ class AnnotatedQuestion:
                     None,
                 )
                 vars = self._extract_variables_from_init_line(assignment_line)
+                definition_part = self._extract_definition_part_from_init_line(
+                    assignment_line
+                )
                 other_var = next((v for v in vars if v != var), None)
                 if other_var and other_var in assignments:
-                    known_value = re.escape(assignments[other_var])
-
-                    # Try to find the unknown value in either position
-                    # Pattern 1: known value is first, unknown is second
-                    pattern1 = r'\("' + known_value + r'",\s*"([^"]+)"\)'
-                    # Pattern 2: known value is second, unknown is first
-                    pattern2 = r'\("([^"]+)",\s*"' + known_value + r'"\)'
-
-                    match = re.search(pattern1, assignment_line)
-                    if not match:
-                        match = re.search(pattern2, assignment_line)
-
-                    try:
-                        assignments[var] = match.group(1)
-                    except AttributeError:
-                        raise AttributeError(
-                            f"Could not find a match for variable {var} in assignment line: {assignment_line}. Please check the question template."
+                    other_value = assignments[other_var]
+                    potential_values = eval(
+                        definition_part,
+                        {"__builtins__": {}},
+                        COMBINATION_HELPERS | replacements,
+                    )
+                    for val in potential_values:
+                        if isinstance(val, (tuple, list)) and len(val) == 2:
+                            if (
+                                val[0] == other_value
+                                or val[1] == other_value
+                                or str(val[0]) == str(other_value)
+                                or str(val[1]) == str(other_value)
+                            ):
+                                assignments[var] = (
+                                    val[1]
+                                    if val[0] == other_value
+                                    or str(val[0]) == str(other_value)
+                                    else val[0]
+                                )
+                                break
+                    if assignments.get(var) is None:
+                        raise ValueError(
+                            f"Could not derive value for variable {var} with value {other_value} from other variables in assignment line: {assignment_line} with potential values {potential_values}. Please check the question template."
                         )
                 else:
                     raise ValueError(
@@ -360,6 +377,12 @@ class AnnotatedQuestion:
         """extract variable names from a line"""
         variables = line.split("=")[0].strip("- ").strip("$").split(",")
         return [v.strip() for v in variables]
+
+    def _extract_definition_part_from_init_line(self, line: str) -> str:
+        """extract the assignment statement from a line"""
+        if "=" in line:
+            return line.split("=", 1)[1].strip()
+        return ""
 
     def _is_init_line_constrained(
         self, line: str, constrained_variables: list[str]
@@ -379,10 +402,6 @@ class AnnotatedQuestion:
         variables = strip_elements(variable_part.strip("$").split(","))
         definition_part = definition_part.strip()
 
-        if definition_part.startswith("range(") or definition_part.startswith(
-            "list(range("
-        ):
-            definition_part = "sample(" + definition_part + ")"
         try:
             values = list(
                 eval(
@@ -445,9 +464,36 @@ class AnnotatedQuestion:
                     )
                     raise e
             else:
-                logger.warning(
-                    f"Constrained init line '{line}' has more than 1 variable. Skipping..."
-                )
+                # If there are multiple variables, we need to handle them as a tuple
+                try:
+                    possible_values = eval(
+                        definition_part,
+                        {"__builtins__": {}},
+                        COMBINATION_HELPERS | replacements,
+                    )
+                    logger.debug(
+                        f"Variables: {variables}, Definition part: {definition_part}, Possible values: {possible_values}"
+                    )
+                except Exception as e:
+                    logger.error(
+                        f"Error evaluating assignment for {variable_part}: {definition_part} -> {e}"
+                    )
+                    raise e
+                if (
+                    isinstance(possible_values, list)
+                    or isinstance(possible_values, tuple)
+                ) and len(
+                    possible_values[0]
+                    if isinstance(possible_values, list)
+                    else possible_values
+                ) == len(variables):
+                    for i, var in enumerate(variables):
+                        pos_vals = [(var, pos_val[i]) for pos_val in possible_values]
+                        possible_assignments[var] = pos_vals
+                else:
+                    logger.warning(
+                        f"Warning: {variables} and {possible_values} are incompatible for line {line}."
+                    )
 
         return possible_assignments
 
@@ -460,14 +506,12 @@ class AnnotatedQuestion:
 
     def _filter_invalid_combinations(self, combinations, conditions):
         valid_combinations = []
+        # Iterate through each combination and check against every condition
         for combination in combinations:
             is_valid = True
             for cond in conditions:
-                temp_combination = combination | {
-                    k: v[1] for k, v in combination.items() if isinstance(v, tuple)
-                }
                 if not eval(
-                    cond, {"__builtins__": {}}, EVAL_CONTEXT_HELPERS | temp_combination
+                    cond, {"__builtins__": {}}, EVAL_CONTEXT_HELPERS | combination
                 ):
                     is_valid = False
                     break
@@ -483,7 +527,7 @@ class AnnotatedQuestion:
             variable_name = match.group(1)
             if variable_name in assignments:
                 value = assignments[variable_name]
-                return str(value[0]) if isinstance(value, tuple) else str(value)
+                return str(value)
 
             return match.group(0)
 
@@ -494,54 +538,21 @@ class AnnotatedQuestion:
         return capitalize_sentences(processed_text)
 
     def format_answer(self, assignments, language: str = "eng"):
-        # Handle tuples in the combination
-        def contains_arithmetic_operators(expr):
-            # Check if the expression is a simple arithmetic expression
-            return any(op in expr for op in ["+", "-", "=", "*", "/", "%", "**", "//"])
-
         def eval_curly_expr(match):
             expr_str = match.group(1)  # Expression inside curly braces
 
-            # Get prefix and suffix by examining the position in the text
-            start_pos = match.start()
-            end_pos = match.end()
-
-            prefix = ""
-            suffix = ""
-
-            # Check for prefix character
-            if start_pos > 0:
-                prefix_char = processed_text[start_pos - 1]
-                if not prefix_char.isspace():
-                    prefix = prefix_char
-
-            # Check for suffix character
-            if end_pos < len(processed_text):
-                suffix_char = processed_text[end_pos]
-                if not suffix_char.isspace():
-                    suffix = suffix_char
-
             logger.debug(f"Evaluating expression: {expr_str}")
-            if (
-                contains_arithmetic_operators(expr_str)
-                or contains_arithmetic_operators(prefix)
-                or contains_arithmetic_operators(suffix)
-            ):
-                eval_env = (
-                    EVAL_CONTEXT_HELPERS
-                    | assignments
-                    | {
-                        k: int(v[1]) if str(v[1]).isnumeric() else v[1]
-                        for k, v in assignments.items()
-                        if isinstance(v, tuple)
-                    }
-                )
-            else:
-                eval_env = (
-                    EVAL_CONTEXT_HELPERS
-                    | assignments
-                    | {k: v[0] for k, v in assignments.items() if isinstance(v, tuple)}
-                )
+
+            eval_env = EVAL_CONTEXT_HELPERS | assignments
+            # Parse the occasional integer...
+            eval_env = eval_env | {
+                k: int(v)
+                for k, v in eval_env.items()
+                if isinstance(v, str)
+                and v.isnumeric()
+                or isinstance(v, float)
+                and v.is_integer()
+            }
             # Parse the occational float...
             eval_env = eval_env | {k: try_parse_float(v) for k, v in eval_env.items()}
             # Parse the occational fraction...
@@ -551,21 +562,20 @@ class AnnotatedQuestion:
             try:
                 value = eval(expr_str, {"__builtins__": {}}, eval_env)
                 logger.debug(f"Evaluated value: {value}")
-                # Convert integer-like floats to integers for display
                 if isinstance(value, float) and value.is_integer():
                     value = int(value)
-                if language == "dan" and isinstance(value, (int, float)):
-                    value = str(value).replace(".", ",")
-                else:
-                    value = str(value)
                 return str(value)
+            except NameError as e:
+                raise NameError(
+                    str(e)
+                    + f"\nNameError evaluating expression '{expr_str}' with environment {eval_env} for answer {self.answer_annotated} with assignments{assignments} in file {self.id_shuffled}"
+                )
             except Exception as e:
                 logger.error(
                     f"Error evaluating expression '{expr_str}': {e} with environment {eval_env} for answer {self.answer_annotated} with assignments{assignments} in file {self.id_shuffled}"
                 )
                 raise e
 
-        # Use a simpler pattern that doesn't capture prefix/suffix
         processed_text = self.answer_annotated
         processed_text = re.sub(
             r"\{([^}]+)\}", lambda m: eval_curly_expr(m), processed_text
