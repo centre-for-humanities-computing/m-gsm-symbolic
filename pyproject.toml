@@ -5,16 +5,24 @@ description = "A codebase for examining the cross-lingual transfer of reasoning.
 readme = "README.md"
 authors = [
     { name = "Kenneth Enevoldsen", email = "kennethcenevoldsen@gmail.com" },
+    { name = "Nicolas Legrand", email = "nicolas.legrand@cas.au.dk" },
+    { name = "Simon Enni", email = "enni@cas.au.dk" },
+    { name = "Sofie Mosegaard", email = "sofie.mosegaard@cas.au.dk" },
 ]
 
 requires-python = ">=3.12"
 dependencies = [
-    "pydantic>=2.11.4",
-    "pydantic-ai>=0.2.12",
-    "pydantic-evals>=0.2.12",
+    "torch>=2.6.0",
+    "wandb>=0.19.11",
     "ipykernel>=6.29.5",
     "numpy>=2.2.6",
     "pandas>=2.3.0",
+    "unsloth>=2025.6.2",
+    "vllm>=0.9.1",
+    "bitsandbytes>=0.46.0",
+    "triton>=3.3.0",
+    "xformers>0.0.27",
+    "trl>=0.18.1",
 ]
 
 [build-system]
