@@ -26,3 +26,6 @@ test:
 	@echo "--- 🧪 Running tests ---"
 	uv run pytest -vv
 
+do-post-training:
+	@echo "--- Perform post training using GRPO ---"
+	uv run src/scripts/post_training.py
