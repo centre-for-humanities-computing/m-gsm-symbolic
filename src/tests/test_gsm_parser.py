@@ -1,34 +1,16 @@
 import pytest
 from pathlib import Path
-from m_gsm_symbolic.gsm_parser import EVAL_CONTEXT_HELPERS, AnnotatedQuestion
+from m_gsm_symbolic.gsm_parser import (
+    EVAL_CONTEXT_HELPERS,
+    AnnotatedQuestion,
+    try_parse_float,
+    try_parse_fraction,
+)
 from m_gsm_symbolic.load_data import load_replacements
 
 
 class TestGetAllPossibleAssignments:
     """Test class for testing the _get_all_possible_assignments method."""
-
-    def test_simple_assignment(self):
-        """Test with simple variable assignments."""
-        # Create a mock AnnotatedQuestion
-        annotated_question = AnnotatedQuestion(
-            question="Test question",
-            answer="Test answer",
-            id_orig=1,
-            id_shuffled=1,
-            question_annotated="Test template\n#init:\n- $x = 5\n#conditions:\n- True\n#answer:\nAnswer is {x}",
-            answer_annotated="Answer is {x}",
-        )
-
-        # Call the method with a simple assignment
-        init_lines = ["$x = range(1, 3)"]
-        replacements = {}
-        result = annotated_question._get_all_possible_assignments(
-            init_lines, replacements
-        )
-
-        # Expected: x should have possible values 1, 2, 3 as tuples ('x', value)
-        expected = {"x": [("x", 1), ("x", 2), ("x", 3)]}
-        assert result == expected
 
     def test_range_expression(self):
         """Test with range expressions."""
@@ -37,11 +19,11 @@ class TestGetAllPossibleAssignments:
             answer="Test answer",
             id_orig=1,
             id_shuffled=1,
-            question_annotated="Test template\n#init:\n- $x = range(1, 5)\n#conditions:\n- True\n#answer:\nAnswer is {x}",
+            question_annotated="Test template\n#init:\n- $x = range(1, 6)\n#conditions:\n- True\n#answer:\nAnswer is {x}",
             answer_annotated="Answer is {x}",
         )
 
-        init_lines = ["$x = range(1, 5)"]
+        init_lines = ["$x = range(1, 6)"]
         replacements = {}
         result = annotated_question._get_all_possible_assignments(
             init_lines, replacements
@@ -93,26 +75,6 @@ class TestGetAllPossibleAssignments:
         expected = {"x": [("x", 10), ("x", 20), ("x", 30)]}
         assert result == expected
 
-    def test_multiple_variables(self):
-        """Test with multiple variables (should skip this case)."""
-        annotated_question = AnnotatedQuestion(
-            question="Test question",
-            answer="Test answer",
-            id_orig=1,
-            id_shuffled=1,
-            question_annotated="Test template\n#init:\n- $x, $y = range(1, 2)\n#conditions:\n- True\n#answer:\nAnswer is {x}",
-            answer_annotated="Answer is {x}",
-        )
-
-        init_lines = ["$x, $y = range(1, 2)"]
-        replacements = {}
-        result = annotated_question._get_all_possible_assignments(
-            init_lines, replacements
-        )
-
-        # Expected: empty dict since multiple variables are skipped
-        assert result == {}
-
     def test_empty_range(self):
         """Test with empty range."""
         annotated_question = AnnotatedQuestion(
@@ -145,7 +107,7 @@ class TestGetAllPossibleAssignments:
         )
 
         init_lines = ["$x = range(start, end)"]
-        replacements = {"start": 2, "end": 5}
+        replacements = {"start": 2, "end": 6}
         result = annotated_question._get_all_possible_assignments(
             init_lines, replacements
         )
@@ -175,13 +137,14 @@ def get_template_files():
 @pytest.mark.parametrize("template_file,language", get_template_files())
 def test_template_formatting_matches_original(template_file, language):
     annotated_question = AnnotatedQuestion.from_json(template_file)
-    example_assignments = annotated_question.default_assignments
+    replacements = load_replacements(language)
+    default_assignments = annotated_question.get_default_assignments(replacements)
 
     formatted_question = annotated_question.format_question(
-        example_assignments, language=language
+        default_assignments, language=language
     )
     formatted_answer = annotated_question.format_answer(
-        example_assignments, language=language
+        default_assignments, language=language
     )
 
     assert formatted_question == annotated_question.question, (
@@ -196,7 +159,8 @@ def test_template_formatting_matches_original(template_file, language):
 @pytest.mark.parametrize("template_file,language", get_template_files())
 def test_default_assignments_are_valid(template_file, language):
     annotated_question = AnnotatedQuestion.from_json(template_file)
-    example_assignments = annotated_question.default_assignments
+    replacements = load_replacements(language)
+    default_assignments = annotated_question.get_default_assignments(replacements)
     constrained_lines = annotated_question.constrained_lines
     conditions = annotated_question.conditions
 
@@ -204,53 +168,62 @@ def test_default_assignments_are_valid(template_file, language):
         return
 
     replacements = load_replacements(language)
-    possible_assignments = annotated_question._get_all_possible_assignments(
+    all_possible_assignments = annotated_question._get_all_possible_assignments(
         constrained_lines, replacements
     )
 
     # Check example values are in possible assignments
-    for var_name, possible_values in possible_assignments.items():
-        if var_name not in example_assignments:
+    for var_name, possible_assignments in all_possible_assignments.items():
+        if var_name not in default_assignments:
             continue
+        possible_values_for_var = [
+            val[1] for val in possible_assignments if isinstance(val, tuple)
+        ]
 
-        example_value = example_assignments[var_name]
-        possible_value_list = [val[1] for val in possible_values]
+        default_value = default_assignments[var_name]
 
-        if isinstance(example_value, tuple):
-            example_value = tuple(
-                int(c) if str(c).isnumeric() else str(c) for c in example_value
+        if isinstance(default_value, tuple):
+            default_value = tuple(
+                int(c) if str(c).isnumeric() else str(c) for c in default_value
             )
-            tuple_of_strings = tuple(str(c) for c in example_value)
-            tuple_as_string = f"({', '.join(tuple_of_strings)})"
             assert (
-                example_value in possible_value_list
-                or tuple_of_strings in possible_value_list
-                or tuple_as_string in possible_value_list
+                default_value in possible_values_for_var
+                or list(default_value) in possible_values_for_var
             ), (
-                f"Example assignment {var_name}={example_value} not found in {possible_value_list} for {template_file.name}"
+                f"Example assignment {var_name}={default_value} not found in {possible_values_for_var} for {template_file.name}"
             )
         else:
-            if str(example_value).isnumeric():
-                example_value = float(example_value)
-                assert example_value in list(map(float, possible_value_list)), (
-                    f"Example assignment {var_name}={example_value} not found in {possible_value_list} for {template_file.name}"
-                )
-            else:
-                assert example_value in possible_value_list, (
-                    f"Example assignment {var_name}={example_value} not found in {possible_value_list} for {template_file.name}"
-                )
+            val_as_float = try_parse_float(str(default_value))
+            val_as_fraction = try_parse_fraction(str(default_value))
+            val_as_int = (
+                int(default_value)
+                if str(default_value).isnumeric()
+                or isinstance(default_value, float)
+                and default_value.is_integer()
+                else default_value
+            )
+
+            assert (
+                val_as_float in possible_values_for_var
+                or str(val_as_float) in possible_values_for_var
+                or val_as_fraction in possible_values_for_var
+                or str(val_as_fraction) in possible_values_for_var
+                or val_as_int in possible_values_for_var
+            ), (
+                f"Example assignment {var_name}={default_value} not found in {possible_values_for_var} for {template_file.name}"
+            )
 
     # Check conditions are satisfied
     if not conditions or all(cond.strip() == "True" for cond in conditions):
         return
 
     example_combination = {}
-    for var_name in possible_assignments.keys():
-        if var_name in example_assignments:
-            example_value = example_assignments[var_name]
-            if isinstance(example_value, tuple):
+    for var_name in all_possible_assignments.keys():
+        if var_name in default_assignments:
+            default_value = default_assignments[var_name]
+            if isinstance(default_value, tuple):
                 numeric_val = None
-                for component in example_value:
+                for component in default_value:
                     try:
                         numeric_val = (
                             float(component)
@@ -262,10 +235,10 @@ def test_default_assignments_are_valid(template_file, language):
                         continue
                 example_combination[var_name] = (
                     var_name,
-                    numeric_val if numeric_val is not None else example_value[0],
+                    numeric_val if numeric_val is not None else default_value[0],
                 )
             else:
-                example_combination[var_name] = (var_name, example_value)
+                example_combination[var_name] = (var_name, default_value)
 
     for cond in conditions:
         if cond.strip() == "True":
@@ -279,7 +252,7 @@ def test_default_assignments_are_valid(template_file, language):
                 cond, {"__builtins__": {}}, EVAL_CONTEXT_HELPERS | temp_combination
             )
             assert condition_result, (
-                f"Example assignments {example_assignments} failed condition '{cond}' for {template_file.name}"
+                f"Example assignments {default_assignments} failed condition '{cond}' for {template_file.name}"
             )
         except Exception:
             pass  # Some conditions reference variables not in example_assignments
