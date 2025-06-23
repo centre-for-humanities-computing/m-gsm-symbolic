@@ -11,7 +11,7 @@ from pydantic_ai import Agent
 from pydantic_evals import Dataset
 from pydantic_evals.evaluators import LLMJudge
 
-from m_gsm_symbolic.kaenguruen.load_data import load_kaenguruen
+from m_gsm_symbolic.kaenguruen.load_data_incl_options import load_kaenguruen
 
 cases = [p.to_case() for p in load_kaenguruen()]
 
