@@ -46,7 +46,7 @@ class KaenguruenProblem(BaseModel):
         """
         return Case(
             name=self.problem_id,
-            inputs={self.question, self.options},
+            inputs=f"{self.question}\n\n{self.options}",
             expected_output=self.answer,
             metadata={
                 "solution": self.solution,
