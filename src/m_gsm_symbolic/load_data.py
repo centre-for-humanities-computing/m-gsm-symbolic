@@ -7,9 +7,12 @@ from pydantic_evals import Case
 
 from m_gsm_symbolic.gsm_parser import AnnotatedQuestion
 
-default_gsm_dan_path = Path(__file__).parents[2] / "data" / "templates" / "dan" / "symbolic"
+default_gsm_dan_path = (
+    Path(__file__).parents[2] / "data" / "templates" / "dan" / "symbolic"
+)
 
 logger = logging.getLogger(__name__)
+
 
 def load_replacements(language):
     root = Path(__file__).parents[2]
@@ -28,23 +31,25 @@ def load_data(language):
 
 
 class GSMProblem(BaseModel):
-
     question: str
     answer: str
     id_orig: int
     filepath: Path
 
     def to_case(self) -> Case:
-        return Case(name = str(self.id_orig),
-                    inputs = self.question,
-                    expected_output = self.answer,
-                    metadata = {"filepath": self.filepath.as_posix(),},)
+        return Case(
+            name=str(self.id_orig),
+            inputs=self.question,
+            expected_output=self.answer,
+            metadata={
+                "filepath": self.filepath.as_posix(),
+            },
+        )
 
 
 def _parse_json_file(filepath: str | Path) -> GSMProblem:
-
     filepath = Path(filepath)
-    with open(filepath, "r", encoding = "utf-8") as file:
+    with open(filepath, "r", encoding="utf-8") as file:
         content = json.load(file)
 
     question = content["question"]
@@ -52,17 +57,16 @@ def _parse_json_file(filepath: str | Path) -> GSMProblem:
     id_orig = content["id_orig"]
     filepath = filepath
 
-    problem_data = GSMProblem(question = question,
-                              answer = answer,
-                              id_orig = id_orig,
-                              filepath = filepath)
+    problem_data = GSMProblem(
+        question=question, answer=answer, id_orig=id_orig, filepath=filepath
+    )
     return problem_data
 
 
-def load_gsm_dan(directory_path: str | Path = default_gsm_dan_path,) -> list[GSMProblem]:
-
+def load_gsm_dan(
+    directory_path: str | Path = default_gsm_dan_path,
+) -> list[GSMProblem]:
     dir_path = Path(directory_path)
     json_files = list(dir_path.glob("*.json"))
-    
-    return [_parse_json_file(f) for f in json_files]
 
+    return [_parse_json_file(f) for f in json_files]
