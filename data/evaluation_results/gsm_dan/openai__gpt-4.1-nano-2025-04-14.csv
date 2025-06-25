@@ -1,0 +1,3295 @@
+name,inputs,expected_output,output,task_duration,assertion_value,assertion_reason
+473,Benny så en 10-fods haj med 2 remoras på 6 tommer hver fastgjort til den. Hvor mange procent af hajens kropslængde udgør den samlede længde af remoras?,"Først, find den samlede længde af remoras i tommer: 6 tommer/remora * 2 remoras = <<6*2=12>>12 tommer
+Derefter dividerer du det tal med 12 for at konvertere det til fod: 12 tommer / 12 tommer/fod = <<1=1>>1 fod
+Derefter dividerer du den samlede remoralængde i fod med hajens længde og ganger med 100% for at udtrykke svaret som en procentdel: 1 fod / 10 fod * 100% = 10%
+#### 10","Først skal vi finde den samlede længde af remoras, og derefter udregne, hvor stor en procentdel det udgør af hajens kropslængde.
+
+**Trin 1:** Konverter remoras længde til fod.  
+Hver remora er 6 tommer lang. Der er 12 tommer i en fod.  
+Så:
+
+\[
+6 \text{ tommer} = \frac{6}{12} = 0,5 \text{ fod}
+\]
+
+Der er 2 remoras, så den samlede længde af remoras er:
+
+\[
+2 \times 0,5 \text{ fod} = 1 \text{ fod}
+\]
+
+**Trin 2:** Find procentdelen af hajens længde udgjort af remoras.  
+Hajen er 10 fod lang.
+
+Andelen:
+
+\[
+\frac{\text{Remoras samlede længde}}{\text{Hajen længde}} = \frac{1}{10} = 0,1
+\]
+
+Procentdelen:
+
+\[
+0,1 \times 100\% = 10\%
+\]
+
+**Svar:** Remoras udgør **10%** af hajens kropslængde.",1.0,True,"The output provides a step-by-step solution to the mathematical problem and arrives at the correct answer, which is that the remoras constitute 10% of the shark's body length."
+103,"En tågebank kommer ind fra havet for at dække en by. Det tager 10 minutter at dække hver 3 miles af byen. Hvis byen er 42 miles bred fra havnefronten til den modsatte indlandsgrænse, hvor mange minutter vil det så tage for tågebanken at dække hele byen?","Byen vil blive dækket på 42 / 3 = <<42/3=14>>14 intervaller af 10 minutter.
+Således vil det tage 14 * 10 = <<14*10=140>>140 minutter for tågen at dække hele byen.
+#### 140","Lad os først finde ud af, hvor mange ""dækninger"" af tågebanken der skal til for at dække hele byen.
+
+**Givet:**
+- Tiden for at dække 3 miles = 10 minutter
+- Byens bredde = 42 miles
+
+**Trin 1: Find antallet af gange tågen skal dække 3 miles for at dække 42 miles**
+\[
+\text{Antal segmenter} = \frac{42 \text{ miles}}{3 \text{ miles per segment}} = 14
+\]
+
+**Trin 2: Find den totale tid**
+Hvis det tager 10 minutter at dække én 3-mile sektion, så vil det tage:
+\[
+14 \times 10 \text{ minutter} = 140 \text{ minutter}
+\]
+
+**Svar:**
+
+\[
+\boxed{140 \text{ minutter}}
+\]",1.0,True,"The output provides a correct and detailed explanation to solve the problem. The arithmetic and logic used align with the question, and the final answer, 140 minutes, is correct based on the input data."
+184,"Jerry kaster en seks-sidet terning. Hvor meget mere sandsynligt er det (udtrykt som procent), at han kaster et tal større end 3, end at han kaster to lige numre i træk?","Der er 3 tal større end 3 på terningen, så chancen for at kaste et af dem er 3 / 6 = 50%.
+Chancen for at kaste et lige tal er 50%, så chancen for at kaste to i træk er 50% * 50% = 25%.
+Forskellen mellem disse to sandsynligheder er 50% - 25% = 25%.
+#### 25","Lad os starte med at analysere de to hændelser:
+
+**1. Sandsynligheden for at kaste et tal større end 3 med en seks-sidet terning**
+
+- De mulige udfald, der er større end 3, er: 4, 5, 6
+- Antal udfald: 3
+- Total antal udfald: 6
+
+**Sandsynlighed for ""et tal større end 3"":**
+\[
+P(\text{>3}) = \frac{3}{6} = \frac{1}{2} = 50\%
+\]
+
+---
+
+**2. Sandsynligheden for at kaste to lige numre i træk**
+
+- De lige tal på terningen er: 2, 4, 6
+- Sandsynlighed for at få et lige tal i ét kast:
+\[
+P(\text{lige}) = \frac{3}{6} = \frac{1}{2}
+\]
+- For to uafhængige kast:
+\[
+P(\text{to lige i træk}) = P(\text{lige på første kast}) \times P(\text{lige på andet kast}) = \frac{1}{2} \times \frac{1}{2} = \frac{1}{4}
+\]
+
+**Sandsynligheden i procent:**
+\[
+\frac{1}{4} = 25\%
+\]
+
+---
+
+**Nu skal vi finde, hvor meget mere sandsynligt det er (udtrykt som procent), at Jerry kaster et tal større end 3 end at han kaster to lige numre i træk.**
+
+**Andelen af sandsynligheder:**
+\[
+\frac{50\%}{25\%} = 2
+\]
+
+Dette betyder, at hændelsen ""kaste et tal større end 3"" er **100% mere sandsynligt** end ""kaste to lige numre i træk"" (fordi det er dobbelt så sandsynligt).
+
+**Svar:**
+\[
+\boxed{100\%}
+\]
+
+**Konklusion:** Det er **100% mere sandsynligt** (dvs. dobbelt så sandsynligt) at kaste et tal større end 3 end at kaste to lige numre i træk.",1.0,True,The calculations provided are correct. The probability of rolling a number greater than 3 (50%) is indeed 100% more likely than rolling two even numbers consecutively (25%).
+740,"En klasse på 50 elever har forskellige hobbyer. 10 kan lide at bage, 5 kan lide at spille basketball, og resten kan lide enten at spille videospil eller spille musik. Hvor mange kan lide at spille videospil, hvis antallet, der kan lide at spille musik, er dobbelt så mange som dem, der foretrækker at spille basketball?","Antallet af elever, der kan lide at spille musik, er dobbelt så mange som dem, der kan lide basketball, så 2 * 5 = 10
+Antallet, der kan lide at spille videospil, er 50 elever i alt - 10 der bager - 5 basketball - 10 musik = 25
+#### 25","Lad os definere variablerne:
+
+- \(-B\): Antallet af elever, der kan lide at bage = 10
+- \(-S\): Antallet af elever, der kan lide at spille basketball = 5
+- \(-V\): Antallet af elever, der kan lide at spille videospil = ?
+
+- \(-M\): Antallet af elever, der kan lide at spille musik = ?
+
+Total elever: \(50\)
+
+Ifølge opgaven er resten af eleverne (dem, der ikke kan lide at bage eller basketball) dem, der kan lide videospil eller musik.
+
+Altså:
+
+\[
+V + M = 50 - (B + S) = 50 - (10 + 5) = 35
+\]
+
+Desuden er det givet, at:
+
+\[
+M = 2 \times S = 2 \times 5 = 10
+\]
+
+Nu kan vi finde \(V\):
+
+\[
+V = 35 - M = 35 - 10 = 25
+\]
+
+**Svar:**
+
+\[
+\boxed{25}
+\]
+
+**Der kan lide at spille videospil er 25 elever.**",1.0,True,"The output provides a detailed calculation and the final answer to the question, ensuring it is consistent with the expected result."
+1264,"Garrett laver popcorn som en snack. Når panden med majskernerne bliver varm, begynder kernerne at poppe hurtigere. Tyve popper i de første 30 sekunder af tilberedningen, derefter tre gange det antal i de næste 30 sekunder. Kernerne øges til fire gange den oprindelige popperate i de næste tredive sekunder, men i de sidste 30 sekunder aftager poppningen til halvdelen af hastigheden som de forgangne 30 sekunder. Efter at Garrett har taget panden af varmen, popper en fjerdedel af antallet af kerner, der poppede i de sidste 30 sekunder af tilberedningen også på grund af den resterende varme. Hvor mange stykker popcorn har Garrett at spise?","I de anden 30 sekunder af tilberedningen popper 3 * 20 = <<3*20=60>>60 kerner.
+I de tredje 30 sekunder popper 4 * 20 = <<4*20=80>>80 kerner.
+I de sidste 30 sekunder popper 80 / 2 = <<80/2=40>>40 kerner.
+Efter tilberedningen får den resterende varme til at 40 / 4 = <<40/4=10>>10 kerner popper.
+Således har Garrett 20 + 60 + 80 + 40 + 10 = <<20+60+80+40+10=210>>210 stykker popcorn at spise.
+#### 210","Lad os analysere opgaven trin for trin.
+
+### Givne oplysninger:
+- Samlet tilberedningstid: 4 blokke á 30 sekunder = 120 sekunder.
+- Populationen af popcorn per periode:
+  1. Første 30 sekunder: 20 kerner.
+  2. Anden 30 sekunder: tre gange det første = \(3 \times 20 = 60\) kerner.
+  3. Tredje 30 sekunder: fire gange det første = \(4 \times 20 = 80\) kerner.
+  4. Fjerde 30 sekunder: halvdelen af den foregående - altså halvdelen af 80 = 40 kerner.
+
+### Step 1: Popper antallet af kerner i hver periode
+| Periode                        | Antal kerner                          |
+|-------------------------------|-------------------------------------|
+| 0-30 sekunder (A)             | 20                                  |
+| 30-60 sekunder (B)             | 60                                  |
+| 60-90 sekunder (C)             | 80                                  |
+| 90-120 sekunder (D)            | 40                                  |
+
+### Step 2: Popper fra poppede kerner
+- Efter at have fjernet panden fra varmen, fortsætter nogle kerner med at poppe.
+- En fjerdedel (25%) af kernerne, der poppede i den sidste periode (D), popper også efter fjernelsen af varmen.
+
+### Step 3: Beregning af det totale antal poppede kerner
+- **Total poppede under tilberedningen:**
+
+\[
+20 + 60 + 80 + 40 = 200
+\]
+
+- **Efter tilberedningen fortsætter poppningen fra kerner i sidste periode (D):**
+
+\[
+\text{Yderligere kerner} = \frac{1}{4} \times 40 = 10
+\]
+
+- **Samlet antal popcorn, Garrett spiser:**
+
+\[
+200 + 10 = \boxed{210}
+\]
+
+---
+
+## **Svar:**  
+**Garrett har 210 stykker popcorn at spise.**",1.0,True,The output correctly calculates the number of pieces of popcorn Garrett will have to eat by breaking down the popping rate for each period and accounting for the additional popcorn popped from residual heat.
+116,"Katy laver kaffe ved hjælp af teskefulde sukker og kopper vand i forholdet 7:13. Hvis hun brugte i alt 120 teskefulde sukker og kopper vand, beregn antallet af teskefulde sukker, hun brugte.","Det samlede forhold, der repræsenterer de ingredienser, hun brugte til at lave kaffen, er 7+13 = <<7+13=20>>20
+Da brøken, der repræsenterer antallet af teskefulde, hun brugte, er 7/20, brugte hun 7/20*120 = <<7/20*120=42>>42
+#### 42","Lad os først definere variablerne:
+
+- \( S \): antallet af teskefulde sukker
+- \( V \): antallet af kopper vand
+
+Ifølge opgaven er forholdet mellem sukker og vand:
+
+\[
+\frac{S}{V} = \frac{7}{13}
+\]
+
+og det samlede antal er:
+
+\[
+S + V = 120
+\]
+
+Fra forholdet kan vi skrive:
+
+\[
+V = \frac{13}{7} S
+\]
+
+Indsæt dette i den samlede sum:
+
+\[
+S + \frac{13}{7} S = 120
+\]
+
+Fællesnævneren er 7:
+
+\[
+\frac{7}{7} S + \frac{13}{7} S = 120
+\]
+
+\[
+\frac{7 S + 13 S}{7} = 120
+\]
+
+\[
+\frac{20 S}{7} = 120
+\]
+
+Multiplicer begge sider med 7:
+
+\[
+20 S = 120 \times 7
+\]
+
+\[
+20 S = 840
+\]
+
+Divide begge sider med 20:
+
+\[
+S = \frac{840}{20} = 42
+\]
+
+**Svar: Katy brugte 42 teskefulde sukker.**",1.0,True,"The output correctly calculates the number of teaspoons of sugar Katy used, following the ratio 7:13 with a total of 120 units. The detailed step-by-step solution confirms the answer of 42 teaspoons of sugar."
+145,John har 10 hektar ananasmark. Der er 100 ananas pr. hektar. John kan høste sine ananas hver 3. måned. Hvor mange ananas kan John høste inden for et år?,"John har 100 x 10= <<100*10=1000>>1000 ananas på sin mark.
+John kan høste sine ananas 12 ÷ 3 = <<12/3=4>>4 gange om året
+Derfor kan John høste 1000 x 4 = <<1000*4=4000>>4000 ananas om året.
+#### 4000","Lad os regne det ud trin for trin:
+
+1. **Total areal:** 10 hektar  
+2. **Antal ananas pr. hektar:** 100 ananas  
+
+**Totalt antal ananas pr. høst:**  
+10 hektar * 100 ananas/hektar = 1000 ananas
+
+3. **Høstinterval:** hver 3. måned  
+Det betyder, at John kan høste 4 gange om året (hele året: januar-februar-marts, april-maj-juni, juli-august-september, oktober-november-december).
+
+4. **Antal høst** pr. år: 4  
+
+**Samlet antal ananas pr. år:**  
+1000 ananas pr. høst * 4 høster = 4000 ananas
+
+**Resultat:**  
+**John kan høste 4000 ananas inden for et år.**",1.0,True,"The output correctly calculates the number of pineapples John can harvest within a year by taking into account the total area, pineapples per hectare, and the number of harvests per year. "
+459,"En landmand køber foder til sine heste. Han køber en række forskellige typer hø, havre, gulerødder og sukkerknalder. Da sukkerknalder er en sjælden godbid, køber han kun to 1-punds æsker af dem til hele stalden. Han ønsker kun nok gulerødder til at fodre hestene, mens grøntsagerne er friske, så han køber fire 12-punds poser. Hø er hovederetten i hestenes kost, så han køber toogfyrre 75-punds baller. Havre er en basisvare til at supplere høet, så han køber tyve 65-punds sække. Hvis hans gårdbil kan bære 2250 pund ad gangen, hvor mange ture skal landmanden bruge for at transportere alt foderet?","Landmanden køber 2 * 1 = <<2*1=2>>2 pund sukkerknalder.
+Han køber 4 * 12 = <<4*12=48>>48 pund gulerødder.
+Han køber 42 * 75 = <<42*75=3150>>3150 pund høballer.
+Han køber 20 * 65 = <<20*65=1300>>1300 pund havresække.
+Vægten af alt foderet er 2 + 48 + 3150 + 1300 = <<2+48+3150+1300=4500>>4500 pund.
+Derfor skal landmanden bruge 4500 / 2250 = <<4500/2250=2>>2 ture for at transportere alt foderet i sin gårdbil.
+#### 2","Lad os beregne den totale vægt af hver type foder:
+
+1. **Sukkerknalder (sjældne godbidder):**  
+   Købt: 2 æsker à 1 pund  
+   Total vægt: \( 2 \times 1 = 2 \) pund
+
+2. **Gulerødder (friske grøntsager):**  
+   Købt: 4 poser à 12 pund  
+   Total vægt: \( 4 \times 12 = 48 \) pund
+
+3. **Hø (hovederetten i kosten):**  
+   Købt: 42 baller à 75 pund  
+   Total vægt: \( 42 \times 75 = 3150 \) pund
+
+4. **Havre (basisføde):**  
+   Købt: 20 sække à 65 pund  
+   Total vægt: \( 20 \times 65 = 1300 \) pund
+
+**Samlet vægt af alt foder:**
+
+\[
+2 + 48 + 3150 + 1300 = 5500 \text{ pund}
+\]
+
+Landmandens gårdbil kan transportere 2250 pund ad gangen.
+
+**Antal ture:**
+
+\[
+\text{Ture} = \left\lceil \frac{\text{Samlet vægt}}{\text{Kapacitet pr. tur}} \right\rceil = \left\lceil \frac{5500}{2250} \right\rceil
+\]
+
+\[
+= \left\lceil 2.444... \right\rceil = 3
+\]
+
+**Svar:**
+
+\(\boxed{3}\) ture.
+
+Landmanden skal altså bruge **3 ture** for at transportere alt foderet.",1.0,True,"The output correctly calculates the total weight of the feed and determines the number of trips needed based on the truck's capacity, concluding that 3 trips are necessary, which is the correct answer to the question."
+269,"En jonglør kan jonglere med 16 bolde. Halvdelen af boldene er golfbolde, og halvdelen af golfboldene er blå. Hvor mange blå golfbolde er der?","Golfbolde:16/2=<<16/2=8>>8
+Blå golfbolde:8/2=<<8/2=4>>4 bolde
+#### 4","Lad os opsummere informationen:
+
+- Total antal bolde: 16
+- Halvdelen af boldene er golfbolde: \( \frac{16}{2} = 8 \) golfbolde
+- Halvdelen af golfboldene er blå: \( \frac{8}{2} = 4 \) blå golfbolde
+
+Svar: Der er **4 blå golfbolde**.",1.0,True,"The solution correctly follows through the computation: half of the 16 balls are golf balls, making 8, and half of those are blue, making 4 blue golf balls."
+930,"Når Sophie passer sin nevø, finder hun en række legetøj frem til ham. Byggestensposen har 31 klodser i sig. Kurven med tøjdyr har 8 tøjdyr indeni. Tårnet med stable-ringe har 9 flerfarvede ringe på sig. Sophie købte for nylig et rør med hoppebolde, hvilket bringer hendes totale antal legetøj til nevøen op på 62. Hvor mange hoppebolde var der i røret?","Lad T være antallet af hoppebolde i røret.
+Efter at have købt røret med bolde, har Sophie 31 + 8 + 9 + T = 48 + T = 62 stykker legetøj til sin nevø.
+Således, T = 62 - 48 = <<62-48=14>>14 hoppebolde var der i røret.
+#### 14","Lad os opsummere oplysningerne:
+
+- Antal byggesten: 31
+- Antal tøjdyr: 8
+- Antal flerfarvede ringe på tårnet: 9
+- Samlet antal legetøj efter at have tilføjet hoppeboldene: 62
+
+Vi skal finde antallet af hoppebolde i røret.
+
+Først beregner vi, hvor mange legetøj der var før røret med hoppeboldene blev tilføjet:
+
+Total før røret = 62 - antallet af hoppebolde
+
+Det samlede af de kendte legetøj uden hoppeboldene er:
+
+31 (byggesten) + 8 (tøjdyr) + 9 (ringen) = 48
+
+Da det samlede antal legetøj nu er 62, betyder det:
+
+62 - 48 = 14
+
+Derfor er antallet af hoppebolde:
+
+**14**
+
+**Svar: Der var 14 hoppebolde i røret.**",1.0,True,The output provides step-by-step calculations leading to the correct answer that there are 14 hoppebolde (bouncy balls) in the tube. The given math and outcome is consistent with the provided problem.
+1223,"For at foretage et opkald fra en telefonboks, skal du betale $0,25 for hvert minut af dit opkald. Efter 16 minutter falder prisen til $0,2 per minut. Hvor meget ville et 36-minutters opkald koste?","De første 16 minutter ville koste 16 * 0,25 = $<<16*0.25=4>>4.
+Derefter er der 36 - 16 = <<36-16=20>>20 minutter af opkaldet tilbage.
+Og disse 20 minutter koster 20 * 0,2 = $<<20*0.2=4>>4.
+Så i alt ville det 36-minutters opkald koste 4 + 4 = $8.
+#### 8","Lad os beregne omkostningerne trin for trin:
+
+1. **Første 16 minutter:**
+- Pris per minut = $0,25
+- Total for 16 minutter = 16 × $0,25 = $4,00
+
+2. **De resterende minutter (36 - 16 = 20 minutter):**
+- Pris per minut efter 16 minutter = $0,20
+- Total for de sidste 20 minutter = 20 × $0,20 = $4,00
+
+3. **Samlet pris:**
+- Total = $4,00 + $4,00 = **$8,00**
+
+**Svar: Et 36-minutters opkald vil koste $8,00.**",1.0,True,"The calculation for the cost of the 36-minute call is incorrect. The first 16 minutes costs $4.00, and the remaining 20 minutes should cost 20 × $0.20 = $4.00 (as calculated), making the total cost $8.00. However, the answer should be the $8.00 stated at the end."
+737,"Peter ønsker at lave isterninger af forskellig størrelse med 32 ounces vand. Han kan lave kæmpe tern, der bruger 4 ounces pr. terning, mellemstore tern, der bruger 2 ounces, og små tern, der bruger 1/2 ounce. Hvis han laver 3 kæmpe tern, 7 mellemstore tern og 8 små tern, hvor mange ounces vand har han tilbage?","Kæmpe ternene brugte 12 ounces vand, fordi 3 gange 4 er lig med <<3*4=12>>12.
+Mellemstore tern brugte 14 ounces vand, fordi 7 gange 2 er lig med <<7*2=14>>14.
+De små tern brugte 4 ounces vand, fordi 8 gange 1/2 er lig med 4.
+Dette betyder, at Peter har brugt 30 ounces vand, fordi 12 plus 14 plus 4 er lig med 30.
+Peter har 2 ounces vand tilbage, fordi 32 minus 30 er lig med <<32-30=2>>2.
+#### 2","Lad os først finde ud af, hvor meget vand Peter bruger på de forskellige isterninger:
+
+**Kæmpe tern:**  
+Antal: 3  
+Vand pr. terning: 4 ounces
+
+Total for kæmpe tern:  
+\(3 \times 4 = 12\) ounces
+
+---
+
+**Mellemstore tern:**  
+Antal: 7  
+Vand pr. terning: 2 ounces
+
+Total for mellemstore tern:  
+\(7 \times 2 = 14\) ounces
+
+---
+
+**Små tern:**  
+Antal: 8  
+Vand pr. terning: 1/2 ounce (0,5 ounces)
+
+Total for små tern:  
+\(8 \times 0,5 = 4\) ounces
+
+---
+
+**Samlet vand brugt:**  
+\(12 + 14 + 4 = 30\) ounces
+
+**Vand tilbage:**  
+Start med 32 ounces  
+Brugt: 30 ounces
+
+Remaining:  
+\(32 - 30 = 2\) ounces
+
+**Svar:**  
+Peter har **2 ounces** vand tilbage.",1.0,True,"The output correctly calculates the total ounces of water used, which is 30 ounces, and correctly determines the remaining water as 2 ounces. This matches the expected answer."
+491,"Jaime lægger æg på bakken. Hver bakke kan rumme 24 æg. Hvis han har 64 æg og 2 bakker, hvor mange æg vil han ikke kunne lægge på bakken?","Jaime vil være i stand til at lægge i alt 24 x 2 = <<24*2=48>>48.
+Derfor er der 64 - 48 = <<64-48=16>>16 æg, som han ikke vil kunne lægge på bakken.
+#### 16","Hvis Jaime har 64 æg og 2 bakker, hvor hver bakke kan rumme 24 æg, så kan han lægge:
+
+2 bakker × 24 æg per bakke = 48 æg
+
+Da han har 64 æg, vil der være:
+
+64 æg - 48 æg = 16 æg
+
+som ikke kan lægges på bakkerne, fordi bakkerne er fyldt til deres kapacitet.
+
+**Svar:** Han vil ikke kunne lægge 16 æg på bakken.",1.0,True,The output correctly calculates the number of eggs that cannot be placed on the trays based on the given constraints and arithmetic.
+99,"Mary er en ivrig gartner. I går modtog hun 18 nye potteplanter fra sit yndlingsplanteskole. Hun har allerede 2 potteplanter på hver af de 40 vindueskarme i sit store landsted. Føler sig generøs, har hun besluttet, at hun vil give 1 potteplante fra hver karm til venner og familie i morgen. Hvor mange potteplanter vil Mary have tilbage?","I går, før hun modtog planterne, havde Mary 2*40 = <<2*40=80>>80 potteplanter
+Efter at have modtaget yderligere 18 planter havde hun derfor i alt 80 + 18 = <<80+18=98>>98 potteplanter
+I morgen vil Marys planteuddeling være 40 *1 = <<40*1=40>>40 potteplanter.
+Hun vil derfor have 98 - 40 = <<98-40=58>>58 potteplanter tilbage.
+#### 58","Først finder vi ud af, hvor mange potteplanter Mary har i alt, inden hun giver nogle væk.
+
+Hun modtog 18 nye potteplanter.
+
+Der er 40 vindueskarme, og hver karm har allerede 2 potteplanter:
+
+\[ 40 \times 2 = 80 \text{ potteplanter} \]
+
+Samlet antal potteplanter efter modtagelsen:
+
+\[ 80 + 18 = 98 \]
+
+Hun vil give 1 potteplante fra hver karm:
+
+\[ 40 \text{ potteplanter} \]
+
+Resten efter at have givet væk:
+
+\[ 98 - 40 = 58 \]
+
+**Svar:** Mary vil have 58 potteplanter tilbage.",1.0,True,"The output correctly calculates that Mary will have 58 potteplanter left, which is the expected answer to the problem given in the input."
+684,"John og Jack har 30 minutter til at gå til skole sammen. Det tager dem 6 minutter at komme til hjørnet, hvor biblioteket er. Det tager dem yderligere 13 minutter at komme til brandstationen. Hvor meget længere tid har de til at nå skolen uden at komme for sent?","John og Jack ankommer til biblioteket med 30 - 6 = <<30-6=24>>24 minutter tilbage til at nå brandstationen.
+Derefter ankommer de til brandstationen og har 24 - 13 = <<24-13=11>>11 minutter tilbage til at nå skolen uden at komme for sent.
+#### 11","Lad os først opsummere oplysningerne:
+
+- Samlet tid til rådighed: 30 minutter
+- Tid til at gå til hjørnet, hvor biblioteket er: 6 minutter
+- Tid til at gå fra biblioteket til brandstationen: 13 minutter
+
+Hvis John og Jack bruger tid på at gå til biblioteket først (der tager 6 minutter), har de stadig:
+
+30 - 6 = 24 minutter tilbage.
+
+Hvis de derefter går til brandstationen (yderligere 13 minutter), har de:
+
+24 - 13 = 11 minutter tilbage.
+
+Hvis deres slutmål er skolen, og de kun skal nå den uden at komme for sent, skal vi vide, hvor lang tid det tager fra brandstationen til skolen. Men denne information er ikke givet i opgaven.
+
+**Antagelsen er, at det er den samlede tid fra deres startpunkt (hvor de begynder at gå), til de når skolen.**
+
+Hvis de altså bruger mindst:
+
+- 6 minutter til at nå hjørnet/library,
+- 13 minutter til at nå brandstationen,
+
+så er den tid, de har tilbage til at nå skolen efter at have når brandstationen, dvs. resten af tiden.
+
+Men eftersom vi ikke har oplysninger om, hvor lang tid det tager fra brandstationen til skolen, kan vi kun beregne, hvor meget tid de har været ude af stand til at bruge, hvis deres mål er at nå skolen præcis på 30 minutter, og de prøver at komme til biblioteket og brandstationen undervejs.
+
+Hvis deres rute er:
+
+Start → biblioteket (6 min)
+
+Biblioteket → brandstationen (13 min)
+
+Og alt andet er uforandret, så har de:
+
+6 + 13 = 19 minutter brugt til at nå biblioteket og brandstationen.
+
+Det betyder, at de har:
+
+30 - 19 = 11 minutter tilbage til at nå skolen.
+
+**Svar:**  
+De har **11 minutter** tilbage til at nå skolen uden at komme for sent.
+
+---
+
+Hvis du har mere præcis information om tiden fra brandstationen til skolen, kan jeg give et mere præcist svar.",1.0,True,"The output correctly calculates how much time John and Jack have left before they risk being late, with a detailed breakdown of the time spent at each part of the journey. The correct answer (11 minutes) is given."
+458,"Jennifers hund har 8 hvalpe, hvoraf 3 har pletter. Brandons hund har 12 hvalpe, hvoraf 4 har pletter. Hvilken procentdel af alle hvalpene har pletter?","Først find det totale antal hvalpe: 8 hvalpe + 12 hvalpe = <<8+12=20>>20 hvalpe
+Derefter find det totale antal hvalpe med pletter: 3 hvalpe + 4 hvalpe = <<3+4=7>>7 hvalpe
+Derefter dividerer du antallet af plettede hvalpe med det totale antal hvalpe og ganger med 100% for at finde procentdelen af hvalpe med pletter: 7 hvalpe / 20 hvalpe * 100% = 35%
+#### 35","Lad os først finde det samlede antal hvalpe, og hvor mange af dem har pletter.
+
+**Jennifers hund:**
+- Antal hvalpe: 8
+- Hvalpe med pletter: 3
+
+**Brandons hund:**
+- Antal hvalpe: 12
+- Hvalpe med pletter: 4
+
+**Samlet antal hvalpe:**
+8 + 12 = 20
+
+**Samlet antal hvalpe med pletter:**
+3 + 4 = 7
+
+**Andel med pletter i procent:**
+\[
+\frac{7}{20} \times 100\% = 35\%
+\]
+
+**Svar: 35% af alle hvalpene har pletter.**",1.0,True,"The solution correctly calculates the number of puppies and those with spots: Jennifers' 8 (3 with spots), Brandons' 12 (4 with spots). Total puppies: 20; with spots: 7. Percentage: 7/20 * 100% = 35%. The expected output matches the correct answer."
+976,"Sunny sælger honningkager og æbletærte til en indsamlingskampagne. Om lørdagen solgte han 10 kasser honningkager og 4 færre kasser æbletærte end om søndagen. Om søndagen solgte han 5 flere kasser honningkager end om lørdagen og 15 kasser æbletærte. Hvis honningkagerne koster $6 og æbletærterne koster $15, hvor meget tjente Sunny på to dage?","Han solgte 10 + 5 = <<10+5=15>>15 kasser honningkager om søndagen.
+Det samlede antal kasser honningkager, som Sunny solgte, er 10 + 15 = <<10+15=25>>25.
+Sunny tjente 25 x $6 = $<<25*6=150>>150 på at sælge honningkager.
+Han solgte 15 - 4 = <<15-4=11>>11 kasser æbletærte om lørdagen.
+Det samlede antal kasser æbletærte, som Sunny solgte, er 15 + 11 = <<15+11=26>>26.
+Han tjente 26 x $15 = $<<26*15=390>>390 på at sælge æbletærter.
+Så Sunny tjente $150 + $390 = $<<150+390=540>>540 på to dage.
+#### 540","Lad os først opsummere oplysningerne:
+
+**Lørdag:**
+- Honningkager: 10 kasser
+- Æbletærte: \(A_L\) kasser
+
+**Søndag:**
+- Honningkager: 5 flere kasser end lørdag → \(10 + 5 = 15\) kasser
+- Æbletærte: 15 kasser
+
+Desuden er der information om æbletærterne på lørdagen:
+- Æbletærterne på lørdagen er 4 færre end om søndagen:
+\[
+A_L = 15 - 4 = 11 \text{ kasser}
+\]
+
+Nu laver vi en opstilling af de totale salg:
+
+### Lørdag:
+- Honningkager: 10 kasser
+- Æbletærte: 11 kasser
+
+### Søndag:
+- Honningkager: 15 kasser
+- Æbletærte: 15 kasser
+
+### Indtjening:
+
+**Honningkager:**
+- Pris pr. kasse: \$6
+- Lørdag: \(10 \times 6 = \$60\)
+- Søndag: \(15 \times 6 = \$90\)
+
+**Æbletærte:**
+- Pris pr. kasse: \$15
+- Lørdag: \(11 \times 15 = \$165\)
+- Søndag: \(15 \times 15 = \$225\)
+
+**Samlet indtjening for de to dage:**
+
+\[
+\text{Total} = (\$60 + \$90) + (\$165 + \$225) = \$150 + \$390 = \boxed{\$540}
+\]
+
+**Svar:** Sunny tjente **\$540** på de to dage.",1.0,True,The output provides a detailed breakdown of the calculations and arrives at the correct total earnings of $540 based on the information given.
+1133,"Bedstemor går 3 miles hver dag på hendes yndlingsvandrerute, som inkluderer 2 miles på stranden og 1 mile på fortovet. På fortovet går Bedstemor dobbelt så hurtigt som hun gør på stranden. Hvis 40 minutter af hendes gåtur tilbringes på stranden, hvor lang tid tager det hende at fuldføre hele 3-mile gåturen, i minutter?","På stranden går Bedstemor med en hastighed på 2 miles per 40 minutter, eller 2/40 = 1/20 miles per minut. På fortovet går hun dobbelt så hurtigt som når hun er på sandet, eller 2 * 1/20 = 1/10 miles per minut. For at gå 1 mile på fortovet, tager det hende 1/(1/10) = 10 minutter. Så i alt tager det Bedstemor 40+10 = 50 minutter at gå hendes yndlingsrute. #### 50","Lad os definere variablerne:
+
+- \( v_s \): Hastigheden på stranden (km/h)
+- \( v_t \): Hastigheden på fortovet (km/h)
+
+Ifølge opgaven er:
+
+\[ v_t = 2 v_s \]
+
+Gåturen er 3 miles i alt, hvoraf:
+
+- 2 miles på stranden
+- 1 mile på fortovet
+
+Opgaven siger, at 40 minutter (dvs. \(\frac{40}{60} = \frac{2}{3}\) timer) bruges på stranden.
+
+---
+
+**1. Find hastigheden på stranden:**
+
+Tid på stranden = længde / hastighed
+
+\[ t_s = \frac{\text{afstand på stranden}}{v_s} = \frac{2 \text{ miles}}{v_s} \]
+
+Givet at dette er 40 minutter = \(\frac{2}{3}\) timer:
+
+\[ \frac{2}{3} = \frac{2}{v_s} \]
+
+Lad os løse for \( v_s \):
+
+\[ \frac{2}{3} = \frac{2}{v_s} \]
+
+Gange begge sider med \( v_s \):
+
+\[ v_s \times \frac{2}{3} = 2 \]
+
+Så:
+
+\[ v_s = \frac{2}{(2/3)} = 2 \times \frac{3}{2} = 3 \text{ miles per time} \]
+
+**2. Find hastigheden på fortovet:**
+
+\[ v_t = 2 v_s = 2 \times 3 = 6 \text{ miles per time} \]
+
+**3. Beregn tid på fortovet:**
+
+Afstand er 1 mile, og hastigheden er 6 mph:
+
+\[ t_t = \frac{\text{afstand på fortovet}}{v_t} = \frac{1}{6} \text{ timer} \]
+
+\[
+t_t = \frac{1}{6} \text{ timer} = 10 \text{ minutter}
+\]
+
+---
+
+**4. Samlet tid:**
+
+- Tid på stranden: 40 minutter
+- Tid på fortov: 10 minutter
+
+Total tid = \( 40 + 10 = 50 \) minutter
+
+---
+
+**Svar:**
+**Det tager bedstemoren 50 minutter at fuldføre hele gåturen.**",1.0,True,The output contains the correct and complete calculation steps leading to the answer. The logical steps to find the total time spent by Bedstemor on her walk are consistent with the given problem and solution methodology.
+158,"Raphael gik for at købe nogle skolemateriel. Han købte 4 kuglepenne, som kostede $1,5 hver, 2 notesbøger, som kostede $4 hver, og en ramme papir, som kostede $20. Hvor meget brugte Raphael i alt?","Raphael brugte 4 x $1,5 = $<<4*1.5=6>>6 for kuglepennene.
+Han brugte også 2 x $4 = $<<2*4=8>>8 for notesbøgerne.
+Derfor brugte Raphael i alt $6 + $8 + $20 = $<<6+8+20=34>>34 for skolemateriel.
+#### 34","Lad os beregne totalbeløbet for Raphael:
+
+- Kuglepenne: 4 stk. à $1,5 hver  
+  \( 4 \times 1,5 = 6 \) dollar
+
+- Notesbøger: 2 stk. à $4 hver  
+  \( 2 \times 4 = 8 \) dollar
+
+- Ramme papir: 1 stk. à $20  
+  \( 20 \) dollar
+
+Total:  
+\( 6 + 8 + 20 = 34 \) dollar
+
+**Raphael brugte i alt 34 kroner.**",1.0,True,"The calculations in the output match the problem statement, leading to a total of 34 dollars."
+1021,"I en quiz med 60 spørgsmål er 40% af spørgsmålene lette, og resten er ligeligt fordelt som gennemsnitlige og svære spørgsmål. Hvis Aries er sikker på at få 75% af de lette spørgsmål rigtige, og halvdelen af de gennemsnitlige og svære spørgsmål korrekt, hvor mange point er hun sikker på at få?","De gennemsnitlige og svære spørgsmål udgør 100% - 40% = 60% af quizzen.
+Der er 60 spørgsmål x 40/100 = 24 lette spørgsmål.
+Der er i alt 60 spørgsmål x 60/100 = 36 gennemsnitlige og svære spørgsmål.
+Hvis Aries er sikker på at få 75% af de lette spørgsmål, betyder det, at hun er sikker på sine 24 spørgsmål x 75/100 = 18 point.
+Fra de gennemsnitlige og svære spørgsmål er hun sikker på at få halvdelen korrekt, så det er 36 spørgsmål / 2 = 18 point.
+Således er hun sikker på at få 18 point + 18 point = 36 point i hendes quiz.
+#### 36","Lad os starte med at finde ud af, hvor mange spørgsmål der er af hver type.
+
+Total spørgsmål: 60
+
+1. **Lette spørgsmål:**
+40 % af 60 = 0,40 × 60 = **24 spørgsmål**
+
+2. **Resten er fordelt ligeligt mellem gennemsnitlige og svære spørgsmål:**
+De resterende spørgsmål: 60 - 24 = 36
+
+Antal gennemsnitlige spørgsmål: 36 ÷ 2 = **18**
+Antal svære spørgsmål: 18
+
+---
+
+**Sandsynligheder for rigtige svar:**
+
+- Aries er sikker på at få 75 % af de lette spørgsmål rigtige:
+  - Rigtige lette: 75 % af 24 = 0,75 × 24 = **18 spørgsmål**
+
+- Af de gennemsnitlige spørgsmål: 50 % rigtige:
+  - Rigtige gennemsnitlige: 50 % af 18 = 0,50 × 18 = **9 spørgsmål**
+
+- Af de svære spørgsmål: 50 % rigtige:
+  - Rigtige svære: 50 % af 18 = 0,50 × 18 = **9 spørgsmål**
+
+---
+
+**Samlet antal spørgsmål, Aries er sikker på at få rigtige:**
+
+= Rigtige lette + rigtige gennemsnitlige + rigtige svære  
+= 18 + 9 + 9  
+= **36 spørgsmål**
+
+---
+
+**Svar:** Aries er sikker på at få **36 point**.",1.0,True,"The output provides the correct detailed breakdown of the calculations leading to the final answer, which aligns with the expected result based on the given problem."
+1020,John plukker 4 bananer om onsdagen. Så plukker han 6 bananer om torsdagen. Om fredagen plukker han tre gange så mange bananer som han gjorde om onsdagen. Hvor mange bananer har John?,"Kombinerer onsdag og torsdag, har John 4 bananer + 6 bananer = <<4+6=10>>10 bananer.
+Om fredagen plukker han 3 * 4 bananer = <<3*4=12>>12 bananer.
+I alt har John 10 bananer + 12 bananer = <<10+12=22>>22 bananer.
+#### 22","Lad os regressivt gennemgå oplysningerne:
+
+1. Om onsdagen plukker John 4 bananer.
+2. Om torsdagen plukker han 6 bananer.
+3. Om fredagen plukker han tre gange så mange som om onsdagen.
+
+Først skal vi finde ud af, hvor mange bananer han plukker i alt over disse tre dage:
+
+- Onsdag: 4 bananer
+- Torsdag: 6 bananer
+- Fredag: 3 gange 4 = 12 bananer
+
+Så totalen for de tre dage er:
+
+4 + 6 + 12 = 22 bananer
+
+**Svar:** John har plukket i alt **22 bananer**.",1.0,True,"The calculation and explanation in the output are correct and consistent with solving the problem step by step. John plukker in total 22 bananer: 4 om onsdagen, 6 om torsdagen, and 12 om fredagen (3 gange 4)."
+107,"Frankie ser TV efter han er færdig med sine lektier hver aften. Mandag og tirsdag så han en 1-times episode af sit yndlingsshow hver aften. Onsdag så han nogle episoder af et 30-minutters show. Torsdag blev han tidligt færdig med lektierne og så en 1-times episode og et 30-minutters show. Fredag måtte han blive oppe sent til weekenden, så han så to 1-times episoder. Hvis han i alt så 7 timers TV, hvor mange 30-minutters episoder så han onsdag?","Lad W være antallet af episoder, han så onsdag.
+Efter mandag havde han 7 - 1 = <<7-1=6>>6 timers TV tilbage.
+Efter tirsdag havde han 6 - 1 = <<6-1=5>>5 timers TV tilbage.
+Efter torsdag havde han 5 - 1 - 1/2 = 3 1/2 timers TV tilbage.
+Efter fredag havde han 3 1/2 - 2 = 1 1/2 timers TV tilbage.
+Hver 30-minutters episode er 1/2 time.
+Således, W = 1 1/2 / 1/2 = 3 episoder.
+#### 3","Lad os samle alle oplysninger:
+
+**Tidsforbrug pr. dag:**
+- Mandag: 1 time (1 episode af yndlingsshow)
+- Tirsdag: 1 time (1 episode af yndlingsshow)
+- Onsdag: Nogle episoder af et 30-minutters show
+- Torsdag: 1 time + 30 minutter = 1,5 time
+- Fredag: 2 episoder à 1 time = 2 timer
+
+---
+
+**Samlet tid set denne uge:** 7 timer (i alt)
+
+Nu kan vi regne ud, hvor meget tid han brugte på de dage.
+
+**Mandag:** 1 time  
+**Tirsdag:** 1 time  
+**Torsdag:** 1,5 timer  
+**Fredag:** 2 timer  
+
+Samlet tid for mandag, tirsdag, torsdag, fredag:
+
+1 + 1 + 1,5 + 2 = 5,5 timer
+
+**Resterende tid til onsdag:** 7 - 5,5 = 1,5 timer
+
+---
+
+**Onsdag:**
+- Set tv i 1,5 timer
+- Episoder på 30 minutter hver
+
+Antal 30-minutters episoder onsdag:
+
+1 time = 2 episoder  
+0,5 time = 1 episode
+
+Samlet antal episoder:
+
+2 + 1 = **3 episoder**
+
+---
+
+**Svar: Frankie så 3 stk. 30-minutters episoder onsdag.**
+
+**Endeligt svar:** \(\boxed{3}\)",1.0,True,"the output contains the correct calculation and explanation leading to the correct answer, which is 3 episodes watched on Wednesday."
+125,"Julia gjorde sig klar til en middagsselskab i hendes hus, hvor hun havde tænkt sig at servere gryderet. Hun bemærkede, at hun var løbet tør for plastik skeer, så hun købte en ny pakke med skeer. Senere købte hendes mand også en pakke med 5 nye skeer og gav dem til Julia. Mens Julia lavede gryderetten, brugte hun tre af skeerne til at smage på sin gryderet. Senere, da hun gik for at dække bordet, havde hun i alt 12 skeer. Hvor mange skeer var der i den pakke, som Julia købte?","Det samlede antal skeer fra Julia og hendes mand var 12+3=<<12+3=15>>15 skeer.
+Da manden købte en pakke med fem skeer, indeholdt Julias pakke 15-5=<<15-5=10>>10 skeer.
+#### 10","Lad os gennemgå oplysningerne skridt for at finde ud af, hvor mange skeer der var i den pakke, Julia købte.
+
+1. **Start**: Julia løb tør for plastik skeer og købte en pakke med skeer. Lad os kalde antallet af skeer i denne pakke for \( x \).
+
+2. **Mands gave**: Hendes mand købte en pakke med 5 skeer og gav til Julia. Så nu har Julia:
+
+\[
+x + 5
+\]
+
+skeer.
+
+3. **Brug under madlavning**: Julia brugte 3 skeer til at smage på sin gryderet. Antallet af skeer efter dette er:
+
+\[
+x + 5 - 3 = x + 2
+\]
+
+4. **Antal skeer ved dækningsbordet**: Når hun gik for at dække bordet, havde hun i alt 12 skeer. Disse inkluderer alle skeerne, som hun havde efter brug under madlavning, da hun gik til borddækning.
+
+Det betyder:
+
+\[
+x + 2 = 12
+\]
+
+5. **Løsning**:
+
+\[
+x + 2 = 12 \implies x = 12 - 2 = 10
+\]
+
+---
+
+**Svar:** Der var **10 skeer** i den pakke, Julia købte.",1.0,True,"The conclusion of the calculation is accurate and consistent with the problem statement. The question was to determine how many spoons were in Julia's purchased pack. Using the provided details, the output shows the step-by-step calculation process clearly and concludes that the package Julia bought contained 10 spoons. This is the correct answer to the question."
+520,"Martha strikker vintertøj til sine 3 børnebørn. De er trillinger, så de har alle samme størrelse. Hun vil lave en hat, et tørklæde, en sweater, vanter og sokker til hver af dem. Det kræver 2 garnnøgler at lave en hat, 4 for et tørklæde, 12 for en sweater, 1 for et par vanter og 2 for et par sokker. Hvor mange garnnøgler skal hun købe?","Et komplet sæt til hvert barn vil kræve 2 garnnøgler per hat + 4 garnnøgler per tørklæde + 12 garnnøgler per sweater + 1 garnnøgle per par vanter + 2 garnnøgler per par sokker = 21 garnnøgler.
+Så for at strikke outfits til alle sine børnebørn, vil hun have brug for 3 * 21 = 63 garnnøgler.
+#### 63","Lad os starte med at finde ud af, hvor mange garnnøgler Martha skal bruge per børnebarn, og derefter multiplicere med 3 for alle tre børnebørn.
+
+**Garnforbrug pr. barn:**
+- Hat: 2 garnnøgler
+- Tørklæde: 4 garnnøgler
+- Sweater: 12 garnnøgler
+- Vanter (par): 1 garnnøgle
+- Sokker (par): 2 garnnøgler
+
+**Total pr. barn:**
+2 + 4 + 12 + 1 + 2 = 21 garnnøgler
+
+**Samlet til alle tre børn:**
+21 garnnøgler × 3 = 63 garnnøgler
+
+**Svar:** Martha skal købe **63 garnnøgler**.",1.0,True,The output correctly calculates the total number of yarn balls needed (63) based on the given input.
+43,"Ifølge oplysningerne om næringsindhold har en pose chips 250 kalorier pr. portion. Hvis en 300g pose har 5 portioner, hvor mange gram kan du spise, hvis dit daglige kaloriemål er 2000, og du allerede har indtaget 1800 kalorier?","Hvis det totale kaloriemål er 2000, og jeg har indtaget 1800 kalorier, så har jeg 2000-1800 = <<2000-1800=200>>200 kalorier tilbage at spise
+Hvis hver portion chips har 250 kalorier, og jeg kun har 200 kalorier tilbage at spise, så kan jeg kun spise 200/250 af en portion = 4/5 af en portion
+Vi ved også, at en 300g pose chips har 5 portioner, derfor har hver portion 300g/5 = <<300/5=60>>60 gram
+Hvis jeg kun kan spise 4/5 af en portion, så kan jeg kun spise 60g * 4/5 = 240g/5 = 48 gram
+#### 48","Først skal vi finde ud af, hvor mange kalorier du har tilbage for resten af dagen:
+
+Total dagligt mål: 2000 kalorier  
+Indtaget indtil nu: 1800 kalorier  
+Kalorier tilbage: 2000 - 1800 = 200 kalorier
+
+Nu ved vi, at én portion chips indeholder 250 kalorier.
+
+Hvis du vil spise så mange chips, som du har plads til uden at overskride dit kaloriemål, kan du beregne:
+
+Antal portioner, du kan spise: 200 kalorier / 250 kalorier per portion = 0,8 portioner
+
+Da én pose indeholder 5 portioner på 300 g, kan vi finde ud af, hvor mange gram de svarer til per portion:
+
+Vægt per portion: 300 g / 5 = 60 g
+
+Så, du kan spise:
+
+0,8 portioner * 60 g/portion = 48 g
+
+**Svar:** Du kan spise op til ca. **48 gram** chips uden at overskride dit kaloriemål.",1.0,True,"the calculation correctly determines the remaining calorie allowance (200), the calories per portion (250), the portion weight (60g), and the convertible grams (48g) based on the given constraints and information."
+982,"I Mr. Ropers klasse på 30 elever, er 20% af klassen fodboldspillere. Ud af de resterende elever er 25% cheerleadere eller en del af bandet. Disse 3 grupper af elever skal forlade skolen tidligt i dag for at rejse til en udekamp. Hvor mange elever forlader skolen tidligt?","20% af de 30 elever er fodboldspillere, så det er .20*30 = <<.20*30=6>>6 elever
+Der er 30 elever, og 6 er fodboldspillere, så der er 30-6 = <<30-6=24>>24 elever tilbage
+25% af de resterende 24 elever er en del af bandet eller cheerleadere, så det er .25*24 = <<.25*24=6>>6 elever
+6 elever er fodboldspillere, og 6 er en del af bandet/cheerleadere, så 6+6 = <<6+6=12>>12 elever forlader skolen tidligt
+#### 12","Først finder vi antallet af fodboldspillere:
+
+20% af 30 elever = 0,20 * 30 = 6 elever
+
+Der er 30 - 6 = 24 elever tilbage, som ikke er fodboldspillere.
+
+Af disse resterende elever er 25% cheerleadere eller bandmedlemmer:
+
+25% af 24 = 0,25 * 24 = 6 elever
+
+Disse 6 elever skal også forlade skolen.
+
+De tre grupper, der skal rejse tidligt, er:
+- Fodboldspillere: 6 elever
+- Cheerleadere/band: 6 elever
+
+Hvis nogle elever kan være både cheerleadere og bandmedlemmer, kan der opstå dobbeltoptælling. Men da der ikke er information om overlap, antager vi, at grupperne er adskilte.
+
+Det samlede antal elever, der forlader skolen tidligt:
+
+6 (fodboldspillere) + 6 (cheerleadere/band) = 12 elever
+
+**Svar: 12 elever forlader skolen tidligt.**",1.0,True,The output correctly calculates the number of students leaving early by determining the number of football players and cheerleader/band members separately and summing them accurately.
+1023,"En mand spiser 5 sandwiches om dagen, hans kone spiser 4 sandwiches om dagen, og deres søn spiser 2 sandwiches om dagen. Hvor mange sandwiches spiser denne familie på en uge?","Antallet af sandwiches, de spiser på en dag, er 5 + 4 + 2 = <<5+4+2=11>>11 sandwiches.
+Antallet af sandwiches, de spiser på en uge, er 11 * 7 = <<11*7=77>>77 sandwiches.
+#### 77","Lad os først finde ud af, hvor mange sandwiches hver person spiser om dagen:
+
+- Mand: 5 sandwiches
+- Konen: 4 sandwiches
+- Sønnen: 2 sandwiches
+
+Samlet antal sandwiches om dagen:  
+5 + 4 + 2 = 11 sandwiches
+
+Nu ganger vi dette med antallet af dage i en uge (7 dage):
+
+11 sandwiches/dag * 7 dage = 77 sandwiches
+
+**Svar:** Familien spiser 77 sandwiches på en uge.",1.0,True,"The calculation provided in the output is correct. The family members collectively eat 11 sandwiches per day. Over a week (7 days), they consume 77 sandwiches. The output matches the correct answer to the question."
+1063,James modtager 80 e-mails om dagen. 20% af disse e-mails kræver ikke noget svar. Han besvarer resten af dem. Hvor mange e-mails svarer han på i en 5-dages arbejdsuge?,"Han modtager 80*.2=<<80*.2=16>>16 e-mails, som han ikke behøver at svare på
+Så han svarer på 80-16=<<80-16=64>>64 e-mails
+Så han svarer på 64*5=<<64*5=320>>320 e-mails om ugen
+#### 320","Først skal vi finde ud af, hvor mange e-mails James modtager hver dag, som kræver svar.
+
+Han modtager 80 e-mails om dagen, og 20% af dem kræver ikke svar:
+
+20% af 80 = 0,20 × 80 = 16 e-mails, der ikke kræver svar.
+
+De e-mails, der kræver svar, er derfor:
+
+80 total - 16 uden svar = 64 e-mails.
+
+I en 5-dages arbejdsuge svarer han på:
+
+64 e-mails/dag × 5 dage = 320 e-mails.
+
+**Svar: James svarer på 320 e-mails i en 5-dages arbejdsuge.**",1.0,True,"The output correctly calculates the number of emails James responds to in a 5-day workweek, based on the input data and correctly performs the necessary calculations."
+955,Et hospital har en kapacitet på 1000 senge med 1/5 optaget. På grund af coronavirus-udbruddet bliver 50 patienter indlagt på hospitalet hver dag. Beregn det samlede antal ledige senge på hospitalet efter 2 uger.,"Hvis 1/5 af den samlede kapacitet af hospitalsengene er optaget, betyder det, at 1/5 * 1000 = <<1000*1/5=200>>200 senge har patienter, der bruger dem.
+Det samlede antal senge på hospitalet uden nye indlæggelser er 1000 senge - 200 senge = <<1000-200=800>>800 senge.
+Hvis 50 personer bliver indlagt hver dag, er det samlede antal patienter på hospitalet efter en uge 50 patienter/dag * 7 dage/uge = 350 patienter.
+Efter to uger er det samlede antal patienter indlagt på hospitalet 350 patienter/uge * 2 uger = <<350*2=700>>700 patienter, hvor hver bruger én seng.
+Hvis der var 800 ledige senge på hospitalet før de nye indlæggelser, reduceres det samlede antal til 800 senge - 700 senge = <<800-700=100>>100 ledige senge.
+#### 100","Lad os gennemgå problemet skridt for skridt:
+
+**Oplysninger:**  
+- Total kapacitet: 1000 senge  
+- Start med 1/5 optaget (dvs. 1/5 af 1000)  
+- Hver dag indlægges 50 nye patienter  
+- Tidsperiode: 2 uger (14 dage)  
+
+**Trin 1: Find det oprindelige antal optagede senge**  
+\[ \text{Startoptag} = \frac{1}{5} \times 1000 = 200 \text{ senge} \]
+
+**Trin 2: Antal ledige senge initialt**  
+\[ 1000 - 200 = 800 \text{ ledige senge} \]
+
+**Trin 3: For hver dag**  
+- Indlægges 50 patienter  
+- Det antages, at alle patienter bliver udskrevet efter én dag (hvilket er en forenkling, medmindre andet er angivet).  
+- Dette betyder, at hospitalets senge, der var ledige, bruges til de nye patienter, og de gamle frigives efter én dag.
+
+**Trin 4: Opdeling af kapacitet dag for dag**  
+
+**Dag 1:**  
+- Start: 200 patienter (fra morgen)  
+- Indlæggelser: 50 nye patienter  
+- Efter dagen: de 200 patienter er udskrevet, og nye 50 patienter er indlagt  
+- Samlet patienter i slutningen af dag 1: 50  
+
+**Dag 2:**  
+- Start: 50 patienter (fra dag 1)  
+- Indlæggelse: 50 nye patienter  
+- Efter dag 2: de 50 patienter fra dag 1 udskrives, og nye 50 patienter indlægges  
+- Patientsaldo: 50  
+
+Denne proces gentager sig hver dag:  
+- Hver dag udskrives de patienter, der var indlagt dagen før, og nye patienter indlægges  
+
+**Næste: Efter 14 dage:**  
+- På dag 14 er der stadig 50 patienter, der er blevet indlagt for 14 dage siden og stadig er indlagt (hvis vi antager, at patienter bliver indlagt og ingen udskrives før end efter én dag).  
+- Men i dette tilfælde, hvor patienter indlægges hver dag og udskrives efter én dag, vil den daglige optagelse 50 patienter følge en glidende sum:  
+
+**Resultat:**  
+- Den første dag: 200 patienter, der bliver udskrevet efter dag 1  
+- Den anden dag: de 50 patienter fra dag 1 udskrives, og 50 nye patienter indlægges – så netto bliver der 50 patienter i dag 2  
+- Agent: netop, at hver dag tilføres 50 patienter og de fra 1 dag gamle udskrives, hvorved antallet af patienter i hospitalet altid er 50, så længe den daglige indlæggelse fortsætter.  
+
+**Efter 14 dage:**  
+- Alle de patienter, der blev indlagt på dag 1, er udskrevet efter én dag, og de 50 nye patienter fra dag 14 stadig er indlagt.  
+- Dette betyder, at der konstant er 50 patienter indlagt (hvor alle bliver udskrevet efter én dag), hvilket giver:  
+
+\[ \text{Patienter} = 50 \]  
+
+**Trin 5: Kapacitet**  
+- Totale senge: 1000  
+- Ledige senge:  
+\[ \text{Ledige} = 1000 - \text{indlagte patienter} = 1000 - 50 = 950 \]
+
+**Svar:**  
+Efter 14 dage (2 uger) er der **950 ledige senge** på hospitalet.
+
+---
+
+**Endeligt svar:**  
+\[
+\boxed{950 \text{ ledige senge}}
+\]",1.0,True,"The output correctly calculates the initial and ongoing patient occupancy and deductions based on daily admissions and discharges, concluding with the correct number of available beds after 14 days."
+496,"Brett er 14 år gammel. Om fire år vil hans søster Angela være tre gange så gammel, som han er nu. Hvor gammel er Angela lige nu?","Om fire år vil Angela være 14*3=<<14*3=42>>42.
+Lige nu er Angela 42-4=<<42-4=38>>38 år gammel.
+#### 38","Først, lad os opstille kendte oplysninger:
+
+- Bretts alder nu: 14 år
+- Om 4 år vil Angela være tre gange så gammel som Brett er nu.
+
+Lad os kalde Angelas nuværende alder for \( A \).
+
+Ifølge problemet:
+
+**Om 4 år vil Angela være:** \( A + 4 \)
+
+**Og dette er tre gange Bretts nuværende alder:** 3 gange 14, hvilket er 42.
+
+Så vi kan opstille ligningen:
+
+\[ A + 4 = 42 \]
+
+Løs for \( A \):
+
+\[ A = 42 - 4 = 38 \]
+
+**Svar: Angela er lige nu 38 år gammel.**",1.0,True,"The output correctly calculates Angela's current age based on the given information. It sets up the equation based on the fact that Angela will be three times Brett's current age in four years. The equation and the solution are correctly derived and solved, leading to the correct answer that Angela is 38 years old."
+873,"David har $12,48 og ønsker at købe 16 bolte fra en kasse i byggemarkedet. Hver bolt koster $0,03. Hvor mange penge har David tilbage efter at have betalt for boltene?","David betalte 16 * 0,03 = $<<16*0.03=0.48>>0,48 for boltene.
+David har $12,48 - $0,48 = $12 tilbage.
+#### 12","Først finder vi ud af, hvor meget 16 bolte koster:
+
+Pris per bolt = $0,03  
+Antal bolte = 16
+
+Samlet pris = 16 × $0,03 = $0,48
+
+Nu trækker vi dette beløb fra Davids samlede penge:
+
+$12,48 - $0,48 = $12,00
+
+**Svar:** David har $12,00 tilbage efter at have købt boltene.",1.0,True,"The calculation of the total cost of bolts is correct, and the subtraction from David's total amount is also correctly performed. The output provides the correct answer to the question, which is that David has $12,00 left."
+1277,"Mia og Emma er i øjeblikket 16 år fra hinanden i alder. Hvis Mia, som er yngre end Emma, er 40 år gammel, hvad er gennemsnittet af deres aldre?","Hvis Mia er 40 år gammel, er Emma 40+16 = <<40+16=56>>56 år gammel.
+Summen af deres aldre er 56+40 = <<56+40=96>>96 år
+Den gennemsnitlige alder af de to er 96/2 = <<96/2=48>>48 år
+#### 48","Hvis Mia er 40 år gammel og er yngre end Emma, og de er 16 år fra hinanden i alder, så kan vi finde Emmas alder:
+
+Mia er yngre, så:
+Emma = Mia + 16 = 40 + 16 = 56 år
+
+Gennemsnittet af deres aldre er:
+(40 + 56) / 2 = 96 / 2 = 48
+
+**Svar:** Gennemsnittet af Mia og Emmas aldre er **48 år**.",1.0,True,"The output provides a step-by-step calculation that correctly finds both Emma's age and the average of their ages as 48 years, consistent with the requirements."
+265,"Mrs. Cruz leder efter et hus, der ikke vil overstige hendes budget på $400 000. Hun så en ejendom, der har en salgspris på $350 000. Udover det skal køberen betale et mæglersalær, som er 5% af salgsprisen, samt en tinglysningsafgift, der er 12% af salgsprisen. Hvor meget mere er husets samlede pris end Mrs. Cruz's budget?","Mæglersalæret er $350 000 x 5/100 = $<<350000*5/100=17500>>17500.
+Tinglysningsafgiften er $350 000 x 12/100 = $<<350000*12/100=42000>>42000.
+Den samlede pris for huset er $350 000 + $17500 + $42000 = $409 500.
+Så det er $409 500 - $400 000 = $<<409500-400000=9500>>9500 mere end Mrs. Cruz's budget.
+#### 9500","Lad os beregne de forskellige dele trin for trin:
+
+**1. Salgsprisen:**  
+\[ \$350,000 \]
+
+**2. Mæglersalær (5% af salgsprisen):**  
+\[ 0.05 \times \$350,000 = \$17,500 \]
+
+**3. Tinglysningsafgift (12% af salgsprisen):**  
+\[ 0.12 \times \$350,000 = \$42,000 \]
+
+**4. Samlet pris:**  
+\[ Salgspris + Mæglersalær + Tinglysningsafgift \]  
+\[ \$350,000 + \$17,500 + \$42,000 = \$409,500 \]
+
+**5. Hvor meget mere er dette end Mrs. Cruz's budget på \$400,000?**  
+\[ \$409,500 - \$400,000 = \$9,500 \]
+
+---
+
+**Svar:** Husets samlede pris er **\$9,500** mere end Mrs. Cruz's budget.",1.0,True,"While the calculations for the broker fee and registration fee are correct, the output correctly computes the total price ($409,500) and compares it to Mrs. Cruz's budget, finding the difference to be $9,500. This matches the expected answer to the question posed: 'Hvor meget mere er husets samlede pris end Mrs. Cruz's budget?'"
+677,"Carol og Jennifer er søstre fra Los Angeles, som elsker at samle autografer fra berømtheder. I deres sommerferie fra skole bruger søstrene hver eftermiddag på at samle autografer. Efter fem uger sammenligner Carol og Jennifer deres autografbøger og tæller antallet af autografer, hver søster har samlet. Carol har 20 autografer i sin bog, og Jennifer har 44. Søstrene har tre uger mere af sommerferien, og de beslutter, at de vil nå 100 autografer tilsammen, inden ferien er slut. Hvor mange autografer skal søstrene samle for at nå deres mål?","Carol og Jennifer har allerede samlet 20 + 44 autografer = <<20+44=64>>64 autografer.
+Da deres mål er 100, skal de samle 100 - 64 autografer. 100 - 64 = <<100-64=36>>36 autografer
+#### 36","Lad os opsummere informationen:
+
+- Nu har Carol 20 autografer.
+- Nu har Jennifer 44 autografer.
+- De vil samlet have 100 autografer, inden ferien er slut.
+- Der er 3 uger tilbage, og vi antager, at de samler autografer hver dag, og at ferietiden er ens for begge søstre.
+
+Først finder vi det samlede antal autografer, de skal samle yderligere:
+
+**Samlet mål:** 100 autografer  
+**Samlet nu:** 20 (Carol) + 44 (Jennifer) = 64 autografer
+
+**Autografer, der mangler:**  
+100 - 64 = **36 autografer**
+
+**Svar:** Søstrene skal samle **36 autografer** mere, for at nå deres mål på 100 autografer tilsammen.
+
+---
+
+Hvis vi antager, at de samler autografer hver dag, kan man også overveje, hvor mange autografer de skal samle pr. dag for at nå målet i de resterende uger, men det er ikke nødvendigt for dette spørgsmål.  
+
+**Endeligt svar:**  
+\(\boxed{36}\) autografer",1.0,True,"The output correctly calculates the number of additional autographs the sisters need to collect to reach their goal of 100 autographs. It concludes they need to collect 36 more autographs, which is consistent with the information provided in the input."
+266,"Hr. Tan solgte sit hus for $400.000. Han betalte overførselsgebyrer, der udgør 3% af salgsprisen, og betalte også et mæglerhonorar, der er 5% af salgsprisen. Hvis han også betalte $250.000 for det resterende lånebeløb på huset, hvor meget er Hr. Tans nettoindtægt fra salget af huset?","Hr. Tan betalte $400.000 x 3/100 = $12.000 for overførselsgebyrerne.
+Han betalte $400.000 x 5/100 = $20.000 for mæglerhonoraret.
+Så Hr. Tan betalte i alt $12.000 + $20.000 + $250.000 = $282.000 for transfer, mægler- og lånegebyrer.
+Derfor er Hr. Tans nettoindtægt $400.000 - $282.000 = $118.000.
+#### 118000","Lad os beregne Hr. Tans nettoindtægt trin for trin:
+
+**Givne oplysninger:**
+- Salgspris af huset: $400.000
+- Overførselsgebyrer: 3% af salgsprisen
+- Mæglerhonorar: 5% af salgsprisen
+- Betalt for restgæld: $250.000
+
+---
+
+**1. Beregn overførselsgebyrene:**
+\[
+\text{Overførselsgebyrer} = 3\% \times 400.000 = 0,03 \times 400.000 = \$12.000
+\]
+
+**2. Beregn mæglerhonoraret:**
+\[
+\text{Mæglerhonorar} = 5\% \times 400.000 = 0,05 \times 400.000 = \$20.000
+\]
+
+**3. Total udgifter ved salg (gebyrer + honorar):**
+\[
+\$12.000 + \$20.000 = \$32.000
+\]
+
+**4. Træk disse udgifter fra salgsprisen for at finde det beløb, der er til rådighed efter salget:**
+\[
+\$400.000 - \$32.000 = \$368.000
+\]
+
+**5. Fradrag det beløb, Hr. Tan betalte for resterende lån:**
+\[
+\$368.000 - \$250.000 = \$118.000
+\]
+
+---
+
+**Resultat:**
+Hr. Tans nettoindtægt fra salget er **$118.000**.
+
+**Svar: \(\boxed{\$118.000}\)**",1.0,True,"The output provides a step-by-step calculation and arrives at the correct final answer of $118,000."
+788,"John samler penge ind til en skoledagstur. Han har ansøgt om hjælp fra skolen, som har besluttet at dække halvdelen af turens pris. Hvor mange penge mangler John, hvis han har $50, og turen koster $300?","Johns skole har besluttet at betale 300 / 2 = $<<300/2=150>>150 for hans tur.
+I alt har John dækket 150 + 50 = $<<150+50=200>>200 for sin tur
+Derfor mangler John 300 - 200 = $<<300-200=100>>100 mere til turen.
+#### 100","John har 50 dollars, og skolen dækker halvdelen af turens pris. Først skal vi finde ud af, hvor meget skolen dækker:
+
+Halvdelen af $300 er \(\frac{1}{2} \times 300 = 150\) dollars.
+
+Det betyder, at John skal betale resten:
+
+$300 - $150 = $150.
+
+Han har allerede $50, så:
+
+$150 - $50 = $100.
+
+**Answer:** John mangler 100 dollars.",1.0,True,"The calculation is correct, and John needs $100 more to cover his part of the trip."
+11,"Toula gik til bageriet og købte forskellige slags kager. Hun købte 3 dusin donuts, som kostede $68 pr. dusin, 2 dusin mini cupcakes, som kostede $80 pr. dusin, og 6 dusin mini cheesecakes for $55 pr. dusin. Hvor meget var den samlede pris?","Den samlede pris for donuts var 3 x $68 = $<<3*68=204>>204.
+Den samlede pris for mini cupcakes var 2 x $80 = $<<2*80=160>>160.
+Den samlede pris for mini cheesecakes var 6 x $55 = $<<6*55=330>>330.
+Derfor var det samlede beløb, Toula betalte for kagerne, $204 + $160 + $330 = $<<204+160+330=694>>694.
+#### 694","Lad os beregne prisen for hver type kage og derefter lægge det sammen.
+
+1. Donuts:
+- Antal: 3 dusin
+- Pris pr. dusin: $68
+- Total for donuts: 3 × $68 = $204
+
+2. Mini cupcakes:
+- Antal: 2 dusin
+- Pris pr. dusin: $80
+- Total for mini cupcakes: 2 × $80 = $160
+
+3. Mini cheesecakes:
+- Antal: 6 dusin
+- Pris pr. dusin: $55
+- Total for mini cheesecakes: 6 × $55 = $330
+
+Nu lægger vi alle summerne sammen:
+$204 + $160 + $330 = $694
+
+**Den samlede pris er $694.**",1.0,True,The calculations for each type of cake and the final sum were performed correctly and arrived at the expected total price of $694.
+921,"Et brød har 24 skiver. Hvis Abby kan spise 2 skiver om dagen, mens Josh kan spise dobbelt så meget, hvor mange dage vil brødet vare?","Josh kan spise 2 x 2 = <<2*2=4>>4 skiver om dagen.
+Sammen kan Abby og Josh spise 2 + 4 = <<2+4=6>>6 skiver om dagen.
+Så et brød vil vare i 24/6 = <<24/6=4>>4 dage.
+#### 4","Først finner vi ut hvor mange skiver Abby kan spise på én dag:
+- Abby spiser 2 skiver per dag.
+
+Josh spiser dobbelt så mye som Abby:
+- Josh spiser \(2 \times 2 = 4\) skiver per dag.
+
+Totalt spiser de begge sammen per dag:
+- \(2 + 4 = 6\) skiver per dag.
+
+Brødet har 24 skiver. For å finne ut hvor mange dager det varer for begge:
+
+\[
+\frac{24 \text{ skiver}}{6 \text{ skiver/dag}} = 4 \text{ dager}
+\]
+
+**Svar:** Brødet vil vare i **4 dager**.",1.0,True,The output provides a step-by-step explanation that correctly calculates the number of days the bread will last.
+799,Et brød hos bageren koster $2. Bagels koster $1 hver. Hvor meget mere koster 3 brød end 2 bagels?,"3 brød koster 3 * $2 = $<<3*2=6>>6.
+2 bagels koster 2 * $1 = $<<2*1=2>>2.
+Brødene koster $6 - $2 = $<<6-2=4>>4 mere end bagelsene.
+#### 4","Først beregner vi prisen for 3 brød:
+3 brød x $2 = $6
+
+Dernæst beregner vi prisen for 2 bagels:
+2 bagels x $1 = $2
+
+Forskellen i pris:
+$6 (for 3 brød) - $2 (for 2 bagels) = $4
+
+**Svar: 3 brød koster $4 mere end 2 bagels.**",1.0,True,"The output correctly calculates that 3 breads cost $6 and 2 bagels cost $2, leading to the correct conclusion that 3 breads cost $4 more than 2 bagels."
+1239,"En pedel skal gøre rent i en skole med 80 klasselokaler. De har 5 dage til at få det gjort. Det tager dem 15 minutter per klasselokale. Hvis de arbejder en 8-timers dag, hvilken procentdel af deres dag, i gennemsnit, bruges til at gøre rent i klasselokaler?","De skal gøre rent i 16 klasselokaler om dagen, fordi 80 / 5 = <<80/5=16>>16
+De bruger 240 minutter på at gøre rent per dag, fordi 16 x 15 = <<16*15=240>>240
+De bruger 4 timer om dagen, fordi 240 / 60 = <<240/60=4>>4
+De bruger halvdelen af deres dag på at gøre rent i klasselokaler, fordi 4 / 8 = <<4/8=.5>>.5
+De bruger 50% af deres dag på at gøre rent i klasselokaler, fordi .5 x 100 = <<.5*100=50>>50
+#### 50","Lad os først finde ud af, hvor meget tid det tager at rengøre alle klasselokalerne:
+
+- Antal klasselokaler: 80
+- Tid pr. klasselokale: 15 minutter
+
+### Samlet tid til at gøre rent alle lokaler:
+\[
+80 \text{ lokaler} \times 15 \text{ minutter} = 1200 \text{ minutter}
+\]
+Dette er den samlede tid, der skal bruges.
+
+---
+
+### Tidsplan:
+
+- Antal dage til at fuldføre arbejdet: 5 dage
+- Arbejdsdagens varighed: 8 timer = 8 × 60 = 480 minutter
+
+### Total til rådighed i 5 dage:
+\[
+5 \text{ dage} \times 480 \text{ minutter/dag} = 2400 \text{ minutter}
+\]
+
+Antallet af minutter, der rent faktisk bliver brugt til rengøring over hele perioden, er 1200 minutter.
+
+### Procentdel af en dag, der bruges på rengøring:
+\[
+\frac{1200 \text{ minutter}}{5 \text{ dage} \times 480 \text{ minutter/dag}} \times 100\% = \frac{1200}{2400} \times 100\% = 0,5 \times 100\% = 50\%
+\]
+
+### **Svar:**
+
+De bruger i gennemsnit **50%** af deres arbejdsdag på at gøre rent i klasselokalerne.",1.0,True,"the output provides a detailed calculation leading to the correct answer of 50% of the day spent on cleaning classrooms, which is consistent with the expected outcome."
+410,"Sally tog til kysten for ferie. Hendes forældre gav hende $10 til at købe, hvad hun ville. I souvenirsbutikken var der tilbud på taffy: ""Køb 1 pund til $3, få 1 pund til halv pris."" Hun tog 2 pund. Hun købte også en blandet pose med muslingeskaller for $1.50 og 4 magneter, der kostede $0.25 hver. Hvor mange penge har Sally tilbage?","Taffy er køb af 1 pund for $3 og får 1 pund til halv pris. Så 1/2 afslag på 1 pund er $3/2 = $1.50 + $3.00 = $4.50
+4 magneter til $0.25 hver er 4 * 0.25 = $1.00
+Når du lægger alle hendes køb sammen, $4.50 + $1.50 + $1.00 = $7.00
+Hun havde $10 og brugte $7, så hun havde $10 - $7 = $3.00 tilbage
+#### 3","Lad os gennemgå det trin for trin:
+
+1. **Penge Sally har**: 10 dollars.
+
+2. **Taffy tilbud**:
+   - Køber 1 pund til $3.
+   - Får 1 pund til halv pris, altså $1.50.
+   - Sally tager 2 pund, hvilket passer med at købe 1 pund til $3 og få 1 pund til halv pris ($1.50).
+
+3. **Pris for 2 pund taffy**:
+   - 1 pund: $3
+   - 1 pund: $1.50
+   - Samlet: $3 + $1.50 = **$4.50**
+
+4. **Køb af muslingeskaller**:
+   - Kostede $1.50.
+
+5. **Magneter**:
+   - 4 magneter, hver $0.25
+   - Total: 4 × $0.25 = **$1.00**
+
+6. **Samlet for alle køb**:
+   - Taffy: $4.50
+   - Skaller: $1.50
+   - Magneter: $1.00
+
+   Samlet udgift: $4.50 + $1.50 + $1.00 = **$7.00**
+
+7. **Hvor meget er tilbage?**
+   - Startkapital: $10
+   - Udgift: $7.00
+
+   Tilbage: $10 - $7.00 = **$3.00**
+
+**Svar: Sally har 3 dollars tilbage.**",1.0,True,The solution is presented in a step-by-step manner and results in the expected outcome of calculating the amount of money left with Sally as $3.00.
+1268,"Et tårn er lavet af 4 blå blokke, dobbelt så mange gule blokke og et ukendt antal røde blokke. Hvis der i alt er 32 blokke i tårnet, hvor mange røde blokke er der?","Der er 4*2 = <<4*2=8>>8 gule blokke i tårnet.
+Der er 32-4-8 = <<32-4-8=20>>20 røde blokke i tårnet.
+#### 20","Lad os først opsummere informationen:
+
+- Blå blokke: 4
+- Gule blokke: dobbelt så mange som blå blokke → \( 2 \times 4 = 8 \)
+- Røde blokke: ukendt antal (lad os kalde det \( R \))
+
+Det totale antal blokke er 32.
+
+Sæt ligningen op:
+
+\[ \text{Blå} + \text{Gule} + \text{Røde} = 32 \]
+\[ 4 + 8 + R = 32 \]
+
+Løs for \( R \):
+
+\[ R = 32 - (4 + 8) = 32 - 12 = 20 \]
+
+**Svar:** Der er **20 røde blokke**.",1.0,True,The output correctly calculates the number of red blocks as 20 based on the given problem statement.
+661,"Roger går til butikken for at købe noget kaffe. Det normale kaffemærke, han køber, koster 5 $ pr. pund. Han var nødt til at købe et dyrere mærke, der koster 20 % mere, da hans yndlingsmærke var udsolgt. Han beslutter sig for at købe kaffe til en uge, og han bruger 1 pund kaffe om dagen. Han besluttede også at købe en donut til sig selv for 2 $. Hvor meget kostede det hele?","Den kaffe, han købte, var 5*.2=$<<5*.2=1>>1 dyrere pr. pund end den, han normalt køber
+Så den kostede 5+1=$<<5+1=6>>6 pr. pund
+Han bruger 1*7=<<1*7=7>>7 pund kaffe om ugen
+Så han betalte 6*7=$<<6*7=42>>42 for kaffen
+Det betyder, at hans samlede regning var 42+2=$<<42+2=44>>44
+#### 44","Lad os beregne, hvor meget Roger har brugt:
+
+1. **Normalpris for hans yndlingskaffe:** 5 dollars pr. pund.
+
+2. **Pris på det dyre mærke:** Det koster 20 % mere end den normale pris.
+
+   \[
+   \text{Dyrere mærke} = 5 \text{ $} + 20\% \text{ af } 5 \text{ $} = 5 + (0,20 \times 5) = 5 + 1 = 6 \text{ $}
+   \]
+
+3. **Køb af kaffe til en uge (7 dage):** 
+   
+   \[
+   7 \text{ dage} \times 6 \text{ $ pr. dag} = 42 \text{ $}
+   \]
+
+4. **Køb af en donut:** 2 dollars.
+
+5. **Samlet udgift:**
+   
+   \[
+   42 \text{ $ (kaffe)} + 2 \text{ $ (donut)} = \boxed{44 \text{ $}}
+   \]
+
+**Svar: Roger købte for i alt 44 dollars.**",1.0,True,"The output correctly calculates the cost of the more expensive coffee brand and includes the donut, resulting in a total expenditure of $44."
+232,"Dax gik til deres gård for at plukke nogle æbler og fandt halvt så mange insekter som myrer i haven. Hvis der var 50 myrer, beregn det samlede antal insekter i haven.","Hvis der var 50 myrer, er det samlede antal insekter i haven 1 insekt/2 myrer * 50 myrer = 25 insekter
+Det samlede antal insekter i haven er 25 insekter + 50 myrer = <<25+50=75>>75 insekter
+#### 75","Lad os først definere variablerne:
+
+- Antallet af myrer = 50
+- Antallet af insekter = halvt så mange som myrer
+
+Da der er halvt så mange insekter som myrer, er antallet af insekter:
+
+Antal insekter = ½ × antallet af myrer = ½ × 50 = 25
+
+Nu kan vi finde det samlede antal insekter i haven ved at lægge insekterne og myrerne sammen:
+
+Samlet antal insekter = antallet af myrer + antallet af insekter = 50 + 25 = 75
+
+**Svar: Der er samlet 75 insekter i haven.**",1.0,True,"The output follows a correct calculation process to determine that there are 75 insects and ants combined in the garden, which is the expected answer."
+365,"Der er 6 piger i parken. Hvis der er dobbelt så mange drenge i parken, hvor mange børn er der i parken?","Der er 6 piger x 2 drenge/pige = <<6*2=12>>12 drenge i parken.
+I alt er der 6 piger + 12 drenge = <<6+12=18>>18 børn i parken
+#### 18","Der er 6 piger. Hvis der er dobbelt så mange drenge, er der 6 × 2 = 12 drenge.  
+Samlet antal børn i parken er derfor 6 + 12 = 18 børn.",1.0,True,The output calculates the total number of children correctly by first determining the number of boys and then adding them to the number of girls.
+984,"Pat har et blomsterbed, der er 111 fod langt. Pat vil fylde hendes blomsterbed med planter. Pats blomster vokser 12 tommer brede, så hun skal efterlade 1,5 fod mellem hver plante. Pat ejer allerede 17 blomster. Hver blomstrende plante koster $6 i butikken, hvor mange penge vil Pat bruge i butikken for at fylde hendes blomsterbed?","Pats blomsterbed er 111 fod / 1,5 fod pr. plante = <<111/1.5=74>>74 planter nødvendige.
+Pat skal købe 74 planter - 17 planter = <<74-17=57>>57 planter skal købes.
+Pat vil bruge 57 planter * $6 = $<<57*6=342>>342.
+#### 342","Lad os først finde ud af, hvor mange planter Pat skal købe for at fylde blomsterbedet.
+
+**Trin 1: Omregn blomsterbedets længde til tommer**  
+- 1 fod = 12 tommer  
+- Blomsterbedets længde: 111 fod = 111 × 12 = **1332 tommer**
+
+**Trin 2: Find ud af, hvor meget plads hver plante og mellemrum tager**  
+- Hver plante: 12 tommer bred  
+- Mellemrum mellem planter: 1,5 fod = 1,5 × 12 = **18 tommer**
+
+**Trin 3: Beregn, hvor mange planter der kan passe i blomsterbedet**  
+Hver plante og det efterfølgende mellemrum (for alle planter undtagen den sidste) tager:  
+12 (plante) + 18 (mellemrum) = 30 tommer
+
+Men til sidst behøver vi ikke et mellemrum efter den sidste plante. Derfor kan vi opdele blomsterbedets længde i segmenter af 30 tommer, hvor det sidste segment kun består af en plante (uden behov for ekstra mellemrum).
+
+Antallet af planter er således:
+
+\[
+\text{Antal planter} = \left\lfloor \frac{1332 + 18}{30} \right\rfloor
+\]
+
+Her tilføjer vi 18 for at sikre, at den sidste plante kan placeres uden at overskride, men en mere præcis måde er:
+
+- Start med 1 plante: 12 tommer + 18 tommer (mellemrum) = 30 tommer, for hver tilføjelse til plantenæset, til den sidste.
+
+Eller bedre, lad os formulere det mere præcist:
+
+**Antal planter (n):**
+
+Planteplads kræver: \( (n \times 12) + ((n - 1) \times 18) \leq 1332 \)
+
+Det vil sige:
+
+\[
+12n + 18(n - 1) \leq 1332
+\]
+\[
+12n + 18n - 18 \leq 1332
+\]
+\[
+30n - 18 \leq 1332
+\]
+\[
+30n \leq 1350
+\]
+\[
+n \leq \frac{1350}{30} = 45
+\]
+
+Så, Pat kan plante op til **45 planter**.
+
+**Trin 4: Husk, at Pat allerede har 17 blomster.**
+
+Antal nye planter, hun skal købe:
+
+\[
+45 - 17 = 28
+\]
+
+**Trin 5: Beregn total omkostning**
+
+Hver plante koster $6:
+
+\[
+28 \times 6 = 168
+\]
+
+**Resultat:** Pat skal bruge **$168** i butikken for at fylde blomsterbedet.
+
+---
+
+**Endeligt svar:**
+
+**Pat vil bruge $168 i butikken for at fylde hendes blomsterbed.**",1.0,True,"The output correctly calculates the total cost Pat will incur to fill her flowerbed, which amounts to $168."
+1031,"Apple High School holder dimission i deres Fine Arts Center i år, som har plads til 6000 personer. Efter at have taget højde for 950 pladser til dimittender og 300 pladser til deltagende fakultet, hvor mange billetter ville hver dimittend modtage til at give til deres venner og familie, hvis billetterne deles ligeligt?","Læg dimittend- og fakultetspladser sammen. 950 + 300 = <<950+300=1250>>1250 pladser til fakultet og dimittender
+Træk pladser til fakultet og dimittender fra det samlede antal tilladte pladser. 6000 - 1250 = <<6000-1250=4750>>4750 resterende pladser.
+Divider antallet af dimittender med de resterende pladser. 4750/950 = <<4750/950=5>>5 billetter
+#### 5","Først skal vi finde ud af, hvor mange pladser der er tilbage til venner og familie, efter at dine med- og fakultetsvalgte pladser er reserveret.
+
+Total kapacitet: 6000 pladser  
+Reserverede pladser til dimittender: 950 pladser  
+Reserverede pladser til fakultet: 300 pladser
+
+**Beregn de tilgængelige billetter til venner og familie:**
+
+6000 - 950 - 300 = 4.750 pladser  
+
+Nu antager vi, at hver dimittend skal dele disse pladser ligeligt mellem deres venner og familie.
+
+Ifølge opgaven er der et vist antal dimittender, men det er ikke specificeret, hvor mange der er. Dog for at besvare, hvor mange billetter hver dimittend vil modtage, skal vi kende det samlede antal dimittender.
+
+Da antallet af dimittender ikke er oplyst, kan vi kun lave en generel formel:
+
+Hvis der er \(N\) dimittender, så modtager hver dimittend:
+
+\[
+\frac{\text{Antal billetter til venner/familie}}{N} = \frac{4750}{N}
+\]
+
+**Hvis antallet af dimittender er kendt, kan du erstatte \(N\) i ovenstående formel for at få det præcise antal billetter pr. dimittend.**
+
+---
+
+**Svar:**  
+Hvis der er \(N\) dimittender, vil hver modtage \(\displaystyle \frac{4750}{N}\) billetter til at give til venner og familie, fordelt ligeligt.",1.0,True,"The output contains a step-by-step calculation, clearly explains how to calculate the number of tickets each graduate would receive when provided with the number of graduates, and concludes with the answer in a formula format. It correctly identifies that the solution requires the number of graduates, which is unspecified in the input."
+1164,Cole skjulte 3 dusin æg i haven til påskeæggejagten. Lamar finder 5 æg. Stacy finder dobbelt så mange som Lamar. Charlie finder 2 færre end Stacy. Og Mei finder halvt så mange som Charlie. Hvor mange æg er stadig skjult i haven?,"Cole skjuler 3 x 12 = <<3*12=36>>36 æg.
+Lamar finder 5 æg.
+Stacy finder 5 x 2 = <<5*2=10>>10 æg.
+Charlie finder 10 - 2 = <<10-2=8>>8 æg.
+Mei finder 8 / 2 = <<8/2=4>>4 æg.
+Børnene finder i alt 5 + 10 + 8 + 4 = <<5+10+8+4=27>>27 æg.
+Det samlede antal skjulte æg, der stadig er i haven, er 36 - 27 = <<36-27=9>>9 æg.
+#### 9","Lad os først opsummere, hvad de har fundet:
+
+- Lamar fandt 5 æg.
+- Stacy fandt dobbelt så mange som Lamar: \(2 \times 5 = 10\) æg.
+- Charlie fandt 2 færre end Stacy: \(10 - 2 = 8\) æg.
+- Mei fandt halvt så mange som Charlie: \(\frac{8}{2} = 4\) æg.
+
+Nu lægger vi alle de fundne æg sammen:
+
+\[5 + 10 + 8 + 4 = 27\]
+
+Der var oprindeligt 3 dusin æg, altså:
+
+\[3 \times 12 = 36\] æg.
+
+Antal æg, der stadig er skjult:
+
+\[36 - 27 = 9\]
+
+**Svar: Der er stadig 9 æg skjult i haven.**",1.0,True,"The output provides a comprehensive calculation detailing how each person's findings add up to a total of 27 eggs found, and correctly computes the remaining hidden eggs as 9. This matches the expected solution to the given problem."
+989,Emily kan skrælle 6 rejer i minuttet og sautere 30 rejer på 10 minutter. Hvor lang tid vil det tage hende at skrælle og tilberede 90 rejer?,"Først find ud af hvor lang tid det tager Emily at skrælle rejerne: 90 rejer / 6 rejer/minut = <<90/6=15>>15 minutter
+Derefter find ud af hvor mange portioner rejer hun skal tilberede: 90 rejer / 30 rejer/portion = <<90/30=3>>3 portioner
+Derefter multiplicerer du antallet af portioner med tiden pr. portion for at finde den samlede tilberedningstid: 3 portioner * 10 minutter/portion = <<3*10=30>>30 minutter
+Til sidst lægger du skrælletiden til for at finde den samlede tid Emily bruger: 30 minutter + 15 minutter = <<30+15=45>>45 minutter
+#### 45","Lad os først se på Emily's arbejdsrater:
+
+**Skrællerejer:**
+- 6 rejer per minut
+
+**Sautere rejer:**
+- 30 rejer på 10 minutter  
+- Det betyder 3 rejer pr. minut (30 rejer / 10 minutter)
+
+## Skrælle rejer:
+For 90 rejer:
+\[ \text{Tid til skrælning} = \frac{90 \text{ rejer}}{6 \text{ rejer/minut}} = 15 \text{ minutter} \]
+
+## Sautere rejer:
+For 90 rejer:
+\[ \text{Tid til sautering} = \frac{90 \text{ rejer}}{3 \text{ rejer/minut}} = 30 \text{ minutter} \]
+
+## Samlet tid:
+Da skrællingen kan startes før sauteringen, antager vi at begge processer kan foretages efter hinanden (eller parallelt, hvilket vil være hurtigere). Her antager vi den sekventielle tilgang:
+
+**Total tid = tid til skrælle + tid til sautere = 15 + 30 = 45 minutter**
+
+---
+
+## **Svar:**
+Det vil tage Emily ca. **45 minutter** at skrælle og tilberede 90 rejer.",1.0,True,"the solution includes a detailed explanation and it correctly calculated the time required for both peeling and sautéing, resulting in a correct total of 45 minutes."
+1165,"John samler skrald fra 3 forskellige lejlighedskomplekser. De første to har 200 lejligheder hver, og det sidste er 60% større end de andre to tilsammen. Han samler skrald 3 gange om ugen fra hvert sted, og han får betalt $0.40 per indsamling for hver lejlighed. Hvor mange penge tjener han om ugen?","De første to komplekser har 200+200=<<200+200=400>>400 lejligheder
+Det tredje har 400*.6=<<400*.6=240>>240 flere lejligheder end de 2 tilsammen
+Så i alt har det 400+240=<<400+240=640>>640 lejligheder
+Så han går til 640+400=<<640+400=1040>>1040 lejligheder hver gang
+Det betyder, at han besøger 1040*3=<<1040*3=3120>>3120 lejligheder hver uge
+Så han tjener 3120*$0.4=$<<3120*0.4=1248>>1248 hver uge
+#### 1248","Lad os først finde ud af, hvor mange lejligheder der er i hver af de tre lejlighedskomplekser.
+
+1. De to første komplekser:
+- Hver har 200 lejligheder.
+- Samlet for de to: 200 + 200 = 400 lejligheder.
+
+2. Det tredje komplekss størrelse:
+- Det er 60% større end de to første tilsammen.
+- 60% af 400 er: 0.60 × 400 = 240.
+- Derfor har det tredje kompleks: 400 + 240 = 640 lejligheder.
+
+**Samlet antal lejligheder:**
+200 + 200 + 640 = 1040 lejligheder.
+
+---
+
+Nu skal vi finde, hvor mange indsamlinger han foretager per uge.
+
+- Han samler skrald 3 gange om ugen fra hvert sted.
+- Altså, for alle tre steder hver uge: 3 gange per sted × 3 steder = 9 indsamlinger.
+
+**Betaling per indsamling per lejlighed:**
+- $0.40.
+
+---
+
+**Total udbetaling:**
+
+Antal indsamlinger (per lejlighed): 9 (per lejlighed) per uge.
+
+- For alle lejligheder: 1040 × 9 = 9360 indsamlinger.
+
+Hver indsamling fra én lejlighed giver $0.40.
+
+- **Samlet indtjening:**
+9360 × $0.40 = **$3744**.
+
+---
+
+**Svar:**
+
+\[
+\boxed{
+John tjener \textbf{\$3744} \text{ om ugen}
+}
+\]
+
+Hvis du ønsker, kan jeg også give en kort opsummering!",1.0,False,"The calculation of earnings is incorrect because it multiplies the number of collections per apartment instead of per complex, leading to an inflated earnings figure. John actually collects 9 collections per week per complex, not per apartment. Therefore, the number of collections should be 9 times the total number of apartments (1040), not 1040 * 9. The calculation error leads to an inflated earnings statement which is incorrect."
+440,"Arealet af Billies rektangulære soveværelse er 360 kvadratfod. Hvis længden af hans værelse er 3 yards, hvad er omkredsen af værelset i fod?","Længden af værelset er 3 yards * (3 fod / 1 yard) = <<3*(3/1)=9>>9 fod.
+Bredden af værelset er 360 kvadratfod / 9 fod = <<360/9=40>>40 fod.
+Værelsets omkreds er 2(40+9) = 98
+#### 98","Lad os starte med at definere variablerne:
+
+- \( L \) = længden af værelset i yards
+- \( B \) = bredden af værelset i yards
+
+Givet:
+\[L = 3\, \text{yards}\]
+
+Arealet er givet som 360 kvadratfod, altså:
+\[A = \text{længde} \times \text{bredde} = 360\, \text{sq ft}\]
+
+Men længden er i yards, så vi skal konvertere længden til fod:
+\[1\, \text{yard} = 3\, \text{feet}\]
+\[
+L = 3\, \text{yards} = 3 \times 3 = 9\, \text{feet}
+\]
+
+Sæt dette ind i areal ligningen:
+\[
+A = L \times B
+\]
+\[
+360 = 9 \times B
+\]
+\[
+B = \frac{360}{9} = 40\, \text{feet}
+\]
+
+Nu kan vi finde omkredsen (\(O\)):
+\[
+O = 2 \times (L + B) = 2 \times (9 + 40) = 2 \times 49 = 98\, \text{fod}
+\]
+
+**Svar:**
+
+\[
+\boxed{O = 98\, \text{fod}}
+\]",1.0,True,"The output correctly calculates the perimeter of the rectangle by following the steps: converting yards to feet, calculating the width of the rectangle, and then finding the perimeter using the correct formula. The final answer is 98 feet, which is consistent with the expected calculation."
+74,"Artie har en blomsterstand på Farmers Market. Han sælger tre slags blomster: morgenfruer, petuniaer og begonier. Han plejer at sælge morgenfruer for $2.74 pr. potte, petuniaer for $1.87 pr. potte og begonier for $2.12 pr. potte. Artie har ingen byttepenge i dag, så han har besluttet at runde alle sine priser til nærmeste hele dollar. Hvis Artie sælger 12 potter med morgenfruer, 9 potter med petuniaer og 17 potter med begonier, hvor meget vil han tjene?","Artie vil runde sine morgenfruer op fra $2.74 til $3, da tallet efter 2 er 5 eller højere.
+Artie vil runde sine petuniaer op fra $1.87 til $2, da tallet efter 1 er 5 eller højere.
+Artie vil runde sine begonier ned fra $2.12 til $2, da tallet efter 2 er mindre end 5.
+Artie sælger 12 morgenfruer x $3 = $<<12*3=36>>36
+Artie sælger 9 petuniaer x $2 = $<<9*2=18>>18
+Artie sælger 17 begonier x $2 = $<<17*2=34>>34
+I alt vil Artie tjene $36 + $18 + $34 = $<<36+18+34=88>>88
+#### 88","Først skal vi runde priserne til nærmeste hele dollar:
+
+- Morgenfruer: \$2.74 → \$3
+- Petuniaer: \$1.87 → \$2
+- Begonier: \$2.12 → \$2
+
+Nu ganger vi antallet potter med de afrundede priser:
+
+- Morgenfruer: 12 potter × \$3 = \$36
+- Petuniaer: 9 potter × \$2 = \$18
+- Begonier: 17 potter × \$2 = \$34
+
+Til sidst lægger vi alle beløbene sammen:
+
+\$36 + \$18 + \$34 = **\$88**
+
+**Svar: Artie vil tjene 88 dollar.**",1.0,True,"The calculations and methodology provided in the output align correctly with the input data. The output correctly rounds the flower prices, calculates the total earning from each type of flower, and sums them all up to the correct total. Therefore, the expected output is 88 dollars, which satisfies the requirements of the rubric."
+843,Craig har 2 tyve dollarsedler. Han køber seks vandpistoler til $2 hver. Han køber også 3 pakker vandballoner til $3 hver. Hvor mange penge har han tilbage?,"Craig starter med 2 * $20 = $<<2*20=40>>40.
+Craig bruger 6 vandpistoler * $2 = $<<6*2=12>>12 på vandpistoler.
+Craig bruger 3 pakker vandballoner * $3 = $<<3*3=9>>9 på vandballoner.
+I alt har Craig brugt $12 + $9 = $<<12+9=21>>21.
+Craig har $40 - $21 = $<<40-21=19>>19 tilbage.
+#### 19","Lad os beregne, hvor meget Craig bruger, og hvor meget han har tilbage.
+
+Først køber han 6 vandpistoler til $2 hver:  
+6 × 2 = $12
+
+Derefter køber han 3 pakker vandballoner til $3 hver:  
+3 × 3 = $9
+
+Samlet forbrug:  
+$12 + $9 = $21
+
+Craig startede med $20, men har brugt $21, så han har:  
+$20 - $21 = -$1
+
+**Det betyder, at Craig mangler $1 for at have råd til alle varer.**",1.0,False,"The output provides a detailed calculation but makes a mistake in the initial amount. Craig starts with $40, not $20 (as he has two $20 bills), and thus should still have $19 remaining after spending $21."
+800,"Pierson scorede 278 point i et spil bowling. Nikita scorede 11 mere end halvdelen af, hvad Pierson gjorde. Hvor mange point havde Pierson og Nikita tilsammen?","Pierson = <<278=278>>278 point
+Nikita = (1/2) 278 + 11 = 150 point
+278 + 150 = <<278+150=428>>428 point
+Tilsammen scorede Pierson og Nikita 428 point.
+#### 428","Lad os først finde Nikitas score.
+
+1. Pierson scorede 278 point.
+2. Halvdel af Piersons score er \(\frac{278}{2} = 139\).
+3. Nikitas score er 11 point mere end halvdelen af Piersons score, så:
+   
+   \[
+   \text{Nikitas score} = 139 + 11 = 150
+   \]
+
+Nu kan vi finde den samlede score:
+
+\[
+\text{Samlet score} = 278 + 150 = 428
+\]
+
+**Svar:**
+Pierson scorede 278 point, Nikita scorede 150 point, og deres samlede score var **428** point.",1.0,True,"The output correctly calculates Nikita's score based on the given condition (11 more than half of Pierson's score), and then accurately sums both scores to obtain the total. Thus, it provides the expected correct answer."
+1189,"Doxa skar et æble i 8 stykker. Hun spiste 1 stykke, hendes søster spiste 1 mere end hende, og hendes bror spiste 1 mere end hendes søster. Hvor mange stykker æble spiste de alle?","Hendes søster spiste 1 + 1 = <<1+1=2>>2 stykker.
+Hendes bror spiste 2 + 1 = <<2+1=3>>3 stykker.
+De spiste i alt 1 + 2 + 3 = <<1+2+3=6>>6 stykker.
+#### 6","Lad os kalde antallet af æblestykker, Doxa skar, for 8.
+
+1. Doxa spiste 1 stykke.
+2. Hendes søster spiste 1 mere end Doxa, altså \(1 + 1 = 2\) stykker.
+3. Hendes bror spiste 1 mere end søsteren, altså \(2 + 1 = 3\) stykker.
+
+Samlet antal stykker, de spiste, er:
+\[
+1 + 2 + 3 = 6
+\]
+
+**Svar:** De spiste tilsammen **6 stykker** æble.",1.0,True,The output correctly calculates the number of apple pieces each person ate and provides the correct total.
+546,"Elise er ved at lære at skrive og beslutter sig for at blive ved med at genskrive alfabetet, indtil hun kan det. Hun skriver det i sin helhed to gange, skriver halvdelen én gang, og genskriver derefter alt, hvad hun allerede har skrevet. Hvor mange bogstaver har Elise i alt skrevet?","Elise har skrevet alfabetet to gange, hvilket er i alt 26 * 2 = <<26*2=52>>52 bogstaver.
+Hun skriver derefter halvdelen af alfabetet, hvilket er 26 / 2 = <<26/2=13>>13 bogstaver.
+Indtil nu er dette i alt 52 + 13 = <<52+13=65>>65 bogstaver.
+At skrive dette igen betyder, at hun har fordoblet antallet af bogstaver, hun har skrevet, så hun har i alt skrevet 65 * 2 = <<65*2=130>>130 bogstaver.
+#### 130","Lad os følge Elise trin for trin og holde styr på, hvor mange bogstaver hun skriver undervejs:
+
+1. **Begyndelsen**: Hun fortæller, at hun skriver alfabetet to gange:
+   - Antal bogstaver i alfabetet: 26
+   - Efter at have skrevet det to gange: \( 2 \times 26 = 52 \)
+
+2. **Andet trin**: Hun skriver halvdelen én gang:
+   - Halvdelen af det komplette alfabet: \( \frac{26}{2} = 13 \) (vi antager, at det er præcist 13)
+   - Tilføjet: 13 bogstaver
+
+3. **Tredje trin**: Hun gen-skriver alt, hvad hun allerede har skrevet (dvs. alt indtil nu): 
+   - Her betyder det, at hun gen-skriver alt, hvad hun har skrevet ifølge trin 1 og 2.
+   - Det vil sige, at hun skriver alt, hvad hun har skrevet i trin 1 og 2 igen.
+
+Lad os sammenfatte:
+
+- Efter trin 1: **52** bogstaver
+- Efter trin 2: tilføjet **13** bogstaver, så total indtil nu: \( 52 + 13 = 65 \)
+- Trin 3: genskriver alt, hvad hun har skrevet indtil nu, dvs. alt 65 bogstaver.
+
+Men nu skal vi tælle, hvor meget hun har skrevet i alt:
+
+- I trin 1: 52 bogstaver
+- I trin 2: 13 bogstaver (det er tilføjet)
+- I trin 3: hun genskriver alt, hvad hun har skrevet indtil nu: 65 bogstaver, men dette er **en gen-skrivning**, altså er det blot ekstra tilføjelse.
+
+Hvis vi tæller altså alt, hvad hun har skrevet, er det:
+
+- Alt i trin 1 (52)
+- Plus halvdelen (13)
+- Plus alt, hvad hun gen-skriver i trin 3 (65)
+
+**Gælder det, at alt, hvad hun har skrevet i trin 3, er en gengivelse af alt indtil nu, dvs. 65?** 
+
+Ja, men det betyder, at for at finde det samlede antal skrevne bogstaver, skal vi overveje, at:
+
+Efter trin 1: 52
+
+Efter trin 2: 65 (52 + 13)
+
+Efter trin 3: hun skriver hele 65 igen, men det er ikke tilføjet til de tidligere; for at finde det samlede, skal vi tælle **alle** de skrevne bogstaver under hele forløbet, inklusive gen-skrivningen.
+
+Derfor: 
+
+- Det totale antal skrevet bogstaver = (bogstaver i trin 1) + (bogstaver i trin 2) + (bogstaver i gen-skrivning i trin 3)
+
+Men i dette tilfælde er det vigtig at forstå, at hun gen-skriver alt, hvad hun har skrevet indtil nu (altså både alt i trin 1 og 2). Det vil sige, at hendes samlede skriveri er:
+
+\[ \text{Total} = \text{(alle skriverier)} = 52 + 13 + 65 \]
+
+Da gen-skrivningen ikke blot erstatter tidligere, men tilføjes som et nyt sæt, så:
+
+\[
+\boxed{
+52 + 13 + 65 = 130
+}
+\]
+
+**Den samlede mængde skrevet bogstaver er 130.**
+
+---
+
+**Svar: 130**",1.0,True,"The output provides the correct answer of 130 letters, which is the expected total number of letters Elise wrote according to the problem statement."
+400,"Et glas mælk er 8 ounces mælk. John drikker 2 glas mælk. Hvis mælk har 3 kalorier per ounce, hvor mange kalorier indtog han?","Han drak 8*2=<<8*2=16>>16 ounces mælk
+Så han drak 16*3=<<16*3=48>>48 kalorier fra mælk
+#### 48","John drikker 2 glas mælk. Hvert glas er 8 ounces, så samlet mængde mælk er:
+
+2 glas × 8 ounces = 16 ounces
+
+Mælk har 3 kalorier per ounce, så det totale kalorieindtag er:
+
+16 ounces × 3 kalorier/ounce = 48 kalorier
+
+**Svar:** John indtog 48 kalorier.",1.0,True,The output correctly calculates the total calorie intake by multiplying the number of glasses by ounces per glass and then applying the calories per ounce.
+480,"Ben har 4 tuber blå maling og 3 tuber gul maling. Jasper har halvt så mange tuber blå maling som Ben, og tre gange så mange tuber gul maling som Ben. Hvor mange tuber maling har Jasper?","Jasper har 4/2= <<4/2=2>>2 tuber blå maling
+Jasper har 3*3=<<3*3=9>>9 tuber gul maling
+Jasper har i alt 2+9 =<<2+9=11>>11 tuber maling
+#### 11","Lad os opsummere oplysningerne:
+
+- Ben har 4 tuber blå maling.
+- Ben har 3 tuber gul maling.
+
+Jasper har:
+
+- Halvt så mange blå tuber som Ben:
+  \[
+  \frac{1}{2} \times 4 = 2 \text{ tuber blå}
+  \]
+
+- Tre gange så mange gule tuber som Ben:
+  \[
+  3 \times 3 = 9 \text{ tuber gul}
+  \]
+
+Så Jasper har i alt:
+
+\[
+2 + 9 = \boxed{11}
+\]
+
+**Svar: Jasper har 11 tuber maling.**",1.0,True,The output correctly calculates the number of tubes of paint Jasper has using the given formula for the blue and yellow paint.
+1026,En dværg kan udvinde 12 pund malm om dagen med sine bare hænder. Han kan udvinde dobbelt så meget med en jernhakke og 50% mere med en stålhakke end med en jernhakke. Hvor mange pund malm kan 40 dværge med stålhakker udvinde på en måned med 30 dage?,"Først find ud af, hvor meget malm en dværg kan udvinde med en jernhakke: 12 pund/dag * 2 = 24 pund/dag
+Derefter gang det beløb med 150% for at finde ud af, hvor meget en dværg kan udvinde med en stålhakke: 24 pund/dag * 150% = 36 pund/dag
+Derefter gang det, en dværg kan udvinde på en dag med en stålhakke, med antallet af dværge: 36 pund/dag/dværg * 40 dværge = 1440 pund/dag
+Derefter gang det daglige beløb af malm med antallet af dage for at finde det samlede beløb udvundet på en måned: 1440 pund/dag * 30 dage = 43200 pund/dag
+#### 43200","Lad os først finde ud af, hvor meget én dværg kan udvinde med hver type værktøj:
+
+**1. Uden værktøj (bare hænder):**  
+12 pund pr. dag
+
+**2. Med jernhakke:**  
+Dværgen kan udvinde dobbelt så meget som uden værktøj:  
+\[ 2 \times 12 = 24 \text{ pund pr. dag} \]
+
+**3. Med stålhakke:**  
+50% mere end med jernhakke:  
+\[ 24 + 0.5 \times 24 = 24 + 12 = 36 \text{ pund pr. dag} \]
+
+---
+
+### Nu skal vi finde ud af, hvor meget 40 dværge kan udvinde med stålhakker på 30 dage:
+
+- En dværg udvinder 36 pund pr. dag  
+- 40 dværge udvinder:  
+\[ 40 \times 36 = 1440 \text{ pund pr. dag} \]
+
+- På 30 dage:  
+\[ 1440 \times 30 = 43.200 \text{ pund} \]
+
+### **Svar:**
+
+\(\boxed{43.200 \text{ pund}}\) malm på en måned med 30 dage.",1.0,True,"The output provides the correct calculation of how much ore 40 dwarves with steel pickaxes can extract in a month with 30 days, showing each step clearly and correctly."
+20,"Jeg har 10 liter appelsindrik, der er to-tredjedele vand, og jeg ønsker at tilføje det til 15 liter ananasdrik, der er tre-femtedel vand. Men da jeg hælder det, spilder jeg en liter af appelsindrikken. Hvor meget vand er der i de resterende 24 liter?","Der er 15 x 3/5 = <<15*3/5=9>>9 liter vand fra de 15 liter ananasdrik.
+Efter 1 liter appelsindrik blev spildt, var der 10 - 1 = <<10-1=9>>9 liter appelsindrik tilbage.
+Ud af de 9 liter er 9 x 2/3 = <<9*2/3=6>>6 liter vand.
+Dermed er der i alt 9 + 6 = <<9+6=15>>15 liter vand ud af de 24 liter.
+#### 15","Lad os først finde ud af, hvor meget vand der er i hver drik, inden du hælder noget ud.
+
+**Appelsindrik (10 liter):**
+- Den er to-tredjede vand.
+- Vandmængde: \( \frac{2}{3} \times 10 = \frac{20}{3} \approx 6,67 \) liter.
+- Den totale appelsindrik er 10 liter, og vand udgør cirka 6,67 liter.
+
+**Ananasdrik (15 liter):**
+- Den er tre-femtedel vand.
+- Vandmængde: \( \frac{3}{5} \times 15 = 9 \) liter.
+- Den totale ananasdrik er 15 liter, og vand udgør 9 liter.
+
+---
+
+Nu, hvor du hælder appelsindrik op i ananasdrikken, spilder du 1 liter af appelsindrikken.  
+Den mængde appelsindrik, du faktisk hælder i, er:
+
+\[ 10 - 1 = 9 \text{ liter} \]
+
+**Vand i de 9 liter appelsindrik, du tilføjer:**
+
+Vand i appelsindrik per liter:
+
+\[ \frac{2}{3} \]
+
+Vand i tilsat appelsindrik:
+
+\[ \frac{2}{3} \times 9 = 6 \text{ liter} \]
+
+---
+
+**Total mængde af drikkene efter tilføjelsen:**
+
+- Appelsindrik tilbage: 1 liter (efter spild, fordi det var den sidste, der spildte)
+- Ananasdrik: 15 liter (antaget uden ændring)
+
+Men her er et vigtigt punkt: Når du hælder de 9 liter appelsindrik i ananasdrikken, vil du tilføje 6 liter vand (fra appelsindrikken).  
+Derudover tilføjer du også 3 liter appelsindrik (uden vand), så den samlede mængde er:
+
+\[ \text{Total volumen} = 15 + 9 = 24 \text{ liter} \]
+
+Men da det totale er 24 liter, og vi ønskede at finde vandmængden i de **resterende** drikkevarer, skal vi finde vandmængden i disse.
+
+**Total vand:**
+
+- Vand i appelsindrik (igen, uden spild):  
+  \( \text{(Vand i 9 liter)} = 6 \text{ liter} \)
+
+- Vand i ananasdrik (upåvirket): 9 liter
+
+**Samlet vand i de 24 liter:**
+
+\[ 6 + 9 = 15 \text{ liter} \]
+
+---
+
+**Svar:**  
+Der er **15 liter vand** i de resterende 24 liter drik.",1.0,True,"The output correctly calculates the amount of water from both drinks and accounts for the spill, resulting in a total of 15 liters of water, which matches the expected output."
+304,"Watson arbejder en 10-timers vagt hver dag, fem dage om ugen. Han tjener $10 i timen og får en bonus på $300 hver uge, hvis virksomheden klarer sig godt. Hvor mange penge tjente Watson i april, hvis virksomheden klarede sig rigtig godt hele måneden?","På en dag tjener Watson 10 * 10 = $<<10*10=100>>100
+Hvis han arbejder fem dage om ugen, er det samlede antal dage for hele måneden 5 * 4 = <<5*4=20>>20 dage.
+Da han tjener $100 om dagen, er det samlede beløb for hele måneden 20 * 100= $<<20*100=2000>>2000.
+Han fik også en 300 * 4 = $<<300*4=1200>>1200 bonus, fordi virksomheden klarede sig godt i alle ugerne i april.
+Ved slutningen af april havde han tjent 2000 +1200 = $<<2000+1200=3200>>3200.
+#### 3200","Først skal vi finde ud af, hvor mange dage Watson arbejder i april.
+
+- Han arbejder 5 dage om ugen.
+- En måned kan have 4 eller 5 arbejdsuger, afhængigt af måneden.
+
+Da det er april, og april har 30 dage, kan vi estimere antallet af arbejdsdage:
+
+- I gennemsnit arbejdede han 5 dage om ugen, og der er ca. 4 uger i april.
+- 4 uger x 5 dage = 20 arbejdsdage.
+
+Men for nøjagtighed kan vi se, præcist hvilke dage han arbejder på. Hvis han arbejder hver mandag til fredag, og 1. april er en mandag, vil han arbejde:
+
+- 1. april (mandag), 2. april (tirsdag), 3. april (onsdag), 4. april (torsdag), 5. april (fredag)
+- 8. april til 12. april
+- 15. april til 19. april
+- 22. april til 26. april
+- 29. april til 30. april (det er kun to dage i slutningen af måneden)
+
+Det giver i alt 5 uger x 5 dage = 25 arbejdsdage, minus weekender og eventuelle usædvanlige dage.
+
+Men for en forenklet beregning kan vi antage, at han arbejder 20-22 dage i april.
+
+Lad os bruge 21 dage til en god gennemsnitsberegning.
+
+### Beregning af basisløn:
+- Timeløn: $10
+- Arbejdstimer pr dag: 10 timer
+- Ugebonus: $300, hvis virksomheden klarer sig godt (vi antager, det gør den)
+
+Antal arbejdsdage i april: 21
+
+**Indtjening fra arbejde pr dag:**
+10 timer x $10 = $100
+
+**Indtjening fra arbejdsdage:**
+21 dage x $100 = $2.100
+
+**Bonus:**
+Denne udbetales ugentligt og for hele april. Der er 4 uge-pengebonuser:
+
+4 uger x $300 = $1.200
+
+### Samlet indtjening:
+$2.100 (arbejde) + $1.200 (bonus) = **$3.300**
+
+---
+
+**Svar:** Watson tjente **$3.300** i april, hvis virksomheden klarede sig rigtig godt hele måneden.",1.0,True,"The output correctly follows the steps to calculate Watson's total earnings for April, considering the number of workdays and weekly bonuses. The expected total is $3,300 as calculated, which matches the correct answer to the question."
+1247,"Brendan har en pose med kugler med 10 indeni. Han snublede over en sten, mens han bar den, og tabte halvdelen af dem. Han skyndte sig at søge efter dem, men fandt kun 3. Da han kom hjem, inspicerede han kuglerne nærmere. En af dem, han samlede op, var ikke en kugle, men faktisk en perle, så han smed den væk. Hvor mange kugler endte Brendan med?","Brendan tabte sine kugler og var tilbage med 10/2=<<10/2=5>>5 kugler.
+Han søgte og fandt nogle af sine tabte kugler, hvilket bragte ham tilbage til 5+3=<<5+3=8>>8 kugler.
+Han gik hjem og fjernede en perle, hvilket efterlod ham med 8-1=<<8-1=7>>7 kugler.
+#### 7","Lad os gennemgå problemet trin for trin:
+
+1. Oprindeligt havde Brendan 10 kugler.
+2. Han snublede og tabte halvdelen af dem:  
+   \(\frac{10}{2} = 5\) kugler gik tabt.  
+   Så han havde nu:  
+   \(10 - 5 = 5\) kugler tilbage.
+3. Han søgte efter kuglerne og fandt 3 af dem.  
+   Disse 3 kugler er en del af de 5, han havde tilbage.
+4. Senere inspicerede han kuglerne og samlede én genstand op, som viste sig at være en perle, ikke en kugle.  
+   Han smed denne væk.
+
+Da han endte med at inspicere, var der 3 kugler, han havde fundet, og ingen yderligere blev tilføjet eller fjernet ud over perlen, som han smed væk.
+
+**Resultat:**  
+Antallet af kugler Brendan endte med er de 3 kugler, han fandt, og da perlen blev smidt væk, forbliver det:
+
+**Svar: 3 kugler.**",1.0,True,"The explanation correctly solves the problem step by step and arrives at the correct answer, which states that Brendan ended up with 3 balls."
+456,"I en sæt magiker-kort er der 15 røde kort, og 60% flere grønne kort. Gule kort er lige så mange som summen af røde og grønne kort. Hvor mange kort af alle nævnte farver er der?","Der er 60/100 * 15 = <<60/100*15=9>>9 flere grønne kort end røde kort.
+Hvilket betyder, at der er 15 + 9 = <<15+9=24>>24 grønne kort.
+Gule kort udgør op til 15 + 24 = <<15+24=39>>39 kort.
+Så i alt er der 39 + 39 = <<39+39=78>>78 kort i forskellige farver.
+#### 78","Lad os definere variablerne:
+
+- Røde kort: \( R = 15 \)
+- Grønne kort: \( G \)
+- Gule kort: \( Y \)
+
+Vi er givet følgende informationer:
+
+1. Der er 15 røde kort.
+2. Der er 60% flere grønne kort end røde kort. Det betyder:
+\[
+G = R + 0,6 \times R = R \times (1 + 0,6) = 15 \times 1,6 = 24
+\]
+Så:
+\[
+G = 24
+\]
+
+3. Gule kort er lige så mange som summen af røde og grønne kort:
+\[
+Y = R + G = 15 + 24 = 39
+\]
+
+**Samlet antal kort:**
+
+\[
+\text{Total} = R + G + Y = 15 + 24 + 39 = 78
+\]
+
+**Svar: Der er i alt 78 kort af de nævnte farver.**",1.0,True,"The calculations step-wisely match the input requirements, leading to a correct solution. The total number of cards calculated is 78 which matches the expected correct answer."
+579,En dreng har 5 kort. Hans bror har 3 færre kort end han har. Hvor mange kort har de tilsammen?,"Hans bror har 5 - 3 = <<5-3=2>>2 kort.
+Tilsammen har de 5 + 2 = <<5+2=7>>7 kort.
+#### 7","Drengen har 5 kort. Hans bror har 3 færre kort end ham, så:
+
+Brorens kort = 5 - 3 = 2
+
+Tilsammen har de = 5 + 2 = 7 kort.",1.0,True,"The output correctly calculates the number of cards each sibling has and their total, which matches the expected numerical solution."
+469,"Mary har 6 krukker krymmel i sit spisekammer. Hver krukke krymmel kan dekorere 8 cupcakes. Mary vil bage nok cupcakes til at bruge al hendes krymmel. Hvis hver bageform rummer 12 cupcakes, hvor mange forme cupcakes skal hun bage?","Hun har nok krymmel til 6 * 8 = <<6*8=48>>48 cupcakes.
+Hun har brug for 48 / 12 = <<48/12=4>>4 forme for at bage alle cupcakes.
+#### 4","Først finder vi ud af, hvor meget krymmel Mary har i alt:
+
+- Antal krukker krymmel: 6
+- Krymmel pr. krukke: 8 cupcakes dekoration
+
+Samlet krymmel: \( 6 \times 8 = 48 \) cupcakes dekoration.
+
+Da hver cupcake kræver én krymmel, kan hun lave 48 cupcakes i alt.
+
+Nu finder vi ud af, hvor mange bageforme der skal bruges:
+
+- Hver bageform kan rumme 12 cupcakes.
+
+Antal forme: \( \frac{48}{12} = 4 \).
+
+**Svar: Mary skal bage 4 forme cupcakes.**",1.0,True,The output correctly calculates the total number of cupcakes Mary can bake and the number of forms needed. The final answer is correctly stated as 4 forms.
+164,"Jackie overvejer, om hun skal lave sine skatter selv eller hyre en revisor. Hvis hun laver skatterne selv, vil hun kunne udføre 3 færre timer freelancearbejde, hvilket betyder et tab på $35/time i mistet indkomst. Revisoren kræver $90. Hvor mange flere penge vil hun have, hvis hun hyrer revisoren?","Først find den samlede mistede indkomst, hvis Jackie laver sine skatter selv: $35/time * 3 timer = $<<35*3=105>>105
+Træk derefter revisorens gebyr fra for at finde ud af, hvor mange penge Janet sparer: $105 - $90 = $<<105-90=15>>15
+#### 15","Lad os analysere situationen:
+
+**Hvis Jackie laver skatterne selv:**  
+- Hun mister 3 timer af fritidsarbejde.  
+- Hver time giver et tab på $35.  
+- Samlet mistet indkomst: \( 3 \times 35 = 105 \) dollars.
+
+**Hvis hun hyrer revisoren:**  
+- Udgiften er $90.
+
+**Beregn forskellen i penge:**
+
+- Når hun laver skatterne selv, taber hun 105 dollar i indkomst.  
+- Hvis hun hyrer revisoren, betaler hun $90, og mister derfor 90 dollar i indkomst.  
+
+**Netto forskel:**
+
+\[
+\text{Besparelse ved at hyre revisor} = \text{tab ved selvlavning} - \text{revisorskost} = 105 - 90 = 15 \text{ dollars}
+\]
+
+**Svar:**  
+Hvis Jackie hyrer revisoren, vil hun have **15 flere dollars** sammenlignet med at lave skatterne selv.",1.0,True,The output accurately calculates the difference in income and makes the correct conclusion that Jackie would have saved $15 by hiring the accountant.
+728,"Candy har 15 lyseblå trådruller, 45 mørkeblå trådruller, 40 lysegrønne trådruller og 50 mørkegrønne trådruller. Hvilken procentdel af hendes ruller er blå?","Først finder vi antallet af blå ruller: 15 ruller + 45 ruller = <<15+45=60>>60 ruller
+Derefter finder vi det samlede antal ruller: 40 ruller + 50 ruller + 60 ruller = <<40+50+60=150>>150 ruller
+Derefter dividerer vi antallet af blå ruller med det samlede antal ruller og multiplicerer med 100% for at udtrykke svaret i procent: 60 ruller / 150 ruller * 100% = 40%
+#### 40","Først skal vi finde det samlede antal trådruller:
+
+- Lyseblå: 15
+- Mørkeblå: 45
+- Lysegrønne: 40
+- Mørkegrønne: 50
+
+Samlet antal trådruller = 15 + 45 + 40 + 50 = 150
+
+De blå trådruller er lyseblå og mørkeblå, altså:
+
+Antal blå trådruller = 15 + 45 = 60
+
+Procentdelen af blå trådruller er:
+
+\[
+\frac{60}{150} \times 100\% = \frac{2}{5} \times 100\% = 40\%
+\]
+
+**Svar:** **40 procent** af hendes trådruller er blå.",1.0,True,"The output correctly calculates and explains that 40% of Candy's thread spools are blue, matching the expected answer."
+1275,"Johns bil bryder sammen. Bilen vejer 1200 pund, og han har bagage i den, der vejer 250 pund. Han har også sine to små børn, der hver vejer 75 pund, i den. Hvis kræften til at flytte bilen er 1% af vægten, hvor meget kraft har han brug for for at skubbe bilen?","Hans to børn vejer 75*2=<<75*2=150>>150 pund
+Så den samlede vægt af bilen og alt er 1200+250+150=<<1200+250+150=1600>>1600 pund
+Så han skal generere 1600*0,01=<<1600*0,01=16>>16 pund
+#### 16","Lad os først finde den samlede vægt af bilen og alt, der er i den.
+
+Vægt af bilen: 1200 pund  
+Vægt af baggage: 250 pund  
+Vægt af to børn: 2 × 75 pund = 150 pund
+
+Samlet vægt = 1200 + 250 + 150 = 1600 pund
+
+Hvis kræften til at flytte bilen er 1% af dens vægt, så er det:
+
+Kraft = 1% af 1600 pund = 0,01 × 1600 = 16 pund
+
+**Svar:** John har brug for en kraft på 16 pund for at skubbe bilen.",1.0,True,"The output has provided the correct calculations to determine the force required. It correctly adds up the total weight of the car, baggage, and children, and then calculates 1% of this total weight."
+220,Det tager Carmen 10 minutter at fuldføre en krydsogtværs og 5 minutter at fuldføre en sudoku. I løbet af weekenden løste hun 3 krydsord og 8 sudoku. Hvor meget tid brugte hun på at spille disse spil?,"Det tager 10 minutter at fuldføre en krydsord, og hun fuldførte 3, hvilket i alt giver 10*3 = <<10*3=30>>30 minutter
+Det tager 5 minutter at fuldføre en sudoku, og hun fuldførte 8, hvilket i alt giver 5*8 = <<5*8=40>>40 minutter
+Hun brugte 30 minutter på krydsord og 40 minutter på sudoku i alt 30+40 = <<30+40=70>>70 minutter
+#### 70","Carmen bruger 10 minutter på hver krydsord, og hun løste 3 af dem:
+
+3 krydsord × 10 minutter = 30 minutter
+
+Hun bruger 5 minutter på hver sudoku, og hun løste 8 af dem:
+
+8 sudoku × 5 minutter = 40 minutter
+
+Samlet tid brugt på alle spil:
+
+30 minutter + 40 minutter = **70 minutter**
+
+**Svar: Carmen brugte 70 minutter på at spille disse spil i løbet af weekenden.**",1.0,True,The output correctly calculates and states that Carmen used 70 minutes in total.
+300,Om tirsdagen vil Peter træne i dobbelt så lang tid som han gjorde på mandag og søndag tilsammen. Om søndagen trænede han i 23 minutter. Om mandagen trænede han i 16 minutter. Hvor mange minutter skal han træne om tirsdagen for at nå sit mål?,"Om søndagen og mandagen trænede han i alt 39 minutter fordi 23 + 16 = <<23+16=39>>39
+Om tirsdagen skal han træne i 78 minutter fordi 39 x 2 = <<39*2=78>>78
+#### 78","Lad os først opsummere de oplysninger, vi har:
+
+- Søndag: 23 minutter
+- Mandag: 16 minutter
+- Tirsdag: Skal træne i dobbelt så lang tid som mandag og søndag tilsammen
+
+Først finder vi, hvor meget Peter træner på mandag og søndag tilsammen:
+
+\[ 23 + 16 = 39 \text{ minutter} \]
+
+Da tirsdag træner dobbelt så længe som mandag og søndag tilsammen, beregner vi:
+
+\[ 2 \times 39 = 78 \text{ minutter} \]
+
+**Svar:** Peter skal træne **78 minutter** på tirsdag for at nå sit mål.",1.0,True,"The output provides a correct summary and calculation of Peter's training plan, arriving at the correct answer of 78 minutes."
+401,"En bygherre arbejder i 4 uger hver måned og i 6 dage hver uge. Hvis han får $50 hver dag, hvor meget tjener han, hvis han arbejder i et år?","Bygherren arbejder i 6 dage hver uge og arbejder i 4 uger hver måned, så han arbejder i 6 dage/uge * 4 uger/måned = <<6*4=24>>24 dage/måned
+Hvis han tjener $50 hver dag, tjener han $50/dag * 24 dage/måned = $<<50*24=1200>>1200/måned
+Et år svarer til 12 måneder, så hvert år tjener han $1200/måned * 12 måneder/år = $<<1200*12=14400>>14400
+#### 14400","Lad os beregne, hvor meget bygherren tjener på et år:
+
+**Trin 1: Find antallet af arbejdsdage pr. uge**
+- Han arbejder 6 dage hver uge.
+
+**Trin 2: Find antallet af arbejdsuger pr. måned**
+- Han arbejder 4 uger hver måned.
+- Antal arbejdsdage pr. måned = 4 uger × 6 dage = 24 dage.
+
+**Trin 3: Tæl antallet af måneder om året**
+- Der er 12 måneder på et år.
+
+**Trin 4: Find det samlede antal arbejdsdage om året**
+- Arbejdsdage pr. år = 24 dage/måned × 12 måneder = 288 dage.
+
+**Trin 5: Beregn den samlede indtjening**
+- Han tjener $50 pr. dag.
+- Samlet indkomst = 288 dage × $50 = **$14.400**.
+
+**Svar:** Han tjener **$14.400** om året.",1.0,True,"The output provides the correct calculation and answer to the question about the annual earnings of the bygherre, showing all necessary steps leading to the answer of $14,400."
+937,"Nate fodrer sine husdyr med hø. Hver ged har brug for 5 pund, og hver får har brug for 3 pund mindre end det dobbelte af, hvad hver ged har brug for. Hvis der er 15 geder og 12 får, hvor mange pund hø har Nate brug for?","Først find ud af, hvor meget hø hvert får har brug for: 5 pund * 2 - 3 = <<5*2-3=7>>7 pund/får
+Nu regn ud, hvor meget hø fårne i alt har brug for: 7 pund/får * 12 får = <<7*12=84>>84 pund
+Nu regn ud, hvor meget hø gederne i alt har brug for: 5 pund/ged * 15 geder = <<5*15=75>>75 pund
+Nu læg de to mængder hø sammen for at finde det samlede antal: 84 pund + 75 pund = <<84+75=159>>159 pund
+#### 159","Lad os opstille problemet trinvist:
+
+1. Antal geder = 15  
+2. Antal får = 12
+
+**Hver ged** kræver 5 pund hø.
+
+**Hver få** kræver 3 pund **mindre end det dobbelte** af, hvad hver ged har brug for.
+
+- Hvad hver ged har brug for = 5 pund
+- Hvad hver få har brug for = 2 × (Hver ged's behov) – 3 = 2 × 5 – 3 = 10 – 3 = 7 pund
+
+Nu kan vi beregne det samlede hø bevægdbet:
+
+- Total hø til geder = 15 geder × 5 pund = 75 pund
+- Total hø til får = 12 får × 7 pund = 84 pund
+
+**Samlet hø** = 75 + 84 = **159 pund**
+
+**Svar: Nate har brug for 159 pund hø.**",1.0,True,The given output provides a step-by-step calculation leading to the correct answer that Nate needs 159 pounds of hay. The process is logically consistent and matches the requirements stated in the input.
+242,"Mike var en penneven med 5 personer. Han stoppede med at være pennevenner med 2 af dem. De sender hver 2 breve om ugen, der er 5 sider lange. Han svarer med det samme. Han kan skrive en side hver 6. minut. Hvor mange timer bruger han på at skrive om ugen?","Han er pennevenner med 5-2=<<5-2=3>>3 personer
+Således får han 3*2=<<3*2=6>>6 breve om ugen
+Så han skriver 6*5=<<6*5=30>>30 sider om ugen
+Så han skriver i 30*6=<<30*6=180>>180 minutter om ugen
+Så han skriver 180/60=<<180/60=3>>3 timer om ugen
+#### 3","Lad os analysere problemet trin for trin:
+
+1. **Antal pennevenner:** Start med 5 personer.
+
+2. **Antal pennevenner der stoppede:** 2 personer, hvilket efterlader ham med 3 pennevenner.
+
+3. **Links opdatering:** Han stopper med at være penneven med de 2, hvilket betyder at han kun skriver til de 3 tilbageværende pennevenner.
+
+4. **Brevudveksling:**  
+- Hver ven sender 2 breve om ugen.  
+- Han modtager altså totalt \( 3 \text{ venner} \times 2 \text{ breve} = 6 \) breve om ugen, og han sender også 6 breve, et til hver ven.
+
+5. **Svar:** Han svarer med det samme.  
+- Når han modtager et brev, svarer han med det samme, så han skriver et svar til hvert brev.
+
+6. **Indhold og tidsforbrug per brev:**  
+- Hvert brev er 5 sider langt.  
+- Han kan skrive én side på 6 minutter.
+
+7. **Tidsforbrug per brev:**  
+- 5 sider \(\times\) 6 minutter per side = 30 minutter pr. brev.
+
+8. **Samlet tid pr. uge:**  
+- Han skal skrive et svar til hver modtaget brev: 6 breve, hver 30 minutter.  
+- Total tid = \(6 \text{ breve} \times 30 \text{ min} = 180 \text{ min}\).
+
+8. **Konverter til timer:**  
+- \(180 \text{ min} / 60 = 3 \text{ timer}\).
+
+---
+
+**Svar:** Mike bruger **3 timer** om ugen på at svare på breve.",1.0,True,"The output provides a clear, step-by-step solution to the problem, resulting in the correct answer that Mike uses 3 hours per week."
+991,"Kometen Halley kredser rundt om solen hvert 75. år. Bills far så kometen, da han var 30 år gammel. Bill så kometen anden gang, da han var tre gange så gammel som hans far var, da han så kometen. Hvor gammel var Bill, da han så kometen for første gang?","Bill så kometen for anden gang, da han var 30 år * 3= <<30*3=90>>90 år gammel.
+Kometen Halley kan ses hvert 75. år, så Bill så kometen for første gang, da han var 90 år - 75 år = <<90-75=15>>15 år gammel.
+#### 15","Lad os definere nogle variable:
+
+- \( F_1 \): Fars alder, da han så kometen første gang.
+- \( B_1 \): Bills alder, da han så kometen første gang.
+- \( F_2 \): Fars alder, da han så kometen anden gang.
+- \( B_2 \): Bills alder, da han så kometen anden gang.
+
+Givet informationer:
+
+1. **Bill så kometen anden gang**, da han var **tre gange så gammel som hans far var**, da han så den første gang:
+\[
+B_2 = 3 \times F_1
+\]
+
+2. **Kometen kredser rundt om solen hvert 75. år**:
+Kometen har en 75-årig cyklus, så tidspunktet mellem de to observationer er 75 år. Derfor:
+\[
+B_2 - B_1 = 75
+\]
+og
+\[
+F_2 - F_1 = 75
+\]
+
+3. **Fars alder, da han så kometen første gang, var** 30 år:
+\[
+F_1 = 30
+\]
+
+4. **Faren og Bill ser kometen igen efter 75 år**:
+\[
+F_2 = F_1 + 75 = 30 + 75 = 105
+\]
+og
+\[
+B_2 = B_1 + 75
+\]
+
+Fra punkt 1:
+\[
+B_2 = 3 \times F_1 = 3 \times 30 = 90
+\]
+Så:
+\[
+B_2 = 90
+\]
+
+Fra dette følger:
+\[
+B_2 = B_1 + 75
+\]
+\[
+90 = B_1 + 75
+\]
+\[
+B_1 = 90 - 75 = 15
+\]
+
+**Svar:**
+
+Bill var **15 år gammel**, da han så kometen for første gang.
+
+---
+
+**Endeligt svar:** \(\boxed{15}\)",1.0,True,"The calculations correctly follow the problem's clues and reach the result of Bill's age being 15 when he first saw the comet, consistent with expected reasoning."
+364,Der er 96 fjerdeklassinger på Small Tree School. 43 af dem er piger. Fredag var 5 fjerdeklassespiger og 4 fjerdeklasse drenge fraværende. Hvor mange fjerdeklasse drenge var på Small Tree School fredag?,"Af de 96 fjerdeklassinger er 43 piger, så 96 elever - 43 piger = <<96-43=53>>53 drenge.
+Fredag var der 53 drenge - 4 fraværende = <<53-4=49>>49 drenge.
+#### 49","Først opsummerer vi de givne oplysninger:
+
+- Total fjerdeklasseelever: 96
+- Antal piger: 43
+- Derfor er antallet af drenge: 96 - 43 = 53
+
+På Fredag var:
+
+- 5 piger fraværende, så der var 43 - 5 = 38 til stede
+- 4 drenge fraværende, så der var 53 - 4 = 49 til stede
+
+Spørgsmålet er, hvor mange drenge der var til stede fredag.
+
+**Svar:** 49 drenge var på Small Tree School fredag.",1.0,True,the output correctly calculates the number of boys present and provides the expected answer.
+1111,"Der er i øjeblikket 3 røde bolde, 11 blå bolde, og 25 grønne bolde i butikken. Røde bolde koster $9, Blå bolde koster $5 og grønne bolde koster $3. Hvor meget vil butikken have modtaget efter alle boldene er solgt?","For de røde bolde, 3 bolde * $9/bolde = $<<3*9=27>>27.
+For de blå bolde, 11 bolde * $5/bolde = $<<11*5=55>>55.
+For de grønne bolde, 25 bolde * $3/bolde = $<<25*3=75>>75.
+For alle bolde, $27 + $55 + $75 = $<<27+55+75=157>>157.
+#### 157","Lad os beregne den samlede indtægt ved at multiplicere antallet af bolde med deres priser og derefter lægge det sammen:
+
+Røde bolde: 3 stk. × $9 = $27  
+Blå bolde: 11 stk. × $5 = $55  
+Grønne bolde: 25 stk. × $3 = $75
+
+Samlet indtjening = $27 + $55 + $75 = $157
+
+**Svar: Butikken vil have modtaget $157 efter alle boldene er solgt.**",1.0,True,"The output provides the correct calculation of total revenue by multiplying each type of ball's quantity by its price and summing the results, correctly concluding it will be $157."
+1207,"Deandre fangede 3 tun i mandags, den første tun han fangede vejer 56 kilogram, den anden tun han fangede vejer 46 kilogram, og den sidste tun han fangede vejer 26 kilogram. Hvis et kilogram tun koster $0,50, hvor meget vil han tjene efter at have solgt alle tunene til markedet?","Deandre vil tjene 56 x $0,50 = $<<56*0.5=28>>28 fra den første tun.
+Han vil tjene 46 x $0,50 = $<<46*0.5=23>>23 for den anden tun.
+Og han vil tjene 26 x $0,50 = $<<26*0.5=13>>13 fra den tredje tun.
+Derfor, den totale mængde han vil tjene for alle tunene er $28 + $23 + $13= $<<28+23+13=64>>64.
+#### 64","Lad os finde ud af, hvor meget Deandre tjener ved at sælge alle sine tun.
+
+Først lægger vi vægten af de tre tun sammen:
+56 kg + 46 kg + 26 kg = 128 kg
+
+Nu ganger vi den samlede vægt med prisen per kilogram:
+128 kg × $0,50 = $64,00
+
+Så Deandre vil tjene **$64,00** efter at have solgt alle tunene.",1.0,True,"The solution correctly calculates the total weight of tunas, calculates the total earning by multiplying the total weight with the price per kilogram, and provides the correct answer."
+655,Shiela skal aflevere en 15-siders forskningsartikel. Hun har allerede skrevet 1/3 af artiklen. Hvor mange sider mangler hun stadig at skrive?,"Shiela har allerede skrevet en tredjedel af artiklen, hvilket er 15 sider x 1/3 = <<15*1/3=5>>5 sider.
+Så hun mangler stadig at skrive 15 sider - 5 sider = <<15-5=10>>10 sider.
+#### 10","For at finde ud af, hvor mange sider Sheila har skrevet, kan vi beregne en tredjedel af de samlede sider:
+
+\[ \frac{1}{3} \times 15 = 5 \]
+
+Så Sheila har allerede skrevet 5 sider. 
+
+Antal sider, hun mangler at skrive, er:
+
+\[ 15 - 5 = 10 \]
+
+**Svar: Sheila mangler stadig at skrive 10 sider.**",1.0,True,The output accurately calculates the number of pages Sheila still needs to write: 15 total pages minus 5 pages already written results in 10 pages remaining.
+1088,"Der er 6 perioder om dagen for en normal elev, men John skal tage 2 ekstra timer. Hver time varer 40 minutter. Han går til undervisning 5 dage om ugen. Han bruger derefter 1/16 af sine ugentlige minutter hver på lørdag og søndag som ekstra læringstid. Hvor mange timer om ugen bruger han på at lære?","Han tager 6+2=<<6+2=8>>8 timer om dagen
+Det betyder, at han bruger 40*8=<<40*8=320>>320 minutter pr. dag i klassen
+Så han bruger 320*5=<<320*5=1600>>1600 minutter om ugen
+Det betyder, at han bruger 1600/16=<<1600/16=100>>100 minutter hver på lørdag og søndag
+Så han bruger 1600+100+100=<<1600+100+100=1800>>1800 minutter om ugen
+Så han bruger 1800/60=<<1800/60=30>>30 timer om ugen
+#### 30","Lad os beregne det trin for trin:
+
+**1. Normalt antal timer om dagen:**
+- En normal dag har 6 perioder.
+- Hver periode varer 40 minutter.
+- Så, daglig undervisningstid = 6 × 40 minutter = 240 minutter.
+
+**2. Ekstra timer for John:**
+- John skal have 2 ekstra timer om dagen.
+- 2 timer = 2 × 60 = 120 minutter.
+
+**3. Total undervisningstid om dagen for John:**
+- Normalt: 240 minutter
+- Ekstra: 120 minutter
+- Samlet daglig tid = 240 + 120 = 360 minutter.
+
+**4. Ugentlig undervisningstid (mandag til fredag):**
+- 5 dage × 360 minutter = 1800 minutter.
+
+**5. Total ugentlig tid inklusive ekstra timer:**
+- Ugeligt antal normaltid (mandag til fredag): 1800 minutter.
+- Du skal nu finde ud af, hvor meget tid han bruger om lørdage og søndage som ekstra læringstid.
+
+**6. Lørdag og søndag som ekstra læringstid:**
+- Han bruger 1/16 af sine ugentlige minutter på lørdag og søndag.
+- Total tid (mandag til fredag): 1800 minutter.
+
+Let’s kalde den samlede ugentlige tid **T**.
+
+- Ugentlig tid på lørdage og søndage = (1/16) × T.
+
+Men her er der en vigtig detalje: tiden han bruger på lørdag og søndag er ekstra tid (ikke bare en andel af det, han allerede bruger).  
+Ifølge opgaven: ""Han bruger derefter 1/16 af sine ugentlige minutter hver på lørdag og søndag som ekstra læringstid."" Det betyder, at disse ekstra timer (lørdag og søndag) er en andel af den samlede ugentlige tid, og de skal altså også inkluderes i T.
+
+Det mest logiske er at antage, at de **samlede** ugentlige minutter (inklusive lørdag og søndag) er T, og at den ekstra træningstid på lørdag og søndag er (1/16) af T.
+
+Lad os derfor formulere det sådan:
+
+\[ \text{Total ugentlige tid} = \text{Tid mandag til fredag} + \text{Lørdag+Søndag} \]
+
+Derfor:
+
+\[
+T = 1800 \text{ minutter} + \frac{1}{16} T
+\]
+
+Lad os nu løse for T:
+
+\[
+T - \frac{1}{16} T = 1800
+\]
+
+\[
+\left(1 - \frac{1}{16}\right) T = 1800
+\]
+
+\[
+\frac{15}{16} T = 1800
+\]
+
+\[
+T = 1800 \times \frac{16}{15}
+\]
+
+\[
+T = 1800 \times \frac{16}{15} = 1800 \times \frac{16}{15} = (1800 ÷ 15) \times 16 = 120 \times 16 = 1920
+\]
+
+**Den samlede ugentlige tid:** 1920 minutter.
+
+---
+
+### **7. Hvor mange minutter bruger John på at lære om ugen?**
+
+**Svar:** 1920 minutter.
+
+### **8. Konverter til timer:**
+
+\[
+1920 \div 60 = 32 \text{ timer}
+\]
+
+**John bruger altså 32 timer om ugen på at lære.**",1.0,True,"The output provides a detailed and correct calculation of the total weekly learning time, arriving at the correct answer of 32 hours per week."
+1074,Teddy afsluttede halvdelen af et puslespil med 500 brikker og begyndte derefter at færdiggøre et andet puslespil med 500 brikker på en time. Hvor mange puslespilsbrikker placerede Teddy i løbet af den time?,"Teddy gjorde 1/2 * 500 brikker = <<500/2=250>>250 brikker.
+Teddy færdiggjorde 250 brikker + 500 brikker = <<250+500=750>>750 brikker.
+#### 750","Teddy afsluttede halvdelen af det første puslespil med 500 brikker. Det betyder, at han har placeret:
+
+\[
+\frac{1}{2} \times 500 = 250 \text{ brikker}
+\]
+
+Derefter begyndte han at færdiggøre det andet puslespil med 500 brikker, og det tog ham én time. Da oplysningerne siger, at han ""begyndte at færdiggøre"" det andet puslespil, tager vi det for at han placerede alle brikkerne i løbet af den timelange periode.
+
+Så i løbet af den time placerede Teddy:
+
+\[
+500 \text{ brikker}
+\]
+
+**Svar:**
+
+\[
+\boxed{500}
+\]",1.0,False,"The output incorrectly calculates and states the number of pieces placed in the hour. Teddy placed the 500 pieces of the second puzzle within the hour, not including the 250 from the first puzzle."
+434,Automaterne sælger chips for 40 cent og slikbarer for 75 cent. George brugte $5 og fik 3 poser chips og havde 1% af sine penge tilbage. Hvor mange slikbarer købte han?,"George fik $.05 i byttepenge fordi 5 x .01 = <<5*.01=.05>>.05
+George brugte $4.95 fordi 5 - .05 = <<5-.05=4.95>>4.95
+George brugte $1.2 på chips fordi 3 x .4 = <<3*.4=1.2>>1.2
+George brugte 3.75 på slikbarer fordi 4.95 - 1.2 = <<4.95-1.2=3.75>>3.75
+George købte 5 slikbarer fordi 3.75 / .75 = <<5=5>>5
+#### 5","Lad os definere variablerne:
+
+- Lad \( x \) være antallet af slikbarer, George købte.
+- Han købte 3 poser chips.
+
+Pris pr. pose chips = 40 cent  
+Pris pr. slikbar = 75 cent
+
+George startede med 5 dollars = 500 cent.
+
+Hans samlede udgift er:
+
+\[
+(3 \times 40) + (x \times 75) \text{ cent}
+\]
+
+Total penge til rådighed = 500 cent
+
+Ifølge opgaven fik han 1% tilbage af sine penge, hvilket betyder:
+
+\[
+\text{Tilbage} = 1\% \text{ af } 500 \text{ cent} = 0.01 \times 500 = 5 \text{ cent}
+\]
+
+Det betyder, at det beløb, han brugte, plus pengene tilbage, svarer til det oprindelige beløb:
+
+\[
+\text{Udgift} + \text{Tilbage} = 500 \text{ cent}
+\]
+
+Da han fik 1% tilbage, kan vi også sige, at:
+
+\[
+\text{Udgift} = 500 - 5 = 495 \text{ cent}
+\]
+
+Altså:
+
+\[
+(3 \times 40) + (x \times 75) = 495
+\]
+
+Regn ud:
+
+\[
+120 + 75x = 495
+\]
+
+Træk 120 fra begge sider:
+
+\[
+75x = 495 - 120 = 375
+\]
+
+Del begge sider med 75:
+
+\[
+x = \frac{375}{75} = 5
+\]
+
+**Svar:** Han købte **5 slikbarer**.",1.0,True,The solution provides a step-by-step explanation of the problem and arrives at the correct answer of 5 slikbarer.
+1025,Påskeæggejagtholdet gemte 100 æg. Smith-tvillingene fandt hver 30 æg. Alle de andre æg undtagen 10 blev fundet af deres venner. Hvor mange æg fandt vennerne?,"Smith-tvillingene fandt, 30 * 2 = <<30*2=60>>60 æg.
+Antallet der forblev skjult var 100 - 60 = <<100-60=40>>40 æg
+Da 10 æg ikke blev fundet, betyder det, at vennerne fandt 40 - 10 = 30 æg
+#### 30","Lad os gennemgå oplysningerne trin for trin:
+
+- Det samlede antal æg er 100.
+- Smith-tvillingene fandt hver 30 æg, altså i alt \( 2 \times 30 = 60 \) æg.
+- Alle de andre æg undtagen 10 blev fundet af deres venner.
+
+Antal æg fundet af Smith-tvillingene er 60, så de resterende æg er:
+
+\[ 100 - 60 = 40 \]
+
+Af disse 40 æg blev alle undtagen 10 fundet af vennerne. Det betyder, at:
+
+\[ 40 - 10 = 30 \]
+
+æg blev fundet af vennerne.
+
+**Svar:** Vennerne fandt **30 æg**.",1.0,True,"the output correctly calculates the number of eggs found by the friends, following the problem statement meticulously step-by-step, leading to the correct answer of 30 eggs."
+320,"I starten af festen var der 25 mænd og 15 kvinder. Efter en time forlod 1/4 af det samlede antal personer. Hvor mange kvinder er tilbage, hvis 22 mænd blev til festen?","Der var i alt 25 mænd + 15 kvinder = <<25+15=40>>40 personer, der deltog i festen.
+Efter en time forlod 40 personer / 4 = <<40/4=10>>10 personer festen.
+Dette betyder, at 40 personer - 10 personer = <<40-10=30>>30 personer blev.
+Ud af de 30, der blev, var 30 personer - 22 mænd = <<30-22=8>>8 kvinder.
+#### 8","Lad os først finde ud af, hvor mange personer der var til at starte med:
+
+- Mænd: 25
+- Kvinder: 15
+- Samlet: 25 + 15 = 40 personer
+
+Efter en time forlod 1/4 af det samlede antal personer:
+
+- Antal personer, der forlod: 1/4 af 40 = 10 personer
+- Det resterende antal personer: 40 - 10 = 30 personer
+
+Vi ved, at 22 mænd blev til festen, hvilket betyder, at der er tilføjet 22 mænd efter starten, og at der stadig er 25 mænd i starten:
+
+- Forskellen i antallet af mænd: 22 - 25 = -3
+
+Dette betyder, at vi faktisk har færre mænd nu end til at starte med, hvilket vil sige, at nogle mænd er gået hjem. Men ifølge opgaven forlod 1/4 af det samlede antal personer, hvilket inkluderer både mænd og kvinder. Lad os analysere det:
+
+### Step 1: Find ud af, hvor mange mænd og kvinder der var til at starte med, der forlod:
+
+Antal personer, der forlod: 10 personer.
+
+Antal mænd til at starte med: 25  
+Antal kvinder til at starte med: 15
+
+Hvis vi antager, at \(x\) mænd forlod, og \(y\) kvinder forlod, har vi:
+
+\[
+x + y = 10
+\]
+
+I slutningen er der:
+
+- Mænd: \(25 - x\)
+- Kvinder: \(15 - y\)
+
+Det er også givet, at 22 mænd ""blev til festen"" – altså, at der er 22 mænd, der var til slut, hvilket kan give anledning til forvirring, men i opgaven står der: ""22 mænd blev til festen,"" hvilket kan tolkes som, at 22 mænd var til stede i slutningen eller har deltaget i festen.
+
+Hvis der er 22 mænd til stede efter forløbet, og der startede 25, så:
+
+\[
+25 - x = 22 \implies x = 3
+\]
+
+Det vil sige, 3 mænd forlod festen.
+
+### Step 2: Find, hvor mange kvinder der forlod:
+
+Da i alt 10 personer forlod, og 3 af dem var mænd, er:
+
+\[
+y = 10 - 3 = 7
+\]
+
+Derfor:
+
+- Kvinder, der forlod: 7  
+- Kvinder tilbage: \(15 - 7 = 8\)
+
+### **Svar:**
+
+Der er **8 kvinder** tilbage efter forløbet.
+
+**\(\boxed{8}\)**",1.0,True,the output correctly calculates the number of women still at the party: 8.
+1305,"Adams-familien har travlt med at lave småkager. Indtil videre har de lavet 7995 småkager. De har 2595 regnbue småkager, 3075 havregryn småkager, og nogle chokoladechip småkager. Hvor mange chokoladechip småkager har de lavet?","Det samlede antal regnbue og havregryn småkager er 2595 + 3075 = <<2595+3075=5670>>5670.
+Derfor har de lavet 7995 - 5670 = <<7995-5670=2325>>2325 chokoladechip småkager.
+#### 2325","Lad os finde ud af, hvor mange chokoladechip småkager Adams-familien har lavet.
+
+De har lavet i alt: 7995 småkager.
+
+De har allerede lavet:
+- Regnbue småkager: 2595
+- Havregryn småkager: 3075
+
+Først lægger vi de kendte småkager sammen:
+2595 + 3075 = 5670
+
+Nu trækker vi dette tal fra det samlede antal for at finde antallet af chokoladechip småkager:
+7995 - 5670 = 2325
+
+**Svar:** Adams-familien har lavet **2325** chokoladechip småkager.",1.0,True,"The output provides the correct calculation and answer for the number of chokoladechip småkager, which is 2325, as derived from the given data."
+336,"Maria køber 8 aktier af en aktie for $8 hver. Aktiekursen stiger 50% det første år, Maria ejer dem, og falder derefter 25% det andet år. Hvad er den endelige værdi af alle Marias aktier?","Først finder vi den oprindelige samlede værdi af Marias køb: 8 aktier * $8/aktie = $<<8*8=64>>64
+Derefter finder vi beløbet for den første prisstigning: $64 * .5 = $<<64*.5=32>>32
+Tilføj det beløb til den oprindelige værdi for at finde værdien efter det første år: $64 + $32 = $<<64+32=96>>96
+Derefter multiplicer det beløb med 25% for at finde faldet i det andet år: $96 * 25% = $<<96*25*.01=24>>24
+Træk derefter det beløb fra værdien efter det første år for at finde den endelige værdi: $96 - $24 = $<<96-24=72>>72
+#### 72","Lad os følge trinene:
+
+1. **Startinvestering:**  
+Maria køber 8 aktier til $8 hver.  
+**Startværdi:** \( 8 \text{ aktier} \times \$8 = \$64 \)
+
+2. **Efter første år:**  
+Aktiekursen stiger med 50%.  
+Ny kurs = \( \$8 + 50\% \times \$8 = \$8 + \$4 = \$12 \)
+
+Værdien af hendes 8 aktier efter det første år:  
+\[ 8 \times \$12 = \$96 \]
+
+3. **Efter andet år:**  
+Aktiekursen falder med 25%.  
+Nye kurs = \( \$12 - 25\% \times \$12 = \$12 - \$3 = \$9 \)
+
+Værdien af hendes 8 aktier efter det andet år:  
+\[ 8 \times \$9 = \$72 \]
+
+**Endelig værdi af Marias aktier: \boxed{\$72}**",1.0,True,The calculation steps are correct and the final value of Maria's stocks is accurately computed as $72.
+1084,"Hvis Sam og Harry har 100 fod hegn mellem dem, og de er enige om at dele det, så Harry får 60 fod mere end Sam, hvor meget er der tilbage til Sam?","Lad x være mængden af hegn, Sam får, og y være mængden, Harry får. Vi ved, at y = x + 60, og y + x = 100.
+Indsætter vi den første ligning i den anden ligning, får vi 2x+60=100
+Trækker 60 fra begge sider, får vi 2x=40
+Vi deler hver side med to, og x=20. Dette betyder, at Sam har 20 fod hegn tilbage.
+#### 20","Lad os først definere variablerne:
+
+- Lad \( S \) være mængden af hegn (i fod) som Sam får.
+- Da Harry får 60 fod mere end Sam, er Harrys mængde hoghst \( S + 60 \).
+
+Ifølge problemet er den samlede mængde hegn 100 fod:
+
+\[
+S + (S + 60) = 100
+\]
+
+Lad os løse for \( S \):
+
+\[
+2S + 60 = 100
+\]
+\[
+2S = 100 - 60
+\]
+\[
+2S = 40
+\]
+\[
+S = \frac{40}{2} = 20
+\]
+
+Så, Sam får 20 fod hegn. For at finde ud af, hvor meget der er til overs til Sam, når Harry får 60 fod mere end han:
+
+\[
+Harry = S + 60 = 20 + 60 = 80
+\]
+
+Tjek:
+
+\[
+S + Harry = 20 + 80 = 100
+\]
+
+Det stemmer. Så alt hegn er fordelt, og der er **ingen tilbage til Sam** udover hans 20 fod.
+
+**Svar: Sam har 20 fod hegn, og der er ingen noget tilbage til ham — det hele er fordelt.**",1.0,True,"The output correctly explains the solution to the problem, clarifying that Sam gets 20 feet of the fence and verifying that the distribution is correct according to the problem statement. The final answer matches the expected result."
+1053,"Alison kvalificerede sig til en plads på løbeholdet, så hun gik ud for at shoppe noget sportsudstyr. Hun købte en tanktop til $10, et par løbeshorts for $5 mere end toppen kostede, og et par tennissko, der oprindeligt kostede $48, men var på udsalg til halv pris. Hun havde en kupon til $2 rabat på pakken med $8 sportsstrømper, som hun også købte. Hvor meget brugte hun på sportsudstyr?","Shortsene kostede $5 mere end tanktoppen, så de kostede $5 + $10 = $<<5+10=15>>15.
+Hendes tennissko kostede halvdelen af den oprindelige pris på $68, så de kostede $48 / 2 = $24.
+Med hendes kupon kostede strømperne $8 - $2 = $<<8-2=6>>6.
+T-shirten, shortsene, skoene og strømperne kostede tilsammen $10 + $15 + $24 + $6 = $<<10+15+24+6=55>>55.
+#### 55","Lad os regne det ud trin for trin:
+
+1. **Tanktop:**  
+Prisen er $10.
+
+2. **Løbeshorts:**  
+De kostede $5 mere end tanktoppen:  
+$10 + $5 = $15.
+
+3. **Tennissko:**  
+Oprindeligt kostede $48, men var på halv pris:  
+$48 / 2 = $24.
+
+4. **Sportsstrømper:**  
+Originalpris $8, rabat på $2:  
+$8 - $2 = $6.
+
+**Samlet beløb:**
+
+\[
+\$10 \quad (\text{tanktop}) \\
++ \$15 \quad (\text{løbeshorts}) \\
++ \$24 \quad (\text{tennissko}) \\
++ \$6 \quad (\text{sportsstrømper}) \\
+= \$55
+\]
+
+Alison brugte **$55** på sportsudstyret.",1.0,True,The explanation and calculation of costs are correct. The total cost of the sports equipment is indeed $55.
+1099,"Den største vandrutsjebane i Five Flags er 300 fod lang, og folk glider ned med 60 fod/minut. Den næststørste vandrutsjebane er 240 fod lang, men stejlere, så folk glider ned med 80 fod/minut. Hvor meget længere tager det at køre på den største rutsjebane sammenlignet med den næststørste?","Først skal du finde køretiden på den største rutsjebane: 300 fod / 60 fod/minut = <<300/60=5>>5 minutter
+Så skal du finde køretiden på den næststørste rutsjebane: 240 fod / 80 fod/minut = <<240/80=3>>3 minutter
+Træk derefter køretiden på den næstlængste rutsjebane fra den længste for at finde forskellen: 5 minutter - 3 minutter = <<5-3=2>>2 minutter
+#### 2","Lad os beregne tiden det tager at køre på hver vandrutsjebane og derefter finde forskellen.
+
+**For den største vandrutsjebane:**
+- Længde: 300 fod
+- Fart: 60 fod/minut
+
+Tiden det tager:  
+\[ t_1 = \frac{\text{længde}}{\text{fart}} = \frac{300 \text{ fod}}{60 \text{ fod/min}} = 5 \text{ minutter} \]
+
+**For den næststørste vandrutsjebane:**
+- Længde: 240 fod
+- Fart: 80 fod/minut
+
+Tiden det tager:  
+\[ t_2 = \frac{240 \text{ fod}}{80 \text{ fod/min}} = 3 \text{ minutter} \]
+
+**Forskellen i tid:**  
+\[ t_1 - t_2 = 5 \text{ min} - 3 \text{ min} = 2 \text{ minutter} \]
+
+**Svar:** Det tager 2 minutter længere at køre på den største vandrutsjebane sammenlignet med den næststørste.",1.0,True,"The output correctly calculates the time difference between the two water slides based on the given speeds and lengths, arriving at the correct conclusion that it takes 2 minutes longer to ride the longest slide."
+39,"Dana kan løbe med en hastighed fire gange hurtigere end hun kan gå, men hun kan springe med en hastighed, der er halvt så hurtig som hun kan løbe. Hvis hun kan springe med 3 miles i timen, hvor mange miles kan hun rejse på seks timer, hvis hun bruger en tredjedel af tiden på at løbe og to tredjedele af tiden på at gå?","Hvis Dana kan springe med halvdelen af hastigheden hun kan løbe, så kan hun løbe med 3*2=<<3*2=6>>6 miles i timen.
+Og da hun kan løbe med en hastighed, der er 4 gange hurtigere end hun kan gå, betyder det, at hun kan gå med 6/4=1,5 miles i timen.
+Hvis to tredjedele af tiden bliver brugt på at gå, så går hun i 6*(2/3)=<<6*(2/3)=4>>4 timer.
+Hvis en tredjedel af tiden bliver brugt på at løbe, så løber hun i 6-4=<<6-4=2>>2 timer.
+Således løber hun i 2 timer med 6 miles i timen, eller 2*6=<<2*6=12>>12 miles.
+Hun går i 4 timer med 1,5 miles i timen, eller 4*1,5=<<4*1,5=6>>6 miles.
+Således rejser hun i alt 12+6=<<12+6=18>>18 miles.
+#### 18","Lad os først opsummere de givne oplysninger:
+
+- Dana kan løbe med en hastighed, der er 4 gange så stor som hendes gåhastighed.
+- Hun kan springe med en hastighed, der er halvt så stor som hendes løbehastighed.
+- Hun kan springe med 3 miles i timen.
+- Hun bruger en tredjedel af tiden på at løbe og to tredjedele af tiden på at gå.
+- Vi vil finde ud af, hvor mange miles hun kan rejse på 6 timer.
+
+Lad os definere:
+
+- \( v_g \): hendes gåhastighed (miles/time)
+- \( v_l \): hendes løbehastighed (miles/time)
+- \( v_s \): hendes springhastighed (miles/time)
+
+### Trin 1: Find hendes løbehastighed
+Hun løber med 4 gange så stor hastighed som hendes gåhastighed:
+
+\[
+v_l = 4 v_g
+\]
+
+### Trin 2: Find hendes springhastighed
+Hendes springhastighed er halvt så stor som hendes løbehastighed:
+
+\[
+v_s = \frac{1}{2} v_l = \frac{1}{2} \times 4 v_g = 2 v_g
+\]
+
+Givet at:
+\[
+v_s = 3 \text{ miles/time}
+\]
+
+Derfor:
+
+\[
+2 v_g = 3 \implies v_g = \frac{3}{2} = 1.5 \text{ miles/time}
+\]
+
+### Trin 3: Find hendes løbehastighed
+\[
+v_l = 4 v_g = 4 \times 1.5 = 6 \text{ miles/time}
+\]
+
+### Trin 4: Tidsfordeling
+Total tid:
+
+\[
+T = 6 \text{ timer}
+\]
+
+- Tid brugt på at løbe:
+
+\[
+T_l = \frac{1}{3} \times 6 = 2 \text{ timer}
+\]
+
+- Tid brugt på at gå:
+
+\[
+T_g = \frac{2}{3} \times 6 = 4 \text{ timer}
+\]
+
+### Trin 5: Beregn distance for hver aktivitet
+- Distance løbet:
+
+\[
+D_l = v_l \times T_l = 6 \times 2 = 12 \text{ miles}
+\]
+
+- Distance gået:
+
+\[
+D_g = v_g \times T_g = 1.5 \times 4 = 6 \text{ miles}
+\]
+
+### **Samlet distance:**
+
+\[
+D_{total} = D_l + D_g = 12 + 6 = \boxed{18 \text{ miles}}
+\]
+
+**Svar: Dana kan rejse 18 miles på seks timer.**",1.0,True,"The output correctly breaks down the problem, solves for the running speed, walking speed, and total distance using the given conditions. It provides a clear step-by-step solution, culminating in the correct total distance of 18 miles in 6 hours."
+652,"James lejer en hestevogn fra kl. 17 til kl. 21. Han får 1 time gratis. Den første betalte time koster $15, og hver efterfølgende time koster det dobbelte. Hvor meget betalte han?","Han havde den i 9-5=<<9-5=4>>4 timer
+Han betaler for 4-1=<<4-1=3>>3 timer
+Den første time koster 1*15=$<<1*15=15>>15
+De andre 3-1=2 timer er dyrere
+De koster 15*2=$<<15*2=30>>30 per time
+Så de 2 timer koster 2*30=$<<2*30=60>>60
+Så han betaler 60+15=$<<60+15=75>>75 for timerne
+#### 75","Lad os først opsummere oplysningerne:
+
+- Hyren starter kl. 17 og slutter kl. 21.
+- Total tid: 4 timer (17-18, 18-19, 19-20, 20-21).
+- Han får 1 time gratis.
+- Den første betalte time koster $15.
+- Hver efterfølgende time koster det dobbelte af den foregående.
+
+---
+
+**Step 1: Bestem hvilken time der er gratis**
+
+Da han lejer fra kl. 17 til 21, kan vi antage, at han får 1 time gratis et vilkårligt sted i perioden, normalt den første time.
+
+Da ""Den første betalte time koster $15,"" betyder det, at:
+- Hvis den første time er gratis, så den første time ikke koster noget.
+- Herefter skal vi bestemme, hvilke timer der er betalte.
+
+---
+
+**Step 2: Tildel gratis time**
+
+Antag, at den gratis time er fra kl. 17-18.
+
+**Hvis den første time (17-18) er gratis:**
+- Betalte timer = 18-19, 19-20, 20-21 ⇒ 3 timer.
+
+**Dette vil give os:**
+
+1. 17-18: gratis
+2. 18-19: betalt (første betalte time)
+3. 19-20: betalt (anden betalte time)
+4. 20-21: betalt (tredje betalte time)
+
+---
+
+**Step 3: Beregn om betalingen passer med priserne**
+
+- Den første betalte time koster $15.
+- Efterfølgende betalte timer koster det dobbelte af den foregående.
+
+Så:
+
+| Betalte time | Pris  |
+|---------------|--------|
+| 1.            | $15   |
+| 2.            | $15 × 2 = $30 |
+| 3.            | $30 × 2 = $60 |
+
+Se, at prisen for hver efterfølgende betalte time er:
+
+- 1. time: $15
+- 2. time: $30
+- 3. time: $60
+
+Total betaling:
+
+$$
+15 + 30 + 60 = 105 \text{ dollars}
+$$
+
+**Samlet betaling**: **$105**
+
+---
+
+**Alternative antagelse:**
+
+Hvis den gratis time er en anden time end den første, kan man også tjekke resten, men det vil resultere i tilsvarende eller større totaler, og since prisen for den første betalte time er givet som $15, er det mest sandsynligt at den gratis time er den første.
+
+---
+
+### **Svar:**
+
+\[
+\boxed{
+\text{James betalte } \mathbf{\$105}
+}
+\]",1.0,True,The output correctly computes that James paid $105 by deducting the free hour and applying the correct pricing strategy.
+149,"Charlie har tre gange så mange Facebook-venner som Dorothy. James har fire gange så mange venner på Facebook som Dorothy. Hvis Charlie har 12 venner på Facebook, hvor mange Facebook-venner har James?","Dorothy har 12 / 3 = <<12/3=4>>4 Facebook-venner.
+James har 4 * 4 = <<4*4=16>>16 Facebook-venner.
+#### 16","Lad os starte med det givne:
+
+- Charlie har 12 venner.
+- Charlie har tre gange så mange venner som Dorothy.
+
+Først finder vi Dorothy's antal venner:
+
+\[ \text{Dorothy's venner} = \frac{\text{Charlie’s venner}}{3} = \frac{12}{3} = 4 \]
+
+Nu ved vi, at James har fire gange så mange venner som Dorothy:
+
+\[ \text{James' venner} = 4 \times \text{Dorothy's venner} = 4 \times 4 = 16 \]
+
+**Svar: James har 16 venner på Facebook.**
+
+\(\boxed{16}\)",1.0,True,"The output correctly calculates the number of Facebook friends James has, based on the information provided in the input."
+406,Hos Allans hus er der dobbelt så meget majs som cannolis. Han har i alt 40 cannolis i sit hus. Allan købte 60 flere cannolis i butikken og 40 færre majs end antallet af cannolis. Find det samlede antal majs og cannolis Allan har i huset?,"Før han købte noget majs og cannoli, havde Allan dobbelt så meget majs som cannoli, hvilket er 40 cannoli * 2 majs/cannoli = 80 majs
+Det samlede antal majs og cannolis, som Allan havde før, er 80 majs + 40 majs = 120 majs
+Da han købte 40 færre majs end cannolis, købte han 60 majs - 40 majs = 20 majs
+I alt købte han 20 majs + 60 cannolis = 80 genstande
+Efter køb, har Allan 120 genstande + 80 genstande = 200 totalt majs og cannolis tilsammen.
+#### 200","Lad os opsummere informationerne:
+
+1. Der er dobbelt så meget majs som cannolis i Allans hus.
+2. Han har i alt 40 cannolis i huset.
+3. Allan købte 60 flere cannolis i butikken.
+4. Han har 40 færre majs end antallet af cannolis.
+
+---
+
+**Trin 1:** Find det oprindelige antal cannolis (i huset).  
+Pga. punkt 2 har han **40 cannolis** i huset.
+
+**Trin 2:** Antal cannolis efter at have købt 60 flere i butikken:  
+\[ \text{Totale cannolis} = 40 + 60 = 100 \]
+
+**Trin 3:** Antal majs i huset:  
+Allan har 40 færre majs end antallet af cannolis (som nu er 100):  
+\[ \text{Majs} = 100 - 40 = 60 \]
+
+**Trin 4:** Tjek om majs er dobbelt så meget som cannolis i huset:  
+Ifølge første sætning er der dobbelt så meget majs som cannolis, i huset.  
+Men vi har fundet, at der er **60 majs** og **40 cannolis** til start.  
+
+Dette stemmer med:  
+\[ \text{Majs} = 2 \times \text{Cannolis} \]
+
+Men den oprindelige cannolis er 40, så dobbelt af 40 er 80 – altså, hvis der skal være dobbelt så meget majs som cannolis i huset, skal der være **80 majs**.
+
+**Men i vores tidligere beregning har vi fundet 60 majs.**  
+
+Så lad os kontrollere de givne oplysninger igen.
+
+---
+
+**Refleksion:**  
+I opgaven står:  
+""*Hos Allans hus er der dobbelt så meget majs som cannolis.*""  
+Hvis dette refererer til hans samlede i huset, så antager vi at:
+
+\[
+\text{Majs} = 2 \times \text{Cannolis}
+\]
+
+og **i huset** er der **40 cannolis**.
+
+Så majs i huset = 80 (dobbelt så mange som cannolis).
+
+Det stemmer, så samlet har Allans hus:
+
+- 40 cannolis
+- 80 majs
+
+---
+
+**Trin 5:** Find det samlede antal majs og cannolis **i hus**, og hvor mange han har købt.
+
+- **Cannolis i huset:** 40 (oprindeligt)  
+- **Cannolis købt i butikken:** 60  
+- Samlet: 40 + 60 = 100 (fuldstændigt antal cannolis i huset efter køb)
+
+- **Majs i huset:** 80 (fra initialinformation, eller ud fra dobbelt forhold)  
+- **Majs:** 40 færre end antallet af cannolis (som nu er 100), dette gives:  
+\[ \text{Majs} = 100 - 40 = 60 \]
+
+Men dette modsiger det tidligere, hvor majs i huset skal være dobbelt så mange som cannolis (dvs. 80).  
+
+**Klarificering:**  
+Hvis i starten (før køb) var der 40 cannolis og majs = 80 (dobbelt så mange), så:
+
+- **Husliggørende:**  
+  - Cannolis: 40  
+  - Majs: 80  
+
+- Efter køb:  
+  - Cannolis: 40 + 60 = 100  
+  - Majs: ifølge tredje sætning: 40 færre end antallet af cannolis.  
+  - Så majs: 100 - 40 = 60
+
+Men denne værdi (60) er ikke dobbelt så meget som 40.
+
+**Det betyder, at de to forhold står:
+
+- I huset: majs = 80, cannolis = 40
+
+- Samlet (inklusive køb):  
+  - Cannolis: 100  
+  - Majs: 80
+
+**Så det samlede antal af majs og cannolis i huset (inklusive de købte) er:**
+
+\[
+\text{Samlet cannolis} = 100 \\
+\text{Samlet majs} = 80
+\]
+
+**Samlet i alt:**  
+\[
+100 + 80 = 180
+\]
+
+---
+
+**Svar:**
+
+Allan har **180** i alt af majs og cannolis i sit hus (40 cannolis oprindeligt, 60 ekstra købt, og tilsvarende majs til at opretholde forholdet).
+
+---
+
+**Endeligt konklusion:**
+
+- Antal cannolis efter køb: **100**
+- Antal majs (ifølge forholdet): **80**
+- Det samlede antal: **180**
+
+---
+
+**Svar:**  
+**Allan har i alt 180 majs og cannolis i sit hus.**",1.0,True,"The output accurately reflects the question's requirements, solving step-by-step to arrive at the correct total number combining corn and cannolis, which is 180."
+432,"Prins Thaddeus dræbte 100 drager med sit mægtige sværd, mens prins Arthur, der brugte et spyd, dræbte tre fjerdedele så mange drager som prins Thaddeus. Ved hjælp af en rusten jernøks dræbte prins Walter dobbelt så mange drager som prins Arthur. Men prins Bruce, som havde glemt sit sværd derhjemme, dræbte en femtedel så mange drager som prins Walter ved hjælp af en neglefil. Hvor mange drager har prins Bruce dræbt?","Prins Arthur dræbte tre fjerdedele så mange drager som prins Thaddeus, altså 100*(3/4)=<<100*(3/4)=75>>75 drager.
+Prins Walter dræbte dobbelt så mange drager som prins Arthur, altså 2*75=<<2*75=150>>150 drager.
+Prins Bruce dræbte en femtedel så mange drager som prins Walter, altså 150/5=<<150/5=30>>30 drager.
+#### 30","Lad os starte med at opsætte de kendte oplysninger trin for trin:
+
+1. **Prins Thaddeus**:
+   - Dræbte **100** drager.
+   
+2. **Prins Arthur**:
+   - Bruger et spyd.
+   - Dræbte3/4 af så mange som Prins Thaddeus:
+   
+   \[
+   \text{Drager dræbt af Arthur} = \frac{3}{4} \times 100 = 75
+   \]
+   
+3. **Prins Walter**:
+   - Bruger en rusten jernøks.
+   - Dræbte dobbelt så mange som prins Arthur:
+   
+   \[
+   \text{Drager dræbt af Walter} = 2 \times 75 = 150
+   \]
+   
+4. **Prins Bruce**:
+   - Glemte sit sværd og brugte en neglefil.
+   - Dræbte en femtedel så mange som prins Walter:
+   
+   \[
+   \text{Drager dræbt af Bruce} = \frac{1}{5} \times 150 = 30
+   \]
+   
+**Svar:**
+
+Prins Bruce har dræbt **30** drager.
+
+---
+
+Hvis du har flere spørgsmål eller ønsker yderligere forklaringer, er du velkommen til at spørge!",1.0,True,"The output provides the correct calculation for each prince and the final answer, which is that Prince Bruce killed 30 dragons."
+554,Når vandet er koldt svømmer Ray en mile på 16 minutter. Når vandet er varmt svømmer Ray en mile på 2 minutter mere end dobbelt så lang tid. Hvor meget længere tager det Ray at svømme 3 miles på en varm dag end en kold dag?,"Koldt vand mile = <<16=16>>16 minutter
+Varmt vand mile = 2+2(16)=34 minutter
+3 miles i koldt vand: 3(16)=<<3*16=48>>48 minutter
+3 miles i varmt vand: 3(34)=<<3*34=102>>102 minutter
+Ray tager 102-48=<<102-48=54>>54 minutter længere
+#### 54","Lad os starte med at finde Ray's svømmetid i begge scenarier.
+
+**Koldt vand:**
+- Ray svømmer en mile på 16 minutter.
+
+**Varmt vand:**
+- Han tager 2 minutter mere end dobbelt så lang tid for en mile.
+- Dobbelt så lang tid for en mile i varmt vand: \( 2 \times 16 = 32 \) minutter.
+- Tilføjet 2 minutter: \( 32 + 2 = 34 \) minutter.
+
+Nu kan vi beregne, hvor lang tid det tager at svømme 3 miles i hver situation.
+
+**Koldt vand:**
+- Tidsforbrug for 3 miles: \( 3 \times 16 = 48 \) minutter.
+
+**Varmt vand:**
+- Tidsforbrug for 3 miles: \( 3 \times 34 = 102 \) minutter.
+
+**Forskellen i tid:**
+\[ 102 - 48 = 54 \text{ minutter} \]
+
+**Svar:**
+Det tager Ray **54 minutter længere** at svømme 3 miles på en varm dag end på en kold dag.",1.0,True,the solution correctly calculates the time for both scenarios and finds the difference to answer the question
+718,"100 mennesker ansøger om et job hos Google. Af dem, der ansøger, modtager kun 30% invitationer til samtale. Af dem, der får en samtale, modtager 20% et jobtilbud. Af dem der får et jobtilbud, accepterer en tredjedel af personerne stillingen. Hvor mange personer accepterer stillingen?","Antallet af personer der modtager invitationer til samtale er 100 * 0,30 = <<100*0.30=30>>30 personer
+Antallet af personer der modtager et jobtilbud er 30 * 0,20 = <<30*0.20=6>>6 personer
+Antallet af personer der accepterer stillingen er 6 / 3 = <<6/3=2>>2 personer
+#### 2","Lad os beregne det trin for trin:
+
+1. **Antal ansøgere:** 100 personer
+
+2. **Antal, der modtager invitation til samtale:**
+   \[
+   30\% \text{ af } 100 = 0,30 \times 100 = 30 \text{ personer}
+   \]
+
+3. **Antal, der får et jobtilbud efter samtale:**
+   \[
+   20\% \text{ af } 30 = 0,20 \times 30 = 6 \text{ personer}
+   \]
+
+4. **Antal, der accepterer tilbuddet:**
+   \[
+   \frac{1}{3} \text{ af } 6 = \frac{1}{3} \times 6 = 2 \text{ personer}
+   \]
+
+**Svar:** **2 personer** accepterer stillingen.",1.0,True,"The calculation presented in the output is correct, leading to the expected result of 2 people accepting the job offer."
+918,"Der er 6 elever, der spiller tennis, og det dobbelte antal spiller volleyball. Der er 16 drenge og 22 piger, der spiller fodbold. Hvis hver elev kun deltager i én gruppe, hvor mange elever er der i alt?","Der er 6 x 2 = <<6*2=12>>12 elever, der spiller volleyball.
+Der er 16 + 22 = <<16+22=38>>38 elever, der spiller fodbold.
+I alt er der 6 + 12 + 38 = <<6+12+38=56>>56 elever.
+#### 56","Lad os opsummere de givne oplysninger:
+
+1. Der er 6 elever, der spiller tennis.
+2. Der er det dobbelte antal elever, der spiller volleyball, altså \( 2 \times 6 = 12 \) elever.
+3. Der er 16 drenge og 22 piger, der spiller fodbold, hvilket giver i alt \( 16 + 22 = 38 \) elever, der spiller fodbold.
+
+Alle elever deltager i præcis én gruppe.
+
+Nu kan vi beregne det samlede antal elever:
+
+\[
+\text{Tennis} + \text{Volleyball} + \text{Fodbold} = 6 + 12 + 38 = 56
+\]
+
+**Svar: Der er i alt 56 elever.**",1.0,True,"The output correctly calculated the total number of students based on the inputs provided. It summarized the information, performed the necessary arithmetic operations, and concluded with the correct answer: 56 students in total."
+357,"Morgans far sagde, at hun havde $90 budgetteret til sin fødselsdagsfest. Hun vil sikre sig, at hun og hendes venner alle får lov til at spille en runde minigolf, få $5 i arkademønter og køre go-karts to gange. En runde minigolf koster $5. Go-karts koster $10 per tur. Hvor mange venner kan hun invitere?","Go-karts vil koste $20 per person, fordi 10 x 2 = <<10*2=20>>20
+Hver person koster $30, fordi 5 + 5 + 20 = <<5+5+20=30>>30
+Tre personer i alt kan deltage, fordi 90 / 30 = <<90/30=3>>3
+Hun kan invitere 2 venner, fordi 3 - 1 =<<3-1=2>>2
+#### 2","Lad os analysere udgifterne:
+
+- Morgans eget spil minigolf: $5
+- Arkademønter til alle (inklusive Morgan): $5 pr. person
+- Go-kart kørt to gange af hver person: 2 gange á $10 = $20 pr. person
+- Det samlede budget: $90
+
+Lad \( n \) være antallet af venner, hun inviterer udover sig selv.
+
+Udgifter for Morgan + venner:
+
+- Minigolf: Morgan + \( n \) venner: \((n + 1) \times 5\) dollars
+- Arkademønter: \( n + 1 \) personer: \((n + 1) \times 5\) dollars
+- Go-karts: \( n + 1 \) personer: \( (n + 1) \times 20 \) dollars
+
+Total udgifter:
+
+\[
+\underbrace{(n+1) \times 5}_{\text{minigolf}} + \underbrace{(n+1) \times 5}_{\text{arkademønter}} + \underbrace{(n+1) \times 20}_{\text{go-karts}} \leq 90
+\]
+
+Sammenfatning:
+
+\[
+(n+1) \times (5 + 5 + 20) \leq 90
+\]
+
+\[
+(n+1) \times 30 \leq 90
+\]
+
+Dividere begge sider med 30:
+
+\[
+n + 1 \leq 3
+\]
+
+\[
+n \leq 2
+\]
+
+Det betyder, at Morgan kan invitere **2 venner**.
+
+---
+
+**Svar:** Morgans far kan invitere **2 venner**.",1.0,True,"The output provides a correct analysis of the cost breakdown and calculation, resulting in Morgan being able to invite 2 friends. This is the expected and correct answer to the problem."
+636,"Julie betjener kassen præcis dobbelt så hurtigt som hendes mindre erfarne kollega Jewel. Dagligt betjener Jewel 50 kunder. Hvad er den samlede ugentlige produktion for de to, hvis de arbejder alle ugens dage?","Mens Jewel behandler 50 ordrer på en dag, behandler Julie 50 ordrer/dag * 2 = <<50*2=100>>100 ordrer/dag.
+På en dag behandler de 100 ordrer/dag + 50 ordrer/dag = <<100+50=150>>150 ordrer sammen.
+Det samlede antal ordrer, de to behandler på en uge, er 150 ordrer/dag * 7 dage/uge = <<150*7=1050>>1050 ordrer
+#### 1050","Lad os først finde ud af, hvor mange kunder Julie betjener pr. dag.
+
+Jewel betjener 50 kunder om dagen.  
+Julie betjener dobbelt så mange som Jewel:
+
+\[ \text{Julie's kunder per dag} = 2 \times 50 = 100 \]
+
+Nu kan vi beregne den samlede daglige produktion for begge:
+
+\[ \text{Samlet kunder per dag} = 50 + 100 = 150 \]
+
+Hvis de arbejder alle ugens dage (typisk 7 dage):
+
+\[ \text{Ugentlig produktion} = 150 \times 7 = 1050 \]
+
+**Svar:** Den samlede ugentlige produktion for Julie og Jewel er **1050 kunder**.",1.0,True,The output provides a detailed step-by-step solution and correctly calculates the weekly production as 1050 customers.
+858,En pest inficerer ti personer. Hver dag inficerer hver inficeret person seks andre. Hvor mange mennesker er inficerede efter tre dage?,"På den første dag inficerer de oprindelige ti mennesker seks personer hver, så 10 * 6 = <<10*6=60>>60 flere mennesker bliver inficeret.
+Der er 10 + 60 = <<10+60=70>>70 inficerede personer efter den første dag.
+På den anden dag bliver 70 * 6 = <<70*6=420>>420 flere mennesker inficeret.
+Der er 70 + 420 = <<70+420=490>>490 inficerede personer efter den anden dag.
+På den tredje dag bliver 490 * 6 = 2940 flere mennesker inficeret. Derfor er der 490 + 2940 = 3430 inficerede personer efter tre dage.
+#### 3430","Vi kan løse dette trin for trin ved at følge inficeringsmønsteret dag for dag.
+
+**Dag 0:**  
+Antal inficerede personer: **1** (den første inficerede)
+
+**Dag 1:**  
+Hver inficeret person inficerer 6 nye personer.  
+Antal nye inficerede: \( 1 \times 6 = 6 \)  
+Samlet inficerede efter dag 1: \( 1 + 6 = 7 \)
+
+**Dag 2:**   
+Alle inficerede fra dag 1 (som nu er 6 personer) inficerer igen 6 nye hver.  
+Antal nye inficerede: \( 6 \times 6 = 36 \)  
+Samlet inficerede efter dag 2: \( 7 + 36 = 43 \)
+
+**Dag 3:**  
+Alle inficerede fra dag 2 (36 personer) inficerer hver 6 nye.  
+Antal nye inficerede: \( 36 \times 6 = 216 \)  
+Samlet inficerede efter dag 3: \( 43 + 216 = 259 \)
+
+**Svar:** Efter tre dage er totalt **259 mennesker** inficerede.",1.0,False,"The calculation in the output begins with an incorrect initial condition, counting only 1 initial case instead of 10 as given by the input. As a result, all subsequent calculations are incorrect since the chain starts wrongly, leading to an incorrect final number of infected people."
+1141,"Hvis Chester spiser 3 æg om dagen i 30 dage og derefter øger det til 5 æg om dagen i 30 dage, hvor mange dusin æg vil Chester have brug for i 60 dage?","Han starter med at spise 3 æg om dagen i 30 dage, hvilket i alt er 3*30 = <<3*30=90>>90 æg
+Derefter øger han det til 5 æg om dagen i 30 dage, hvilket i alt er 5*30 = <<5*30=150>>150 æg
+I alt vil han spise 90+150 = <<90+150=240>>240 æg
+Der er 12 æg i 1 dusin, og han vil spise 240 æg, hvilket er 240/12 = 20 dusin æg
+#### 20","Lad os beregne, hvor mange æg Chester bruger i alt over de 60 dage.
+
+1. Først spiser Chester 3 æg om dagen i 30 dage:
+\[ 3 \text{ æg/dag} \times 30 \text{ dage} = 90 \text{ æg} \]
+
+2. Derefter øger han til 5 æg om dagen i de næste 30 dage:
+\[ 5 \text{ æg/dag} \times 30 \text{ dage} = 150 \text{ æg} \]
+
+3. Samlet antal æg over 60 dage:
+\[ 90 + 150 = 240 \text{ æg} \]
+
+4. For at finde ud af, hvor mange dusin æg det er:
+Der er 12 æg i en dusin, så:
+\[ \frac{240 \text{ æg}}{12} = 20 \text{ dusin} \]
+
+**Svar:** Chester vil have brug for **20 dusin æg** i løbet af de 60 dage.",1.0,True,"The output provides the correct and complete solution to the problem, correctly calculating the total number of dozen eggs Chester would need in 60 days, which is 20 dozen."
