@@ -14,7 +14,14 @@ logger = logging.getLogger(__name__)
 
 
 def is_int(value):
-    return isinstance(value, int) or (isinstance(value, float) and value.is_integer())
+    return (
+        isinstance(value, int)
+        or (
+            isinstance(value, float)
+            and (value.is_integer() or (value - round(value)) < 1e-6)
+        )
+        or (isinstance(value, Fraction) and value.denominator == 1)
+    )
 
 
 def divides(a, b):
@@ -30,6 +37,18 @@ def sample(items, n=1):
     if n == 1:
         return random.choice(items)
     return random.sample(items, n)
+
+
+def range_sample(start, end, step=1):
+    """Sample an item from a range statement."""
+    if start > end:
+        raise ValueError(f"Start ({start}) must be less than or equal to end ({end}).")
+    if step <= 0:
+        raise ValueError(f"Step ({step}) must be a positive integer.")
+    possible_numbers = [i for i in range(start, end + 1, step)]
+    if not possible_numbers:
+        raise ValueError(f"No valid numbers in range({start}, {end}, {step}).")
+    return random.choice(possible_numbers)
 
 
 def range_str(start, end, step, numbers):
@@ -108,7 +127,7 @@ def arange_possibilities(start, end, step=1):
 
 def sample_possibilities(items, n=1):
     """Return possibilities for given sample statement."""
-    return items
+    return list(itertools.combinations(items, n)) if n > 1 else items
 
 
 def strip_elements(lst):
@@ -127,7 +146,8 @@ EVAL_CONTEXT_HELPERS = {
     "sample": sample,
     "sample_sequential": sample_sequential,
     "list": list,
-    "range": range,
+    "range": range_sample,
+    "range_list": range_possibilities,
     "range_str": range_str,
     "arange": arange_sample,
     "Fraction": frac_format,
@@ -140,6 +160,18 @@ COMBINATION_HELPERS = {
     "sample": sample_possibilities,
     "list": list,
 }
+
+
+# Convert value to int, float, or fraction if possible
+def parse_value(val):
+    if (
+        isinstance(val, str)
+        and val.isnumeric()
+        or isinstance(val, float)
+        and val.is_integer()
+    ):
+        return int(val)
+    return try_parse_fraction(try_parse_float(val))
 
 
 def try_parse_float(value):
@@ -248,7 +280,7 @@ class AnnotatedQuestion:
             if "=" in line
         ]
         variable_sets = [set(v) for v in variables_per_line]
-        return reduce(set.union, variable_sets)
+        return list(reduce(set.union, variable_sets))
 
     @property
     def init(self) -> list[str]:
@@ -308,17 +340,6 @@ class AnnotatedQuestion:
         """extract example assignments from question_annotated"""
         assignment_tuples = re.findall(r"\{(\w+),\s*([^}]+)\}", self.question_template)
 
-        # Convert value to int, float, or fraction if possible
-        def parse_value(val):
-            if (
-                isinstance(val, str)
-                and val.isnumeric()
-                or isinstance(val, float)
-                and val.is_integer()
-            ):
-                return int(val)
-            return try_parse_fraction(try_parse_float(val))
-
         assignments = {var: parse_value(val) for var, val in assignment_tuples}
 
         # Ensure that all variables in the answer are also in the question template
@@ -335,6 +356,10 @@ class AnnotatedQuestion:
                     ),
                     None,
                 )
+                if not assignment_line:
+                    raise ValueError(
+                        f"Variable {var} not found in any assignment line in question {self.id_shuffled}. Please check the question template."
+                    )
                 vars = self._extract_variables_from_init_line(assignment_line)
                 definition_part = self._extract_definition_part_from_init_line(
                     assignment_line
@@ -403,13 +428,13 @@ class AnnotatedQuestion:
         definition_part = definition_part.strip()
 
         try:
-            values = list(
-                eval(
-                    definition_part,
-                    {"__builtins__": {}},
-                    EVAL_CONTEXT_HELPERS | replacements,
-                )
+            values = eval(
+                definition_part,
+                {"__builtins__": {}},
+                EVAL_CONTEXT_HELPERS | replacements,
             )
+
+            values = [values] if not isinstance(values, (list, tuple)) else values
             logger.debug(
                 f"Variables: {variables}, Definition part: {definition_part}, Evaluated values: {values}"
             )
@@ -454,17 +479,17 @@ class AnnotatedQuestion:
                         {"__builtins__": {}},
                         COMBINATION_HELPERS | replacements,
                     )
-                    # Save as a list of tuples to make it easier to generate combinations
-                    possible_assignments[variable_name] = list(
-                        zip([variable_name] * len(possible_values), possible_values)
-                    )
+
+                    possible_assignments[variable_name] = [
+                        {variable_name: val} for val in possible_values
+                    ]
                 except Exception as e:
                     logger.error(
                         f"Error evaluating line '{line}': {e} for file {self.id_shuffled}"
                     )
                     raise e
             else:
-                # If there are multiple variables, we need to handle them as a tuple
+                # If there are multiple variables, we need to handle them as a collected assignment
                 try:
                     possible_values = eval(
                         definition_part,
@@ -479,17 +504,25 @@ class AnnotatedQuestion:
                         f"Error evaluating assignment for {variable_part}: {definition_part} -> {e}"
                     )
                     raise e
-                if (
-                    isinstance(possible_values, list)
-                    or isinstance(possible_values, tuple)
-                ) and len(
+
+                num_vars = len(variables)
+                num_vals = len(
                     possible_values[0]
                     if isinstance(possible_values, list)
                     else possible_values
-                ) == len(variables):
-                    for i, var in enumerate(variables):
-                        pos_vals = [(var, pos_val[i]) for pos_val in possible_values]
-                        possible_assignments[var] = pos_vals
+                )
+                if num_vars == num_vals and isinstance(possible_values, list):
+                    assignment = ", ".join(variables)
+                    # We need to save it as a collected assignment in order to avoid splitting them up when generating combinations later
+                    possible_assignments[assignment] = [
+                        {var: val for var, val in zip(variables, pos_val)}
+                        for pos_val in possible_values
+                    ]
+                elif num_vars == num_vals and isinstance(possible_values, tuple):
+                    # If the possible values are a single tuple, we can directly map them to the variables
+                    possible_assignments[", ".join(variables)] = [
+                        {var: val for var, val in zip(variables, possible_values)}
+                    ]
                 else:
                     logger.warning(
                         f"Warning: {variables} and {possible_values} are incompatible for line {line}."
@@ -498,9 +531,19 @@ class AnnotatedQuestion:
         return possible_assignments
 
     def _get_all_combinations(self, possibilities):
+        num_combinations = reduce(lambda x, y: x * len(y), possibilities.values(), 1)
+        print(f"Number of combinations: {num_combinations}")
+        if num_combinations > 10000000:
+            raise ValueError(
+                f"Too many combinations ({num_combinations}) for question {self.id_shuffled}. Please reduce the number of variables or their possible values."
+            )
         all_combinations = list(itertools.product(*possibilities.values()))
+        unpacked_combinations = [
+            reduce(lambda x, y: x | y, combination) for combination in all_combinations
+        ]
         combination_dicts = [
-            {k: v for k, v in combination} for combination in all_combinations
+            {k: parse_value(v) for k, v in combination.items()}
+            for combination in unpacked_combinations
         ]
         return combination_dicts
 
@@ -589,11 +632,14 @@ class AnnotatedQuestion:
             for line in self.unconstrained_lines
         ]
         logger.debug(f"Unconstrained assignments: {unconstrained_assignments}")
-        constrained_assignments = random.choice(
-            self._evaluate_constrained_init_lines(
-                self.constrained_lines, self.conditions, replacements
+        if len(self.constrained_lines) > 0:
+            constrained_assignments = random.choice(
+                self._evaluate_constrained_init_lines(
+                    self.constrained_lines, self.conditions, replacements
+                )
             )
-        )
+        else:
+            constrained_assignments = {}
         logger.debug(f"Constrained assignments: {constrained_assignments}")
         collected_assignments = constrained_assignments | reduce(
             lambda x, y: x | y, unconstrained_assignments

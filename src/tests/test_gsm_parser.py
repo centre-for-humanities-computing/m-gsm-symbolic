@@ -30,7 +30,7 @@ class TestGetAllPossibleAssignments:
         )
 
         # Expected: x should have values 1, 2, 3, 4, 5
-        expected = {"x": [("x", 1), ("x", 2), ("x", 3), ("x", 4), ("x", 5)]}
+        expected = {"x": [{"x": 1}, {"x": 2}, {"x": 3}, {"x": 4}, {"x": 5}]}
         assert result == expected
 
     def test_range_with_step(self):
@@ -51,7 +51,7 @@ class TestGetAllPossibleAssignments:
         )
 
         # Expected: x should have values 1, 3, 5, 7, 9 with step 2
-        expected = {"x": [("x", 1), ("x", 3), ("x", 5), ("x", 7), ("x", 9)]}
+        expected = {"x": [{"x": 1}, {"x": 3}, {"x": 5}, {"x": 7}, {"x": 9}]}
         assert result == expected
 
     def test_sample_possibility(self):
@@ -72,7 +72,7 @@ class TestGetAllPossibleAssignments:
         )
 
         # Expected: x should have possible values 10, 20, 30
-        expected = {"x": [("x", 10), ("x", 20), ("x", 30)]}
+        expected = {"x": [{"x": 10}, {"x": 20}, {"x": 30}]}
         assert result == expected
 
     def test_empty_range(self):
@@ -113,7 +113,7 @@ class TestGetAllPossibleAssignments:
         )
 
         # Expected: x should have values 2, 3, 4, 5
-        expected = {"x": [("x", 2), ("x", 3), ("x", 4), ("x", 5)]}
+        expected = {"x": [{"x": 2}, {"x": 3}, {"x": 4}, {"x": 5}]}
         assert result == expected
 
 
@@ -177,7 +177,7 @@ def test_default_assignments_are_valid(template_file, language):
         if var_name not in default_assignments:
             continue
         possible_values_for_var = [
-            val[1] for val in possible_assignments if isinstance(val, tuple)
+            assignment[var_name] for assignment in possible_assignments
         ]
 
         default_value = default_assignments[var_name]
