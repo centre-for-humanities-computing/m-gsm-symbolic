@@ -44,7 +44,7 @@ class KaenguruenProblem(BaseModel):
         Returns:
             A Case object with the problem data.
         """
-        
+
         return Case(
             name=self.problem_id,
             inputs=f"{self.question}\n\n{self.options}",
