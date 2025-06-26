@@ -19,6 +19,10 @@ class HuggingFace_agent_wrapper:
 
     async def run(self, prompt: str):
         model_input = self.tokenizer(prompt, return_tensors="pt")
+
+        if "token_type_ids" in model_input:
+            del model_input["token_type_ids"]
+
         input_len = model_input["input_ids"].shape[-1]
 
         model_output = self.model.generate(**model_input, max_new_tokens=50)
