@@ -2,6 +2,7 @@ from pathlib import Path
 
 import argparse
 import pandas as pd
+import torch
 
 from pydantic_evals import Dataset
 from pydantic_evals.evaluators import LLMJudge
@@ -12,13 +13,20 @@ from m_gsm_symbolic.kaenguruen.load_data import load_kaenguruen
 from m_gsm_symbolic.load_data import load_gsm_dan
 
 
+if torch.cuda.is_available():
+    dev = "cuda"
+else:
+    dev = "cpu"
+device = torch.device(dev)
+
+
 class HuggingFaceAgent:
     def __init__(self, model: str):
         self.tokenizer = AutoTokenizer.from_pretrained(model)
-        self.model = AutoModelForCausalLM.from_pretrained(model)
+        self.model = AutoModelForCausalLM.from_pretrained(model).to(device)
 
     async def run(self, prompt: str):
-        model_input = self.tokenizer(prompt, return_tensors="pt")
+        model_input = self.tokenizer(prompt, return_tensors="pt").to(device)
 
         model_input.pop("token_type_ids", None)
 
