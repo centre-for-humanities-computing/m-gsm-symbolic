@@ -12,7 +12,7 @@ from m_gsm_symbolic.kaenguruen.load_data import load_kaenguruen
 from m_gsm_symbolic.load_data import load_gsm_dan
 
 
-class HuggingFace_agent_wrapper:
+class HuggingFaceAgent:
     def __init__(self, model: str):
         self.tokenizer = AutoTokenizer.from_pretrained(model)
         self.model = AutoModelForCausalLM.from_pretrained(model)
@@ -20,17 +20,16 @@ class HuggingFace_agent_wrapper:
     async def run(self, prompt: str):
         model_input = self.tokenizer(prompt, return_tensors="pt")
 
-        if "token_type_ids" in model_input:
-            del model_input["token_type_ids"]
+        model_input.pop("token_type_ids", None)
 
         input_len = model_input["input_ids"].shape[-1]
 
-        model_output = self.model.generate(**model_input, max_new_tokens=50)
+        model_output = self.model.generate(**model_input, max_new_tokens=500)
         model_output = model_output[0][input_len:]
 
         output_decoded = self.tokenizer.decode(model_output, skip_special_tokens=True)
 
-        return type("Reponse", (), {"output": output_decoded})
+        return output_decoded
 
 
 def parser():
@@ -41,7 +40,8 @@ def parser():
         required=True,
         choices=[
             "google/gemma-3-1b-pt",
-            "meta-llama/Llama-3.2-1B",
+            "google/gemma-3-1b-itmeta-llama/Llama-3.2-1B",
+            "meta-llama/Llama-3.2-1B-Instruct",
             "allenai/OLMo-1B-hf",
             "PleIAs/Pleias-1.2b-Preview",
         ],
@@ -63,7 +63,7 @@ def main():
 
     judge_llm_name = "openai:gpt-4o-2024-08-06"
     response_model_name = args.model
-    agent_evaluated = HuggingFace_agent_wrapper(response_model_name)
+    agent_evaluated = HuggingFaceAgent(response_model_name)
 
     if args.dataset == "kaenguruen":
         cases = [p.to_case() for p in load_kaenguruen()]
@@ -83,7 +83,7 @@ def main():
 
     async def answer_question(question: str) -> str:
         r = await agent_evaluated.run(question)
-        return r.output
+        return r
 
     report = ds.evaluate_sync(answer_question)
 
