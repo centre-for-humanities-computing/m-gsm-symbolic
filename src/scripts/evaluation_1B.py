@@ -3,6 +3,7 @@ from pathlib import Path
 import argparse
 import pandas as pd
 import torch
+import random
 
 from pydantic_evals import Dataset
 from pydantic_evals.evaluators import LLMJudge
@@ -21,13 +22,16 @@ device = torch.device(dev)
 
 
 class HuggingFaceAgent:
-    def __init__(self, model: str, examples: list):
+    def __init__(self, model: str, examples: list = []):
         self.tokenizer = AutoTokenizer.from_pretrained(model)
-        self.model = AutoModelForCausalLM.from_pretrained(model, torch_dtype="auto").to(device)
+        self.model = AutoModelForCausalLM.from_pretrained(model, torch_dtype="auto").to(
+            device
+        )
+        self.examples = examples
 
     def _build_prompt(self, prompt):
         examples = []
-        for case in cases:
+        for case in self.examples:
             example = f"Problem: {case.inputs}\n\nSolution: {case.expected_output}"
             examples.append(example)
 
@@ -91,6 +95,9 @@ def main():
     elif args.dataset == "gsm_eng":
         cases = [p.to_case() for p in load_gsm_eng()]
 
+    random.seed(42)
+    random.shuffle(cases)
+
     judge_llm_name = "openai:gpt-4o-2024-08-06"
     response_model_name = args.model
     agent_evaluated = HuggingFaceAgent(response_model_name, examples=cases[-3:])
@@ -102,7 +109,7 @@ def main():
     )
 
     ds = Dataset(
-        cases=cases,
+        cases=cases[0:96],
         evaluators=[evaluator],
     )
 
