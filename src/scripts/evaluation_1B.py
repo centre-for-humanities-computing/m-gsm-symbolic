@@ -1,12 +1,17 @@
 from pathlib import Path
 
 import argparse
+import re
+from dataclasses import dataclass
 import pandas as pd
 import torch
 import random
 
+import outlines
+from outlines.types.dsl import Regex
+
 from pydantic_evals import Dataset
-from pydantic_evals.evaluators import LLMJudge
+from pydantic_evals.evaluators import Evaluator, EvaluatorContext
 
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
@@ -21,17 +26,24 @@ else:
 device = torch.device(dev)
 
 
+answer_pattern = Regex(r".{,300}####\s\d+")
+
+
 class HuggingFaceAgent:
-    def __init__(self, model: str, examples: list = []):
+    def __init__(
+        self, model: str, examples: list, answer_pattern: Regex = answer_pattern
+    ):
         self.tokenizer = AutoTokenizer.from_pretrained(model)
-        self.model = AutoModelForCausalLM.from_pretrained(model, torch_dtype="auto").to(
-            device
+        self.model = outlines.from_transformers(
+            AutoModelForCausalLM.from_pretrained(model, torch_dtype="auto").to(device),
+            self.tokenizer,
         )
-        self.examples = examples
+        self.cases = examples
+        self.answer_pattern = answer_pattern
 
     def _build_prompt(self, prompt):
         examples = []
-        for case in self.examples:
+        for case in self.cases:
             example = f"Problem: {case.inputs}\n\nSolution: {case.expected_output}"
             examples.append(example)
 
@@ -42,20 +54,22 @@ class HuggingFaceAgent:
 
     def run(self, prompt: str):
         prompt = self._build_prompt(prompt)
-        model_input = self.tokenizer(prompt, return_tensors="pt").to(device)
+        model_output = self.model(prompt, answer_pattern, max_new_tokens=500)
 
-        model_input.pop("token_type_ids", None)
+        return model_output
 
-        input_len = model_input["input_ids"].shape[-1]
 
-        model_output = self.model.generate(**model_input, max_new_tokens=500)
-        del model_input
-        model_output = model_output[0][input_len:]
+@dataclass
+class AnswerOnlyMatch(Evaluator):
+    def evaluate(self, ctx: EvaluatorContext) -> bool:
+        m_pred = re.search(r"####\s*((\d|,)+)", ctx.output)
+        m_true = re.search(r"####\s*((\d|,)+)", ctx.expected_output)
+        if not m_pred or not m_true:
+            return False
 
-        output_decoded = self.tokenizer.decode(model_output, skip_special_tokens=True)
-        del model_output
-
-        return output_decoded
+        return float(m_pred.group(1).replace(",", "")) == float(
+            m_true.group(1).replace(",", "")
+        )
 
 
 def parser():
@@ -98,19 +112,14 @@ def main():
     random.seed(42)
     random.shuffle(cases)
 
-    judge_llm_name = "openai:gpt-4o-2024-08-06"
     response_model_name = args.model
-    agent_evaluated = HuggingFaceAgent(response_model_name, examples=cases[-3:])
-
-    evaluator = LLMJudge(
-        rubric="The output should be consist expected output, which is the correct answer to the question.",
-        model=judge_llm_name,
-        include_input=True,
+    agent_evaluated = HuggingFaceAgent(
+        response_model_name, examples=cases[-3:], answer_pattern=answer_pattern
     )
 
     ds = Dataset(
         cases=cases[0:97],
-        evaluators=[evaluator],
+        evaluators=[AnswerOnlyMatch()],
     )
 
     async def answer_question(question: str) -> str:
