@@ -28,7 +28,6 @@ device = torch.device(dev)
 
 answer_pattern = Regex(r".{,300}####\s\d+")
 
-
 class HuggingFaceAgent:
     def __init__(
         self, model: str, examples: list, answer_pattern: Regex = answer_pattern
