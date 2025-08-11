@@ -31,7 +31,7 @@ device = torch.device(dev)
 
 
 #answer_pattern = Regex(r".{,300}####\s\d+")
-answer_pattern = r".{,300}####\s\d+"
+answer_pattern = r"[\s\S]{0,300}####\s\d+"
 
 class HuggingFaceAgent:
     def __init__(
@@ -60,14 +60,14 @@ class HuggingFaceAgent:
     def run(self, prompt: str):
         prompt = self._build_prompt(prompt)
         guided_params = GuidedDecodingParams(regex=self.answer_pattern)
-        sampling_params = SamplingParams(guided_decoding=guided_params)
+        sampling_params = SamplingParams(guided_decoding=guided_params, max_tokens=500)
         model_output = self.model.generate(
             prompt,
             sampling_params=sampling_params
         )
         #model_output = self.model(prompt, answer_pattern, max_new_tokens=500)
 
-        return model_output
+        return model_output[0].outputs[0].text
 
 
 @dataclass
@@ -161,8 +161,6 @@ def main():
                 "expected_output": case.expected_output,
                 "output": case.output,
                 "task_duration": case.task_duration,
-                "assertion_value": case.assertions["LLMJudge"].value,
-                "assertion_reason": case.assertions["LLMJudge"].reason,
             }
         )
 
