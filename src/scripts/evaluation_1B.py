@@ -7,8 +7,12 @@ import pandas as pd
 import torch
 import random
 
-import outlines
-from outlines.types.dsl import Regex
+
+from vllm import LLM, SamplingParams
+from vllm.sampling_params import GuidedDecodingParams
+
+#import outlines
+#from outlines.types.dsl import Regex
 
 from pydantic_evals import Dataset
 from pydantic_evals.evaluators import Evaluator, EvaluatorContext
@@ -26,17 +30,19 @@ else:
 device = torch.device(dev)
 
 
-answer_pattern = Regex(r".{,300}####\s\d+")
+#answer_pattern = Regex(r".{,300}####\s\d+")
+answer_pattern = r".{,300}####\s\d+"
 
 class HuggingFaceAgent:
     def __init__(
-        self, model: str, examples: list, answer_pattern: Regex = answer_pattern
+        self, model: str, examples: list, answer_pattern: str = answer_pattern
     ):
         self.tokenizer = AutoTokenizer.from_pretrained(model)
-        self.model = outlines.from_transformers(
-            AutoModelForCausalLM.from_pretrained(model, torch_dtype="auto").to(device),
-            self.tokenizer,
-        )
+        #self.model = outlines.from_transformers(
+        #    AutoModelForCausalLM.from_pretrained(model, torch_dtype="auto").to(device),
+        #    self.tokenizer,
+        #)
+        self.model = LLM(model=model)
         self.cases = examples
         self.answer_pattern = answer_pattern
 
@@ -53,7 +59,13 @@ class HuggingFaceAgent:
 
     def run(self, prompt: str):
         prompt = self._build_prompt(prompt)
-        model_output = self.model(prompt, answer_pattern, max_new_tokens=500)
+        guided_params = GuidedDecodingParams(regex=self.answer_pattern)
+        sampling_params = SamplingParams(guided_decoding=guided_params)
+        model_output = self.model.generate(
+            prompt,
+            sampling_params=sampling_params
+        )
+        #model_output = self.model(prompt, answer_pattern, max_new_tokens=500)
 
         return model_output
 
