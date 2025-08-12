@@ -7,17 +7,13 @@ import pandas as pd
 import torch
 import random
 
-
 from vllm import LLM, SamplingParams
 from vllm.sampling_params import GuidedDecodingParams
-
-#import outlines
-#from outlines.types.dsl import Regex
 
 from pydantic_evals import Dataset
 from pydantic_evals.evaluators import Evaluator, EvaluatorContext
 
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers import AutoTokenizer
 
 from m_gsm_symbolic.kaenguruen.load_data import load_kaenguruen
 from m_gsm_symbolic.load_data import load_gsm_dan, load_gsm_eng
@@ -30,18 +26,14 @@ else:
 device = torch.device(dev)
 
 
-#answer_pattern = Regex(r".{,300}####\s\d+")
 answer_pattern = r"[^#]{0,300}####\s\d+"
+
 
 class HuggingFaceAgent:
     def __init__(
         self, model: str, examples: list, answer_pattern: str = answer_pattern
     ):
         self.tokenizer = AutoTokenizer.from_pretrained(model)
-        #self.model = outlines.from_transformers(
-        #    AutoModelForCausalLM.from_pretrained(model, torch_dtype="auto").to(device),
-        #    self.tokenizer,
-        #)
         self.model = LLM(model=model)
         self.cases = examples
         self.answer_pattern = answer_pattern
@@ -61,11 +53,7 @@ class HuggingFaceAgent:
         prompt = self._build_prompt(prompt)
         guided_params = GuidedDecodingParams(regex=self.answer_pattern)
         sampling_params = SamplingParams(guided_decoding=guided_params, max_tokens=500)
-        model_output = self.model.generate(
-            prompt,
-            sampling_params=sampling_params
-        )
-        #model_output = self.model(prompt, answer_pattern, max_new_tokens=500)
+        model_output = self.model.generate(prompt, sampling_params=sampling_params)
 
         return model_output[0].outputs[0].text
 
@@ -161,12 +149,13 @@ def main():
                 "expected_output": case.expected_output,
                 "output": case.output,
                 "task_duration": case.task_duration,
-                "correct": case.assertions["AnswerOnlyMatch"].value
+                "correct": case.assertions["AnswerOnlyMatch"].value,
             }
         )
 
     df = pd.DataFrame(rows)
     df.to_csv(save_path.with_suffix(".csv"), index=False)
+
 
 if __name__ == "__main__":
     main()
