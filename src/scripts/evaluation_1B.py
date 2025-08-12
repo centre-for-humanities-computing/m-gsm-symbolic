@@ -31,7 +31,7 @@ device = torch.device(dev)
 
 
 #answer_pattern = Regex(r".{,300}####\s\d+")
-answer_pattern = r"[\s\S]{0,300}####\s\d+"
+answer_pattern = r"[^#]{0,300}####\s\d+"
 
 class HuggingFaceAgent:
     def __init__(
@@ -161,12 +161,12 @@ def main():
                 "expected_output": case.expected_output,
                 "output": case.output,
                 "task_duration": case.task_duration,
+                "correct": case.assertions["AnswerOnlyMatch"].value
             }
         )
 
     df = pd.DataFrame(rows)
     df.to_csv(save_path.with_suffix(".csv"), index=False)
-
 
 if __name__ == "__main__":
     main()
