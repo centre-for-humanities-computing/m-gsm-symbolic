@@ -31,10 +31,12 @@ answer_pattern = r"[^#]{0,300}####\s\d+"
 
 class HuggingFaceAgent:
     def __init__(
-        self, model: str, examples: list, answer_pattern: str = answer_pattern
+        self, model: str, gpu: int, examples: list, answer_pattern: str = answer_pattern
     ):
         self.tokenizer = AutoTokenizer.from_pretrained(model)
-        self.model = LLM(model=model)
+        self.model = LLM(
+            model=model, tensor_parallel_size=gpu, max_model_len=8192, max_num_seqs=1
+        )
         self.cases = examples
         self.answer_pattern = answer_pattern
 
@@ -97,6 +99,13 @@ def parser():
         choices=["kaenguruen", "gsm_dan", "gsm_eng"],
         help="Specify which dataset to evaluate",
     )
+    parser.add_argument(
+        "--gpu",
+        "-g",
+        type=int,
+        required=True,
+        help="Specify number of GPU",
+    )
     args = parser.parse_args()
     return args
 
@@ -115,8 +124,12 @@ def main():
     random.shuffle(cases)
 
     response_model_name = args.model
+    num_gpu = args.gpu
     agent_evaluated = HuggingFaceAgent(
-        response_model_name, examples=cases[-3:], answer_pattern=answer_pattern
+        response_model_name,
+        gpu=num_gpu,
+        examples=cases[-3:],
+        answer_pattern=answer_pattern,
     )
 
     ds = Dataset(
