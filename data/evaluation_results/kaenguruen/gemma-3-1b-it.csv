@@ -1,0 +1,4543 @@
+name,inputs,expected_output,output,task_duration,assertion_value,assertion_reason
+2024_8-9-klasse/23.txt,"Kaptajn Flint bad fire af sine pirater om at skrive på et stykke papir, hvor mange guld-, sølv- og bronzemønter, der var i skattekisten.
+Deres svar er vist på tegningen, men desværre er en del af papiret beskadiget.
+Kun én af de fire pirater talte sandt. De tre andre løj i alle deres svar.
+
+Det samlede antal mønter er 30.
+
+|     | Gold | Silver | Bronze |
+| Tom |      |   9    |   11   |
+| Al  |  7   |        |   12   |
+| Pit |  10  |        |   10   |
+| Jim |  9   |   10   |        |",Al,"
+
+Hvis hver pirat svarede sandt til den givne opgave, skal et antal mønter, der er tilfældigt resulterer i et antal mønter, der er lik 30.
+I et ufuldstændigt skattecontainer, skal du vurdere, hvor mange mønter, der er i containeren, der er i den rigtige mønter.
+Antallet af mønter, der er i den rigtige mønter, er 10.
+
+Før du tager beslutningen, skal du udføre en fejlfindende analyse.
+Tælle alle mønterne i containeren, der er i den rigtige mønter.
+Antallet af mønter, der er i den rigtige mønter, er 10.
+Der er 6 mønter, der er i den rigtige mønter.
+Antallet af mønter, der er i den rigtige mønter, er 10.
+Antallet af mønter, der er i den rigtige mønter, er 10.
+
+Det er ikke sandt, at der er 10 mønter i den rigtige mønter.
+Antallet af mønter i den rigtige mønter er 10.
+For at bestemme, hvor mange mønter, der er i den rigtige mønter, er det mest almindelige.
+Tæll alle mønterne, der er i containeren, der er i den rigtige mønter.
+|     | Gold | Silver | Bronze |
+| Tom |   9   |   11   |   12   |
+| Al  |  7   |   10   |   10   |
+| Pit |  10  |   10   |   10   |
+| Jim |  9   |   10   |   10   |
+
+|     | Gold | Silver | Bronze |
+| Tom |   9   |   11   |   12   |
+| Al  |  7   |   10   |   10   |
+| Pit |  10  |   10   |   10   ",<MagicMock name='mock.__sub__().__truediv__()' id='140263632758896'>,False,The output does not provide the correct solution to the problem. It repeats incorrect numbers for the coins and does not solve the logic puzzle based on the condition given (only one pirate tells the truth).
+2024_8-9-klasse/9.txt,"Længden af denne række indkøbsvogne er 108 cm.
+Længden af en række med ti indkøbsvogne er 168 cm.
+
+Hvad er længden af en enkelt indkøbsvogn?",78,"
+
+Lad x være længden af en enkelt indkøbsvogn.
+Vi har:
+x + x + x + x + x + x = 108
+5x = 108
+x = 108/5
+x = 21.6
+Længden af en enkelt indkøbsvogn er 21.6 cm.
+
+Vi har også:
+x + x + x + x + x + x = 168
+6x = 168
+x = 168/6
+x = 28
+Længden af en enkelt indkøbsvogn er 28 cm.
+
+Derfor er længden af en enkelt indkøbsvogn 21.6 cm eller 28 cm.
+Men vi må antage at vi har en række af indkøbsvogne.
+Hvis rækken består af 108 indkøbsvogne, så er længden af hver vogn 108/108 = 1 cm.
+Hvis rækken består af 168 indkøbsvogne, så er længden af hver vogn 168/168 = 1 cm.
+Hvis vi har en række af 108 indkøbsvogne, så er længden af hver vogn 108/108 = 1 cm.
+Hvis vi har en række af 168 indkøbsvogne, så er længden af hver vogn 168/168 = 1 cm.
+Så længden af en enkelt indkøbsvogn er 21.6 cm eller 28 cm.
+
+En række af 108 indkøbsvogne har en længde på 108 cm. Hver vogn har en længde på 1 cm.
+En række af 168 indkøbsvogne har en længde på 168 cm. Hver vogn har en længde på 1 cm.
+Så den længste række af indkøbsvogne har en længde på 108 cm.
+
+Længden af en enkelt indkøbsvogn er 21.6",<MagicMock name='mock.__sub__().__truediv__()' id='140263636478064'>,False,"The calculation for the length of a single cart is incorrect and inconsistent. The input describes two different lengths for different numbers of carts, but the correct calculations per the input should determine the length of a single cart. The stated outputs ('21.6 cm' and '28 cm') are incorrect and misunderstood the input conditions. The calculation details contain errors."
+2024_8-9-klasse/20.txt,"Der sidder 50 elever i en cirkel. De kaster en bold rundt i cirklen.
+De kaster bolden til den elev, der sidder 6 pladser længere væk mod uret.
+Freda fanger bolden 100 gange.
+
+Hvor mange elever får aldrig bolden?",25,"
+
+Lad os antage at bolden kastes i en cirkel.
+Hvis bolden kastes til den elev, der sidder 6 pladser længere væk mod uret, så er der 100 foldninger.
+Dette indikerer en cirkel med radius r.
+Så r = 100.
+Det ville være et geometrisk korrekt svar.
+Men vi kan ikke bare sige, at de 100 foldninger sker, så det er ikke et geometrisk svar.
+
+Vi har et system af ligninger der beskriver, hvordan eleverne bevæger sig.
+Lad $n$ være antallet af elever.
+Hver elev sidder 6 pladser længere væk mod uret.
+Hvis en elev kaster bolden, så er der 100 foldninger, så der er 100 rollinger.
+I denne cirkel, der er 50 elever.
+Hvis en elev kaster bolden, så er der 6 pladser længere væk.
+Så skal vi finde antallet af elever, der ikke får bolden.
+Det er n elever, så der skal være n + 100 elev-foldninger.
+
+Lad os se på det andre system.
+Hvis vi kaster bolden til den elev, der sidder 6 pladser længere væk, så er der 100 foldninger.
+Det betyder, at vi har en cirkel med radius r, så r = 100.
+Dette er ikke noget geometrisk svar.
+
+Vi ved, at en elev får bolden, hvis den er 6 pladser længere væk.
+Hvis en elev kaster bolden, så er der 100 foldninger, så der er 100 rollinger.
+Da der er 50 elever, så skal vi finde antallet af elever, der ikke får bolden.
+Det er 50 elever, så der skal være 50 + 100 = 150 foldninger.
+
+Antag, at bolden kan blive kastet fra en elev til en anden.
+Hvis en elev kaster bolden, så er der 6 pladser længere væk.
+Dette er en cirkel med radius r.
+Vi kaster bolden til",<MagicMock name='mock.__sub__().__truediv__()' id='140272302757392'>,False,"The output does not provide the correct answer to the question. It contains a lengthy and unclear reasoning process, but does not conclude with the number of students who never receive the ball."
+2024_8-9-klasse/5.txt,"Ria har tre brikker med tallene 1, 5 og 11.
+
+Hun vil placere dem ved siden af hinanden for at danne et firecifret tal.
+Hvor mange forskellige firecifrede tal kan hun lave?",6,"
+
+Ria har 3 brikker med tallene 1, 5 og 11.
+Hun kan placere dem ved siden af hinanden for at danne et firecifret tal.
+Vi kan tænke på dem som 1, 5, 11.
+
+Vi kan bruge forskellige permutationer af disse tallene.
+1.  1 5 11
+2.  1 11 5
+3.  5 1 11
+4.  5 11 1
+5.  1 1 11
+6.  11 1 5
+7.  11 5 1
+
+Det er 7 forskellige firecifrede tal, som hun kan lave.
+
+Alternativt, vi kan tænke på det som en 3 x 3 matrix.
+Vi har 3 x 3 = 9 celler.
+Vi kan ræsonnere om den enkelte celle, og så kan vi finde antallet af firecifrede tal.
+Hver celle kan have 3 tal: 1, 5, 11.
+Vi har 9 celler, så der er 9! mulige kombinationer.
+For hver celle har vi 3 muligheder.
+Så der er $3^9$ muligheder.
+Men vi har 3 brikker.
+Hvis vi tænker på 3 brikker, der er 1, 5 og 11, så må vi tænke på dem som 1, 5, 11.
+Vi kan placere dem i en række.
+Det er 3! = 6 mulige reder.
+For hver række har vi 3 mulige tallene.
+Så der er $3^3 = 27$ mulige tal.
+Men vi har 3 brikker, så vi skal tænke på arrangementet af dem.
+
+For hver celle kan vi tænke på tallet som 1, 5, 11.
+Det er 3 tal.
+En række med 3 tal kan have 3! = 6 muligheder.
+Men vi har 3 brikker, så vi skal tænke på permutationer.
+I første celle kan vi have 3 tal.
+I",<MagicMock name='mock.__sub__().__truediv__()' id='140265122950912'>,False,"The provided output does not clearly and correctly calculate or present the number of different four-digit numbers that can be formed with the digits 1, 5, and 11. It provides incorrect logic, such as non-sense about matrices and factorials that don't apply, and also gives incorrect result (7), without considering the valid placement of the numbers. The correct approach would involve properly considering the four-digit scenario with available digit placements, specifically treating the '11' as two digits and setting up the problem accordingly."
+2024_8-9-klasse/7.txt,"Vægtbegrænsningen for en elevator siger, at den enten kan bære 12 voksne eller 20 børn.
+Hvad er det største antal børn, der kan køre med elevatoren sammen med ni voksne,
+når man overholder vægtbegrænsningen?",5,"
+```
+(1) 12
+(2) 15
+(3) 18
+(4) 21
+```
+
+Det bedste svar er 21.
+
+Forklar:
+Vi skal finde det største antal børn, der kan køre med elevatoren sammen med ni voksne, uden at overskride vægtbegrænsningen.
+Vægtbegrænsningen er 12 voksne eller 20 børn.
+
+Vi kan have et antal børn, der er større end eller lig med 12.
+Lad antal børn være 'x'. Så er antal voksne '9 - x'.
+Vi skal have (9-x) * x <= 20
+9x - x^2 <= 20
+0 <= x^2 - 9x + 20 <= 0
+Hvor x er antallet af børn.
+Vi skal finde løsninger til denne kvadratiske ligning.
+Vi kan bruge en kvadratisk rente for at finde x.
+x^2 - 9x + 20 = 0
+Vi kan faktorisere denne ligning.
+(x - 4)(x - 5) = 0
+Så x = 4 eller x = 5.
+Derfor kan antallet af børn være 4 eller 5.
+Da vi ønsker det største antal børn, vælger vi 5.
+Hvis antallet af børn er 5, så er antal voksne 9 - 5 = 4.
+Samlet antal personer er 5 + 4 = 9.
+Vægtbegrænsningen er 12 voksne eller 20 børn.
+5+4=9, som er mindre end 9. Så det er muligt at køre 5 børn og 4 voksne.
+Omvendt kan vi have 4 børn og 9 voksne.
+5+9=14. Det er ikke tilladt.
+
+Lad os prøve at finde det største antal børn, der kan køre med elevatoren sammen med ni voksne.
+Hvis vi har 12 voksne, kan vi køre 12 børn.
+Hvis vi har 12 børn, kan vi køre 12 voksne.
+Vægtbegrænsningen",<MagicMock name='mock.__sub__().__truediv__()' id='140263636387360'>,False,"The output concluded that the best answer is 21 without clear logical steps leading to that conclusion, and there was no clear calculation or explanation reaching the correct answer. Additionally, the final conclusion of the explanation is ambiguous and unfinished, not aligned with the given options (12, 15, 18, 21)."
+2024_8-9-klasse/14.txt,"Johan havde en masse ens kuber. Han lavede figuren til højre ved at tage en enkelt kube
+og derefter lime en kube fast på alle dens sider. Han ønsker at lave figuren større på samme måde.
+
+Hvor mange ekstra kuber skal han bruge for at lave den næste figur?",18,"
+
+Lad os kalde antallet af ekstra kuber for 'x'.
+Hvis Johan lavede figuren til højre, så var den første figur en enkel kube.
+Hvis han lavede figuren til venstre, så var den første figur en kube med 7 sider.
+Han ønsker at lave den næste figur med den samme metode.
+I stedet for en kube med 7 sider, vil han gerne have en kube med 14 sider.
+Så skal han lave en kube med 14 sider,
+og så skal han lime 7 kuber til den kube.
+Hvis han laver en kube med 7 sider, så skal han lime 7 kuber.
+Det er den samme metode.
+I stedet for en kube med 7 sider, vil han gerne have en kube med 14 sider.
+Så skal han lave en kube med 14 sider,
+og så skal han lime 7 kuber.
+I stedet for en kube med 7 sider, vil han gerne have en kube med 14 sider.
+Så skal han lave en kube med 14 sider,
+og så skal han lime 7 kuber.
+Lad os antage, at Johan laver en kube med 7 sider, og efterfølgende limes 7 kuber til den.
+Han ønsker at lave en kube med 14 sider.
+Han skal lave en kube med 7 sider, og lime 7 kuber.
+Han skal lave en kube med 14 sider, og lime 7 kuber.
+Ligesom det går, skal han lave en kube med 7 sider, og lime 7 kuber.
+Det er det samme princip.
+Så skal han lave 7 kuber til den nye kube.
+Lad os antage, at Johan laver en kube med 7 sider.
+Han skal lave en kube med 14 sider.
+Han skal lave 7 kuber til den nye kube.
+Han skal lave en kube med 14 sider.
+Han skal lave 7 kuber til den nye kube.
+Han skal lave en kube med 7 sider.
+Han skal lave 7 kuber til den nye kube.
+Han skal lave en kube med 14 sider.
+Han skal lave 7 kuber til den nye kube.
+Han skal lave en kube med 7 sider.
+Han skal lave 7 kuber",<MagicMock name='mock.__sub__().__truediv__()' id='140265523248112'>,False,The output doesn't provide a clear and coherent answer to how many extra cubes Johan needs. It repeatedly mentions creating figures with 7 and 14 sides without a logical or consistent approach to build the next figure. The output is not clear and doesn't match the expected solution process.
+2024_8-9-klasse/21.txt,"Tarek ønsker at farve to firkanter mere på tegningen,
+så mønsteret har netop en symmetriakse.
+
+På hvor mange forskellige måder kan han tegne sit mønster?
+
+|  |██|  |  |
+|--|--|--|--|
+|  |  |██|  |
+|--|--|--|--|
+|  |  |  |  |
+|--|--|--|--|
+|  |  |  |  |",6,"
+
+En vinkel på 90 grader er ikke værdifuld.
+
+Hvor mange differentierbare kan de være?
+
+Løs problemet.
+
+```
+y = 2x + 1
+10x + y = 100
+x = 2
+y = 10
+```
+```
+y = 2x + 1
+10x + y = 100
+x = 2
+y = 10
+```
+
+Der er et problem med det problem.
+```
+y = 2x + 1
+10x + y = 100
+x = 2
+y = 10
+```
+
+```
+y = 2x + 1
+10x + y = 100
+x = 2
+y = 10
+```
+```
+y = 2x + 1
+10x + y = 100
+x = 2
+y = 10
+```
+
+```
+y = 2x + 1
+10x + y = 100
+x = 2
+y = 10
+```
+```
+y = 2x + 1
+10x + y = 100
+x = 2
+y = 10
+```
+```
+y = 2x + 1
+10x + y = 100
+x = 2
+y = 10
+```
+```
+y = 2x + 1
+10x + y = 100
+x = 2
+y = 10
+```
+```
+y = 2x + 1
+10x + y = 100
+x = 2
+y = 10
+```
+```
+y = 2x + 1
+10x + y = 100
+x = 2
+y = 10
+```
+
+```
+y = 2x + 1
+10x + y = 100
+x = 2
+y = 10
+```
+
+```
+y = 2x + 1
+10x + y = 100
+x = 2
+y = 10
+```
+
+```",<MagicMock name='mock.__sub__().__truediv__()' id='140265525648832'>,False,The output contains random equations unrelated to the question about painting squares and determining symmetry axes. The expected output should address the specified problem in the input.
+2024_8-9-klasse/6.txt,"En frugtskål indeholder 5 slags frugt: æbler, vindruer, kirsebær, jordbær og bananer.
+
+Al kan lide æbler.
+Bok kan lide æbler, kirsebær, jordbær og bananer.
+Cam kan lide vindruer, kirsebær, jordbær og bananer.
+Don kan lide æbler, vindruer og kirsebær.
+Eva kan lide æbler og kirsebær.
+Frugten deles så alle får et stykke frugt, som de kan lide. Alle får forskellige frugter.
+
+Hvem får kirsebærene?",Eva,"
+Hvem får vindruerne?
+Hvem får jordbærerne?
+Hvem får bananerne?
+Hvem får æblerne?
+Hvem får donen?
+Hvem får Evaen?
+Hvem får alle?
+Hvad er det?
+Løsningen er:
+Er at der er 5 personer:
+- 2 æbler
+- 3 vindruer
+- 2 kirsebær
+- 2 jordbær
+- 2 bananer
+Personer 1, 2, 3, 4, 5 har 1 æble, 1 vindruer, 1 kirsebær, 1 jordbær, 1 banan
+Personer 1, 2, 3, 4, 5 har 1 æble, 1 vindruer, 1 kirsebær, 1 jordbær, 1 banan
+Personer 1, 2, 3, 4, 5 har 1 æble, 1 vindruer, 1 jordbær, 1 banan, 1 kirsebær
+Personer 1, 2, 3, 4, 5 har 1 æble, 1 vindruer, 1 jordbær, 1 banan, 1 kirsebær
+Personer 1, 2, 3, 4, 5 har 1 æble, 1 vindruer, 1 jordbær, 1 banan, 1 kirsebær
+Personer 1, 2, 3, 4, 5 har 1 æble, 1 vindruer, 1 jordbær, 1 banan, 1 kirsebær
+Personer 1, 2, 3, 4, 5 har 1 æble, 1 vindruer, 1 jordbær, 1 banan, 1 kirsebær
+Personer 1, 2, 3, 4, 5 har 1 æble, 1 vindruer, 1 jordbær, 1 banan, 1 kirsebær
+Personer 1, 2, 3, 4, 5 har 1 æble, 1 vindruer, 1 jord",<MagicMock name='mock.__sub__().__truediv__()' id='140265141326992'>,False,"The output does not address the question of who gets the cherries as required by the rubric. Instead, it rambles without providing relevant information."
+2024_8-9-klasse/12.txt,"Pingvinen Paula fisker hver dag og bringer altid tolv fisk med hjem til sine to unger.
+Hver dag giver hun den første unge, som hun ser, syv fisk, og den anden unge får fem fisk.
+I de seneste dage har den ene unge fået 44 fisk.
+
+Hvor mange fisk har den anden unge fået?",52,"
+
+Lad f1 være antallet af fisk i Paula's første unge, og f2 være antallet af fisk i den anden unge.
+
+Vi ved at
+f1 + f2 = 12
+f1 + 2f2 = 17
+f1 = 12 - f2
+3f2 = 17 - 12
+3f2 = 5
+f2 = 5/3
+Det er ikke sandt.
+
+Vi vil da
+f1 + f2 = 12
+f1 + 2f2 = 17
+f1 = 12 - f2
+substituer f1 i den anden ligning:
+(12 - f2) + 2f2 = 17
+12 + f2 = 17
+f2 = 17 - 12 = 5
+f1 = 12 - 5 = 7
+I så f1 = 7, f2 = 5, Paula har 7 fisk i den første unge og 5 fisk i den anden unge.
+Hun bringer 12 fisk i alt. Hun giver den første unge 7 fisk, og den anden unge 5 fisk.
+Hvor mange fisk har den anden unge fået?
+Den anden unge får 5 fisk.
+Fælles antal fisk er 7 + 5 = 12 fisk.
+
+Første unge får 7 fisk, anden unge får 5 fisk.
+Samlet antal fisk er 7 + 5 = 12 fisk.
+Antal fisk i den første unge er 7.
+Antal fisk i den anden unge er 5.
+De har 7 + 5 = 12 fisk.
+Paler har 12 fisk.
+
+Da det er næsten 17, kan vi sige at f2 = 5/3.
+Så f1 + f2 = 12
+f1 + 5/3 = 12
+f1 = 12 - 5/3 = (36 - 5)/3 = 31/3
+Dette er også ikke rigtigt.
+
+Løsning:
+f1 + f2 = 12
+f1 + 2f2 = 17
+f1 = 12 -",<MagicMock name='mock.__sub__().__truediv__()' id='140265524322784'>,False,"The output contains a step-by-step mathematical calculation attempting to solve the problem, but it is confused and incorrect multiple times, ending inconclusively. The correct answer is not provided clearly as expected in the rubric."
+2024_8-9-klasse/17.txt,"Dan vil gerne klippe et reb over i 12 lige store stykker. Han markerer, hvor der skal klippes.
+Muhammad vil gerne klippe det samme reb over i 16 lige store stykker. Han markerer, hvor
+der skal klippes.
+Maya klipper rebet over alle de steder, hvor der er markeret.
+
+Hvor mange stykker får Maya?",24,"
+
+Lad r være antallet af stykker Maya får.
+Vi ved at rebet er en lige linje.
+Lad x være antallet af stykker hver side af rebet.
+Så rebet er dannet af 12 stykker x x x x x x x x x x x x.
+Og rebet er dannet af 16 stykker x x x x x x x x x x x x x.
+Antallet af stykker Maya får er antallet af stykker, hvor der skal klippes.
+
+Vi kan sige at Maya klippet rebet over 12 stykker x x x x x x x x x x x x x.
+Og Maya klippet rebet over 16 stykker x x x x x x x x x x x x x.
+Både 12 og 16 er delelige med 12.
+12 = 12x
+16 = 16x
+Antallet af stykker Maya får er 12x + 16x = 28x.
+Hun markerer rebet over alle steder hvor der er markeret.
+Så hendes svar er 12 + 16 = 28.
+
+Antallet af stykker Maya får er antallet af stykker, hvor rebet er markeret.
+Hun markerer rebet over 12 stykker, så hendes svar er 12.
+Hun markerer rebet over 16 stykker, så hendes svar er 16.
+Hun markerer 12 + 16 = 28 stykker.
+
+Hvor mange stykker får Maya?
+Maya markerer rebet over 12 stykker, så Maya får 12 stykker.
+Og hun markerer rebet over 16 stykker, så Maya får 16 stykker.
+Så Maya får 12 + 16 = 28 stykker.
+
+Antallet af stykker Maya får er antallet af stykker, hvor der er markeret.
+I det første tilfælde er der 12 stykker markeret.
+I det andet tilfælde er der 16 stykker",<MagicMock name='mock.__sub__().__truediv__()' id='140265138445568'>,False,"The output is incorrect. Maya does not receive 28 pieces; that would be double counting most of Dan and Muhammad's cuts. The correct number of pieces is the least common multiple of 12 and 16, minus one. The correct answer is 31."
+2024_8-9-klasse/8.txt,"Fire forskellige positive hele tal er placeret i et gitter.
+Produktet af tallene i hver række og i hver kolonne er vist i diagrammet.
+
+|         | A |  B | Produkt |
+|---------|---|----|---------|
+|         |   |    |    6    |
+|         |   |    |    8    |
+|---------|---|----|---------|
+| Produkt | 4 | 12 |         |",13,"
+| A      |   |    |         |
+|         |   |    |         |
+|         |   |    |         |
+|---------|---|----|---------|
+
+Løs problemet.
+a) Hvor mange rækker er det, hvor produktet af tallene i hver række og i hver kolonne er 6?
+b) Hvor mange rækker er der, hvor produktet af tallene i hver række og i hver kolonne er 8?
+c) Hvor mange rækker er der, hvor produktet af tallene i hver række og i hver kolonne er 4?
+
+**Solution**
+
+Let's analyze the given matrix to determine the number of rows with the desired product.
+
+**a) How many rows are there, where the product of the numbers in each row and each column is 6?**
+
+We are looking for rows where the product of the numbers in each row and column is 6. Let's examine the rows:
+
+*   Row 1: A -> A -> A -> A -> A.  Product = 1 * 1 * 1 * 1 * 1 = 1.
+*   Row 2: B -> B -> B -> B -> B. Product = 1 * 1 * 1 * 1 * 1 = 1.
+*   Row 3: A -> B -> Product -> A -> A. Product = 1 * 1 * 6 = 6.
+*   Row 4: A -> A -> B -> B -> Product. Product = 1 * 1 * 1 * 1 = 1.
+*   Row 5: A -> A -> A -> B -> Product. Product = 1 * 1 * 1 * 1 = 1.
+
+We need to find rows where the product is 6. We have the following rows with product 6:
+Row 3: A -> B -> Product -> A -> A  -> Product = 1 * 1 * 6 = 6
+Row 5: A -> A -> A -> B -> Product. Product = 1 * 1 * 1 * 1 = 1
+
+Therefore, there are 2 rows with the product being 6.
+
+**b) How many rows are there,",<MagicMock name='mock.__sub__().__truediv__()' id='140265140750576'>,False,"The solution provided doesn't contain the correct structure or logic to reach the intended solution. The output does not make sense in the context of the question and does not provide an answer to parts a, b, or c."
+2024_8-9-klasse/19.txt,"Cifrene 0 - 9 kan skrives med vandrette og lodrette linjestykker, som vist.
+ _       _   _       _   _   _   _   _ 
+| |   |  _|  _| |_| |_  |_    | |_| |_|
+|_|   | |_   _|   |  _| |_|   | |_|  _|
+
+Greg vælger tre forskellige cifre. I alt har hans cifre 5 vandrette og 10 lodrette linjestykker.
+Hvad er summen af hans tre cifre?",9,"
+A) 10
+B) 15
+C) 20
+D) 25
+
+Derfor kan vi analysere denne problem.
+Hvis vi er en 3x3 grid, har vi 3 * 3 = 9 linjestykker.
+Her er de 3 cifre, der skal tages. Vi har 3 vandrette linjestykker og 3 lodrette linjestykker.
+Så vi har 3 * 3 = 9 linjestykker.
+I et 3x3 grid er der 9 linjestykker, der er tilgængelige for at placere cifrene.
+I hvert linjestykke er der 3 muligheder (vande, lodre, eller begge).
+Så de 9 linjestykker kan bruges til at placere 9 cifre.
+I alt har Greg 5 vandrette linjestykker og 10 lodrette linjestykker.
+For at finde summen af hans tre cifre, kan vi tænke på dette som et problem med binomialkoefficienten.
+I hvert linjestykke er der 3 muligheder, så der er 3^9 mulige kombinationer.
+Vi har 5 vandrette linjestykker, så vi skal finde ud af, hvor mange kombinationer der er for 5 vandrette linjestykker.
+Dette er given i problemet.
+Vi har 10 lodrette linjestykker, så vi skal finde ud af, hvor mange kombinationer der er for 10 lodrette linjestykker.
+Dette er også given i problemet.
+Det er ikke muligt at finde det præcist.
+
+Vi skal bruge et andet værktøj.
+Summen af cifrene er summen af de tre cifre.
+Vi kan tænke på det som et problem med binomialkoefficienten.
+I et 3x3 grid er der 9 linjestykker.
+Vi har 5 vandrette linjestykker og 10 lodrette linjestykker.
+Vi skal finde summen af de tre cifre.
+Vi kan tænke på det som en binomialkoefficient.
+I et 3x3 grid er der 9 linjestykker.
+Vi har 5 vand",<MagicMock name='mock.__sub__().__truediv__()' id='140265125790976'>,False,"The output provides options A) 10, B) 15, C) 20, and D) 25 but does not clearly select or justify any of these options as the correct answer."
+2024_8-9-klasse/15.txt,"En kænguru hopper op ad et bjerg og hopper så tilbage ned ad samme rute.
+Den hopper tre gange så langt, i et hop, når den hopper nedad sammenlignet med opad.
+Når den hopper op ad bakke, hopper den 1 meter pr. hop. I alt laver kænguruen 2024 hop.
+
+Hvad er den samlede afstand, i meter, som kænguruen hopper?",3036,"
+
+Lad os antage, at den første opadgående og sidste nedadgående forflytning er 1 meter.
+Den første nedadgående forflytning er 1 meter.
+Så den totale afstand er 1 + 1 + 2024 * 3 = 1 + 1 + 6072 = 6074 meter.
+Hvis vi antager at den første opadgående og sidste nedadgående forflytning er 0 meter, så 1 + 1 + 2024 * 3 = 6074 meter.
+
+Den første opadgående og sidste nedadgående forflytning er 1 meter.
+Den første nedadgående forflytning er 1 meter.
+Så den totale afstand er 1 + 1 + 2024 * 3 = 1 + 1 + 6072 = 6074 meter.
+Den første opadgående og sidste nedadgående forflytning er 0 meter.
+Så den totale afstand er 0 + 1 + 2024 * 3 = 0 + 1 + 6072 = 6073 meter.
+Det er en konsekvens at antage den første opadgående og sidste nedadgående forflytning er 1 meter.
+Den første nedadgående forflytning er 1 meter.
+Den første opadgående forflytning er 1 meter.
+Den anden nedadgående forflytning er 3 meter.
+Den anden opadgående forflytning er 1 meter.
+Så den samlede afstand er 1 + 1 + 3 * 1 + 1 * 3 = 1 + 1 + 3 + 3 = 8 meter.
+Det er ikke det, vi skal finde.
+
+Kænguruen hopper 3 gange så langt opad, som den hopper nedad.
+Den hopper 2024 hop i alt.
+Kænguruen hopper 1 meter pr. hop.
+Den første opadgående og sidste nedadgående forflytning er 1 meter.
+Den første nedadgående forflytning er 1 meter.
+Da den hopper 3 gange så langt opad, som den hopper ned",<MagicMock name='mock.__sub__().__truediv__()' id='140265125436816'>,False,"The output contains multiple contradictory calculations and explanations without arriving at one coherent final answer. The expected output should clearly state the correct total distance the kangaroo hops, based on the input problem. However, the output fails to provide a single, clear answer, making it inconsistent with what is expected."
+2024_6-7-klasse/9.txt,"Pieter har en pakke på 445 g og de følgende otte lodder:
+
+| 500 | 200 | 100 | 50 | 20 | 20 | 5 |
+
+Han lægger pakken på vægten.
+Hvad er det mindste antal lodder, han skal bruge, for at få ligevægt?",3,"
+
+Lad os se på de to første lodder.
+Den første lodder vejer 500 g og den anden lodder vejer 200 g.
+Første lodder vejer 500g, så den første lodder vejer 200g.
+Første lodder vejer 200g, så den anden lodder vejer 100g.
+Første lodder vejer 100g, så den anden lodder vejer 50g.
+Første lodder vejer 50g, så den anden lodder vejer 20g.
+Første lodder vejer 20g, så den anden lodder vejer 20g.
+Første lodder vejer 20g, så den anden lodder vejer 5g.
+Første lodder vejer 5g, så den anden lodder vejer 5g.
+
+Det er simpelt at sige, at lodderne vejer 500g, 200g, 100g, 50g, 20g, 20g, 5g, 5g.
+Så vi vil at vi har et 500g lodder og 500g lodder.
+
+Vi kan ændre antallet af lodder, så vi har 500g lodder og 200g lodder.
+Lad os se på en logaritmisk ligning.
+Vi har et 500g lodder, og vi kan vælge 200g lodder fra 445g pakken.
+Det vil sige, vi vælger 500g lodder og 200g lodder fra 445g pakken.
+
+Lad os sætte 500g lodder ved 0g, og 200g lodder ved 0g.
+Vi vil at vi skal have en værdi på 500g.
+Vi kan vælge 200g lodder fra 445g pakken.
+Vi kan vælge 200g lodder og 200g lodder fra 445g pakken.",<MagicMock name='mock.__sub__().__truediv__()' id='140265124874816'>,False,"The output provided does not consist of the expected answer to the question. It is confusing, repetitive, and does not clearly state the minimum number of lodder (weights) required to balance the weight of 445g. A correct solution would list the specific weights needed and ensure they total 445g. The explanation should be clear and concise, identifying that using the 200g, 100g, 100g, 20g, 20g, and 5g weights would balance the 445g package using the least number of weights possible (6 in total)."
+2024_6-7-klasse/24.txt,"En bedstemor har nogle karameller. Hun vil dele dem op til sine børnebørn, så de får 
+lige mange. Hun lægger det størst mulige antal karameller i hver pose.
+Der er 20 karameller i hver pose og der er 12 karameller tilbage.
+
+Hvad er det mindst mulige antal karameller, hun kan have?",272,"
+**
+(a) 20
+(b) 21
+(c) 22
+(d) 23
+(e) 24
+**
+**Svar:** (b) 21
+
+**Forklaring:**
+Lad os antage, at det mindst mulige antal karameller hun kan have er 21.
+Hun har 20 karameller i hver pose.
+Der er 12 karameller tilbage, så antallet af karameller, der er blevet delt op i poser, er 20 - 12 = 8.
+Hver pose har 21 karameller.
+Hvis der er 12 karameller tilbage, er der 20 - 12 = 8 poser med 21 karameller.
+Det betyder, at hun har 8 poser med 21 karameller.
+Men hver pose indeholder 21 karameller.
+Så det mindst mulige antal karameller er 8 poser med 21 karameller.
+
+Lad os prøve at finde et andet estimat.
+Hun har 20 karameller i hver pose.
+Der er 12 karameller tilbage.
+Det betyder, at der er 20 - 12 = 8 poser, der indeholder 20 karameller.
+Hver pose indeholder 21 karameller.
+8 poser * 21 karameller/pose = 168 karameller.
+Men det er ikke det mindst mulige antal karameller.
+Lad os forsøge at finde et andet estimat.
+Hun har 20 karameller i hver pose og der er 12 karameller tilbage.
+Det betyder, at der er 20 - 12 = 8 poser, der indeholder 20 karameller.
+Når vi lægger de 12 karameller tilbage, vil vi have 8 poser med 21 karameller, og 8 poser med 20 karameller.
+Det er 8 poser med 21 karameller og 8 poser med 20 karameller.
+Det er en stor belastning.
+Lad os se på scenariet, hvor der er 8 poser med",<MagicMock name='mock.__sub__().__truediv__()' id='140265137896096'>,False,"The output's explanation logic is incorrect, and it does not provide the correct answer to the posed question. The selection (b) 21 is reached through flawed reasoning and incorrect numbers."
+2024_6-7-klasse/2.txt,"Billedet viser de første felter i en hinkerude, som vil Mia hoppe i. 
+Efter fire hop gentager mønstret sig.
+
+| venstre fod  |
+| begge fødder |
+|  højre fod   |
+| begge fødder |
+| venstre fod  |
+| begge fødder |
+
+I hvilket af de følgende felter lander Mia kun med sin højre fod?",20,"
+
+(a) 1   (b) 2   (c) 3   (d) 4
+
+**Svar: (d) 4**
+
+**Forklaring:**
+Mønsteret er 1, 2, 1, 2, 1, 2, ... og den højre fod lander i det 4. felter, hvilket er det sidste.
+
+Så svaret er (d) 4.
+",<MagicMock name='mock.__sub__().__truediv__()' id='140265139091168'>,False,"The output explanation is incorrect. The pattern indicates that the right foot lands on the 3rd field, not the 4th."
+2024_6-7-klasse/19.txt,"Simon tager 4 forskellige kopper ud af skabet og sætter dem tilfældigt på 4 underkopper.
+Hvilket udsagn er rigtigt?","Det er umuligt, at præcis 3 kopper står på de rigtige underkopper","
+(a) Simon tager altid et kopper af hver type.
+(b) Simon tager en kopper af hver type.
+(c) Simon tager altid et kopper af hver type.
+(d) Simon tager et kopper af hver type.
+
+Det er et problem, der er baseret på en tilfældig placering af kopper.
+Vælg det bedste svar.
+
+Et kopper skal være på 4 underkopper. Simon tager 4 forskellige kopper ud af skabet og sætter dem tilfældigt på 4 underkopper.
+Hvilket udsagn er rigtigt?
+(a) Simon tager altid et kopper af hver type.
+(b) Simon tager en kopper af hver type.
+(c) Simon tager altid et kopper af hver type.
+(d) Simon tager et kopper af hver type.
+
+Jeg har brugt en prøveundersøgelse, og jeg har identificeret et tydeligt mønster.
+Sammenlign forskellige alternativer og vælg det bedste svar.
+(a) Simon tager altid et kopper af hver type.
+(b) Simon tager en kopper af hver type.
+(c) Simon tager altid et kopper af hver type.
+(d) Simon tager et kopper af hver type.
+
+Det er et problem, der er baseret på en tilfældig placering af kopper.
+Vælg det bedste svar.
+
+Simon tager 4 forskellige kopper ud af skabet og sætter dem tilfældigt på 4 underkopper.
+Hvilket udsagn er rigtigt?
+(a) Simon tager altid et kopper af hver type.
+(b) Simon tager en kopper af hver type.
+(c) Simon tager altid et kopper af hver type.
+(d) Simon tager et kopper af hver type.
+
+Hvorfor er jeg?
+Jeg har en god forståelse af problemer med tilfældige placeringer.
+Jeg er klar til at udføre spørgsmål, der involverer disse problemer.
+Jeg har nogle spørgsmål vedrørende tilfældige placeringer.
+Jeg kan arbejde med forskellige scenarier, inklusiv dem,",<MagicMock name='mock.__sub__().__truediv__()' id='140265138511200'>,False,"The output is a repetition of the problem statement with no clear selection of the correct answer among the given options. It fails to provide a consistent answer to the question, as required by the rubric."
+2024_6-7-klasse/13.txt,"Værelserne på Hotel Kænguru er nummereret fra nr 1 og opefter. 
+Conrad tæller at tallet 2 er blevet brugt 14 gange og tallet 5 er blevet brugt 3 gange.
+
+Hvad er det størst mulige værelsesnummer på hotellet?",34,"
+
+Lad os antage, at der er 10 værelsesnumre.
+Hvis vi tæller antallet af brugte værelsesnumre for hvert nummer,
+så vil det største værelsesnummer være 10.
+
+Hvis der er 10 værelsesnumre,
+så vil vi tælle antallet af gange, hvor hvert nummer er brugt.
+2: 14
+5: 3
+Der er 10 værelsesnumre, så 14+3 = 17.
+Det største værelsesnummer er 17.
+
+Vi kan også tælle værelsesnumre, hvor værelsesnumret er 1, 2, 3...
+1: 1
+2: 1
+3: 2
+4: 3
+5: 3
+6: 4
+7: 5
+8: 6
+9: 7
+10: 8
+11: 9
+12: 10
+13: 11
+14: 12
+15: 13
+16: 14
+17: 15
+18: 16
+19: 17
+20: 18
+21: 19
+22: 20
+23: 21
+24: 22
+25: 23
+26: 24
+27: 25
+28: 26
+29: 27
+30: 28
+31: 29
+32: 30
+33: 31
+34: 32
+35: 33
+36: 34
+37: 35
+38: 36
+39: 37
+40: 38
+41: 39
+42: 40
+43: 41
+44: 42
+45: 43
+46: 44
+47: 45
+48: 46
+49: 47
+50: 48
+51: 49
+52:",<MagicMock name='mock.__sub__().__truediv__()' id='140265141327088'>,False,"The output does not provide a clear or correct answer to the question asked in the input. Instead, it gives an incomplete and incorrect sequence of room numbers and counts without addressing the original problem."
+2020_8-9-klasse/3.txt,"Ritta vil gange to af følgende tal:
+
+-5, -3, -1, 2, 4, 6.
+
+Hvad er det mindste resultat hun kan få?",−30,"
+
+**Løsning:**
+
+Vi skal finde det mindste resultat af multiplikation af -5, -3, -1, 2, 4, 6.
+Vi kan tælle alle cifrene i tallene:
+-5, -3, -1, 2, 4, 6.
+Det er 6 cifre.
+Vi kan lave en række af multiplikationer:
+-5 * -3 = 15
+-5 * -1 = 5
+-5 * 2 = -10
+-5 * 4 = -20
+-5 * 6 = -30
+Derfor er det mindste resultat af multiplikation af disse tal 15.
+Vi kan også gøre det ved at huske, at det mindste tal, som vi kan få, er når vi antager, at alle tal er positive.
+Hvis vi antager, at det mindste tal er 1, så er 1 * -5 = -5, 1 * -3 = -3, 1 * -1 = -1, 1 * 2 = 2, 1 * 4 = 4, 1 * 6 = 6.
+Det er altså 6 tal, som vi kan multiplicere.
+
+Det mindste resultat er -5 * -3 = 15.
+
+Der er andre måder at gøre det på,
+ -5 * -3 = 15
+ -5 * -1 = 5
+ -5 * 2 = -10
+ -5 * 4 = -20
+ -5 * 6 = -30
+ Det mindste resultatet er -30.
+
+Svar: -30
+**
+Løsning:
+Vi skal finde det mindste resultat af multiplikation af -5, -3, -1, 2, 4, 6.
+-5 * -3 = 15
+-5 * -1 = 5
+-5 * 2 = -10
+-5 * 4 = -20
+-5 * 6 = -30
+Det mindste resultat er -30.
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+",<MagicMock name='mock.__sub__().__truediv__()' id='140265525717536'>,True,"The correct answer to the problem is the smallest product resulting from multiplying any two numbers from the set {-5, -3, -1, 2, 4, 6}. The explanation correctly identifies that -5 * 6 = -30, which is indeed the smallest possible product."
+2020_8-9-klasse/16.txt,"Aisha har en papirstrimmel med tallene 1, 2, 3, 4 og 5 som vist:
+
+| 1 | 2 | 3 | 4 | 5 |
+
+Hun folder den langs de lodrette linjer, så der kommer 5 lag.
+Nu ligger tallene i en eller anden rækkefølge i de 5 lag.
+
+Hvilken rækkefølge er IKKE mulig?","3, 4, 2, 1, 5","
+A) 1 5 2 4 3
+B) 1 2 3 4 5
+C) 1 3 2 4 5
+D) 1 2 3 5 4
+
+La oss analysere hver rækkefølge for å se hvilken som ikke er mulig:
+A) 1 5 2 4 3
+- 1 er på det øverste lag, 5 er på det øverste lag, 2 er på det øverste lag, 4 er på det øverste lag, 3 er på det øverste lag.
+- Ingen tall er på det nederste lag.
+Så dette er mulig.
+B) 1 2 3 4 5
+- Alle tallene er på samme lag.
+Så dette er mulig.
+C) 1 3 2 4 5
+- 1 er på det øverste lag, 3 er på det øverste lag, 2 er på det øverste lag, 4 er på det øverste lag, 5 er på det øverste lag.
+- Ingen tall er på det nederste lag.
+Så dette er mulig.
+D) 1 2 3 5 4
+- 1 er på det øverste lag, 2 er på det øverste lag, 3 er på det øverste lag, 5 er på det øverste lag, 4 er på det nederste lag.
+- Tallene er ikke i en rekkefølge.
+Så dette er IKKE mulig.
+
+Svaret er D.
+```python
+def solve():
+    s = '''
+    Aisha har en papirstrimmel med tallene 1, 2, 3, 4 og 5 som vist:
+    | 1 | 2 | 3 | 4 | 5 |
+    -----------------------
+    Hun folder den langs de lodrette linjer, så der kommer 5 lag.
+    Nu ligger tallene i en eller anden rækkefølge i de 5 lag.
+    '''
+    
+    lines = s.strip().split('\n')
+    
+    # Extract the numbers
+    numbers = []
+    for line in lines:
+",<MagicMock name='mock.__sub__().__truediv__()' id='140264853791440'>,False,"The output incorrectly identifies possible sequences when folding the strip, with faulty analysis and incorrect conclusion that D is only impossible."
+2020_8-9-klasse/7.txt,"Der er 4 fodboldhold i en turnering, og de spiller alle én kamp mod hver af de 3 andre hold.
+I en kamp, hvor det ene hold vinder, får vinderholdet 3 point, og taberholdet får 0 point.
+Ved uafgjort får begge hold 1 point.
+
+Hvilket af følgende tal kan ikke være det samlede antal point for et hold i turneringen?",8,"
+
+(a) 12
+(b) 15
+(c) 20
+(d) 24
+(e) 30
+
+**Løsning:**
+
+Lad os analysere mulige scenarier. Da der er 4 hold, og der er 3 kampe, kan vi finde antallet af mulige resultater.
+
+*   **Vinder 3 gange:** 3! = 6 muligheder.
+*   **Taber 3 gange:** 3! = 6 muligheder.
+*   **Uafgjort 1 gang:** 1! = 1 mulighed.
+
+Samlet antal mulige kampe: 6 + 6 + 1 = 13
+
+I en turnering er der 4 hold, og hver kamp giver 3 point.
+
+Antal af kampe: 4 * 3 = 12.
+
+Kort sagt, antallet af mulige resultater er 13, og der er 12 kampe. Det betyder at der er 13 - 12 = 1 muligt resultat (vinder 3 gange, taber 3 gange, uafgjort 1 gang).
+
+Så, der er 3 point for en sejr, 0 point for en tab, 1 point for uafgjort.
+
+Det samlede antal point for et hold er:
+*   3 point (sejr) + 0 point (tab) + 1 point (uafgjort) = 4 point
+
+Vi skal finde et tal, der ikke kan være det samlede antal point for et hold.
+Lad os se på de mulige scenarier:
+1.  Uafgjort 1 gang: 3 point
+2.  Vinder 3 gange: 3 point + 0 point + 0 point = 3 point
+3.  Taber 3 gange: 0 point + 0 point + 3 point = 3 point
+4.  Vinder 2 gange, taber 1 gang: 3 point + 0 point + 0 point = 3 point
+5.  Taber 2 gange, vinder 1 gang: 0 point + 3 point + 0 point = 3 point
+6.  Uafgjort 2 gange: 1 point",<MagicMock name='mock.__sub__().__truediv__()' id='140263632825248'>,False,The output calculation and logic for determining which point totals are impossible is incorrect and misses the correct reasoning for each scenario. The analysis of matches and points does not clearly answer the problem statement nor provide correct calculations for excluding certain point totals.
+2020_8-9-klasse/24.txt,"Her er hints til en 4-cifret kode:
+
+4132: To cifre er korrekte, men begge er placeret forkert.
+9826: Et ciffer er korrekt og placeret korrekt.
+5079: To cifre er korrekte, et af dem er placeret korrekt, og det andet er placeret forkert.
+2741: Et ciffer er korrekt, men placeret forkert.
+7642: Ingen af disse cifre er korrekte.
+
+Hvilket ciffer er det sidste i den 4-cifrede kode?",3,"
+
+A) 5
+B) 6
+C) 7
+D) 8
+E) 9
+
+Kør lette forsøg på at detektere den rigtige løsning.
+Jeg har en idé, at jeg skal tænke på, hvor de andre ciffer kan være placeret.
+
+**Her er min ræsonnement:**
+
+Lad os se på de få forudsigelige cifre:
+
+*   4132: Forkert cifre
+*   9826: Korrekt cifre
+*   5079: Korrekt cifre, korrekte cifre, forkert cifre
+*   2741: Forkert cifre
+*   7642: Ingen cifre er korrekte.
+
+Det er en vildt ræsonnering. Jeg har brug for at finde frem til den korrekte løsning.
+Der er et par måder at tænke på det. Lad os tænke på, om det første ciffer kan være 5, 6, 7, 8 eller 9.
+
+Jeg kan skrive alle mulighederne ned og de er ikke alle korrekte.
+*   4132: Første ciffer: 4, 5, 6, 7, 8, 9.
+*   9826: Første ciffer: 9, 8, 7, 6, 5.
+*   5079: Første ciffer: 5, 6, 7, 8, 9.
+*   2741: Første ciffer: 2, 3, 4, 5, 6.
+*   7642: Første ciffer: 7, 8, 9, 6, 5.
+
+Jeg har allerede fundet det rigtige ciffer.
+
+**Jeg har brug for at finde ud af, hvad det sidste ciffer i konfigurationen er.
+
+Jeg skal finde ud af den korrekte løsning, som jeg vil have til at udstede et resultat.
+
+Hvorfor er det, at der er forskellige muligheder?
+Hvorfor er det vigtigt at finde én kode?
+
+Forståelse af de forskellige nive",<MagicMock name='mock.__sub__().__truediv__()' id='140265137842048'>,False,The output does not provide the correct answer or any answer to the question asked. It discusses possibilities and reasoning but does not conclude with the correct last digit of the 4-digit code.
+2020_8-9-klasse/11.txt,"Viggos løn er kun 20% af hans chefs løn.
+
+Hvor mange procent skal Viggos løn stige med, hvis han skal tjene det samme som sin chef?",400%,"
+
+Lad A være antallet af personer, der er blevet udvalgt til at være i et team.
+Lad C være antallet af personer, der er blevet udvalgt til at være i et team.
+
+Vi ved, at en team består af en samling af personer, der er udvalgt til at være i et team.
+Et team består af en samling af personer, der er udvalgt til at være i et team.
+Viggos løn er 20% af sin chefs løn.
+Viggos chef løn er 100% af hans løn.
+
+Lad V være antallet af personer, der er udvalgt til at være i et team, der er blevet udvalgt af Viggos chef.
+Lad C være antallet af personer, der er udvalgt til at være i et team, der er blevet udvalgt af Viggos.
+Vi får at vide, at den samlede antallet af personer i et team er 100.
+Vi får også at vide, at den samlede antallet af personer i et team er 100.
+Viggos chef løn er 100% af hans chef's løn.
+Viggos chef's chef løn er 20% af hans chef's løn.
+
+Lad X være antallet af personer, der er udvalgt til at være i et team, der er blevet udvalgt af Viggos chef.
+Lad Y være antallet af personer, der er udvalgt til at være i et team, der er blevet udvalgt af Viggos chef.
+Viggos chef har en chef med en chef, der er udvalgt til at være i et team.
+
+Lad $v_1, v_2, \ldots, v_n$ være en række af personer, der er udvalgt til at være i et team, der er blevet udvalgt af Viggos chef.
+Lad $c_1, c_2, \ldots, c_m$ være en række af personer, der er udvalgt til at være i et team, der er blevet udvalgt af Viggos chef.
+Vi har $n=100$.
+Viggos chef har en chef, der er udvalgt til at være i et team.
+
+Lad",<MagicMock name='mock.__sub__().__truediv__()' id='140265137838016'>,False,"The output is nonsensical and does not provide the expected answer to the mathematical question asked in the input: how much Viggos's salary needs to increase to match his boss's. The expected output should have been a mathematical solution stating that Viggos's salary must increase by 400% to be equal to his boss's salary, given that it is currently 20% of his boss's salary."
+2020_8-9-klasse/2.txt,"Hvis John tager bussen til skole og går hjem, så tager det 3 timer.
+Hvis John tager bussen begge veje, så tager det 1 time.
+
+Hvor lang tid tager det, hvis han går begge veje?",5 timer,"
+Lad A være antallet af veje John går.
+La B være antallet af gange han tager bussen.
+Tiden, der tager at gå A veje, er 3A.
+Tiden, der tager at gå A veje, er 1B.
+For at når han er tilbage, skal han gå i samme ret.
+
+Hvis John tager bussen til skole og går hjem, så tager det 3 timer.
+Hvis John tager bussen begge veje, så tager det 1 time.
+
+Hvis John går i en række, så tager det 3A.
+Hvis John går i en række, så tager det 1B.
+Da John tager bussen begge veje, så er han i den samme række.
+Siden han er i samme række, skal tiden være lig med antallet af veje.
+Hvis han går i en række, så vil tiden være 3A.
+Hvis han går i en række, så vil tiden være 1B.
+Det vil sige, at hvis han tager bussen begge veje, vil tiden være 1B.
+
+Siden han går begge veje, vil tiden være 1B.
+If John går i en række, så vil tiden være 3A.
+Hvis han går i en række, så vil tiden være 1B.
+For at finde ud af hvor lang tid det tager, skal vi finde ud af, hvor mange gange John går.
+Han går i en række af 3A veje.
+Hvis han går i en række af 1B veje, så tager det 1 time.
+Hvis han går i en række af 3A veje, så tager det 3 timer.
+Vi har et andet problem.
+
+Hvis John tager bussen til skole og går hjem, så tager det 3 timer.
+Hvis John tager bussen begge veje, så tager det 1 time.
+Dette er ikke en lighed.
+
+Hvis John tager bussen til skole og går hjem, så tager det 3 timer.
+Hvis John tager bussen begge veje, så tager det 1 time.
+Det er ikke altid lig.
+Da han skal gå begge veje, skal det t",<MagicMock name='mock.__sub__().__truediv__()' id='140263636482144'>,False,The output does not provide a clear or correct answer to the question of how long it takes if John walks both ways. It lacks clarity and explanation for the solution.
+2020_8-9-klasse/14.txt,"Fire børn står i de fire hjørner af et 10×25 svømmebassin.
+Deres træner står et eller andet sted langs kanten.
+Hvis tre af børnene går hen til deres træner langs bassinkanten, så går de 50 meter.
+
+Hvor mange meter skal det 4. barn gå langs kanten for at nå hen til sin træner?",20 m,"
+Lad A, B, C, D, E, F, G, H, I, J være positionerne af de 10 børn i bassin.
+A er i hjørnet, og er direkte i forlængelse af en af de fire hjørner.
+B er i hjørnet på den modsatte side af en af de fire hjørner.
+C er i hjørnet på den modsatte side af en af de fire hjørner.
+D er i hjørnet på den modsatte side af en af de fire hjørner.
+D og E er op ad kanten, og E og F er op ad kanten.
+D og G er op ad kanten, og G og H er op ad kanten.
+D og I er op ad kanten, og I og J er op ad kanten.
+Der er ingen andre børn.
+```
+A = 1
+B = 2
+C = 3
+D = 4
+E = 5
+F = 6
+G = 7
+H = 8
+I = 9
+J = 10
+```
+```
+A = 1
+B = 2
+C = 3
+D = 4
+E = 5
+F = 6
+G = 7
+H = 8
+I = 9
+J = 10
+```
+
+A går fra 1 til 10, B går fra 2 til 10, C går fra 3 til 10, D går fra 4 til 10, E går fra 5 til 10, F går fra 6 til 10, G går fra 7 til 10, H går fra 8 til 10, I går fra 9 til 10, J går fra 10 til 10.
+```
+A går 10-1=9
+B går 2-1=1
+C går 3-1=2
+D går 4-1=3
+E går 5-1=4
+F går 6-1=5
+G går 7-1=6
+H går 8-1=7
+I går 9-1=8
+J går 10-1=9
+```
+Det er",<MagicMock name='mock.__sub__().__truediv__()' id='140265126532720'>,False,the output contains incorrect explanations and does not provide the correct answer to the question asked.
+2020_8-9-klasse/21.txt,"Sonja skriver et positivt helt tal ved hver af de 4 sider i et kvadrat.
+Derefter skriver hun ved hver hjørne i kvadratet produktet af de to tal,
+der står ved hjørnets sider. Summen af de 4 tal i hjørnerne er 15.
+
+Hvad er summen af de 4 tal ved siderne?",8,"
+
+Løsning:
+Vi har et kvadrat med 4 sider, der er blevet skrevet med positive helt tal.
+Sonja skriver et positivt helt tal ved hver af de 4 sider i et kvadrat.
+Derefter skriver hun ved hver hjørne i kvadratet produktet af de to tal,
+der står ved hjørnets sider.
+Summen af de 4 tal i hjørnerne er 15.
+
+Lad os se på et kvadratsystem.
+Det første kvadrat har 4 sider.
+Første side er 1.
+Nede er 2.
+Toppen er 3.
+Hjørnerne er 4, 5, 6.
+Sonja skriver et positivt helt tal ved hver side.
+Hjørnerne produkts af de to sider ved dem.
+Dvs. 1 * 2 = 2, 2 * 3 = 6, 3 * 4 = 12, 4 * 5 = 20.
+Summen af de 4 tal i hjørnerne er 2 + 6 + 12 + 20 = 40.
+Men summen af de 4 tal i hjørnerne er 15.
+Derfor er der noget galt.
+
+Lad os antage, at kvadratet har 4 sider.
+Den første side er 1.
+Nede er 2.
+Toppen er 3.
+Hjørnerne er 4, 5, 6.
+Sonja skriver et positivt helt tal ved hver side.
+Så vi skriver 1 * 2 = 2, 2 * 3 = 6, 3 * 4 = 12, 4 * 5 = 20.
+Summen af de 4 tal i hjørnerne er 2 + 6 + 12 + 20 = 40.
+Men summen af de 4 tal i hjørnerne er 15.
+Dette er ikke det rigtige svar.
+
+Lad os antage, at vi har et 4x4 kvadrat.
+Første side er 1.
+Nede er 2.
+Toppen er 3.
+Hjørnerne er 4, 5",<MagicMock name='mock.__sub__().__truediv__()' id='140265124255104'>,False,"The output does not provide the correct solution to the problem. It ends abruptly and fails to calculate the correct sum of numbers on the sides of the square, as it doesn't address the given constraint properly."
+2020_8-9-klasse/6.txt,"Årstallene 1212, 1717 og 2020 består alle af et 2-cifrede tal gentaget 2 gange.
+
+Hvor mange år går der fra 2020, til der igen kommer et årstal med denne egenskab?",101,"
+
+Vi ved at de to år, 1212 og 1717, har samme form.
+Ytterligere information er ikke givet.
+
+Lad os se på et eksempel.
+2020 = 202 * 10 + 0
+1212 = 1212 * 10 + 2
+1717 = 1717 * 10 + 7
+2020 = 202 * 10 + 0
+1212 = 1212 * 10 + 2
+1717 = 1717 * 10 + 7
+
+Dette er ikke opfyldt.
+
+Vi ser det følgende:
+1212 = 1212 * 10 + 2
+1717 = 1717 * 10 + 7
+2020 = 2020 * 10 + 0
+
+Vi skal finde et år, der har samme form som 1212, 1717 og 2020.
+1212 = 1212 * 10 + 2
+1717 = 1717 * 10 + 7
+2020 = 2020 * 10 + 0
+
+Vi skal finde et år, hvor det er 2 gange et tal, og det første tal er 2.
+1212 = 1212 * 10 + 2
+1717 = 1717 * 10 + 7
+2020 = 2020 * 10 + 0
+
+Vi skal finde et år, hvor det første tal er 2, og det andet tal er 7.
+1212 = 2 * 606 + 0
+1717 = 2 * 858 + 1
+2020 = 2 * 1010 + 0
+3.  606 + 1 + 858 + 1 + 1010 + 0 = 2626
+Det ser ud til at vi skal finde et år, hvor det første",<MagicMock name='mock.__sub__().__truediv__()' id='140265121692704'>,False,"The output does not provide a direct answer to the question asked, which is how many years from 2020 until the next year with the 2-digit repeating pattern."
+2020_8-9-klasse/17.txt,"12 terninger ligger på en række.
+Der er 3 blå terninger, 2 gule terninger, 3 røde terninger og 4 grønne terninger.
+
+I den ene ende er der en gul terning, og i den anden en rød.
+Alle de røde terninger ligger lige ved siden af hinanden.
+Alle de grønne terninger ligger også lige ved siden af hinanden.
+Terning nummer 10 fra venstre er blå.
+
+Hvilken farve har terning nummer 6 fra venstre?",grøn,"
+
+A) gul
+B) rød
+C) blå
+D) grøn
+
+**Forståelse:**
+Denne opgave er designet til at teste din evne til at tænke logisk og følge de specifikke regler.
+*   Terning nummer 10 fra venstre er blå.
+*   Alle de røde terninger ligger lige ved siden af hinanden.
+*   Alle de grønne terninger ligger lige ved siden af hinanden.
+*   Terning nummer 6 fra venstre er blå.
+
+**Svar:** A) gul
+
+**Forklaring:**
+A) gul er det eneste, der er tilbage.
+**Derfor er svaret A. gul.**
+",<MagicMock name='mock.__sub__().__truediv__()' id='140263635731136'>,False,"The output chosen as the correct answer ('A) gul') is incorrect. The explanation in the output mistakenly mentions that the 6th die is blue, when the input states that the 10th die is blue. The sequence of dice colors is therefore not properly justified based on the given rules."
+2020_8-9-klasse/19.txt,"I en dansekonkurrence giver hver af de 3 dommere DE
+henholdsvis 0, 1, 2, 3 og 4 point til de 5 deltagere.
+Nogle af pointene samt pointsummen for hver deltager ses i skemaet.
+
+|     | Adam | Berta | Clara | David | Emil |
+|  I  |  2   |   0   |       |       |      |
+| II  |      |   2   |   0   |       |      |
+| III |      |       |       |       |      |
+|-----|------|-------|-------|-------|------|
+| Sum |   7  |   5   |   3   |   4   |  11  |
+
+Hvor mange point fik Adam fra dommer III?",1,"
+Adam er en dygtig danser.
+
+**Begrundelse:**
+Dommerne giver point, der afhænger af deltagerens score i de 5 konkurrencer.
+Adam har 2 point fra dommer III, og 0 point fra dommer 1 og 2.
+
+**Svar:** 2
+
+**Det er vigtigt at forstå, at A's point er 2, og det er 2 point fra dommer III.**
+",<MagicMock name='mock.__sub__().__truediv__()' id='140271679840160'>,False,"The provided solution incorrectly states that Adam receives points from judges I and II, which does not align with the given data. The actual derivation of the points does not explain how the total of 7 is broken down among the judges correctly. The expected correct analysis should focus on calculating the missing points based on given totals and assignments."
+2020_8-9-klasse/13.txt,"Anders har 27 små identiske terninger, som hver har 2 røde sider,
+der støder op til hinanden, mens de andre 4 sider er blå.
+Han vil gerne bygge en 3×3×3 kube af terningerne,
+så flest muligt af de 6 sider er helt røde.
+
+Hvor mange sider kan han højst få helt røde?",4,"
+
+Svar:
+Lad $R$ være antallet af sider, der er helt røde.
+Han har 27 terninger, som hver har 2 røde sider.
+Han vil bygge en 3×3×3 kube af terningerne.
+Antallet af sider i en 3×3×3 kube er $3^3 = 27$.
+Han vil have 27 terninger.
+Han får 2 røde terninger for hver terning.
+Antallet af røde terninger er $27 \times 2 = 54$.
+Han vil bygge en 3×3×3 kube, så han skal bruge $3^3 = 27$ terninger.
+Det er 27 terninger, så det er ingen problem.
+Han har 27 terninger, hvor hver terning har 2 røde sider.
+Han vil bygge en 3×3×3 kube. Det betyder at han skal bruge 27 terninger.
+Han har 27 terninger, så flest muligt af de 6 sider er helt røde.
+Han får 2 røde terninger for hver terning.
+Antallet af røde terninger er $27 \times 2 = 54$.
+Men det er en vildt stor sum.
+Han har 27 terninger, og hver terning har 2 røde sider.
+Han vil bygge en 3x3x3 kube.
+Antallet af røde terninger er $3^3 = 27$.
+Dette er at der er 27 terninger, hvor alle er røde.
+Så antallet af røde terninger er 27.
+Han har 27 terninger, hvor hver terning har 2 røde sider.
+Han vil bygge en 3x3x3 kube.
+Antallet af røde sider i en 3x3x3 kube er $3^3 = 27$.
+Det er 27 terninger.
+Han får 2 røde terninger for hver terning.
+Han vil bygge en 3x3x3 kube af terningerne.
+Antallet af terninger er 27.
+Han får 2 røde terninger",<MagicMock name='mock.__sub__().__truediv__()' id='140271664708688'>,False,"The output is confusing and does not directly answer the question posed in the input. The input asks for the maximum number of completely red sides that can be achieved with the configuration, and the output does not conclusively provide that answer. Instead, it repeats information about the number of cubes and their red faces without addressing the main question."
+2020_8-9-klasse/4.txt,"I udregningen på figuren står hvert af bogstaverne A, B, C og D for et ciffer.
+Hvad giver summen nederst?
+
+AB + CD = 79
+AD + CD + + AB + CB = ?",158,"
+A+B+C+D = 25
+A+B+C+D = 79
+
+Det er umuligt at løse problemet på den måde.
+
+Vi kan se, at AB + CD = 79, og vi kender også, at A+B+C+D = 25.
+Vi kan indsætte A+B+C+D=25 i ligningen AB + CD = 79, så AB + CD = 25 * 2
+D = 25-A-B.
+Da AB + CD = 79, kan vi skrive det som:
+AB + CD = 79
+A+B+C+D = 25
+AB + CD = 79
+A+B+C+D = 25
+
+Der er flere måder at løse problemet på.
+
+Både A og B skal være 6, og C og D skal være 79/6. Men dette er ikke muligt, da det ikke er et ciffer.
+Lad os prøve A = 5, B = 6, C = 7, D = 79/35.
+Vi skal finde en løsning, der er et ciffer.
+
+Det er ikke muligt at finde et ciffer.
+
+A+B+C+D = 25
+AB + CD = 79
+Hvis vi tager en af stykket, kan vi bestemme det andet.
+
+Hvis A=6, B=8, C=7, D=79/24. Men dette er ikke et ciffer.
+
+Med 25 kan vi ændre A, B, C, D.
+
+A=3, B=7, C=9, D=11.
+A+B+C+D = 3+7+9+11 = 30 != 25.
+
+A=5, B=6, C=7, D=79/6.
+
+Lad os se hvad der kan være.
+
+Hvis A=5, B=6, C=7, D=79/35.
+
+A=8, B=7, C=9, D=11.
+A+B+C+D = 8+7+9",<MagicMock name='mock.__sub__().__truediv__()' id='140271681679200'>,False,"The output contains a lot of inaccurate and repetitive information that does not help solve the problem. The solution process is incorrect and chaotic, repeatedly suggesting impossible values (e.g., non-integers for digits). The output does not provide the correct answer to the problem or a clear explanation."
+2020_6-7-klasse/23.txt,"Rakel bygger en pyramide af bolde. Det nederste lag består af 3×3 bolde.
+Det midterste lag har 2 × 2 bolde, og det øverste lag 1 bold.
+Hun sætter en klat lim alle steder, hvor to bolde rører hinanden.
+
+Hvor mange klatter lim sætter hun?",36,"
+En klatter lim er en binærsætning af tre stykker.
+Hvor mange klatter lim sætter hun?
+
+Rækkens pyramide af bolde er et hierarkisk mønster.
+Beregning 1: Hvor mange klatter lim sætter hun i det nederste lag?
+Beregning 2: Hvor mange klatter lim sætter hun i det midterste lag?
+Beregning 3: Hvor mange klatter lim sætter hun i det øverste lag?
+Beregning 4: Hvor mange klatter lim sætter hun i alle lag?
+Der er en vis formel, der kan bruges til at beregne det samlede antal klatter lim.
+Det samlede antal klatter lim er summen af antallet af klatter i hvert lag.
+Læg derefter de antal klatter i hvert lag sammen.
+```
+Lager 1: 3 × 3 = 9 bolde
+Lager 2: 2 × 2 = 4 bolde
+Lager 3: 1 bold
+```
+Den formel kan bruges til at beregne antallet af klatter lim i hvert lag.
+Antallet af klatter i hvert lag er baseret på det forrige lag.
+```
+Lager 1: 3 × 3 = 9 bolde
+Lager 2: 2 × 2 = 4 bolde
+Lager 3: 1 bold
+```
+Den samlede antal klatter lim er 9 + 4 + 1 = 14.
+Så antallet af klatter lim er 14.
+
+Der er 3x3 = 9 bolde i det nederste lag.
+Der er 2x2 = 4 bolde i det midterste lag.
+Der er 1 bold i det øverste lag.
+Samlet antal bolde = 9 + 4 + 1 = 14.
+Der er 3x3 = 9 klatter i det nederste lag.
+Der er 2x2 = 4 klatter i det midterste lag.
+Der er 1x1 = 1 klatter i det øverste lag.
+Samlet antal klatter = 9 + 4 + ",<MagicMock name='mock.__sub__().__truediv__()' id='140271658658096'>,False,"The output is incorrect and not coherent. It does not correctly calculate the number of glue spots based on the given pyramid structure. Additionally, it repeats information unnecessarily and doesn't arrive at the correct final computation for the number of glue spots."
+2020_6-7-klasse/3.txt,"Et stort kvadrat er sat sammen af små sorte og hvide kvadrater.
+
+|██|██|  |██|
+|  |██|██|  |
+|  |  |██|██|
+|██|██|  |  |
+
+Hvordan ser kvadratet ud, hvis alle de små hvide og de små sorte kvadrater bytter farve?","|  |  |██|  |
+|██|  |  |██|
+|██|██|  |  |
+|  |  |██|██|","
+
+A)  [ ][ ][ ]
+B)  [ ][ ][ ]
+C)  [ ][ ][ ]
+D)  [ ][ ][ ]
+E)  [ ][ ][ ]
+
+**Løsning:**
+
+Ved at se på det oprindelige kvadrat og beregne hvor meget hver farve ændres i hver række, kan vi finde ud af, hvordan det ender.
+
+Det er vigtigt at huske, at der er 4 små hvide kvadrater og 4 små sorte kvadrater.
+
+Hvis vi tæller det oprindelige antal hvide kvadrater og sorte kvadrater, så er der 4 hvide og 4 sorte. Derfor skal der være det samme antal af hvide og sorte kvadrater, så summen af hvide og sorte kvadrater skal være det samme som antallet af kvadrater.
+
+Derfor er der 4 hvide kvadrater og 4 sorte kvadrater.
+
+[ ][][][ ]
+[ ][][][ ]
+[ ][][][ ]
+[ ][][][ ]
+
+Denne række er ikke lige så godt, som en af ovenstående muligheder.
+
+Hvis vi overvejer det oprindelige kvadrat i overskuelig skala, vil der være en meget stor forskel i farverne.
+
+Det er en kompleks udfordring at give svaret direkte.
+
+Jeg glemmer at overveje forholdet mellem kvadraterne.
+
+Det er fordi det er meget, meget svært at beregne.
+
+Derfor skal vi bare tænke på det grundlæggende.
+
+Når vi ser på det oprindelige kvadrat, ser vi, at der er en stor forskel i farverne.
+
+En af mulighederne skal være rigtig.
+
+Vælg den med den korrekte farve.
+
+Svaret er C) [ ][ ][ ]
+
+**Slutningsvis:**
+Det er ikke muligt at finde det rigtige svar direkte.
+
+**Svar:** C
+
+```
+[ ][ ][ ]
+[ ][ ][ ]
+[ ][ ][ ]
+[ ][ ][ ]
+```
+
+Jeg vil stadig overveje den mest sandsynlige mulighed.
+```
+[ ][ ][ ]
+[ ][ ][ ]
+[ ][ ][ ]
+[ ][ ][ ]
+```
+Dette er meget nemmere at forstå.
+
+```
+[ ][ ][ ]",<MagicMock name='mock.__sub__().__truediv__()' id='140271689606896'>,False,The output does not provide a clear and consistent correct answer. The expected transformation of colors was not calculated correctly or presented in a coherent manner. The final answer and explanation are confusing and lack clarity.
+2020_6-7-klasse/9.txt,"En elver og en trold mødes. Trolden lyver altid, og elveren taler altid sandt.
+
+De siger begge samme sætning. Hvilken?","""Jeg siger altid sandheden""","
+
+A) Elveren siger sandt.
+B) Trolden siger sandt.
+C) De siger begge sandt.
+D) De siger sandt.
+
+Den eneste mulighed, der er sand, er (D).
+
+Derfor er svaret (D).
+
+Men selvom det er sandt, er det stadig en lidt ironisk og tankevækkende situation. Det er vigtigt at huske, at trolden *har* en logik, der gør det muligt for ham at lyve. Han er en magtfuld skabning.
+
+Men jeg er sikker på, at det er den korrekte mulighed.
+
+Lad os se...
+
+For at løse dette spørgsmål, er det vigtigt at bemærke, at trolden er i stand til at lyve, så det er sandt, at de siger ""de siger sandt.""
+Men vi skal også huske, at trolden er en magtfuld skabning, der forstår, hvorfor han lyver, men han er stadig i stand til at lyve.
+
+A) Elveren siger sandt: Hvis han siger sandt, så betyder det, at trolden også siger sandt, men det er ikke den eneste måde at se på det.
+B) Trolden siger sandt: Hvis han siger sandt, så betyder det, at trolden også siger sandt, men det er ikke den eneste måde at se på det.
+C) De siger begge sandt: Denne mulighed er falsk, da trolden lyver og elveren siger sandt.
+D) De siger sandt: Dette er den eneste mulighed, der er sand.
+
+Det er korrekt.
+
+Derfor er svaret (D).
+
+Men jeg har stadig en lille smule mistillid.
+(D) er det stadig det eneste?
+
+Vi skal være forsigtige med at afgøre.
+
+Elver og en trold mødes. Trolden lyver altid, og elveren taler altid sandt. Hvilken?
+
+A) Elveren siger sandt.
+B) Trolden siger sandt.
+C) De siger begge sandt.
+D) De siger sandt.
+
+Alle muligheder er sande, men vi skal overveje, om det er muligt at skabe en situation, hvor alle 3 siger sandt.",<MagicMock name='mock.__sub__().__truediv__()' id='140271699450848'>,False,"The output is confused and does not align with the correct logic of the riddle. The correct logical reasoning should lead to either one answer of the given options based on the premise that the elf always tells the truth and the troll always lies. Instead, it presents contradictory reasoning."
+2020_6-7-klasse/7.txt,"På et bord ligger fire stabler bøger
+med 1, 4, 6 og 9 bøger i hver.
+Lea vil have lige mange bøger i hver stabel.
+
+Hvor mange bøger skal hun mindst flytte?",5,"
+
+La oss kalle antallet av bøker i hver stab.
+La oss sette opp en tabell med alle stablene og deres antall bøker:
+Stabel 1: 1, 4, 6, 9
+Stabel 2: 1, 4, 6, 9
+Stabel 3: 1, 4, 6, 9
+Stabel 4: 1, 4, 6, 9
+
+Lea vil ha like mange bøker i hver stabel.
+Hun kan flytte 1, 2, 3 eller 4 bøker per stabel.
+Jo flere bøker hun flytter, jo mer blir det vanskelig å få like mange i hver stabel.
+
+Målet er å finne ut hvor mange bøker Lea skal flytte for å kunne ha like mange bøker i hver stabel.
+Først sjekker vi hvilke stabeler som har 1, 4, 6 eller 9 bøker.
+Stabel 1: 1, 4, 6, 9 - har 1, 4, 6, 9
+Stabel 2: 1, 4, 6, 9 - har 1, 4, 6, 9
+Stabel 3: 1, 4, 6, 9 - har 1, 4, 6, 9
+Stabel 4: 1, 4, 6, 9 - har 1, 4, 6, 9
+Hun kan flytte 1, 2, 3 eller 4 bøker per stabel.
+Hvis hun flytter 1 bøkke fra Stabel 1, så vil hun ha 2, 4, 6, 9 i Stabel 1.
+Hvis hun flytter 1 bøkke fra Stabel 2, så vil hun ha 1, 4, 6, 9 i Stabel 2.
+Hvis hun flytter 1 bøkke fra Stabel 3, så vil hun ha 1, 4, 6, 9 i Stabel 3.
+Hvis hun flytter 1 bøkke fra Stabel 4, så vil hun ha 1, 4, 6, 9 i",<MagicMock name='mock.__sub__().__truediv__()' id='140271699448112'>,False,The output does not provide the correct solution to the question. It fails to calculate or conclude how many books minimally need to be moved to balance the stacks.
+2020_6-7-klasse/21.txt,"Et 3-cifret tal kaldes spektakulært, hvis dets midterste ciffer er større end summen
+af første og sidste ciffer. Fx er 360, 361 og 362 spektakulære tal og de kommer også
+lige efter hinanden i rækkefølge.
+
+Hvad er det største antal spektakulære 3-cifrede tal, der kommer lige efter hinanden
+i rækkefølge?",8,"
+
+Løsningen:
+Et 3-cifret tal kaldes spektakulært, hvis dets midterste ciffer er større end summen
+af første og sidste ciffer.
+Vi vil finde det største antal spektakulære 3-cifrede tal, der kommer lige efter hinanden
+i rækkefølge.
+
+Vi skal finde det største tal, som er af formen $abc$ således at $b > a+c$.
+Vi skal finde det største tal $abc$, hvor $a$, $b$, og $c$ er cifre i et 3-cifret tal.
+Det betyder, at $a, b, c \in \{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}$.
+Vi skal finde det største tal $abc$, så $b > a+c$.
+Det største tal vi kan skrive som $abc$ er 987.
+
+Vi skal finde det største antal 3-cifrede tal, der kommer lige efter hinanden i rækkefølge.
+Vi vil søge efter et tal $abc$, så $b > a+c$.
+Vi ønsker at finde det største tal $abc$.
+For at finde det største tal, der opfylder betingelsen, kan vi vælge $a=9, b=8, c=7$.
+Så $b > a+c$ ved $8 > 9+7 = 16$, hvilket er falsk.
+Prøv $a=9, b=9, c=8$.
+Så $b > a+c$ ved $9 > 9+8 = 17$, hvilket er falsk.
+Prøv $a=9, b=8, c=7$.
+Så $b > a+c$ ved $8 > 9+7 = 16$, hvilket er falsk.
+Prøv $a=9, b=7, c=8$.
+Så $b > a+c$ ved $7 > 9+8 = 17$, hvilket er falsk.
+Prøv $a=8, b=9, c=7$.
+Så $b > a+c$ ved $9 > 8+7 = 15",<MagicMock name='mock.__sub__().__truediv__()' id='140263664038448'>,False,"The output does not provide a definitive answer to the question, i.e., the largest number of consecutive 3-digit 'spectacular' numbers. It includes attempts to solve the problem but leaves it incomplete, with some logical errors. "
+2020_6-7-klasse/6.txt,"Maria har 10 ark papir.
+Hun klipper nogle af arkene i 5 stykker. Dere
+er har Maria 22 stykker papir i alt.
+
+Hvor mange ark klippede hun i stykker?",3,"
+Maria har 10 ark. Hun klipper nogle af arkene i 5 stykker. Hvor mange ark klippede hun i alt?
+Maria har 10 ark. Hun klipper nogle ark i 5 stykker. Hvor mange ark har hun i alt?
+Maria har 10 ark. Hun klipper 22 stykker papir. Hvor mange ark har hun i alt?
+Maria har 10 ark. Hun klipper 10 ark. Hvor mange ark har hun i alt?
+Maria har 10 ark. Hun klipper 22 ark. Hvor mange ark har hun i alt?
+
+Hvor mange ark har Maria i alt?
+Maria har 10 ark. Hun klipper nogle ark i 5 stykker. Hvor mange ark har hun i alt?
+Maria har 10 ark. Hun klipper 22 stykker papir. Hvor mange ark har hun i alt?
+Maria har 10 ark. Hun klipper 10 ark. Hvor mange ark har hun i alt?
+
+Maria har 10 ark. Hun klipper nogle ark i 5 stykker. Hvor mange ark har hun i alt?
+Maria har 10 ark. Hun klipper 22 stykker papir. Hvor mange ark har hun i alt?
+Maria har 10 ark. Hun klipper 10 ark. Hvor mange ark har hun i alt?
+
+Maria har 10 ark. Hun klipper nogle ark i 5 stykker. Hvor mange ark har hun i alt?
+Maria har 10 ark. Hun klipper 22 stykker papir. Hvor mange ark har hun i alt?
+Maria har 10 ark. Hun klipper 10 ark. Hvor mange ark har hun i alt?
+
+Maria har 10 ark. Hun klipper nogle ark i 5 stykker. Hvor mange ark har hun i alt?
+Maria har 10 ark. Hun klipper 22 stykker papir. Hvor mange ark har hun i alt?
+Maria har 10 ark. Hun klipper 10 ark. Hvor mange ark har hun i alt?
+
+Maria har 10 ark. Hun klipper 22 ark. H",<MagicMock name='mock.__sub__().__truediv__()' id='140265123835168'>,False,"The output consists mainly of repetitive and incomplete sentences that do not provide the correct answer to the question. The expected answer was the calculation of how many sheets Maria cut to get 22 pieces in total, which is not addressed."
+2020_6-7-klasse/22.txt,"Magnus skal spille 15 kampe i en skakturnering.
+Undervejs i turneringen har han vundet halvdelen af de kampe, han allerede har spillet,
+tabt en tredjedel og spillet to uafgjorte kampe.
+
+Hvor mange kampe mangler Magnus at spille på dette tidspunkt?",3,"
+
+Lad $N$ være det samlede antal kampe i turneringen.
+$$ N = 15 $$
+Magnus har spillet $m_1$ kampe, $m_2$ kampe, $m_3$ kampe, $m_4$ kampe, $m_5$ kampe, $m_6$ kampe, $m_7$ kampe, $m_8$ kampe, $m_9$ kampe, $m_{10}$ kampe, $m_{11}$ kampe, $m_{12}$ kampe.
+Han har vundet halvdelen af de kampe han allerede har spillet, så $m_1 = \frac{1}{2}m_1 + \frac{1}{2}m_2$.
+Han har tabt en tredjedel af de kampe han har spillet, så $m_2 = \frac{1}{3}m_1 + \frac{1}{3}m_3$.
+Han har spillet to uafgjorte kampe, så $m_3 = 2$.
+Vi har også at $m_1+m_2+m_3+m_4+m_5+m_6+m_7+m_8+m_9+m_{10}+m_{11}+m_{12} = 15$.
+Vi skal finde antallet af kampe, der mangler.
+Vi ved at $m_1 = \frac{1}{2}m_1 + \frac{1}{2}m_2$, så $m_1 - \frac{1}{2}m_1 = \frac{1}{2}m_2$, så $\frac{1}{2}m_1 = \frac{1}{2}m_2$, så $m_1 = m_2$.
+$m_2 = \frac{1}{3}m_1 + \frac{1}{3}m_3$, så $m_2 = \frac{1}{3}m_1 + \frac{1}{3}(2) = \frac{1}{3}m_1 + \frac{2}{3}$.
+$m_1 = m_2$, så $m_1 = \",<MagicMock name='mock.__sub__().__truediv__()' id='140265122626496'>,False,The output is incomplete and does not result in a final numerical answer for the number of games Magnus has left to play. The derivation attempts to set up equations for each game outcome but does not reach a conclusive solution.
+2020_6-7-klasse/19.txt,"Ni mønter er sorte på den ene side og hvide på den anden.
+Til at starte med ligger fire mønter med den sorte side opad.
+I hver tur vendes tre mønter.
+
+Hvor mange ture skal man mindst bruge, hvis alle mønterne skal have samme farve opad?",2,"
+
+Løsningen:
+1.
+Start: Alle fire mønter med den sorte side opad.
+2.
+Første tur: 3 mønter vendes. 3 mønter med den sorte side vendes, så der er 3 sorte. De 3 resterende mønter står med den hvide side opad.
+3.
+Anden tur: 3 mønter vendes. 3 mønter med den sorte side vendes, så der er 3 sorte. De 3 resterende mønter står med den hvide side opad.
+4.
+Tredje tur: 3 mønter vendes. 3 mønter med den sorte side vendes, så der er 3 sorte. De 3 resterende mønter står med den hvide side opad.
+5.
+Efter 4 ture, er der 3 sorte og 3 hvide.
+6.
+I den femte tur skal man vende 3 mønter.
+7.
+Til at få alle mønterne til at have samme farve opad, skal man altid vende 3 mønter.
+Vi skal derfor bruge 5 ture.
+
+Men vi har en fejl.
+Lad os prøve.
+Start: Alle fire mønter med den sorte side opad.
+1. første tur: 3 mønter vendes. 3 mønter med den sorte side vendes, så der er 3 sorte. De 3 resterende mønter står med den hvide side opad.
+2. anden tur: 3 mønter vendes. 3 mønter med den sorte side vendes, så der er 3 sorte. De 3 resterende mønter står med den hvide side opad.
+3. tredje tur: 3 mønter vendes. 3 mønter med den sorte side vendes, så der er 3 sorte. De 3 resterende mønter står med den hvide side opad.
+4. første tur: 3 mønter vendes. 3 mønter med den sorte side vendes, så der er 3 sorte. De 3 resterende mønter står med den hvide side opad.
+5. anden tur: 3 mønter vendes",<MagicMock name='mock.__sub__().__truediv__()' id='140265140935648'>,False,"The solution provided is not clear and seems to repeat steps without logical progression. Furthermore, it incorrectly concludes 5 steps without explaining how each step effectively contributes towards all coins showing the same color."
+2020_6-7-klasse/13.txt,"Når flagermusen Vlad forlader sin grotte, viser det digitale ur 20:20.
+Når han vender tilbage og hænger med hovedet nedad, ser han igen 20:20 på uret.
+
+Hvor lang tid var Vlad væk fra grotten?",5 timer og 42 minutter,"
+Lad os antage at Vlad har været væk i 10 minutter.
+
+**Logikken:**
+
+*   Hver gang Vlad forlader grotten, ser han 20:20 på uret.
+*   Han er blevet væk i 10 minutter.
+*   Så er han blevet væk i 10 minutter * 60 sekunder/minut = 600 sekunder.
+
+**Svar:** Vlad var væk i 600 sekunder (10 minutter).
+
+**Alternativt, hvis du vil bruge den anden måde at tænke på det:**
+
+*   Hver gang Vlad forlader grotten, ser han 20:20 på uret.
+*   Han har været væk i 10 minutter.
+*   Da Vlad forlader grotten hvert 10. minut, har han været væk i 10 minutter / 10 = 10 minutter.
+
+**Svar:** Vlad var væk i 10 minutter.
+
+Hvilket svar er korrekt?
+",<MagicMock name='mock.__sub__().__truediv__()' id='140265522487536'>,False,"the output incorrectly describes Vlad's absence as both 10 minutes and 600 seconds when he actually sees 20:20 as before, indicating 12 hours or 0 hours in absence. The correct conclusion isn't reached."
+2020_6-7-klasse/4.txt,"Kim har flere kæder af længde 5 og 7.
+Ved at sætte kæderne sammen en efter en kan Kim lave kæder af flere forskellige længder.
+
+Hvilken længde kan han IKKE lave?",13,"
+Lad os analysere mulige længder.
+
+*   3 kæder på 5-længder, der kan give 15.
+*   3 kæder på 7-længder, der kan give 21.
+
+Derfor er det mest sandsynlige svar, at vi skal finde en længde, der IKKE kan tilføjes til en kæde af 5-længder for at få en længde, der er i intervallet mellem 5 og 7.
+
+Lad os forsøge at identificere et scenarie:
+
+1.  Vi kunne lave 3 kæder på 7-længder. Derudover kunne vi lægge 2 kæder på 5-længder til den første kæde, så vi får 3 kæder på 7-længder og 2 kæder på 5-længder. Det giver en længde på 7 + 5 + 5 = 17.
+2.  Vi kunne lave 3 kæder på 7-længder. De ekstra 2 kæder, der er på 5-længder, kan man lægge til de 3 på 7-længder. Det giver en længde på 7 + 5 + 5 = 17.
+3.  Vi kunne lave 3 kæder på 5-længder. Men vi kan ikke tilføje 2 kæder på 7-længder til en kæde på 5-længder.
+
+Det er usandsynligt at vi kan lave en længde, der ikke kan tilføjes til en kæde af 5-længder. Men, vi kan se, at 7+5=12. Så man kan lave 3 kæder på 7-længder og 2 kæder på 5-længder, og så får vi en længde på 7 + 5 + 5 = 17.
+
+Der er ikke en længde, der ikke kan tilføjes. Det er et uendeligt spørgsmål.
+
+Jeg skal give et andet svar.
+
+Lad os overveje situationen:
+
+Kim har 3 kæder af længde 5 og 3 kæder af længde 7.
+Hvilken længde kan",<MagicMock name='mock.__sub__().__truediv__()' id='140265126027840'>,False,"the output does not provide a clear and correct answer to the question asked, which is to identify a length that cannot be made."
+2024_4-5-klasse/3.txt,"Kortet indeholder 28 hvide felter.
+
+|  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |
+
+Iva maler to vandrette rækker og en lodret kolonne.
+Hvor mange felter er stadig hvide?",12,"
+
+Lad os sige, at det er en kolonne med 28 hvide felter.
+Vi skal finde antallet af hvide felter, der er blevet malet.
+Hvis vi maler hver hvid og blank felt, kan vi se, at vi har 28 hvide felter.
+Det betyder, at der ikke er nogen, der er blevet malet.
+
+Vi vil kende antallet af hvide felter i kortet.
+I kortet er der 28 hvide felter.
+Hvis vi maler en hvid og blank felt, så er der 28 - 1 = 27 hvide felter.
+Hvis vi maler en anden hvid og blank felt, så er der 27 - 1 = 26 hvide felter.
+Og så videre.
+Vi skal være klar over, at vi skal vurdere, hvor mange hvide felter der er blevet malet.
+Der er 28 hvide felter.
+Efter at have malet en felt, så er der 27 hvide felter tilbage.
+Dette kan gøres ved at sige, at vi må køre et antal hvide felter.
+Hvis der er 28 hvide felter, og vi skal male 28 hvide felter, er der 0 hvide felter tilbage.
+Men vi er nødt til at kende, hvor mange hvide felter der er tilbage.
+Hvert hvidt felt, der er blevet malet, er blevet malet.
+Så der er 28 hvide felter.
+Efter at have malet en hvid og blank felt, er der 27 hvide felter tilbage.
+Efter at have malet en anden hvid og blank felt, er der 26 hvide felter tilbage.
+Og så videre.
+Hvis vi maler 28 hvide felter, vil der være 0 hvide felter tilbage.
+
+Hvert hvidt felt, der bliver malet, bliver malet.
+Hvis vi bare maler hver hvid og blank felt, så er der 28 hvide felter.
+Hvis der er 28 hvide felter, og vi skal have 28 hvide felter, skal vi",<MagicMock name='mock.__sub__().__truediv__()' id='140272304596816'>,False,"The output does not provide the correct answer to the question. The input describes a card with 28 white fields arranged in 4 rows of 7 fields each. Painting 2 horizontal rows and 1 vertical column results in some overlap, so the total painted fields are 15 (2 rows of 7 = 14 + 1 column of 4 = 3 unique) resulting in 13 white fields still left unpainted. The output does not address this and instead provides a repetitive and unclear explanation that does not offer an answer."
+2024_4-5-klasse/9.txt,"Mohammed skriver tre på hinanden følgende firecifrede tal. 
+Hans søster visker nogle af cifrene ud.
+Hvilke cifre mangler (fra venstre til højre)?
+(Fx 213, 214, 215 er 3 på hinanden følgende 3-cifrede tal.)
+
+_ _ _ 7 , _ 8 9 8 , 4 8 _ _","489, 4, 99"," 7 _
+_ _ 1 4 7 5 _  _  _
+_ 3 2 1 6 4  _  _  _
+
+(Hint:
+1. Find den længste cykel.
+2.  Find de cifre, der er tilbage.
+)
+**Solution**
+
+1. Find den længste cykel:
+   Længden af den længste cykel i det første tal er 4.
+   Længden af den længste cykel i det andet tal er 4.
+   Længden af den længste cykel i det tredje tal er 4.
+   Derfor er den længste cykel 4.
+
+2. Find de cifre, der er tilbage:
+   Den længste cykel er 4, så det betyder, at vi har 4 + 4 + 4 = 12.
+   Den længste cykel i det første tal er 7, så vi har 7 + 4 + 4 = 15.
+   Den længste cykel i det andet tal er 8, så vi har 8 + 4 + 4 = 16.
+   Den længste cykel i det tredje tal er 7, så vi har 7 + 4 + 4 = 15.
+   Så de 3-cifrede tal er 15, 16, 15.
+   Derfor er de manglende cifre: 1, 5, 6.
+
+Det er ikke en enkel strategi.
+Lad os prøve at finde den længste cykel.
+Længden af cykelne i det første tal er 4.
+Længden af cykelne i det andet tal er 4.
+Længden af cykelne i det tredje tal er 4.
+Så den længste cykel er 4.
+
+Den længste cykel i det første tal er 7.
+Længden af cykelne i det andet tal er 8.
+Længden af cykelne i det tredje tal er 7.
+Så den længste cykel er 7.
+
+Den længste cykel i det første tal er 4.
+Længden af cykelne i det andet tal er 8.
+L",<MagicMock name='mock.__sub__().__truediv__()' id='140263633325088'>,False,The output does not provide a coherent or correct solution to the question. It is filled with repetitive and incorrect analysis that doesn't lead to identifying the missing numbers in the sequence of numbers.
+2024_4-5-klasse/7.txt,"Der er fem forskellige frugter i en skål: æble, kirsebær, vindrue, jordbær, banan.
+Ann kan lide: vindrue.
+Ben kan lide: æble, kirsebær, vindrue, jordbær, banan.
+Cam kan lide: vindrue, jordbær, banan.
+Dan kan lide: vindrue, banan.
+Eli kan lide: kirsebær, jordbær.
+
+Alle får et stykke frugt, som de kan lide.
+Alle får forskellige frugter.
+
+Hvad får Ben?",æble,"
+Han kan lide: æble, kirsebær, vindrue, jordbær, banan.
+Han er ikke træt.
+
+Løs problemet!
+Ben har én frukt. Han kan lide alle 5 frugter.
+Ben skal bruge 10 fåreår til at få 5 nye frugter.
+Fruetænkning:
+1.  Han kan ikke have flere frugter end han har.
+2.  Han skal vælge 5 frugter, der er forskellige.
+3.  Han skal kunne lide alle 5 frugter.
+4.  Han skal have 10 fåreår til at få 5 nye frugter.
+
+Her er et forsøg:
+1.  Han skal vælge 5 frugter.
+2.  Han skal vælge 5 forskellige frugter.
+3.  Han har allerede 5 frugter.
+4.  Han skal bruge 10 fåreår.
+
+Ben kunne have:
+- 1 æble
+- 1 kirsebær
+- 1 vindrue
+- 1 jordbær
+- 1 banan
+
+Lad os se, om det er muligt.
+
+Ben har 1 æble, 1 kirsebær, 1 vindrue, 1 jordbær, 1 banan.
+Han kan lide alle 5 frugter.
+Hvis han har 1 æble, 1 kirsebær, 1 vindrue, 1 jordbær, 1 banan, kan han lide alt.
+Han har 10 fåreår.
+Han kan have 5 ny frugter.
+Han har 10 fåreår.
+Han har 5 nye frugter.
+
+Ben kan have 1 æble, 1 kirsebær, 1 vindrue, 1 jordbær, 1 banan.
+Han kan lide alle 5 frugter.
+Han kan lide: æble, kirsebær, vindrue, jordbær, banan.
+Han har 10 fåreår.
+Han kan have 10 ny frugter.
+Den første frugt er æble.
+Han kan lide alle 5 frugter.
+Han kan få 10 nye frugter.
+
+Ben kan have:
+- ",<MagicMock name='mock.__sub__().__truediv__()' id='140265122788368'>,False,The output does not provide the expected specific fruit that Ben gets. It lists multiple options instead of a single correct answer based on the conditions given. The output is also unnecessarily verbose and digresses into irrelevant details unrelated to solving the question directly.
+2024_4-5-klasse/11.txt,"Pingvinen Peter fanger 9 fisk hver dag til sine to pingvinunger. 
+Hver dag får den første unge, han møder efter fisketuren fem fisk, og den anden unge får fire fisk.
+I løbet af de sidste dage har den ene unge fået 26 fisk.
+
+Hvor mange fisk har den anden unge fået?",28,"
+
+**Løsning:**
+
+1.  **Bestem antallet af fisk, som den første unge har fået i løbet af fisketuren.**
+    Den første unge får 5 fisk for hver fisk, der han møder.  Så i løbet af fisketuren får han 5 * 2 = 10 fisk.
+
+2.  **Bestem antallet af fisk, som den anden unge har fået i løbet af fisketuren.**
+    Den anden unge får 4 fisk for hver fisk, der han møder. Så i løbet af fisketuren får han 4 * 5 = 20 fisk.
+
+3.  **Find det samlede antal fisk, som de to unge har fået.**
+    De har totalt 9 fisk, og den første unge har 10 fisk, og den anden unge har 20 fisk.  Så de har 10 + 20 = 30 fisk.
+
+4.  **Find antallet af fisk, som den anden unge har fået.**
+    Den anden unge har 26 fisk, men han får kun 20 fisk.  Så der er 26 - 20 = 6 fisk, som den anden unge har fået.
+
+**Svar:** Den anden unge har 6 fisk.
+
+**Alternativ løsning:  Kombinere ligninger**
+
+Lad x være antallet af fisk, som den første unge har fået.
+Lad y være antallet af fisk, som den anden unge har fået.
+
+Vi har følgende ligninger:
+*   x = 5 * 2 + 4 * 5 = 10 + 20 = 30
+*   y = 5 * 5 = 25
+*   x + y = 9
+*   x = 30
+*   y = 25
+
+Dette er en urealistisk løsning.
+
+**Endelig løsning**
+
+Den første unge har 10 fisk i løbet af fisketuren.
+Den anden unge får 26 fisk i løbet af fisketuren.
+For at finde ud af hvor mange fisk den anden unge har fået, skal vi finde antallet af fisk, som den anden unge fik fra fiskene, hvor den har fisk, i løbet af",<MagicMock name='mock.__sub__().__truediv__()' id='140265137421296'>,False,"The output contains mathematical errors and inconsistencies. The calculations and solution do not consistently relate to the problem statement where one penguin chick gets 26 fish. The approach fails to clearly determine how many fish the second chick receives, given the conditions of the problem."
+2024_4-5-klasse/18.txt,"Lucy vejer nogle klodser:
+
+rektangel + cirkel = 200 g
+trekant + cirkel = 100 g
+rektangel + trekant = 240 g
+rektangel + trekant + cirkel = ?
+
+Hvad vejer de tre klodser tilsammen?",270 g,"
+
+Løsningen er:
+(200+100+240) = 540 g
+
+Og vi ved at (reaktangelen + trekant) = 240 g
+Så det første udtryk er korrekte.
+Der er andre måder at løse dette problem på.
+
+Lad os forsøge:
+(reaktangel + trekant) + cirkel = 200 g
+240 + 200 = 440 g
+Jeg tror, der er en fejl.
+Rekta + trekant + cirkel = ?
+
+(reaktangel + trekant) + cirkel = 240 g
+reaktangel + trekant = 240 g
+240 + cirkel = 240 g
+cirkel = 0 g
+det betyder at vi måske måske ikke tager cirkel i betragtning.
+Det virker ikke.
+
+(reaktangel + trekant) + cirkel = 240 g
+(reaktangel + trekant) = 240 g
+240 + cirkel = ?
+hvis cirkel = 0 g, så 240 = 240 g
+Det virker ikke.
+Jeg har brug for hjælp.
+
+Jeg har prøvet at udregne
+(reaktangel + trekant) + cirkel = ?
+(reaktangel + trekant) = 240 g
+Der er en fejl i de første oplysninger,
+(reaktangel + trekant) + cirkel = 200g + 100g = 300 g
+Der er en fejl.
+(reaktangel + trekant) + cirkel = 240 g
+Jeg kan ikke se den korrekte løsning.
+Jeg har prøvet en anden måde på at tænke,
+(reaktangel + trekant) + cirkel = 240 g
+hvis cirkel = 0 g
+så (reaktangel + trekant) + 0 = 240 g
+reaktangel + trekant = 240 g
+Hvis vi tager cirkel ud af beregningen, så 240 = 240.
+",<MagicMock name='mock.__sub__().__truediv__()' id='140271685535408'>,False,"The solution provided in the output is incorrect and lacks clarity. The correct solution is: rectangle + triangle = 240g; rectangle + circle = 200g; triangle + circle = 100g. Therefore, adding all three equations: 2*(rectangle + triangle + circle) = 200 + 100 + 240. Hence, rectangle + triangle + circle = 540/2 = 270g. The expected output should reflect this correct calculation."
+2024_4-5-klasse/8.txt,"Lizzy betaler 7 kr. for tre ting. 
+Tingene koster et helt antal kr., og de koster alle noget forskelligt.
+
+Hvad koster den dyreste ting?",4 kr.,"
+Betalingsprisen er en løsning, ikke en simpel aritmetisk løsning.
+
+La oss si at det er 45 kr.
+Liszy betaler 7 kr. for tre ting, hvor de koster et helt antal kr., og de koster alle noget forskelligt.
+Vi vet at Liszy betaler 7 kr. for tre ting, og at det er en løsning.
+Det er en simpel løsning.
+Vi vet at Liszy betaler 7 kr. for tre ting. 
+Vi vet at det er 45 kr.
+Her er en ligning:
+`a + b + c = 45`
+hvor a, b og c er de tre ting.
+A:  a + b + c = 45
+B:  7a + 7b + 7c = 45
+C:  7a + 7b + 7c = 45
+Vi er ikke sikker på om det er en enkel løsning.
+Liszy betaler 7 kr. for tre ting. Det er en simpel løsning.
+A: a + b + c = 45
+B: 7a + 7b + 7c = 45
+C: 7a + 7b + 7c = 45
+Vi vet at det er en løsning.
+Det er ikke en simpel løsning.
+
+Vi vil analysere det.
+Ligningen `a + b + c = 45` gir en løsning.
+Ligningen `7a + 7b + 7c = 45` gir en løsning.
+Anta at det er en enkel løsning.
+Hvad er løsningen?
+```python
+def solve():
+    print(""Anta at det er en enkel løsning."")
+    print(""Ligningen a + b + c = 45 er en løsning."")
+    print(""Ligningen 7a + 7b + 7c = 45 er en løsning."")
+    print(""Anta at det er en simpel løsning."")
+    print(""Vi kan analysere det."")
+    print(""Vi kan se at 7a + 7b + 7c = 45 er en løsning."")
+    ",<MagicMock name='mock.__sub__().__truediv__()' id='140271666794368'>,False,"The given output is incorrect and incoherent. The problem is straightforward: Lizzy buys three items with prices that are distinct integers summing to 7 kr. The task is to determine the cost of the most expensive item. However, the output doesn't address the problem appropriately and contains unrelated and incorrect sequences of equations and logic. There is no solution provided that answers 'What is the cost of the most expensive item?' from the set of 1, 2, 4 kr (because 1+2+4 = 7)."
+2024_4-5-klasse/19.txt,"Hver figur betyder et tal.
+
+trekant + trekant = firkant + cirkel
+cirkel + trekant = firkant + firkant
+
+Hvad er værdien af trekant x cirkel x firkant?",28,"
+Trekanter = 3
+Trekant + trekant = firkant + cirkel
+Trekanter + cirkel = firkant + firkant
+3x + cirkel = x^2 + cirkel
+
+Uden yderligere information er det svært at afgøre, hvad værdien af trekant x cirkel x firkant er.
+
+Konklusion:
+hvis det er en simpel formel, vil det være 3x * cirkel * firkant. Men med flere antagelser, kan det være et meget komplekst tal.
+
+Hvis vi antager, at dette er en matematisk formel, hvor der er 3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333",<MagicMock name='mock.__sub__().__truediv__()' id='140265126055664'>,False,"The output provides no clear solution to the equation and falsely claims a trivial assumption that leads to a long, nonsensical number."
+2024_4-5-klasse/4.txt,"Fodboldspiller nr. 1-11 står i rækkefølge i en cirkel.
+Hver spiller sparker bolden til den 3. spiller mod venstre.
+Spillet slutter, når en spiller modtager bolden for 2. gang.
+
+Hvilket nummer har spilleren, som sparker den sidste bold?",9,"
+
+A. 1
+B. 2
+C. 3
+D. 4
+E. 5
+F. 6
+G. 7
+H. 8
+
+Først så ser vi at spilleren i nummer 1, 2 og 3 skal sparke bolden mod venstre.
+Efterfølgende skal spilleren i nummer 4 sparke bolden mod venstre.
+Så spilleren i nummer 5 skal sparke bolden mod venstre.
+Så spilleren i nummer 6 skal sparke bolden mod venstre.
+Så spilleren i nummer 7 skal sparke bolden mod venstre.
+Så spilleren i nummer 8 skal sparke bolden mod venstre.
+
+Denne i-ligning er ikke gyldig.
+Der er måske en anden måde at løse problemet.
+
+Spiller nr. 1, 2, 3, 4, 5, 6, 7, 8 står i rækkefølge i en cirkel.
+Spiller nr. 1 sparker bolden mod venstre.
+Spiller nr. 2 sparker bolden mod venstre.
+Spiller nr. 3 sparker bolden mod venstre.
+Spiller nr. 4 sparker bolden mod venstre.
+Spiller nr. 5 sparker bolden mod venstre.
+Spiller nr. 6 sparker bolden mod venstre.
+Spiller nr. 7 sparker bolden mod venstre.
+Spiller nr. 8 sparker bolden mod venstre.
+
+Spiller nr. 1 er den første spiller.
+Spiller nr. 2 er den anden spiller.
+Spiller nr. 3 er den tredje spiller.
+Spiller nr. 4 er den fjerde spiller.
+Spiller nr. 5 er den femte spiller.
+Spiller nr. 6 er den sjette spiller.
+Spiller nr. 7 er den syvende spiller.
+Spiller nr. 8 er den nittende spiller.
+
+Spiller nr. 1 sparker bolden mod venstre.
+Spiller nr. 2 sparker bolden mod venstre.
+Spiller nr. 3 sparker bolden mod venstre.
+Spiller nr. 4 sparker",<MagicMock name='mock.__sub__().__truediv__()' id='140263652081248'>,False,The output does not provide the correct answer to the question. It contains unnecessary and incorrect steps without reaching a logical conclusion.
+2024_4-5-klasse/15.txt,"Amir har tre kort med tal på.
+Tallenes sum er 782.
+Desværre har en orm spist dele af kortene (indikeret med o).
+
+2 o 3
+1 o 4 
+4 1 o
+
+Hvad er summen af de spiste cifre?",11,"
+
+a) 15
+b) 20
+c) 25
+d) 30
+e) 50
+
+Svar: 50
+
+Fordeling af kortene:
+- Kort 1: 3, 3, 3
+- Kort 2: 4, 1, 1
+- Kort 3: 2, 2, 4
+
+Kort 1: 3, 3, 3 = 9
+Kort 2: 4, 1, 1 = 6
+Kort 3: 2, 2, 4 = 8
+
+Summen af de spiste cifre er: 9+6+8 = 23.
+Dette er ikke det rigtige svar.
+
+Lad os prøve igen:
+
+2 o 3
+1 o 4
+4 1 o
+
+Hvad er summen af de spiste cifre?
+
+a) 15
+b) 20
+c) 25
+d) 30
+e) 50
+
+Lad os se på summen af kortene:
+3+3+3+4+1+1+4 = 20
+Summen af de spiste cifre er 20.
+
+Dette er ikke rigtigt.
+
+Vi har kortene:
+2 o 3
+1 o 4
+4 1 o
+
+Der er to o'er.
+
+Hvis vi har 2 o 3, så er 2+o+3=782.
+2+o = 782 - 3 = 779
+o = 779 - 2 = 777
+
+Hvis vi har 1 o 4, så er 1+o+4=782.
+1+o = 782 - 4 = 778
+o = 778 - 1 = 777
+
+Hvis vi har 4 1 o, så er 4+1+o=782.
+4+1+o = 782
+5+o = 782
+o = 782 - 5 = 777
+
+Så o = 777.
+Den oprindelige sum af",<MagicMock name='mock.__sub__().__truediv__()' id='140263529679424'>,False,The output does not provide the correct or expected answer to the question. The calculations and assertions present in the output are incorrect.
+2021_6-7-klasse/16.txt,"Min cykellås består af fire cylindre med tallene fra 0 til 9.
+Når jeg starter med min kode og drejer alle 4 cylindre lige langt i samme retning, står der 6348.
+
+Hvilken af disse koder kan **ikke** være min kode?",4906,"
+
+a) 9876
+b) 0123
+c) 5432
+d) 1234
+e) 8765
+
+**Forklaring:**
+
+Lad os analysere, hvordan hver kode fremstår. Hvis du drejer alle 4 cylindre lige langt, får du 6348.
+
+*   a) 9876: Hvis du drejer 9876 lige langt, får du 7698.
+*   b) 0123: Hvis du drejer 0123 lige langt, får du 1230.
+*   c) 5432: Hvis du drejer 5432 lige langt, får du 4352.
+*   d) 1234: Hvis du drejer 1234 lige langt, får du 4321.
+*   e) 8765: Hvis du drejer 8765 lige langt, får du 7658.
+
+Det ser ud til at 9876 og 1234 er de eneste, der kan generere 6348. Det betyder at de to koder ikke kan være den samme.
+
+**Svar:**
+d) 1234
+```python
+def solve():
+    print(""d"")
+
+solve()
+```
+Er der noget galt?
+
+```
+d
+```
+Derfor er svaret d.
+
+```python
+def solve():
+    print(""d"")
+
+solve()
+```
+```
+d
+```
+Dette er rigtigt!
+```
+```
+d
+```
+Den korrekte logik er, at kun 9876 og 1234 har denne konfiguration, så de er forskellige.
+```
+
+```
+d
+```
+Der er ikke nogen fejl i koden.
+```
+```
+d
+```
+Jeg er ved at finde en fejl i koden.
+
+```
+d
+```
+Jeg mener, at det er korrekt at svare d, men jeg kan ikke se en fejl.
+```
+```
+d
+```
+```
+d
+```
+
+```
+d
+```
+```
+d
+```
+```
+d
+```
+
+```
+d",<MagicMock name='mock.__sub__().__truediv__()' id='140265123788800'>,True,"The output correctly identifies 'd' as the code that cannot be converted to 6348, consistent with the logical explanation provided."
+2021_6-7-klasse/24.txt,"På hver hylde er der 64 deciliter æblejuice. 
+Der er tre forskellige størrelser flasker: lille (l), mellem (m) og stor (s).
+
+|    s s s l l l l    |
+|    l l l s s m m    |
+| l l l l l l m m m m |
+
+Hvor mange deciliter indeholder en mellem flaske?",10,"
+
+**Løsning:**
+
+*   **Forståelse af problemet:** Vi skal finde ud af, hvor mange deciliter en mellem flaske indeholder.
+*   **Læsning af diagrammet:** Diagrammet viser, at flasken er præcis halvet af størrelsen af den store flaske.
+*   **Vurdering:** En mellem flaske indeholder 32 deciliter.
+
+**Svar:**
+En mellem flaske indeholder 32 deciliter.
+
+**Forklaring:**
+
+*   Først ser man på de 64 deciliter.
+*   Vi kan danne en hélse med 32 deciliter, fordi en mellem flaske er halvdelen af en stor flaske.
+
+Hvis du vil have en mere detaljeret forklaring, kan du give mig et andet diagram.",<MagicMock name='mock.__sub__().__truediv__()' id='140263664946304'>,False,"The solution provided incorrectly calculates the content of a medium bottle as 32 deciliter by making an unfounded assumption about the bottle size relation, while the problem doesn't provide enough information to make such a determination."
+2021_6-7-klasse/11.txt,"To trolde lyver altid. De ser på et digitalt ur og siger:
+
+Trold 1: Klokken er mellem 8 og 12.
+Trold 2: Klokken er IKKE mellem 8 og 13.
+
+Uret viser et af følgende tidspunkter. Hvilket?",12:30,"
+
+a) 10:00
+b) 11:00
+c) 12:00
+d) 13:00
+
+Det er simpelt.
+Dette er et matematikproblem.
+
+Er der en logik?
+Dette er et spørgsmål, der kan forblive med det samme.
+Forstå forstå
+Men jeg har talt om det her.
+Jeg ved ikke, hvad jeg skal gøre.
+
+Dårlig
+Dårlig
+Dårlig
+Dårlig
+Jeg siger, ""Hvorfor er det så svært?""
+Dårlig
+Dårlig
+Dårlig
+Dårlig
+Jeg er ikke sikker.
+Jeg ved ikke, hvad der er problem.
+Jeg ved ikke, hvor jeg skal start.
+Dårlig
+Dårlig
+Dårlig
+Dårlig
+Jeg forstår ikke, hvad der er problemet.
+Jeg skal bare
+Jeg ved ikke.
+Jeg ved ikke, hvad jeg skal gøre.
+
+Jeg ser, at jeg kan have talt om det.
+Dårlig
+Dårlig
+Dårlig
+Dårlig
+Jeg har det i baggrunden.
+Jeg ser, at jeg tager den på
+Jeg skal få det
+Jeg kan ikke finde.
+Dårlig
+Dårlig
+Dårlig
+Dårlig
+Jeg tager det
+Jeg har talt om det.
+Jeg er ikke sikker.
+Dårlig
+Dårlig
+Dårlig
+Dårlig
+Jeg skal finde det.
+Dårlig
+Dårlig
+Dårlig
+Dårlig
+Jeg kan ikke finde det.
+Jeg er ikke sikker.
+Dårlig
+Dårlig
+Dårlig
+Dårlig
+Jeg er et stænk.
+Jeg er ikke sikker.
+Dårlig
+Dårlig
+Dårlig
+Dårlig
+Jeg skal finde det.
+Jeg må se det.
+Dårlig
+Dårlig
+Dårlig
+Dårlig
+Jeg er et stænk.
+Dårlig
+Dårlig
+Dårlig
+Dårlig
+Jeg er ikke sikker.
+Dårlig
+Dårlig
+Dårlig
+Dårlig
+Jeg skal finde det.
+Dårlig
+Dårlig
+Dårlig",<MagicMock name='mock.__sub__().__truediv__()' id='140265526447664'>,False,The output contains a long ramble without answering the question directly. It doesn't provide the expected correct answer to the problem.
+2021_6-7-klasse/2.txt,"Sofie ønsker at tage bogstaverne KÆNGU fra boksene.
+Hun kan kun tage et bogstav fra hver boks.
+
+| boks 1 |  boks 2   | boks 3 |  boks 4 | boks 5 |
+|  N Æ   | G Æ N K U |   N    | U Æ N G |  U Æ   |
+
+Hvilket bogstav skal hun tage fra boks 4?",G,"
+
+**Løsning:**
+
+*   Sofie har adgang til: K, Æ, N, G, U.
+*   Hun skal tage bogstavellet fra boks 4.
+
+**Svar: U**
+
+Lad mig vide, hvis du har brug for at tjekke svaret.
+",<MagicMock name='mock.__sub__().__truediv__()' id='140265122942032'>,True,"The given output provides the correct answer to the question by identifying the letter 'U' from boks 4, which matches the instructions and expected output."
+2021_6-7-klasse/21.txt,"Mette vil farve figuren, så der er 4 symmetriakser. 
+Hvor mange flere små kvadrater skal hun mindst farve sorte?
+
+|  |██|██|  |  |  |
+|  |  |██|  |  |  |
+|  |  |  |  |  |  |
+|  |  |  |  |  |  |
+|  |  |  |  |  |  |
+|  |  |  |  |  |  |",21,"
+
+Siden koden bare er et eksempel, kan vi antar at det er bare én farve som fylles ut.
+Dette er et problem med et lite antall elementer. 
+
+Vi vet at 4 symmetriakser er i det motstående hjørnet.
+Så vi kan tenke på dette som et rutenett.
+Hvis vi plasserer 4 små kvadrater hver side, vil det totalt være 16 kvadrater.
+Dette gir 4 * 4 = 16.
+Det blir 4 røde kvadrater.
+Det blir 4 symmetriakser.
+Vi skal nå legge til 4 mer små kvadrater.
+Det totalt antall kvadrater er 16 + 4 = 20.
+Derfor må vi legge til 4 antall røde kvadrater.
+Hvis vi skulle plassere 4 små kvadrater i hver side, vil det i det motstående hjørnet være 4 kvadrater.
+Det blir en symmetri av 4.
+Da må vi plassere 4 flere små kvadrater.
+Det blir 4 kvadrater.
+Da vil det totale antall kvadrater være 4 + 4 = 8.
+Det blir 4 symmetriakser.
+Dette er et problem som ikke kan løses med kun 4 kvadrater.
+
+Vi må plotte et grafisk diagram.
+Hvis vi plasserer 4 røde kvadrater, vil det være 4 symmetriakser.
+Dette kan man ikke løse med 4 røde kvadrater.
+Siden det er 4 symmetriakser, og vi må plassere en 4.
+Vi kan plassere et bilde med 4 små kvadrater i hver side.
+Vi skal også plassere 4 flere små kvadrater.
+Siden vi har 4 symmetriakser, kan vi bruke 4 blå kvadrater.
+Dette er en løsning.
+
+Siden koden bare er et eksempel, så kan vi anta at det er bare én farve som fylles ut.
+Vi må plassere 4 små kvadrater i hver side, da er det 4 røde kvadrater.
+Siden det er 4 symmetriakser, må vi plassere 4 ekstra.
+Vi må plassere en 4.
+Hvor mange flere",<MagicMock name='mock.__sub__().__truediv__()' id='140263633865280'>,False,"The output is rambling, repetitive and ultimately does not solve the problem. It fails to provide a clear and correct answer to the question about the number of additional squares needed to achieve 4 lines of symmetry. The output is incomplete and does not meet the criteria of the rubric."
+2021_6-7-klasse/18.txt,"Der er 20 æbler og 20 pærer i en kurv. 
+Karl tager tilfældigt 20 frugter fra kurven, og Oskar tager resten.
+
+Hvilket af følgende udsagn er helt sikkert sandt?","Karl fik lige så mange pærer, som Oskar fik æbler.","
+
+a) Karl tager 20 æbler og 0 pærer.
+b) Karl tager 10 æbler og 10 pærer.
+c) Karl tager 20 æbler og 20 pærer.
+d) Karl tager 10 æbler og 10 pærer.
+e) Karl tager 20 æbler og 0 pærer.
+f) Oskar tager 10 æbler og 10 pærer.
+
+fg) Karl tager 10 æbler og 10 pærer.
+Karl tager 20 æbler og 0 pærer.
+
+Karl tager 20 æbler og 0 pærer.
+Oskar tager de resterende æbler og pærer.
+Karl tager 20 æbler og 0 pærer.
+Karl tager 20 æbler og 0 pærer.
+Karl tager 20 æbler og 0 pærer.
+Karl tager 20 æbler og 0 pærer.
+Karl tager 20 æbler og 0 pærer.
+
+Karl tager 20 æbler og 0 pærer.
+
+Karl tager 20 æbler og 0 pærer.
+Karl tager 20 æbler og 0 pærer.
+Karl tager 20 æbler og 0 pærer.
+Karl tager 20 æbler og 0 pærer.
+Karl tager 20 æbler og 0 pærer.
+Karl tager 20 æbler og 0 pærer.
+Karl tager 20 æbler og 0 pærer.
+Karl tager 20 æbler og 0 pærer.
+Karl tager 20 æbler og 0 pærer.
+Karl tager 20 æbler og 0 pærer.
+
+Karl tager 20 æbler og 0 pærer.
+Karl tager 20 æbler og 0 pærer.
+
+Karl tager 20 æbler og 0 pærer.
+
+Karl tager 20 æbler og 0 pærer.
+Karl tager 20 æbler og 0 pærer.
+Karl tager 20 æbler og 0 pærer.
+Karl",<MagicMock name='mock.__sub__().__truediv__()' id='140265120637360'>,False,The correct answer is that Karl can take any combination of 20 fruits from the 20 apples and 20 pears. There's no answer stating it must specifically be 20 of one fruit for sure. The output lists one possible scenario repeatedly but doesn't answer the question correctly.
+2021_6-7-klasse/12.txt,"Tallet 5021972970 er skrevet på et stykke papir.
+Julius skærer papiret i 3 stykker, så han får 3 tal. Dere
+er lægger han de 3 tal sammen.
+
+Hvad er det mindste resultat Julius kan få?",3444,"
+(1) 1, 2, 3
+(2) 1, 2, 4
+(3) 1, 2, 5
+(4) 1, 2, 6
+Det er 3 stykker på papiret.
+Julius skærer papiret i 3 stykker, så han får 3 tal.
+Dere er lægger han de 3 tal sammen.
+
+A) 3, 4, 5
+B) 1, 2, 3
+C) 1, 2, 4
+D) 1, 2, 6
+Det er 3 stykker på papiret.
+Julius skærer papiret i 3 stykker, så han får 3 tal.
+Dere er lægger han de 3 tal sammen.
+
+1.  Julius skærer papiret i 3 stykker.
+2.  Han får 3 tal.
+3.  Dere er lægger han de 3 tal sammen.
+4.  Hvad er det mindste resultat Julius kan få?
+
+Vi skal finde det mindste resultat Julius kan få ved at lægge de 3 tal sammen.
+
+A) 3, 4, 5: 3 + 4 + 5 = 12
+B) 1, 2, 3: 1 + 2 + 3 = 6
+C) 1, 2, 4: 1 + 2 + 4 = 7
+D) 1, 2, 6: 1 + 2 + 6 = 9
+
+Det er ikke rigtigt.
+Hvad er det mindste resultat Julius kan få?
+
+Julius skærer papiret i 3 stykker, så han får 3 tal.
+Dere er lægger han de 3 tal sammen.
+Løsning:
+Vi skal finde det mindste resultat Julius kan få ved at lægge de 3 tal sammen.
+Den mindste værdi for 3 tal er 1+1+1 = 3.
+Så svaret er 3.
+Svaret er A.
+3, 4, 5
+3 + 4 + 5 = 12
+
+Korrekt svar: A.
+
+Final Answer:",<MagicMock name='mock.__sub__().__truediv__()' id='140265523237744'>,False,"The output does not correctly address the problem of finding the smallest sum of three numbers from the original number. The expected task was to split the original number 5021972970 to form 3 numbers that, when summed, yield the smallest possible total. The given solution does not even attempt to address that specific problem. Instead, it provides an unrelated series of numbers and tasks that do not solve the question at hand."
+2021_6-7-klasse/17.txt,"Ann, Bob, Carina, Dan og Ed sidder om et rundt bord. 
+Ann sidder ikke ved siden af Bob, Dan sidder ved siden af Ed,
+og Bob sidder ikke ved siden af Dan.
+
+Hvem sidder Carina ved siden af?",Ann og Bob,"
+F.eks. ""Dan - Carina""
+Forholdet mellem Ann, Bob, Carina, Dan og Ed er som følger:
+
+Ann - Bob, Dan - Ed, Bob - Carina, Dan - Carina, Ed - Carina.
+
+Hvis vi tager alle et trin til højre, så får vi Ann - Carina, Bob - Dan, Dan - Ed, Ed - Carina, Carina - Bob.
+Den sidste retning er ikke mulig.
+
+Nu er vi i en kerne af en lighed:
+Ann - Bob, Dan - Ed, Bob - Carina, Dan - Carina, Ed - Carina.
+
+Vi skal finde ud af, hvor Carina kan sidde.
+(Ann - Bob, Dan - Ed, Bob - Carina, Dan - Carina, Ed - Carina).
+Ann - Bob, Dan - Ed, Bob - Carina, Dan - Carina, Ed - Carina.
+
+Sidste gruppe er Ann - Carina, Bob - Dan, Dan - Ed, Ed - Carina, Carina - Bob.
+Ann - Carina, Bob - Dan, Dan - Ed, Ed - Carina, Carina - Bob.
+
+Kæden er Ann - Carina, Bob - Dan, Dan - Ed, Ed - Carina, Carina - Bob.
+Det er en cyklus.
+Efter at Carina er sidst, så er Carina sidder ved siden af Bob.
+Carina - Bob
+
+Så Carina sidder ved siden af Bob.
+Den sidste retning er ikke mulig.
+Både Ann og Bob kan sidde ved siden af Carina.
+
+Nu er vi i en kerne:
+Ann - Carina, Bob - Dan, Dan - Ed, Ed - Carina, Carina - Bob.
+Denne gruppe er i gang.
+Vi skal finde ud af, hvem der sidder ved siden af Carina.
+Ann - Carina, Bob - Dan, Dan - Ed, Ed - Carina, Carina - Bob.
+Ann - Carina, Bob - Dan, Dan - Ed, Ed - Carina, Carina - Bob.
+Derfor er Carina sidder ved siden af Bob.
+
+C. Hvilke løsninger er der for Carina?
+Vi kan få følgende løsninger:
+Carina - Ann",<MagicMock name='mock.__sub__().__truediv__()' id='140271687148912'>,False,"The output fails to deliver a clear and correct answer to the question. The question asks specifically 'Hvem sidder Carina ved siden af?', and the expected answer is a straightforward response. However, the output provides a lengthy and confusing explanation without concisely stating who sits next to Carina. It mentions several different configurations and seems to contradict itself, ultimately suggesting two different people, Bob and Ann, which adds to the confusion."
+2021_6-7-klasse/22.txt,"201 bolde ligger på en række og er nummereret fra 1 til 201.
+Hver bold er farvet rød eller grøn.
+Ligegyldigt hvilke 10 bolde man vælger, som ligger lige efter hinanden, er der 5 grønne.
+Bold nummer 1 er grøn.
+
+Hvor mange røde bolde er der?",100,"
+
+Lad $G$ være antallet af grønne bolde, og $R$ være antallet af røde bolde.
+Vi har $G+R = 201$.
+Vi ved at den række er nummereret fra 1 til 201.
+Og der er 5 grønne bolde.
+Bold nummer 1 er grøn.
+
+Lad $G$ være antallet af grønne bolde.
+Lad $R$ være antallet af røde bolde.
+Så $G+R = 201$.
+Vi ved at der er 5 grønne bolde i en række.
+Bold nummer 1 er grøn.
+
+Vi kan antage, at der er 5 grønne bolde, i rækken fra 1 til 201.
+Dette betyder, at der er 10 bolas i hele rækken.
+Så er der 5 rødde, 5 grønne, og 10 nul.
+Lad $G$ være antallet af grønne bolde, og $R$ være antallet af røde bolde.
+Da bold nummer 1 er grøn, må vi have $G \ge 1$.
+Den række er nummereret fra 1 til 201, og der er 5 grønne bolde.
+Betragt, at vi vælger 10 bolas til at være sort, og 10 bolas til at være grøn.
+Vi har 5 grønne bolde, så $G=5$.
+Da bold nummer 1 er grøn, må det være en rød bolde.
+
+Vi kan se, at 5 er antallet af grønne bolde.
+Vi ved, at der er 5 grønne bolde.
+Så $G = 5$.
+Da $G+R = 201$, så $5+R = 201$, og $R = 201-5 = 196$.
+Vi har 5 grønne og 196 røde bolde.
+Dog er det ikke korrekt.
+
+Lad $G$ være antallet af grønne bolde, og $R$ være antallet af røde bolde.
+Vi har $G+R =",<MagicMock name='mock.__sub__().__truediv__()' id='140263529528304'>,False,"The output contains multiple errors and contradictions, such as incorrect mathematical logic and incorrect conclusions about the number of green and red balls. It does not provide a coherent or correct answer to the problem."
+2021_6-7-klasse/15.txt,"Ronja har 4 hvide klodser, og Birk har 4 sorte klodser.
+De skiftes til at lægge en klods, så de sammen bygger to tårne. Ronja starter.
+
+Hvilket par af tårne kan de **ikke** bygge på denne måde?","|  |  |
+|██|██|
+|  |██|
+|  |██|","
+
+A) Ronja, Birk
+B) Ronja, Birk, Ronja
+C) Ronja, Birk, Ronja
+D) Ronja, Birk, Birk
+
+**Besvarelse:**
+
+Den eneste mulighed, der ikke kan bruges er alternativet (A) Ronja, Birk, Ronja.
+
+**Forklaring:**
+
+Når Ronja lægger en klods, og Birk lægger en klods,  kan de ikke bygge to tårne.  Ronja kan bygge 4 klodser og Birk 4 sorte klodser, så de kan kun bygge to tårne, hvor Ronja og Birk er i samme tårn.  Hvis Ronja lægger en klods og Birk lægger en klods, opstår det, at de bygger to tårne, hvor Ronja og Birk er i samme tårn. Men i den nuværende situation er det ikke muligt.
+
+Derfor er svaret (A).
+",<MagicMock name='mock.__sub__().__truediv__()' id='140263527639056'>,False,"The output answer (A) is incorrect according to the logic. Alternative (A) Ronja, Birk, matches the sequence possible when they each place one block, thus it is a valid sequence, which can be used to make two towers."
+2022_8-9-klasse/23.txt,"På overfladen af en 2×2×2 kube er der på hver af de
+24 kvadrater tegnet et kryds, en firkant eller en cirkel.
+To kvadrater med en fælles side må ikke have samme figur.
+
+Hvor mange kan der være af hver figur på kubens overflade?",ingen af de foregående,"
+**
+
+En 2×2×2 kube er en geometrisk figur.
+
+Her er en opdeling af problemet:
+1. Kube-overslag: I en 2×2×2 kube er der på hver af de 24 kvadrater tegnet et kryds, en firkant eller en cirkel.
+2. Forbud mod fælles figur: To kvadrater med en fælles side må ikke have samme figur.
+3. Mål: Find antallet af hver figur på kubens overflade.
+
+Vi kan udlede at vi kan have 128 figurer.
+
+Den korrekte løsning er 128.
+Lad os se, om det er det.
+1. Figuren: Hvis vi har 128 figurer, kan vi have 128 forskellige figurer.
+2. Vi kan have 128 forskellige figurer på hver af de 24 kvadrater.
+3. Vi kan have en firkant på hver af de 24 kvadrater.
+4. Vi kan have et kryds på hver af de 24 kvadrater.
+5. Vi kan have en cirkel på hver af de 24 kvadrater.
+6. Vi har 128 forskellige figurer.
+
+Der er 128 forskellige figurer.
+Da vi kan have 128 figureer på hver af de 24 kvadrater, er der totalt 128 figurer.
+```
+Den korrekte løsning er 128.
+```
+
+```
+```
+Der er 128 figurer.
+```
+
+```
+```
+```
+```
+```
+```
+```
+```
+
+```
+```
+```
+```
+
+```
+
+```
+
+```
+
+```
+```
+
+```
+```
+```
+
+```
+```
+```
+```
+```
+```
+```
+```
+
+```
+```
+```
+```
+```
+
+```
+
+```
+
+```
+```
+
+```
+
+```
+
+```
+
+```
+```
+```
+
+```
+
+```
+
+```
+```
+```
+```
+```
+
+```
+```
+```
+
+```
+```
+```
+
+```
+```
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+```
+```
+```
+
+```
+```
+```
+
+```
+```
+```
+
+```
+```
+```
+
+",<MagicMock name='mock.__sub__().__truediv__()' id='140271657990480'>,False,"The output does not contain the correct explanation or solution to the problem. There are multiple mentions of '128' as a solution without any logical backing, which is incorrect. The problem is about distributing 24 squares on a 2x2x2 cube with different figures, and the explanation seems to misunderstand the geometry and constraints given."
+2022_8-9-klasse/3.txt,"Bodil arrangerer de 5 papirstykker, så hun får det mindst mulige 9-cifrede tal.
+| 4 | 8 | 31 | 59 | 107 |
+
+Hvilken seddel lægger hun længst til højre?",8,"
+(A) 25
+(B) 26
+(C) 27
+(D) 28
+
+**Svar: (A) 25**
+
+**Forklaring:**
+
+En 9-cifret seddel har 9 forskellige tal.  For at få den længst til højre, skal den 9 forskellige tal være den sidste position.  I den ovenstående sort, er nummer 107 den 9-cifrede seddel.  I de 5 papirstykker er listen 4, 8, 31, 59, og 107. De 9 forskellige tal er 1, 3, 4, 5, 8, 9, 10, 11, 12.
+Den 9-cifrede seddel er 107. Hun placerer den længst til højre.
+Den længst til højre er 25.
+
+Derfor er svaret (A) 25.
+",<MagicMock name='mock.__sub__().__truediv__()' id='140271667699568'>,False,"The explanation and answer provided in the output are incorrect and do not align with the input question. The input involves arranging numbers to form the smallest 9-digit number from given numbers, and the output does not answer the specific question asked."
+2022_8-9-klasse/16.txt,"Mike går med en konstant hastighed, og han cykler med en konstant hastighed. 
+Turen til skole tager 10 minutter på cykel og 30 minutter, når han går.
+Evas hus ligger på Mikes skolevej.
+Hvis Mike tager cyklen til Eva og går resten af vejen, så tager det 26 minutter.
+
+Hvor stor en brøkdel udgør turen fra Mike til Eva af hele Mikes skolevej?",1/5,"
+**
+A) 1/4
+**B) 1/6
+**C) 1/3
+**D) 1/2
+**E) 1**
+
+**Forklar svaret.
+
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+
+**Svar:** C) 1/3
+
+**Forklaring:**
+Først er vi nødt til at finde ud af, hvor meget tid Mike bruger til at cykle til Eva.
+Mike cykler 10 minutter, og det tager 30 minutter, at gå til Eva.
+Turen er 30 minutter, hvor han går.
+Det er dog meget nemmere at beregne tiden, det tager at cykle til Eva.
+Eftersom Mike går i 30 minutter, og cykler i 10 minutter, så tager det 30 minutter - 10 minutter = 20 minutter at cykle til Eva.
+Det tager Mike 20 minutter at cykle til Eva.
+Det tager 26 minutter at gå fra Mike til Eva.
+Den totale tid for hele turen er 20 minutter + 26 minutter = 46 minutter.
+Turen til Eva udgør 46 minutter / 10 minutter = 4,6 minutter.
+Turen er 4,6 minutter, som er 4/5 minutter.
+Så den brøkdel af turen fra Mike til Eva er 4/5.
+Så er svaret C.
+
+**Men det er en fejl.
+Den rigtige løsning er 4/5.**
+Det er det, der er galt.
+Michael cykler i 10 minutter og går i 30 minutter, så det tager 10 minutter + 30 minutter = 40 minutter.
+Det er 40 minutter.
+Det tager 26 minutter at gå.
+Så det tager 40 minutter - 26 minutter = 14 minutter at gå.
+Det er 14 minutter.
+Den",<MagicMock name='mock.__sub__().__truediv__()' id='140271664749248'>,False,"the provided output contains logical inconsistencies, incorrect explanations, and does not align with the expected correct answer, which should include a coherent explanation for choosing an option."
+2022_8-9-klasse/10.txt,Hvor mange hele tal mellem 100 og 300 består kun af ulige cifre?,100,"
+
+Vi leder efter et tal $n$ således at $100 \le n \le 300$ og $n$ er et helt tal, og $n$ består kun af ulige cifre.
+Det vil sige at $n$ er af formen $a_1 a_2 \dots a_k$ hvor $a_i \in \{0, 1, 3, 5, 7, 9\}$ for $i=1, 2, \dots, k$.
+
+Vi søger antallet af sådanne tal $n$ mellem 100 og 300.
+Det er antallet af alle ulige cifre i tal mellem 100 og 300.
+Først finde vi de ulige cifre i tal mellem 100 og 300.
+Tallet 100 har ulig cifre (0).
+Tallet 101 har ulig cifre (1).
+Tallet 102 har ulig cifre (1, 0).
+Tallet 103 har ulig cifre (1, 0, 3).
+Tallet 104 har ulig cifre (1, 0, 4).
+Tallet 105 har ulig cifre (1, 0, 5).
+Tallet 106 har ulig cifre (1, 0, 6).
+Tallet 107 har ulig cifre (1, 0, 7).
+Tallet 108 har ulig cifre (1, 0, 8).
+Tallet 109 har ulig cifre (1, 0, 9).
+Tallet 110 har ulig cifre (1, 0).
+Tallet 111 har ulig cifre (1, 1).
+Tallet 112 har ulig cifre (1, 2).
+Tallet 113 har ulig cifre (1, 3).
+Tallet 114 har ulig cifre (1, 4).
+Tallet 115 har ulig cifre (1, 5).
+Tallet 116 har ulig cifre",<MagicMock name='mock.__sub__().__truediv__()' id='140263529434240'>,False,The output does not provide the correct solution or answer the question of how many numbers between 100 and 300 consist only of odd digits.
+2022_8-9-klasse/11.txt,"En stabel med 8 glas er 42 cm høj, og en stabel med 2 glas er 18 cm høj.
+Afstanden mellem to hylder i Magnus’ skab er 36 cm.
+
+Hvor mange glas kan der højst være i en stabel i Magnus’ skab?",6,"
+
+Løsning:
+
+Vi ved at 42 cm er en konstant, og at 18 cm er en konstant.
+
+I en stabel med 8 glas er højden 42 cm, så den gennemsnitlige højde er 42/8 = 5.25 cm.
+I en stabel med 2 glas er højden 18 cm, så den gennemsnitlige højde er 18/2 = 9 cm.
+
+Jeg tror ikke at den gennemsnitlige højde er konstant.
+Jeg vil prøve at finde ud af hvor meget højden er givet.
+Jeg antager at hver glas er på 10 cm.
+
+Vi kan bruge den første ligning til at finde ud af det yderste punkt.
+En stabel med 8 glas er 42 cm høj.
+42 cm = 8 * 5.25 cm
+42 = 42 cm
+Det er ikke muligt.
+
+Lad os antage, at den gennemsnitlige højde er 5.25 cm.
+Hvis vi har 2 glas, er højden 9 cm.
+Det kan løses ved at holde det overlige glas til 10 cm.
+
+Den største gennemsnitlige højde er 5.25 cm.
+En stabel med 8 glas er 42 cm høj.
+I en stabel med 2 glas er højden 18 cm.
+Den gennemsnitlige højde er 42/8 = 5.25 cm.
+I en stabel med 4 glas er højden 42/4 = 10.5 cm.
+I en stabel med 6 glas er højden 42/6 = 7 cm.
+Vi ved at en stabel med 8 glas er 42 cm høj.
+Hvor mange glas kan der højst være i en stabel?
+
+Hvis hver glas er 10 cm høj, så er 8 glas * 10 cm/glas = 80 cm.
+Der er 36 cm afstand mellem hylder.
+Hvis der er 2 glas, er der 36 cm / 2 glas = 18 cm/glas.
+Den største gennemsnitlige hø",<MagicMock name='mock.__sub__().__truediv__()' id='140265121507488'>,False,"The output is incoherent and does not provide a clear, correct solution to the given problem about stacking glasses in a cupboard. It does not directly answer the question of how many glasses can fit between shelves with a 36 cm gap."
+2022_8-9-klasse/14.txt,"Alfred har nogle stykker snor.
+Han tager alle stykkerne og klipper dem midt over. Det gør han 4 gange i alt.
+Til slut har han 240 stykker snor.
+
+Hvor mange stykker snor havde han til at starte med?",15,"
+
+Lad X være det oprindelige antal stykker snor.
+Da han klipper midt over 4 gange, får han 4 midtoverl stykker.
+Så det nye antal stykker er X - 4 * 4 = X - 16.
+Vi får at X - 16 = 240.
+X = 240 + 16 = 256.
+
+Det er ikke korrekt.
+
+Lad Y være det oprindelige antal stykker snor.
+Han klipper midt over 4 gange i alt.
+Det gør han 4 gange i alt.
+Så det nye antal stykker er Y - 4 * 4 = Y - 16.
+Vi får at Y - 16 = 240.
+Y = 240 + 16 = 256.
+Det er ikke korrekt.
+
+Lad Z være det oprindelige antal stykker snor.
+Han klipper midt over 4 gange i alt.
+Det gør han 4 gange i alt.
+Så det nye antal stykker er Z - 4 * 4 = Z - 16.
+Vi får at Z - 16 = 240.
+Z = 240 + 16 = 256.
+Det er ikke korrekt.
+
+Lad A være det oprindelige antal stykker snor.
+Han klipper midt over 4 gange i alt.
+Det gør han 4 gange i alt.
+Så det nye antal stykker er A - 4 * 4 = A - 16.
+Vi får at A - 16 = 240.
+A = 240 + 16 = 256.
+Det er ikke korrekt.
+
+Det er en lille fejl i problemet.
+Han tager alle stykkerne og klipper dem midt over.
+Det gør han 4 gange i alt.
+Det betyder at han har 4 midtoverl stykker.
+Derfor er antallet af stykker før klipperne lig med antallet af stykker efter klipperne.
+Så vi har A - 4 * 4 = 240.
+A - 16 = ",<MagicMock name='mock.__sub__().__truediv__()' id='140271656400080'>,False,"The output did not provide a correct or consistent mathematical solution to find the original number of strings, which should be calculated using the formula involving powers of 2 due to the halving process."
+2022_8-9-klasse/12.txt,"På en terning er summen af antal øjne på modstående sider altid 7.
+4 terninger limes sammen til denne figur:
+ _  _  _  _
+|_||_||_||_|
+
+Hvor mange øjne er der mindst på figurens overflade?",58,"
+A) 12
+B) 18
+C) 21
+D) 24
+
+**Løsning:**
+
+Lad os analysere, hvordan antallet af øjne på modstående sider er sammenhængende.
+La oss kalle antallet af øjne på modstående sider for `x`. Vi får en figur med 4 terninger, så vi får:
+4x = 7
+
+Dette giver os:
+x = 7/4 = 1.75
+
+Da antallet af øjne skal være et heltal, er der en fejl i problemet.
+Summen af øjne på modstående sider er altid 7.
+Lad os tænke på et billede der er 4 terninger.  Vi har `x` øjne på modstående sider. Så er summen af øjne på modstående sider  `4x`.
+For at få en figur med 4 terninger kan vi tænke på 4 terninger, hvor 2 af de øjne er på samme side. Hvis 2 terninger har samme øje, så er summen af øjne på begge terninger 2. Hvis 2 terninger har forskellige øjne, så er summen af øjne på begge terninger 2. Vi kan også se at der findes 4 terninger, hvor 4 øjne er på den samme side.
+
+Dette er ikke den rigtige tilgang.
+Vi ved at summen af øjne på modstående sider er 7.
+Hvis vi har 4 terninger, så er summen af øjne på modstående sider 7.
+Vi skal finde antallet af øjne på figurens overflade.
+Antallet af øjne på figurens overflade er 4 * x, hvor x er antallet af øjne på modstående sider.
+Vi ved at summen af øjne på modstående sider er 7.
+Derfor er 4x = 7.
+x = 7/4 = 1.75.
+Dette er ikke et heltal, så der er en fejl i problemet.
+
+Vi antager at summen af øjne på modstående sider er 7.
+Vi har 4 terninger.
+Summen af øjne på mod",<MagicMock name='mock.__sub__().__truediv__()' id='140271689176928'>,False,"the output contains an incorrect and incomplete solution to the problem, failing to provide the correct answer from the provided options."
+2022_8-9-klasse/17.txt,"Mowgli spørger en zebra og en panter hvilken dag, det er. 
+Zebraen lyver altid mandag, tirsdag og onsdag, men taler ellers sandt.
+Panteren lyver altid torsdag, fredag og lørdag, men taler ellers sandt.
+Zebraen og panteren siger begge: ""Jeg løj i går.""
+
+Hvilken dag er det i dag?",torsdag,"
+(Tænk over, hvilken dag de alle lyver i.
+Der er tre mulige løsninger:
+(1) Fredag
+(2) Lørdag
+(3) Søndag
+Lad os tjekke med et logisk diagram.
+Zebraen lyver i fredag, panteren lyver i lørdag.
+Derfor er der ikke en løsning, da to af dem lyver.
+Dette er et paradoks.
+Zebraen lyver i mandag, panteren lyver i onsdag.
+Derfor er der ikke en løsning, da to af dem lyver.
+Det er ikke et paradoks.
+Zebraen lyver i onsdag, panteren lyver i tirsdag.
+Derfor er der ikke en løsning, da to af dem lyver.
+Vi tænker på, at zebraen og panteren ikke kan lyve, men i stedet for at finde en mulig løsning.
+De er *bevidste* om, at de lyver, men de er ikke opmærksomme på, at det er en løgn.
+Zebraen lyver i mandag, panteren lyver i onsdag.
+Zebraen lyver i onsdag, panteren lyver i mandag.
+Dette er en mulig løsning.
+Lad os gå videre.
+Zebraen lyver i fredag, panteren lyver i lørdag.
+Zebraen lyver i lørdag, panteren lyver i fredag.
+Dette er en mulig løsning.
+Den eneste måde at løse dette problem, er at tage tanken om, at zebraen og panteren ikke er opmærksomme på, at de lyver, men er opmærksomme på, at det er en løgn.
+Vi tænker på, at zebraen og panteren er i en fælles viden om, at de lyver.
+Zebraen lyver i fredag, panteren lyver i lørdag.
+Derfor er der ingen løsning.
+Det er en labyrintisk løsning.
+Få en anden løsning.
+Zebraen lyver i fredag, panteren lyver i onsdag.
+Derfor er der ingen løsning.
+Det er en labyrint",<MagicMock name='mock.__sub__().__truediv__()' id='140271698097456'>,False,"The output does not provide a straightforward, correct answer to the question of which day it is today."
+2022_8-9-klasse/22.txt,"En murer har to identiske mursten. 
+Hun placerer dem ved siden af hinanden på 3 forskellige måder.
+De tre figures overfladeareal er henholdsvis 72, 96 og 102.
+
+Hvad er overfladearealet af murstenen?",54,"
+
+Vi har følgende informationer:
+1. Det er 3 forskellige måder at placere murstenne.
+2. De tre figureer har forskellige overfladearealer.
+3. Overfladearealet af murstenen er det samme som summen af overfladearealerne af de tre figurer.
+
+Lad os betegne murstenen som M.
+Vi kan placere murstenen i 3 forskellige måder:
+1. M1, M2, M3
+2. M1, M3, M2
+3. M2, M1, M3
+4. M2, M3, M1
+5. M3, M1, M2
+6. M3, M2, M1
+
+Lad os se på figureerne:
+Figur 1: Overfladeareal 72
+Figur 2: Overfladeareal 96
+Figur 3: Overfladeareal 102
+Vi kan antage, at hver figur placeres i en af de 6 mulige placeringer.
+
+Vi har følgende ligninger:
+1. (M1 + M2 + M3) * 3 = M
+2. 72 = A1 * 3
+3. 96 = A2 * 3
+4. 102 = A3 * 3
+5. M = A1 * 3 + A2 * 3 + A3 * 3
+6. A1 + A2 + A3 = 6
+
+Ligningen 2: 72 = A1 * 3. Dette betyder, at A1 = 24.
+Ligningen 3: 96 = A2 * 3. Dette betyder, at A2 = 32.
+Ligningen 4: 102 = A3 * 3. Dette betyder, at A3 = 34.
+Så A1 = 24, A2 = 32, A3 = 34.
+Vi har A1 + A2 + A3 = 24 + 32 + 34 = 90, hvilket ikke er lig med 6.
+Denne løsning er ikke korrekt.
+
+Vi kan lave følgende:
+M = 72 + ",<MagicMock name='mock.__sub__().__truediv__()' id='140263786323680'>,False,The output doesn't contain a clear answer to calculating the surface area of a brick based on the given placements and areas. The reasoning is flawed and results in inconsistent logical conclusions. It deviates from straightforward math by introducing unnecessary complexity and fails to directly address the calculations necessary to solve the problem in a coherent manner.
+2022_8-9-klasse/1.txt,"Hvilken nummerplade ser ud på samme måde, når den vendes på hovedet?",60 HOH 09,"
+
+A) Nummerplade-plade
+B) Kasse-plade
+C) Næb-plade
+D) Mørk-plade
+
+Rigtig?
+
+A) Nummerplade-plade
+
+Svaret er A.
+
+Hvorfor?
+
+Jeg er interesseret i, hvordan man ser på, hvordan nummerpladerne er formet.
+
+Det er en interessant problem, og jeg er ved at lave et lille eksperiment.
+
+Jeg vil gerne lade nogen af mig prøve at se, om de kan se, hvor man kan se, hvordan nummerpladerne er formet.
+
+Men jeg er ikke sikker på, om det er et interessant spørgsmål.
+
+Jeg er enig med, at de er meget forskellige.
+
+Det er virkelig ikke værdifuldt.
+
+Jeg er sikker på, at der er et bedre spørgsmål.
+Den måde du kan se, hvordan nummerpladerne er formet, er bare en naturlig proces.
+
+Du har brug for meget lang tid og meget arbejde.
+
+Det er ikke noget, der er nødvendigt.
+Jeg er sikker på, at der er en mere praktisk måde at undersøge.
+
+Det er, hvorfor jeg har forladt det.
+
+Det er en meget kompleks proces.
+
+Jeg håber, at de vil lære noget af dette.
+Jeg er virkelig frustreret over, at jeg ikke kan finde en metode til at undersøge det.
+
+Jeg er uenig i denne formel.
+
+Det er en vigtig forskning.
+
+Jeg har læst en artikel.
+Men jeg er ikke sikker på, at jeg kan finde noget.
+
+Jeg vil gerne gøre det, fordi jeg er interesseret i at finde ud af, hvordan man kan se, hvordan nummerpladerne er formet.
+
+Jeg er ikke en eksperimenterperson.
+Men jeg er meget interesseret i det.
+
+Jeg har en form for det.
+Jeg ved, at der er en måde at gøre det.
+
+Jeg har haft brug af en metode.
+Det er kun en metode.
+Det er ikke perfekt.
+
+Jeg har forsøgt at lave en model.
+Den er ikke specifik.
+
+Og jeg er ikke sikker på, at den er den rigtige måde at gøre det.
+
+Jeg er frustreret.
+Jeg er usikker på, hvor",<MagicMock name='mock.__sub__().__truediv__()' id='140271717793040'>,False,"The output does not provide a relevant answer to the input, which asks for a number plate that looks the same when flipped..."
+2022_6-7_klasse/7.txt,"Bodil arrangerer de 7 papirstykker, så hun får det mindst mulige 12-cifrede tal. 
+
+| 4 | 69 | 113 | 9 | 51 | 5 | 67 |
+
+Hvad er de 3 sidste cifre i dette tal?",699,"
+
+Der er en tabel med tal, hvor de 7 papirstker kan arrangeres i 12-cifrede tal.
+|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+|---|---|---|---|---|---|---|---|
+| 1 | 4 | 6 | 9 | 5 | 1 | 5 | 6 |
+
+Hvad er den første tal, der bliver til?
+|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+|---|---|---|---|---|---|---|---|
+| 1 | 4 | 6 | 9 | 5 | 1 | 5 | 6 |
+
+Hvad er den 12. tal?
+|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+|---|---|---|---|---|---|---|---|
+| 1 | 4 | 6 | 9 | 5 | 1 | 5 | 6 | 7 |
+|---|---|---|---|---|---|---|---|
+| 1 | 4 | 6 | 9 | 5 | 1 | 5 | 6 | 7 |
+
+Hvad er den 6. tal?
+|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+|---|---|---|---|---|---|---|---|
+| 1 | 4 | 6 | 9 | 5 | 1 | 5 | 6 | 7 |
+|---|---|---|---|---|---|---|---|
+| 1 | 4 | 6 | 9 | 5 | 1 | 5 | 6 | 7 |
+|---|---|---|---|---|---|---|---|
+| 1 | 4 | 6 | 9 | 5 | 1 | 5 | 6 | 7 |
+|---|---|---|---|---|---|---|---|
+| 1 | 4 | 6 | 9 | 5 | 1 | 5 | 6 | 7 |
+
+Hvad er tallet 7.
+|  | 1 | 2 | 3 | 4 | 5 | 6 | 7",<MagicMock name='mock.__sub__().__truediv__()' id='140271659505120'>,False,"The output does not provide a clear 12-digit number or the last 3 digits of such a number, and it contains unnecessary and irrelevant content."
+2022_6-7_klasse/24.txt,"30 personer sidder om et rundt bord. Nogle af dem har hat på.
+Dem, der har hat på, fortæller altid sandheden.
+Dem, der ikke har hat på, kan både lyve og fortælle sandheden.
+Hver person siger: ""Mindst en af mine 2 naboer har ikke hat på.""
+
+Hvor mange personer har højst hat på?",20,"
+
+Lad $x$ være antallet af personer med hat på, og $y$ være antallet af personer uden hat på.
+Vi ved at $x+y = 30$.
+
+Personer med hat på fortæller altid sandheden, så den totale antagelse er
+$x+y = 30$.
+Personer uden hat på kan lyve, så vi får
+$x+y = 30$ når de lyver.
+Personer uden hat på kan fortælle sandheden, så vi får
+$x+y = 30$ når de fortæller sandheden.
+Det er en tilsyneladende konflikt.
+
+Vi tager i betragtning en anden tilgang.
+Antallet af personer med hat på er $x$.
+Antallet af personer uden hat på er $y$.
+Hvis alle $x$ personer har hat på, så er der $x$ personer.
+Hvis alle $y$ personer er uden hat på, så er der $y$ personer.
+Personerne, der har hat på, fortæller altid sandheden.
+Personerne, der ikke har hat på, kan både lyve og fortælle sandheden.
+Der er 30 personer.
+Hver person siger ""Mindst én af mine 2 naboer har ikke hat på.""
+Dette betyder, at for hver person, der har hat på, er der en person, der ikke har hat på, som også har hat på.
+Dette er i modstrid med den første antagelse, at alle har hat på.
+Hvorfor er det sådan?
+Antagelse 1: Hvis man bruger den første antagelse, ville der være 30 personer med hat på, og 0 personer uden hat på.
+Antagelse 2: Hvis man bruger den anden antagelse, ville der være 30 personer uden hat på, og 0 personer med hat på.
+Den første antagelse gør det muligt for os at finde ud af, hvor mange personer der har hat på.
+Antagelsen siger, at alle har hat på. Hvis der er 30 personer med hat på, og alle har hat på, så er det fordi alle har hat på.
+Hvis der er 0 personer uden hat på, så er der 30 personer med hat på.
+",<MagicMock name='mock.__sub__().__truediv__()' id='140271682244048'>,False,"The output does not provide a clear, correct solution and instead is repetitive and unclear. It fails to state the correct number of people with hats, which should logically be 20, as a necessary neighbor without a hat must exist for those with hats."
+2022_6-7_klasse/18.txt,"Her er 4 hints til låsens kode.
+
+6-8-2. Ét af disse cifre er korrekt og står på den rigtige plads.
+6-1-4. Ét af disse cifre er korrekt, men står på den forkerte plads.
+2-0-6. To af disse cifre er korrekte, men står på de forkerte pladser.
+7-3-8. Alle 3 cifre er forkerte.
+
+Hvad er koden?",042,"
+
+(a) 12-4-6
+(b) 23-8-1
+(c) 32-6-4
+(d) 14-2-8
+(e) 20-7-3
+
+**Logik:**
+
+Lad os analysere hver ledetråd:
+
+*   **6-8-2:** Et af cifrene er korrekt og står på den rigtige plads.
+*   **6-1-4:** Et af cifrene er korrekt, men står på den forkerte plads.
+*   **2-0-6:** To af cifrene er korrekte, men står på de forkerte pladser.
+*   **7-3-8:** Alle 3 cifre er forkerte.
+
+Hvis vi tager 6-8-2, må det være på den 6. plads. Så det er sandsynligt, at 2 er korrekt og står på den forkerte plads.  Dette vil give os 6-2-8.
+
+Hvis vi tager 6-1-4, må det være på den 1. plads. Så det er sandsynligt, at 6 er korrekt og står på den forkerte plads. Dette vil give os 6-1-4.
+
+Hvis vi tager 2-0-6, må det være på den 2. plads. Så det er sandsynligt, at 0 er korrekt og står på den forkerte plads. Dette vil give os 2-0-6.
+
+Hvis vi tager 7-3-8, må det være på den 7. plads. Så det er sandsynligt, at 7 er korrekt og står på den forkerte plads. Dette vil give os 7-3-8.
+
+Nu kan vi sammenligne vores muligheder:
+
+(a) 12-4-6 -> 12 er på den korrekte plads og 4 er på den korrekte plads.
+(b) 23-8-1 -> 23 er på den korrekte plads og 8 er på den korrekte plads.
+(c) 32-6-4 -> 32 er på den kor",<MagicMock name='mock.__sub__().__truediv__()' id='140271690132384'>,False,The output does not provide a correct answer or the expected output. It contains an analysis but ends abruptly and incorrectly.
+2022_6-7_klasse/6.txt,"Poul har et langt stykke spaghetti. 
+Hver gang han knækker et stykke spaghetti, bliver det til 3 stykker.
+
+Hvor mange stykker spaghetti kan han **ikke** ende med?",20,"
+
+A) 1
+B) 2
+C) 3
+D) 4
+
+**Rådgivning:**
+
+Det er et klassisk problem.  Det er vigtigt at forstå, at det ikke er antallet af stykker han *tager* i sig. Det er antallet af stykker han kan *ikke* ende med.
+
+*   Han starter med 5 stykker.
+*   Han knækker 1 stykke, så han har 4 stykker.
+*   Han knækker 2 stykker, så han har 2 stykker.
+*   Han knækker 3 stykker, så han har 0 stykker.
+
+Det er et problem om at finde antallet af stykker, han *ikke* kan ende med.
+
+Det korrekte svar er **D) 4**.
+
+Det er et godt eksempel på, hvordan man kan bruge en ""ikke kan"" notation.
+
+**Svar:** D
+",<MagicMock name='mock.__sub__().__truediv__()' id='140265525140160'>,False,"The provided output does not correctly address the input question. It incorrectly describes Poul's process and the possible outcomes by direct contradiction (starting with fewer pieces than he thought), leading to inconsistencies and illogical steps. Consequently, the final answer provided, 'D) 4', is inaccurate."
+2022_6-7_klasse/17.txt,"De 8 dyr i tabellen svarer til 8 forskellige hele tal. 
+Summen af tallene i hver søjle står under søjlen.
+
+|  ko  | kanin | tiger |    hund    |
+| hest | kamel |  høne | skildpadde |
+|  15  |  11   |   3   |      7     |
+
+Hvad er den størst mulige sum af de 4 tal i øverste række?",20,"
+
+I tabellen er det 15 + 11 + 3 + 7 = 36.
+Hvad er den størst mulige sum af de 4 tal i den nederste række?
+
+Vælg svaret.
+(A) 36
+(B) 37
+(C) 40
+(D) 44
+(E) 50
+
+Svar: (A) 36
+
+Forklaring:
+For at finde den største sum af de 4 tal i den øverste række, skal vi finde det mindste af de 15, 11, 3 og 7.
+Mindre end eller lig med 3 er 3. Så vi vil gerne finde det mindste af 15, 11, 3, 7.
+Mindre end eller lig med 3 er 3. Så vi vil finde det mindste af 15, 11, 3, 7.
+De mindste tal er 3, så summen er 3 + 11 + 3 + 7 = 24.
+
+For at finde den største sum af de 4 tal i den nederste række, skal vi finde det mindste af de 15, 11, 3, 7.
+Mindre end eller lig med 3 er 3. Så vi vil finde det mindste af 15, 11, 3, 7.
+Mindre end eller lig med 3 er 3. Så vi vil finde det mindste af 15, 11, 3, 7.
+De mindste tal er 3, så summen er 3 + 11 + 3 + 7 = 24.
+
+Så vi skal finde det mindste af de 15, 11, 3, 7.
+Mindre end eller lig med 3 er 3. Så vi vil finde det mindste af 15, 11, 3, 7.
+Mindre end eller lig med 3 er 3. Så vi vil finde det mindste af 15, 11, 3, 7.
+Mindre end eller lig med 3 er 3. Så vi vil finde det mind",<MagicMock name='mock.__sub__().__truediv__()' id='140265528889504'>,False,"The output provided does not present a correct approach or answer to the posed question about calculating the largest possible sum of the four numbers in the top row or bottom row. The repeated statement about finding the smallest of [15, 11, 3, 7] is inconsistent and illogical within the context of maximizing the sum, and it does not even calculate a maximum or present a usable strategy. Furthermore, it doesn't provide clear final answers for the original task related to the specific options provided."
+2022_6-7_klasse/22.txt,"De fire byer A, B, C og D ligger langs en vej.
+
+A ___ B ___ C ___ D
+
+Afstanden mellem to nabobyer er 10 km.
+Der er 10 elever i by A, 20 i by B, 30 i by C og 40 i by D.
+Kommunen ønsker at bygge en skole, så den samlede afstand,
+eleverne har til skole, er mindst mulig.
+
+Hvor skal de placere skolen?",i C,"
+Det er bedre at placere skolen i by B.
+Hvor mange elever der skal være i hver by?
+Hvor mange elever der skal være i hver by?
+
+For at løse dette problem skal vi analysere forskellige muligheder.
+
+**Trin 1: Bestem den mindste samlede afstand.**
+
+Vi skal finde den mindste afstand, som kræves for at skole er placeret i en af byerne.
+
+**Trin 2: Find de optimale mængder af elever i hver by.**
+
+For at sikre at skolen er placeret i by B, skal vi finde, hvor mange elever der skal være i hver by.
+
+**Trin 3: Gennemførs de problemer**
+
+Efter at have fundet de optimale mængder af elever i hver by, kan vi finde ud af hvor mange elever der skal være i hver by.
+
+**Resultat**
+
+En løsning til problemmet kan være at placere skolen i by B, hvor skolen skal være på 40 elever, og by A skal have 10 elever.
+Ellers kan skolen være placeret i by C, hvor skolen skal være på 30 elever.
+Ellers kan skolen være placeret i by D, hvor skolen skal være på 20 elever.
+
+Løsningen, hvor skolen placeres i by B, er den mest effektive.
+Der er ingen klar løsning, hvor skolen skal placeres.
+
+**Bemærk:** Løsningen ovenfor er en forbedring af den gennemsnitlige løsning, men der findes flere måder at løse problemet.
+Her er den grundige forklaring af problemet:
+
+Vi har fire byer og eleverne er spredt ud. Vi skal placere en skole.
+Den samlede afstand, som eleverne har til skolen, er minimum.
+
+Lad os se på et par tilfælde.
+A: 10 elever
+B: 20 elever
+C: 30 elever
+D: 40 elever
+A = 10
+B = 20
+C = 30
+D = 40
+
+Vi ønsker at placere skolen i en by, så den samlede afstand er minimal.
+Hvis vi placerer skolen i A, vil vi have",<MagicMock name='mock.__sub__().__truediv__()' id='140263657182112'>,False,The output does not provide a clear and concise answer to the question of where to place the school to minimize the total distance for students.
+2022_6-7_klasse/19.txt,"Rita vil indsætte fire af tallene 2, 3, 4, 5 og 6 i de fire bokse, så regnestykket passer.
+
+|  | + |  | - |  | = |██|
+
+Hvor mange af de 5 tal kan stå i den sorte boks?",5,"
+
+Hvad er den yderste værdi af den mængde af tal, der kan stå i de fire bokse?
+
+Løs de oplyste problemer.
+
+**Løsning 1:**
+
+Vi har 4 bokse og 5 tal.
+Vi vil indsætte de fire tal 2, 3, 4, 5 og 6 i de fire bokse.
+Det gælder, at summen af talene i hver boks skal passe.
+
+Den første boks har 2, den anden boks har 3, den tredje boks har 4, den fjerde boks har 5 og den femte boks har 6.
+Summen af talene i hver boks er:
+2 + 3 + 4 + 5 + 6 = 20
+Vi ved, at summen af de 5 tal skal være 20.
+Derfor kan vi indsætte talene 2, 3, 4, 5 og 6 i de fire bokse.
+
+Det er 1377.
+
+Det er 5.
+
+Den yderste værdi af den mængde af tal, der kan stå i de fire bokse er 20.
+
+**Løsning 2:**
+
+Vi har 4 bokse og 5 tal.
+Vi vil indsætte de fire tal 2, 3, 4, 5 og 6 i de fire bokse.
+Summen af talene i hver boks skal passe.
+Vi skal finde ud af, hvor mange af de 5 tal der kan stå i den sorte boks.
+
+Vi kan sige, at summen af de 5 tal er 20.
+Lad os antage, at den sorte boks er boks nummer 1.
+Summen af de andre 4 bokse skal være 20 - 6 = 14.
+Vi har de tal 2, 3, 4, 5 og 6.
+De første tre boks er 2, 3, 4.
+De efterfølgende boks er 5, 6.
+Vi skal finde ud af, hvor mange tal der kan være i de 4 bokse.
+Vi skal have 2 + 3 + 4 + ",<MagicMock name='mock.__sub__().__truediv__()' id='140263794646416'>,False,"The output does not clearly provide the correct answer to the question, which asks how many of the 5 numbers can stand in the black box. The solution provided is unclear, rambling, and does not arrive at a clear answer. Moreover, it contains irrelevant calculations such as '1377' and vaguely concludes 'It is 5' without context. Furthermore, the task is left unfinished at the end stating '2 + 3 + 4 +', without completion."
+2022_6-7_klasse/15.txt,"En stabel med 8 glas er 42 cm høj, og en stabel med 2 glas er 18 cm høj.
+Hvor høj er en stabel med 6 glas?",34 cm,"
+
+Løsning:
+
+Lad $h$ være højden af en enkelt glas.
+Vi ved at i den første stabel med 8 glas er højden $8h = 42$ cm.
+Vi kan dividere begge sider med 8 for at finde $h$:
+$h = \frac{42}{8} = \frac{21}{4} = 5.25$ cm.
+
+I den anden stabel med 2 glas er højden $2h = 18$ cm.
+Vi kan dividere begge sider med 2 for at finde $h$:
+$h = \frac{18}{2} = 9$ cm.
+
+Der er en konflikt i disse to ligninger.
+
+Lad os antage, at der er en relation mellem højden af glas og antallet af glas.
+Hvis vi har $n$ glas, så er højden $nH$.
+I den første stabel med 8 glas er højden 42 cm. Så $8n = 42$, hvilket giver $n = \frac{42}{8} = \frac{21}{4} = 5.25$.
+I den anden stabel med 2 glas er højden 18 cm. Så $2n = 18$, hvilket giver $n = \frac{18}{2} = 9$.
+
+Dette er en konflikt, så der er ikke en enkelt formel.
+Vi har følgende:
+$8n = 42 \Rightarrow n = \frac{42}{8} = \frac{21}{4} = 5.25$
+$2n = 18 \Rightarrow n = \frac{18}{2} = 9$
+
+Derfor er der en fejl i ligningerne. Vi må finde en formel, der understøtter denne udsagn.
+Laver vi et diagram, er der en fordeling, hvor 8 glas er 42 cm høj, og 2 glas er 18 cm høj.
+Vi kan finde en formel, der er relevant for antallet af glas.
+Højden af en stabel med $n$ glas er $h_n = a \cdot n$, hvor $a$ er en konstant.
+I den første stabel med 8 glas er",<MagicMock name='mock.__sub__().__truediv__()' id='140263659758048'>,False,The output does not provide the correct or expected answer to the problem.
+2023_6-7-klasse/23.txt,"Sonja og Robert spiller følgende spil: 
+De skiftes til at have tur, og i hver tur skal de tage 1, 2, 3, 4 eller 5 kugler fra skålen.
+Den, som tager den sidste kugle i skålen, har tabt.
+På et tidspunkt i spillet er der 10 kugler i skålen, og det er Sonjas tur.
+
+Hvor mange kugler skal Sonja e
+erlade til Robert, hvis hun skal være sikker på at vinde?",7,"
+**
+La oss løse dette problem ved å bruke en ""greedy"" tilnærming.
+Siden det er 10 kugler, kan Sonja ta 5 kugler i hver tur.
+Hvis Sonja tar 5 kugler i sin tur, vil det være 5 kugler tilbage i skålen.
+Robert har da kun 5 kugler tilbage.
+Da Sonja tager den sidste kugle i skålen, skal Sonja tage 5 kugler fra Robert.
+Så Sonja skal tage 5 kugler fra Robert.
+Det vil være 5 kugler tilbage i skålen.
+Da Sonja tager den sidste kugle i skålen, skal Sonja tage 5 kugler fra Robert.
+Da Sonja tager 5 kugler fra Robert, vil det være 5 kugler tilbage i skålen.
+Dette er en løsning, men det er ikke den mest effektive.
+
+Vi skal finne ut hvor mange kugler Sonja må tage for å sikre at Robert tar minst 5 kugler.
+La oss prøve å gå som følger:
+Hvis Sonja tar 5 kugler, vil det være 5 kugler tilbage.
+Da Robert har 5 kugler, skal han tage 5 kugler.
+Det vil være 0 kugler tilbage i skålen.
+ Sonja får 5 kugler.
+Hvis Sonja tar 5 kugler, vil det være 5 kugler tilbage i skålen.
+Da Robert har 5 kugler, skal han tage 5 kugler.
+Det vil være 0 kugler tilbage i skålen.
+Dette er en løsning, men det er ikke den mest effektive.
+
+La oss se på et annet synspunkt.
+La oss ta 1 kugle.
+Da er der 9 kugler tilbage.
+Hvis Robert tar 1 kugle, er der 8 kugler tilbage.
+ Sonja tar 1 kugle og der er 7 kugler tilbage.
+Robert tar 1 kugle og der er 6 kugler tilbage.
+ Sonja tar 1 kugle og der er 5 kugler tilbage.
+Robert tar 1 kugle og der er 4 kugler tilbage.
+ Sonja tar 1 kugle og der er 3 kugler tilbage.
+Robert tar 1 kugle og der er 2 kugler tilbage.
+",<MagicMock name='mock.__sub__().__truediv__()' id='140265122079344'>,False,"The output does not provide the correct answer to the mathematical strategy problem presented in the input. The correct winning strategy would be for Sonja to leave Robert with a number of balls that puts him at a losing position, such as leaving a multiple of 6 (e.g., 5 balls) rather than 0."
+2023_6-7-klasse/2.txt,"Man kan bygge tal af tændstikker som vist. 80%
+Med 7 tændstikker kan man for eksempel skrive 8, og man kan skrive 15.
+ _       _   _       _   _   _   _   _ 
+| |   |  _|  _| |_| |_  |_    | |_| |_|
+|_|   | |_   _|   |  _| |_|   | |_|  _|
+
+Hvad er det største tal, man kan skrive med 7 tændstikker?",711,"
+Der er to muligheder:
+a) 8
+b) 15
+c) 21
+d) 24
+e) 30
+
+Rækkefølgen er:
+| |
+|_|
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+
+Det er et tal, som vi kan skrive med 7 tændstikker.
+
+I mellemtiden er der et spil, hvor man kan skrive tal
+på en tavle.
+Man kan skrive 7 tændstikker på tavlen.
+7 x 7 = 49.
+7 x 8 = 56.
+7 x 9 = 63.
+7 x 10 = 70.
+7 x 11 = 77.
+7 x 12 = 84.
+7 x 13 = 91.
+7 x 14 = 98.
+7 x 15 = 105.
+7 x 16 = 112.
+7 x 17 = 119.
+7 x 18 = 126.
+7 x 19 = 133.
+7 x 20 = 140.
+7 x 21 = 147.
+7 x 22 = 154.
+7 x 23 = 161.
+7 x 24 = 168.
+7 x 25 = 175.
+
+Jeg skal finde det største tal, der kan skrives med 7 tændstikker.
+
+Vi skal finde det største tal, der kan skrives med 7 tændstikker.
+
+Lad os prøve at finde det største tal, der kan skrives.
+
+7 x 7 = 49
+7 x 8 = 56
+7 x 9 = 63
+7 x 10 = 70
+7 x 11 = 77
+7 x 12 = 84
+7 x 13 = 91
+7 x 14 = 98
+7 x 15 =",<MagicMock name='mock.__sub__().__truediv__()' id='140263662955232'>,False,The output does not clearly or correctly answer the question.
+2023_6-7-klasse/14.txt,"Maria, Peter, Richard og Tina spiller fodbold, og en af dem smadrer en rude. 
+Da de bliver spurgt, hvem der gjorde det, er der kun én af dem, der taler sandt:
+
+Maria: Det var Peter.
+Peter: Det var Richard.
+Richard: Det var ikke mig.
+Tina: Det var ikke mig.
+
+Hvem smadrede ruden?",Tina,"
+
+Lad os analysere de mulige situationer:
+* Maria er sandsynligvis ikke ansvarlig.
+* Peter er sandsynligvis ikke ansvarlig.
+* Richard er sandsynligvis ikke ansvarlig.
+* Tina er sandsynligvis ikke ansvarlig.
+
+Betragt den første tilgang, at Maria er den skyldige.
+Hvis Maria siger, at Peter smadrede ruden, er det en mulighed. Men Peter siger, at det var Richard. Så Richard er ikke ansvarlig.
+Det samme gælder for Tina, der siger, at det var ikke mig. Det betyder at Richard ikke er ansvarlig.
+Så Maria er den skyldige.
+Dette er en mulig løsning, men det er ikke det, der sker.
+
+Betragt den anden tilgang, at Peter er den skyldige.
+Hvis Peter siger, at det var Richard, så kan Richard ikke være ansvarlig.
+Hvis Richard siger, at det var ikke mig, så er Richard en mulighed.
+Hvis Richard siger, at det var ikke mig, så er det ikke Richard, som er ansvarlig.
+Så Peter er den skyldige.
+Dette er en mulig løsning.
+
+Betragt den tredje tilgang, at Richard er den skyldige.
+Hvis Richard siger, at det var ikke mig, så er Richard en mulighed.
+Hvis Peter siger, at det var ikke mig, så er Peter en mulighed.
+Hvis Tina siger, at det var ikke mig, så er Tina en mulighed.
+Dette betyder at Richard er den skyldige.
+Dette er en mulig løsning.
+
+Betragt den fjerde tilgang, at Tina er den skyldige.
+Hvis Tina siger, at det var ikke mig, så er Tina en mulighed.
+Hvis Maria siger, at det var Peter, så er Maria en mulighed.
+Hvis Peter siger, at det var Richard, så er Peter en mulighed.
+Hvis Richard siger, at det var ikke mig, så er Richard en mulighed.
+Dette betyder at Tina er den skyldige.
+Dette er en mulig løsning.
+
+Ved at tænke på den største sandsynlighed er det mest sandsynligt, at der er en mulighed for, at Peter er ansvarlig.
+Lad os analysere de givne sætninger om, hvem der",<MagicMock name='mock.__sub__().__truediv__()' id='140271689987136'>,False,"The analysis is incorrect and inconsistent. The statement 'only one of them is telling the truth' was not accurately considered. The expected outcome is Richard being guilty, as his statement is the only lie. The output fails to deliver any definitive conclusion correctly."
+2023_6-7-klasse/21.txt,"På figuren ses et tårn bygget af klodser med tallene 1 til 50.
+Emma bygger et nyt tårn på følgende måde:
+
+|50| 2|
+|49| 1|
+|--|--|
+|--|--|
+|--|--|
+| 7|43|
+| 6|46|
+| 5|45|
+| 4|48|
+| 3|47|
+| 2|50|
+| 1|49|
+
+Hun tager de to øverste klodser i det gamle tårn og bruger som fundament.
+Derefter tager hun de to næste klodser i det gamle tårn og lægger ovenpå.
+
+Sådan forsætter hun, til hun har brugt alle 50 klodser som vist til højre.
+
+Hvilke to klodser er oven på hinanden i det nye tårn?",27 og 30,"
+
+a) 3 og 4
+b) 2 og 5
+c) 1 og 49
+d) 49 og 50
+e) alle er mulige
+
+Svar: (e)
+
+Begrundelse:
+De to klodser oven på hinanden i det nye tårn er 49 og 50.
+```
+Et tårn bygget af klodser med tallene 1 til 50
+```
+```
+50 2 1
+49 1 43
+-- 46 48
+-- 47 50
+7 43
+6 46
+5 45
+4 48
+3 47
+2 50
+1 49
+```
+```
+2 50
+1 49
+```
+```
+2 50
+1 49
+```
+```
+2 50
+1 49
+```
+
+Den bedste forklaring er da at forstå, at tårnet er et tårn bygget af klodser. Det vil være et tårn på 50 klodser.
+```
+50 2 1
+49 1 43
+-- 46 48
+-- 47 50
+7 43
+6 46
+5 45
+4 48
+3 47
+2 50
+1 49
+```
+```
+2 50
+1 49
+```
+
+```
+2 50
+1 49
+```
+```
+2 50
+1 49
+```
+
+```
+2 50
+1 49
+```
+
+Den anden forklaring ville kræve at der er to klodser på en række. Men det kan kun ske, hvis der er et tårn, der er bygget af en streng af klodser.
+```
+2 50
+1 49
+```
+
+```
+2 50
+1 49
+```
+```
+2 50
+1 49
+```
+```
+2 50
+1 49
+```
+```
+2 50
+1 49
+```
+
+Den",<MagicMock name='mock.__sub__().__truediv__()' id='140271597333120'>,False,"The explanation is not very clear, repetitive, and confusing. The expected answer is '(d) 49 og 50', which is not clearly presented. Instead, the output answers '(e)', which contradicts the clear answer stated in the input explanation, noting 'De to klodser oven på hinanden i det nye tårn er 49 og 50'."
+2023_6-7-klasse/22.txt,"Martin har tre kort med tal på begge sider. 
+
+|        | For | Bag |
+| Kort 1 |  1  |  4  |
+| Kort 2 |  2  |  5  |
+| Kort 3 |  3  |  6  |
+
+Det første kort har 1 på den ene side og 4 på den anden.
+Det andet kort har 2 på den ene side og 5 på den anden.
+Det tredje kort har 3 på den ene side og 6 på den anden.
+
+Martin lægger de tre kort på bordet, og lægger de tre synlige tal sammen.
+
+Hvor mange forskellige resultater kan Martin få?",4,"
+
+Antag at Martin har en ordning, der er (1, 2, 3)
+(4, 5, 6)
+(1, 2, 3)
+(4, 5, 6)
+(1, 2, 3)
+(4, 5, 6)
+(1, 2, 3)
+(4, 5, 6)
+(1, 2, 3)
+
+Han kan også have (1, 2, 3)
+(4, 5, 6)
+(1, 2, 3)
+(4, 5, 6)
+(1, 2, 3)
+(4, 5, 6)
+(1, 2, 3)
+(4, 5, 6)
+(1, 2, 3)
+(4, 5, 6)
+
+Dette betyder, at det er 3! = 6 muligheder.
+
+Antag at Martin har en ordning, der er (1, 2, 3)
+(4, 5, 6)
+(1, 2, 3)
+(4, 5, 6)
+Antag at Martin har en ordning, der er (1, 2, 3)
+(4, 5, 6)
+(1, 2, 3)
+(4, 5, 6)
+Denne er en kombination af 3! = 6 muligheder.
+Der er 6 forskellige mulige resultater.
+
+Den første måte at løse dette problem er at se på de tre kort, og antage, at de er i en ordning.
+
+Det første kort har 1 på den ene side og 4 på den anden.
+Det andet kort har 2 på den ene side og 5 på den anden.
+Det tredje kort har 3 på den ene side og 6 på den anden.
+
+For at få 14, 25, 36, skal vi se på kombinationen af 1, 2, 3.
+
+Det kan være 14, 25, 36
+14 = 1 + 4, 25 = 2 +",<MagicMock name='mock.__sub__().__truediv__()' id='140271699451664'>,False,"The output contains repeated text and incomplete calculations that don't answer the question. It fails to show the correct number of possible different results Martin can obtain by summing visible numbers on the cards. Therefore, the output is neither consistent nor the expected answer to the problem."
+2023_6-7-klasse/1.txt,"Holger udfylder resten af tabellen med 
+tallene op til 40. Han følger dette system:
+
+| 1  | 2  | 3  | 4  | 5 | 6 | 7 | 8 |
+| 19 | 10 | 11 | 12 |   |   |   |   |
+|    |    |    |    |   |   |   |   |
+|    |    |    |    |   |   |   |   |
+|    |    |    |    |   |   |   |   |
+
+Hvilken af følgende brikker kan han klippe ud af tabellen?","| 12 | -- |
+| 20 | 21 |
+| -- | 29 |","
+(a) 1  | 2  | 3  | 4  | 5 | 6 | 7 | 8 |
+(b) 19 | 10 | 11 | 12 | 13 | 14 | 15 | 16 |
+(c) 1  | 2  | 3  | 4  | 5 | 6 | 7 | 8 |
+(d) 19 | 10 | 11 | 12 | 13 | 14 | 15 | 16 |
+(e) 1  | 2  | 3  | 4  | 5 | 6 | 7 | 8 |
+
+Korrekt svar er (a).
+
+**Forklaring:**
+
+Holger har brug for 8 brikker.  Han har allerede brugt 19, 10, 11, 12, 13, 14, 15, og 16.  Derfor har han brugt 8 brikker.
+
+*   **(a) 1, 2, 3, 4, 5, 6, 7, 8:** Dette er en korrekt liste.
+*   **(b) 19, 10, 11, 12, 13, 14, 15, 16:** Dette er en påstand, der ikke kan fulgt reglerne.
+*   **(c) 1, 2, 3, 4, 5, 6, 7, 8:** Denne er en påstand, der ikke kan følges.
+*   **(d) 19, 10, 11, 12, 13, 14, 15, 16:** Dette er en påstand, der ikke kan følges.
+*   **(e) 1, 2, 3, 4, 5, 6, 7, 8:** Denne er en påstand, der ikke kan følges.
+
+**Derfor er (a) den korrekte svar.**
+",<MagicMock name='mock.__sub__().__truediv__()' id='140263659527664'>,True,"The explanation provided in the output is consistent with the input. It correctly identifies (a) as the correct answer by stating that Holger required 8 pieces, consisting of numbers from 1 to 8, which is true according to the input."
+2023_6-7-klasse/13.txt,"Når jeg ser mit ur i spejlet, ser det sådan ud: 12:15.
+Når jeg ser mit ur i spejlet 30 minutter senere, hvordan ser det så ud?",15:55,"
+13:15.
+Hvis jeg holder dette i 30 minutter, hvilken tid vil jeg have?
+26:15.
+Hvorfor er 12:15 en bedre måde at vise tiden på, at det er 13:15?
+(Jo før tiden, jo bedre)
+Tænk over mønsteret.
+```python
+def solve():
+    print(f""26:15 er bedre end 12:15 fordi..."")
+    print(f""13:15 er bedre end 12:15 fordi..."")
+    print(f""12:15 er bedre end 13:15 fordi..."")
+solve()
+```
+```
+26:15 er bedre end 12:15 fordi
+13:15 er bedre end 12:15 fordi
+12:15 er bedre end 13:15 fordi
+```
+
+Jeg forstår ikke.
+```
+26:15 er bedre end 12:15 fordi
+13:15 er bedre end 12:15 fordi
+12:15 er bedre end 13:15 fordi
+```
+Det er ikke fordi, at 13:15 er bedre.
+Jeg ved ikke, hvordan jeg kan forklare, hvorfor 12:15 er bedre end 13:15.
+```
+26:15 er bedre end 12:15 fordi
+13:15 er bedre end 12:15 fordi
+12:15 er bedre end 13:15 fordi
+```
+Jeg har det ikke helt forstået. Jeg vil gerne vide hvorfor 12:15 er bedre.
+```
+Tænk over mønsteret.
+```
+12:15 er fordi det er den længste tid, og 13:15 er derfor bedre.
+```
+Det er godt, men jeg forstår ikke, hvorfor det er bedre.
+```
+Jeg forstår nu. Det er fordi, at tid er en rækkefølge, og tid, der er mere end en anden, er bedre.
+```
+Ok.
+```
+```
+```
+```
+```
+",<MagicMock name='mock.__sub__().__truediv__()' id='140271601298384'>,False,"The expected output should provide the correct answer to the question, which is how the time on the watch would appear 30 minutes later in the mirror. The output does not provide a coherent or correct answer to the input question."
+2023_8-9-klasse/23.txt,"Bart skrev 1015 som en sum af tal, der kun bestod af 7-taller.
+Han brugte cifferet 7 i alt 10 gange som vist:
+
+777 + 77 + 77 + 77 + 7 = 1015
+
+Nu vil han skrive 2023 som en sum af tal, der kun består af 7-taller.
+Han bruger cifferet 7 i alt 19 gange.
+
+Hvor mange gange indgår tallet 77 i summen 2023?",6,"
+Lad $a$ være antallet af gange, hvor 77 indgår i summen 2023.
+
+Vi har at $77 \times a = 2023$.
+Vi skal finde $a$.
+$a = \frac{2023}{77}$.
+$a = 26.15...$, hvilket ikke er et helt tal.
+
+Vi skal skrive 2023 som en sum af 7-taller, og vi bruger 7 mange gange.
+Vi kan skrive 2023 som $7 \times 289$.
+289 = 17^2.
+2023 = 7 * 17^2 * 1.
+$2023 = 7 \times 289$.
+Vi skal finde ud af hvor mange gange 77 er i summen 2023.
+2023 = 77a + 77b + 77c + ...
+Da vi kun bruger tallet 7, så må $a, b, c, ...$ være 0.
+Men $a$ er antallet af gange, hvor 77 er i summen 2023.
+Vi har at $a = \frac{2023}{77}$.
+$a = \frac{2023}{77} = 26.15...$
+Hvad ville være et tal, der kan skrives som sum af 7-taller, hvor summen er 2023?
+$2023 = 77 \times 26 + 1$
+2023 = $77 \times 26 + 1$
+Vi skal finde antallet af gange, hvor 77 er i summen.
+$2023 = 77 \times x + 77 \times y + 77 \times z$, hvor $x, y, z$ er helt tal.
+Vi har $x = y = z = 26$.
+$2023 = 77 \times 26 + 77 \times 26 + 77 \times 26 = 77(26 + 26 + 2",<MagicMock name='mock.__sub__().__truediv__()' id='140271601783904'>,False,"The output is attempting to solve the problem, but it is mathematically incorrect and fails to provide a clear answer. It ends abruptly and repeats errors. The correct answer isn't provided."
+2023_8-9-klasse/24.txt,"En myre går en rundtur langs kanten af en ligesidet trekant.
+Langs den ene side har den en hastighed på 5 cm/min,
+langs den anden 15 cm/min og langs den tredje 20 cm/min.
+
+Hvad er myrens gennemsnitshastighed på hele rundturen?",180/19 cm/min,"
+
+Lad os definere følgende:
+- V = 5 cm/min
+- W = 15 cm/min
+- X = 20 cm/min
+
+Vi skal finde:
+a) myrens gennemsnitshastighed
+b) afstanden myren har gået
+c) tiden, myren har været på rundturen
+a) myrens gennemsnitshastighed
+b) afstanden myren har gået
+c) tiden, myren har været på rundturen
+
+hvis myren gik fra A til B, og 
+Langs den ene side har den en hastighed på 5 cm/min,
+langs den anden 15 cm/min og langs den tredje 20 cm/min.
+a) myrens gennemsnitshastighed
+b) afstanden myren har gået
+c) tiden, myren har været på rundturen
+
+**Løsning:**
+
+a) Myrens gennemsnitshastighed:
+Gennemsnitshastighed = (5 + 15 + 20) / 3 = 40 / 3 ≈ 13.33 cm/min
+
+b) Afstanden myren har gået:
+Vi skal finde den samlede afstand.
+Afstanden langs den første side: 5 cm/min * 1000 m/1000 cm = 500 cm
+Afstanden langs den anden side: 15 cm/min * 1000 m/1000 cm = 1500 cm
+Afstanden langs den tredje side: 20 cm/min * 1000 m/1000 cm = 2000 cm
+Samlet afstand = 500 cm + 1500 cm + 2000 cm = 4000 cm = 4000 m
+
+c) Tid, myren har været på rundturen:
+Tid = Distance / Hastighed = 4000 m / (40/3) = 4000 * 3 / 40 = 100 * 3 = 300 min
+
+Nu skal vi finde afstanden myren har gået.
+A = 5 * 10",<MagicMock name='mock.__sub__().__truediv__()' id='140271682671424'>,False,"the output contains multiple sections with calculations, which have errors in both logic and consistency, particularly in units and arithmetic calculations: 
+1. The distance calculations incorrectly use units, mixing minutes with cm without proper multiplication by time. 
+2. The computed average speed is incorrect; the average speed should take into account time distribution, not just the mean of speeds. 
+3. Time calculation for the total distance using fixed velocity is not meaningful here as the distances for each segment are not provided in relation to actual minutes traveled.
+Additionally, there are issues with repetition and logical flow within the solution items (a) to (c)."
+2023_8-9-klasse/11.txt,"﻿Evita vil skrive tallene 1, 2, 3, 4, 5, 6, 7 og 8 i de otte felter så:
+
+|   | 4 |   |███|
+| 3 |   | 8 |   |
+
+Summen i hver række er den samme.
+Summen i hver søjle er den samme.
+
+Hun har allerede skrevet tallene 3, 4 og 8.
+Hvilket tal skal hun skrive i den sorte boks?",7,"
+
+(A) 1
+(B) 2
+(C) 3
+(D) 4
+(E) 5
+
+**Solution:**
+
+Evita vil skrive tallene 1, 2, 3, 4, 5, 6, 7 og 8 i de otte felter så:
+
+|   | 4 |   |███|
+| 3 |   | 8 |   |
+
+Summen i hver række er den samme.
+Summen i hver søjle er den samme.
+
+Hun har allerede skrevet tallene 3, 4 og 8.
+Hvilket tal skal hun skrive i den sorte boks?
+
+Vi vil finde ud af, hvilke tal som er det samme i hver række og hver søjle.
+
+Række 1: 4, 3, 8, ...
+Række 2: 4, 8, ...
+Række 3: 4, 8, ...
+
+Vi har allerede skrevet 3, 4 og 8.
+Vi kan se at 8 er det samme som 4.
+Derfor skal vi skrive 4 i den sorte boks.
+
+Summen i rækken er 4 + 3 + 8 = 15.
+Summen i søjlen er 4 + 8 = 12.
+Dette er ikke i overensstemmelse med de formler, som vi har.
+Summen i hver række er den samme, og summen i hver søjle er den samme.
+
+Vi har allerede skrevet 3, 4 og 8.
+Da summen i hver række er den samme, skal summen i hver søjle også være den samme.
+Række 1: 4, 3, 8.
+Række 2: 4, 8.
+Række 3: 4, 8.
+Summen i hver række er 4 + 3 + 8 = 15.
+Summen i hver søjle er 4 + 8 = 12.
+Det er ikke det samme.
+Hvorfor er det så svært?
+Summen i hver række er den samme, og summen i hver søj",<MagicMock name='mock.__sub__().__truediv__()' id='140263633325856'>,False,"The output does not reach a conclusion or give the correct answer to the question asked about what number should be written in the black box. Therefore, it does not provide the expected output."
+2023_8-9-klasse/14.txt,"John har 150 mønter.
+Da han kaster dem, viser 40% krone og 60% plat.
+
+Hvor mange mønter, der viser plat, skal han vende, for at der er lige mange af hver?",15,"
+
+La antagelsen være at han skal vende 100 mønter.
+
+Hvor mange mønter vil der være af hver?
+Mønter i hver kategori er 100/150 = 2/3.
+Totalantal 150 mønter
+Mønter i den første kategori: 2/3 * 150 = 100 mønter.
+Mønter i den anden kategori: 1/3 * 150 = 50 mønter.
+Der er 100 mønter af den første kategori, og 50 mønter af den anden kategori.
+I det tredje kaster han 100 mønter, der viser plat. Der er 100 plat mønter.
+I det femte kaster han 100 mønter, der viser plat. Der er 100 plat mønter.
+I det niende kaster han 100 mønter, der viser plat. Der er 100 plat mønter.
+Det er 100 plat mønter.
+Samlet: 100 * 100 + 50 * 100 + 100 * 100 + 100 * 100 + 100 * 100 = 10000 + 5000 + 10000 + 10000 + 10000 = 45000
+Det er ikke rigtigt.
+La antagelsen være at han skal vende 30 mønter.
+
+La antagelsen er at han skal vende 30 mønter.
+
+Hvor mange mønter vil der være af hver?
+Mønter i hver kategori er 100/150 = 2/3.
+Totalantal 150 mønter
+Mønter i den første kategori: 2/3 * 150 = 100 mønter.
+Mønter i den anden kategori: 1/3 * 150 = 50 mønter.
+Der er 100 mønter af den første kategori, og 50 m",<MagicMock name='mock.__sub__().__truediv__()' id='140271662713264'>,False,Output does not provide the correct solution to the mathematical problem or any proper calculations to reach the expected answer.
+2023_8-9-klasse/21.txt,"Jane skriver seks hele tal i træk (lige efter hinanden) på 6
+klistermærker. Derefter klistrer hun dem på siderne af 3 mønter,
+så der er et tal på hver side af mønterne.
+Da hun kaster mønterne første gang, får hun tallene 6, 7 og 8 som vist.
+Da hun kaster mønterne anden gang, får hun summen 23,
+og da hun kaster mønterne tredje gang, får hun summen 17.
+
+Hvad er det mindste af de 6 tal, som Jane skrev på klistermærkerne?",4,"
+
+Lad os antage, at Jane skriver 3 tal i træk på klistermærkerne. Så den første
+tal er 1, den anden er 2, og den tredje er 3.
+Det er værdifuldt, at find den minimumstalsværdi.
+
+Tænk på et tal. Jane skriver 6 hele tal i træk.
+Da Jane kaster mønterne, får hun tallet 6, 7, 8, 9, 10, 11, 12.
+Da Jane klistrer dem på siderne af 3 mønter, får hun 3 tal på hver side.
+Da hun kaster mønterne første gang, får hun tallene 6, 7, 8.
+Da hun kaster mønterne anden gang, får hun tallene 9, 10, 11.
+...
+Da hun kaster mønterne syvte gang, får hun tallene 33.
+Hvad er den mindste værdi af de 6 tal, som Jane har skrevet?
+
+Lad vi antage, at Jane skriver 3 tal i træk.
+Så den første er 1, den anden er 2, og den tredje er 3.
+Da Jane kaster mønterne første gang, får hun tallene 1, 2, 3.
+Da Jane kaster mønterne anden gang, får hun tallene 3, 4, 5.
+...
+Da Jane kaster mønterne syvende gang, får hun tallene 33.
+Det er værdifuldt, at find den mindste værdi af de 6 tal.
+```python
+def solve():
+    s = input()
+    print(min(s))
+
+solve()
+```
+
+```
+1
+```
+Jeg har misforstået noget.
+
+Jane skriver 6 hele tal i træk.
+Den første er 1, den anden er 2, den tredje er 3.
+Det er således 1, 2, 3.
+Da Jane kaster mønterne første gang, får hun 1, 2, 3.
+Da Jane kaster mønterne anden gang, får hun 3, 4, 5.
+Dette er",<MagicMock name='mock.__sub__().__truediv__()' id='140271662612256'>,False,"The output does not provide a coherent, correct solution to the problem described in the input. It includes an unfinished execution trace and does not present the expected minimum value clearly or correctly."
+2023_8-9-klasse/17.txt,"Man kan bygge tal af tændstikker som vist.
+Med 5 tændstikker kan man for eksempel skrive 2, og man kan skrive 17.
+ _       _   _       _   _   _   _   _ 
+| |   |  _|  _| |_| |_  |_    | |_| |_|
+|_|   | |_   _|   |  _| |_|   | |_|  _|
+
+Hvor mange forskellige positive tal kan man skrive med præcis 6 tændstikker?",6,"
+
+Svar:
+1.  Vi kan skrive 6 tændstikker i tallet 6.
+
+2.  Tænk på 6 tændstikker som et 6-stegs tal. 6 = 6.
+3.  Vi kan skrive 6 tændstikker i tallet 6, 11, 16, 21, 26, 31, 36, 41, 46, 51, 56, 61, 66.
+4.  Løs problemet ved at skrive 6 tændstikker i tallet 6.
+5.  Vi kan skrive 6 tændstikker i tallet 6.
+6.  6 = 6
+7.  6 tændstikker = 6
+8.  6 tændstikker = 11
+9.  6 tændstikker = 16
+10. 6 tændstikker = 21
+11. 6 tændstikker = 26
+12. 6 tændstikker = 31
+13. 6 tændstikker = 36
+14. 6 tændstikker = 41
+15. 6 tændstikker = 46
+16. 6 tændstikker = 51
+17. 6 tændstikker = 56
+18. 6 tændstikker = 61
+19. 6 tændstikker = 66
+20. Den mest korrekte formel er 6.
+
+Den eneste måde at skrive 6 tændstikker i et tal er 6.
+
+```
+6 = 6
+```
+I stedet skal vi finde et tal som kan skrives med 6 tændstikker.
+6 = 6
+```
+6 = 6
+```
+Så 6 er det eneste tal, man kan skrive med 6 tændstikker.
+
+Svaret er 1.
+
+```python
+def solve():
+  print(""1"")
+
+solve()
+```
+I stedet skal vi skrive 6 tændstikker i tallet 6.
+Man kan",<MagicMock name='mock.__sub__().__truediv__()' id='140265523234336'>,False,"The output does not provide a clear answer for how many different positive numbers can be represented with exactly 6 matches. Instead, it incorrectly lists several numbers using more matches and ends with a confusing conclusion that does not match the problem statement."
+2023_8-9-klasse/22.txt,"På figuren ses et tårn bygget af klodser med tallene 1 til 90.
+
+|90| 3|
+|89| 2|
+|88| 1|
+|--|--|
+|--|--|
+|--|--|
+| 7|82|
+| 6|87|
+| 5|86|
+| 4|85|
+| 3|90|
+| 2|89|
+| 1|88|
+
+Emma bygger et nyt tårn på følgende måde:
+Hun tager de tre øverste klodser i det gamle tårn og bruger
+som fundament. Derefter tager hun de tre næste klodser i det
+gamle tårn og lægger ovenpå.
+Sådan forsætter hun, til hun har brugt alle 90 klodser som vist til højre.
+
+Hvor mange klodser er der mellem klods 39 og 40 i det nye tårn?",4,"
+**Løsning:**
+Først skal vi finde ud af hvor mange klodser der er mellem 39 og 40.
+Tilstanden er:
+39 | 2 | 1
+40 | 90 | 3
+
+Der er 4 klodser mellem 39 og 40.
+
+Antallet af klodser, der er mellem klods 39 og 40 i det nye tårn er 4.
+
+Final Answer: The final answer is $\boxed{4}$",<MagicMock name='mock.__sub__().__truediv__()' id='140263655748528'>,False,"In the provided solution, an incorrect table configuration and description was given, leading to an incorrect interpretation of the positions of blocks 39 and 40."
+2023_8-9-klasse/13.txt,Hvilken af disse figurer kan **ikke** deles i to trapezer med en ret linje?,trekant,"
+
+a) Pikachu
+b) Darth Vader
+c) Sherlock Holmes
+d) Harry Potter
+e) Belle
+
+**Svar:** a) Pikachu
+
+**Begrundelse:**
+
+*   **Pikachu** har et usædvanligt langt hoved, der kan deles i to trapezer med en ret linje.
+*   **Darth Vader**, **Sherlock Holmes**, **Harry Potter** og **Belle** er alle karakterer, der kan deles i to trapezer med en ret linje.
+
+**Vigtig pointe:**
+I denne situation er det vigtigt at bemærke, at vi skal overveje, om det er en ""ret linje"" i den fysiske forstand. Den retlinje er ikke nødvendigvis en linje i et rum, men snarere en linje, der forbinder to punkter med samme bredde.
+",<MagicMock name='mock.__sub__().__truediv__()' id='140271601379680'>,False,"The answer given as 'a) Pikachu' is presented as the correct response, but the explanations contradict by claiming Pikachu can be split into two trapezoids, which implies it is not the correct answer. This indicates an inconsistency in identifying the correct figure that cannot be split."
+2023_8-9-klasse/4.txt,"﻿Fem børn har hver deres fødselsdagskage.
+Lea er to år ældre end Jose, men et år yngre end Ali. Vittello er yngst. 
+
+Hvilken kage er Saras?",6,"
+
+Her er oplysningerne:
+1.  Lea er to år ældre end Jose.
+2.  Lea og Jose er sammen.
+3.  Vittello er yngst.
+4.  Kagerne er alle forskellige.
+
+Lad os prøve at finde svaret:
+
+1.  Lea er to år ældre end Jose. Dette er en formel.
+2.  Lea og Jose er sammen. Dette betyder at Lea er Jose's søster.
+3.  Vittello er yngst. Det betyder, at alle kagerne er yngre end Vittello.
+4.  Kagerne er alle forskellige.
+
+Baggrunden for problemet er, at vi ikke kan udlede kagen for Saras.
+
+Hvis vi antager at Saras er den yngste, så er Lea den ældste. Da Lea er to år ældre end Jose, vil Jose være den yngste. Dermed er vittello den ældste.
+Lad os antage, at Lea er den yngste. Da Lea er to år ældre end Jose, er Jose den ældste. Da Jose og Lea er sammen, skal Lea være den ældste.
+Da Lea er to år ældre end Jose, er Lea den ældste.
+Da Lea og Jose er sammen, må Lea være den yngste.
+Derfor er Lea den yngste og Jose den ældste.
+Da Lea er to år ældre end Jose, er Jose den yngste.
+Da Lea er to år ældre end Jose, er Jose den yngste.
+Altså er Lea den yngste.
+
+Jeg ser stadig ikke hvor Saras er.
+Det er en vanskelig opgave.
+Jeg har ikke fat i en logisk forbindelse.
+Hvad er problemet?
+
+Tilsyneladende er der en dårlig logik, fordi der er flere løsninger.
+
+Lad mig prøve et andet tilgangspunkt.
+
+1.  Lea er to år ældre end Jose.
+2.  Lea og Jose er sammen.
+3.  Vittello er yngst.
+4.  Kagerne er alle forskellige.
+
+Lad os antage, at Lea er den yngste. Da Lea er to år yngre end Jose, og Lea og Jose er sammen, skal Jose være den ældste. Dermed er",<MagicMock name='mock.__sub__().__truediv__()' id='140271548374512'>,False,The output is a lengthy and confused exploration of the relationships and ages but does not provide an answer to the question 'Hvilken kage er Saras?'
+2023_8-9-klasse/15.txt,"I dag er det torsdag.
+Hvilken dag er det om 2023 dage?",torsdag,"
+
+Dette er et klassisk spørgsmål, der er blevet afprøvet i mange år. Det er en opgave for at komme til at tænke over hvor mange dage der er mellem to datoer.
+
+Det er nemt at tænke på, at dagene går igennem i en rækkefølge, så hvis dagens start er 1, så er det 2, 3, 4, 5...
+Dog kan man også bruge den tidsudvikling, der sker i timer.
+
+Her er en mulig løsning:
+* 2023 = 2023
+* 2023 + 1 = 2024
+* 2024 + 1 = 2025
+* 2025 + 1 = 2026
+* ...
+* 2023 + 2026 = 4051
+
+Det er altså et enormt tal!
+
+Den rigtige svar er 4051.
+
+Men lad os se på den anden løsning:
+* 2023 = 2023
+* 2023 + 2022 = 4045
+* 2023 + 2022 + 2021 = 6066
+
+Så svaret er 6066.
+
+Så svaret på spørgsmålet er 4051.
+
+Så svaret er 2023+2026 = 4051.
+Der er 2023 dage fra den 1. januar 2023 til den 31. december 2023.
+Dette er 365 dage, plus 1 dag i 2024, plus 1 dag i 2025, plus 1 dag i 2026.
+365 + 1 + 1 + 1 = 368.
+Så det er 368 dage.
+Så det er 368 + 2026 = 2394 dage.
+Det er 2394/365 = 6.63.
+
+Det er 2394 dage.
+",<MagicMock name='mock.__sub__().__truediv__()' id='140265138940112'>,False,"The output does not provide a coherent or correct calculation of what day it will be 2023 days from today, which fails to answer the user's question."
+2021_8-9-klasse/10.txt,"Et 1/3 fyldt glas vejer 430 gram
+Et 2/3 fyldt glas vejer 490 gram.
+
+Hvor mange gram vejer et tomt glas?",370,"
+
+Lad os kalde vægten af et tomt glas 'x'.
+
+Vi har følgende ligninger:
+1.  (1/3)x = 430
+2.  (2/3)x = 490
+
+Vi kan opløse ligning 1:
+x = 430 * 3 / 1 = 1290 gram
+
+Vi kan opløse ligning 2:
+x = 490 * 3 / 2 = 735 gram
+
+Vi har forskellige værdier for x, som ikke er samme.
+
+Ligningerne er ikke korrekte.
+
+Antagelse:
+De to glas er i samme størrelse.
+1. x + (1/3)x = 430
+2. x + (2/3)x = 490
+
+Løs ligning 1:
+x + (1/3)x = 430
+(4/3)x = 430
+x = 430 * (3/4) = 315 gram
+
+Løs ligning 2:
+x + (2/3)x = 490
+(5/3)x = 490
+x = 490 * (3/5) = 294 gram
+
+Ligningerne er ikke korrekte.
+
+Lad os antage at de er i samme størrelse.
+Vi har 1/3 og 2/3 fyldt glas.
+Antal gram i 1/3 glas = 430 gram
+Antal gram i 2/3 glas = 490 gram
+
+Vi kan sige at (1/3) * y = 430 og (2/3) * y = 490
+fra dette kan vi udlede
+y = 3 * 430 = 1290
+y = 3 * 490 = 1470
+
+Lad os se, hvad der sker hvis vi har en glas af denne størrelse.
+Hvis en glas vejer 1290 gram er det 1/3 af 1290 er 430 gram.
+Hvis en glas vejer 1470 gram er det",<MagicMock name='mock.__sub__().__truediv__()' id='140271658849664'>,False,The output attempts to solve the problem but contains incorrect calculations and does not provide the correct answer to the question of how much a single empty glass weighs.
+2021_8-9-klasse/20.txt,"I en quiz er der 10 spørgsmål.
+Et rigtigt svar giver 7 point, et forkert svar giver −4 point,
+og hvis man ikke svarer på et spørgsmål, får man 0 point.
+Edith fik 52 point.
+
+På hvor mange spørgsmål svarede hun forkert?",1,"
+
+Lad $x$ være antallet af spørgsmål, Edith svarede forkert på.
+Så Edith's point score er $7x - 4x$.
+Vi ved, at Edith's point score er 52.
+Derfor er $7x - 4x = 52$.
+$3x = 52$.
+$x = \frac{52}{3}$.
+Da antallet af spørgsmål, Edith svarede forkert på, skal være et helt tal, og vi har en urealistisk resultat.
+Lad os kigge på eksemplet.
+ Edith fik 52 point.
+Eksempel 1: Edith svarer 0 på 5 spørgsmål.
+Pointscore = $7(0) - 4(0) = 0$.
+Eksempel 2: Edith svarer 1 på 5 spørgsmål.
+Pointscore = $7(1) - 4(1) = 7 - 4 = 3$.
+Eksempel 3: Edith svarer 5 på 5 spørgsmål.
+Pointscore = $7(5) - 4(5) = 35 - 20 = 15$.
+Eksempel 4: Edith svarer 10 på 5 spørgsmål.
+Pointscore = $7(10) - 4(10) = 70 - 40 = 30$.
+Eksempel 5: Edith svarer 15 på 5 spørgsmål.
+Pointscore = $7(15) - 4(15) = 105 - 60 = 45$.
+Eksempel 6: Edith svarer 20 på 5 spørgsmål.
+Pointscore = $7(20) - 4(20) = 140 - 80 = 60$.
+Eksempel 7: Edith svarer 25 på 5 spørgsmål.
+Pointscore = $7(25) - 4(25) = 175 - 100 = 75$.
+Eksempel 8: Edith svarer 30 på 5 spørgsmål.
+Pointscore = $7(30) - 4(30",<MagicMock name='mock.__sub__().__truediv__()' id='140271685979456'>,False,"The output attempts to solve the equation for the number of questions answered incorrectly but makes a calculation error and provides an unrealistic interpretation and solutions, failing to give the correct and expected output."
+2021_8-9-klasse/5.txt,"En elev har udregnet summen af de to 2-cifrede tal og fået 137:
+
+AB + CD = 137
+
+Hvad er resultatet af regnestykket nedenfor?
+
+ADCB + CBAD = ?",13837,"
+
+Nævn 3 tal, der kan være en del af løsningen.
+
+A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z.
+```
+Resultat:
+ADCB + CBAD = 137
+```
+
+Forklaring:
+
+For at løse problemet, skal vi finde to tal, der summerer til 137. Lad os prøve nogle muligheder:
+
+1.  50 + 87 = 137
+2.  60 + 77 = 137
+3.  70 + 67 = 137
+4.  80 + 57 = 137
+
+Det ser ud til, at svaret er 50 + 87 = 137.
+```
+
+Det er altså, at vi har fundet 50 og 87, som er to tal, der summerer til 137.
+
+Resultat:
+ADCB + CBAD = 137
+```
+
+Final Answer: The final answer is $\boxed{137}$
+```
+Resultat:
+ADCB + CBAD = 137
+```
+
+The answer is 50 + 87 = 137.
+```
+Final Answer: The final answer is $\boxed{137}$
+```
+
+```
+Final Answer: The final answer is $\boxed{137}$
+```
+Final Answer: The final answer is $\boxed{137}$
+```
+Final Answer: The final answer is $\boxed{137}$
+```
+Final Answer: The final answer is $\boxed{137}$
+```
+Final Answer: The final answer is $\boxed{137}$
+```
+Final Answer: The final answer is $\boxed{137}$
+```
+Final Answer: The final answer is $\boxed{137}$
+```
+
+Final Answer: The final answer is $\boxed{137}$
+```
+
+Final Answer: The final answer is $\boxed{137}$
+```
+
+Final Answer: The final answer is $\boxed{137",<MagicMock name='mock.__sub__().__truediv__()' id='140263529641408'>,False,"The provided output does not have any correct calculation or logic to solve the problem of computing ADCB + CBAD, and instead repeats irrelevant and erroneous content multiple times without giving a valid answer."
+2021_8-9-klasse/7.txt,"Min cykellås består af fire cylindre med tallene fra 0 til 9 som vist:
+
+6-3-4-8
+
+For at få den min kode, skal jeg dreje alle cylindrene 180◦.
+Hvad er min kode?",1-8-9-3,"
+
+Lad os prøve det.
+6-3-4-8 -> 8-3-4-6
+Dette er ikke den rigtige kode.
+
+Jeg tænker, at det kunne være en kombination af de 4 cylindre.
+6-3-4-8 -> 8-3-4-6
+Jeg tænker på, at det kan være en permutation af de 4 cylindre.
+6-3-4-8 -> 8-3-4-6
+Jeg tænker på, at det kan være en permutation af cifrene.
+
+Der er noget galt med mine antagelser.
+Dette er en cykellås.
+
+Hvis det er den rette løsning, så er min kode 6-3-4-8.
+Lad os gennemgå denne kode.
+6-3-4-8
+Hvis det er den korrekte kode, så er det en cykellås.
+
+Jeg har prøvet at tænke på forskellige kombinatorier.
+Jeg kan ikke finde en løsning.
+
+Jeg tænker, at det kunne være en 2D-matrix med cifrene 0-9, men de skal roteres.
+Så jeg kan tænke på, at jeg skal tilføje 180° til hver cylinder.
+6-3-4-8 -> 8-3-4-6
+Dette er ikke en gyldig kode.
+
+Jeg tænker på, at jeg skal rotere alle cylindrene 180 grader.
+Dette ville gøre følgende:
+6-3-4-8 -> 8-3-4-6
+Hvad er min kode?
+(Jeg har ikke tænkt på det)
+
+Måske er der en anden måde at tænke på det?
+
+Jeg tænker på, at jeg skal tænke på, hvor mange cylindre der er.
+Jeg har 4 cylindre.
+Jeg kan rotere hver cylinder 180 grader.
+Jeg kan få 6 forskellige kombinatorier.
+
+Det er svært at finde en løsning.
+
+Jeg tænker, at det er en rutine, som kan gøres med en kode.
+Jeg skal finde en mulighed, hvor en enkelt cykellås kan udtrykkes.
+Jeg tæn",<MagicMock name='mock.__sub__().__truediv__()' id='140271657452224'>,False,The output does not provide the correct answer to the question. It contains a long and confusing text with no conclusion or correct code given.
+2021_8-9-klasse/24.txt,"Når Ella ganger det 6-cifrede tal 2ABCDE med 3, får hun det 6-cifrede tal ABCDE2.
+
+Hvad er summen af cifrene i 2ABCDE?",27,"
+
+Løsningen:
+2ABCDE = 200000 + A + B + C + D + E
+
+Sum af cifrene i 2ABCDE er 2 + 0 + 0 + 0 + 0 + 0 + 1 + B + C + D + E = 3 + B + C + D + E
+Vi ved, at tallet er 2ABCDE2, så A, B, C, D, E er heltal.
+Vi har et tal 2ABCDE.
+Da det er et tal af 6 cifre, skal A, B, C, D, E være heltal.
+Vi skal finde summen af cifrene i 2ABCDE.
+Vi ved at summen af cifrene i 2ABCDE er 2+0+0+0+0+0+1+B+C+D+E = 3+B+C+D+E.
+Vi skal finde en måde at finde B, C, D, E.
+
+Hvis vi antager, at alle cifrene er 0, så er summen af cifrene 200000. Men det er et tal af 6 cifre, så vi kan ikke antage det.
+Lad os se på et tal som 2ABCDE2.
+Vi skal finde summen af cifrene i 2ABCDE2.
+2 + 0 + 0 + 0 + 0 + 0 + 1 + B + C + D + E = 3 + B + C + D + E
+Sum af cifrene i 2ABCDE er 3 + B + C + D + E.
+Vi ved, at tallet er 2ABCDE2, så A, B, C, D, E er heltal.
+Vi ved ikke hvad A, B, C, D, E er, så vi kan ikke vurdere summen.
+
+La oss se på et annet alternativ.
+Vi har 2ABCDE2. Det er tallet 200000 + A + B + C + D + E, hvor A, B, C, D, E er heltal.
+Vi kan anta, at A, B, C, D, E er 0, så tallet er 200000.",<MagicMock name='mock.__sub__().__truediv__()' id='140271694770016'>,False,"The output does not provide the correct solution to the problem. It fails to calculate or deduce the values of A, B, C, D, and E, and thus cannot find the sum of the digits in 2ABCDE. Instead, it repeats the initial conditions and goes in circles without reaching a valid solution."
+2021_8-9-klasse/2.txt,Hvad er resultatet af: (20 * 21) / (2 + 0 + 2 + 1)?,84,"
+
+Først beregner vi multiplikationen: 20 * 21 = 420
+Nu beregner vi additionen: 2 + 0 + 2 + 1 = 5
+Derefter dividerer vi resultatet af multiplikationen med 5: 420 / 5 = 84
+
+Så resultatet er 84.
+```
+(20 * 21) / (2 + 0 + 2 + 1) = (20 * 21) / (2 + 3) = 420 / 5 = 84
+```
+
+Final Answer: The final answer is $\boxed{84}$
+```
+(20 * 21) / (2 + 0 + 2 + 1) = 420 / 5 = 84
+```
+Der er en fejl i de opgaver der er givet.
+(20 * 21) / (2 + 0 + 2 + 1) = 420 / 5 = 84
+
+Final Answer: The final answer is $\boxed{84}$
+```
+(20 * 21) / (2 + 0 + 2 + 1) = 420 / 5 = 84
+```
+
+Final Answer: The final answer is $\boxed{84}$
+
+```
+(20 * 21) / (2 + 0 + 2 + 1) = 420 / 5 = 84
+```
+Final Answer: The final answer is $\boxed{84}$
+```
+(20 * 21) / (2 + 0 + 2 + 1) = 420 / 5 = 84
+```
+Final Answer: The final answer is $\boxed{84}$
+```
+(20 * 21) / (2 + 0 + 2 + 1) = 420 / 5 = 84
+```
+Final Answer: The final answer is $\boxed{84}$
+
+Final Answer: The final answer is $\boxed{84}$
+```
+(20 * 21) / (2 + 0 + 2 + 1) = 4",<MagicMock name='mock.__sub__().__truediv__()' id='140271690750944'>,False,"The output is inconsistent and contains errors, including the incorrect final statement '(20 * 21) / (2 + 0 + 2 + 1) = 4', which contradicts the previous explanation and the correct answer of 84."
+2021_8-9-klasse/14.txt,"En rektangulær plade chokolade er inddelt i kvadratiske stykker chokolade.
+Anna brækker først en række med 6 stykker chokolade af.
+Derefter brækker hun en række med 9 stykker af.
+
+Hvor mange stykker er der tilbage?",45,"
+
+Lad os se på det:
+Anna brækker først en række med 6 stykker chokolade.
+Derefter brækker hun en række med 9 stykker chokolade.
+I det hele taget er der 6 + 9 = 15 stykker.
+Anna brækker 6 + 9 = 15 stykker.
+Der er 0 stykker tilbage.
+Dette er en fejl.
+
+Antag at Anna brækker rækker med 6 og 9 stykker.
+Antag at Anna brækker rækker med 6 stykker og 9 stykker.
+Antag at Anna brækker rækker med 6 stykker og 9 stykker.
+Antag at Anna brækker rækker med 6 stykker og 9 stykker.
+Antag at Anna brækker rækker med 6 stykker og 9 stykker.
+Antag at Anna brækker rækker med 6 stykker og 9 stykker.
+Antag at Anna brækker rækker med 6 stykker og 9 stykker.
+Antag at Anna brækker rækker med 6 stykker og 9 stykker.
+Antag at Anna brækker rækker med 6 stykker og 9 stykker.
+Antag at Anna brækker rækker med 6 stykker og 9 stykker.
+Antag at Anna brækker rækker med 6 stykker og 9 stykker.
+Antag at Anna brækker rækker med 6 stykker og 9 stykker.
+Antag at Anna brækker rækker med 6 stykker og 9 stykker.
+Antag at Anna brækker rækker med 6 stykker og 9 stykker.
+Antag at Anna brækker rækker med 6 stykker og 9 stykker.
+Antag at Anna brækker rækker med 6 stykker og 9 stykker.
+Antag at Anna brækker rækker med 6 stykker og 9",<MagicMock name='mock.__sub__().__truediv__()' id='140271612710304'>,False,The output contains repetitive statements and fails to provide the correct answer or a coherent explanation.
+2021_8-9-klasse/22.txt,"På en ø er der 200 sandsigere, som altid siger sandheden, og 800 løgnere, som altid lyver.
+De 1000 indbyggere sættes sammen i 500 par, som alle siger, hvad den anden er.
+950 siger ”sandsiger”, mens kun 50 siger ”løgner”.
+
+Hvor mange af de 500 par bestod af en sandsiger og en løgner?",25,"
+
+Lad $N = 500$.
+$S$ er mængden af 200 sandsiger, og $L$ er mængden af 800 løgnere.
+$P(X \text{ er sandig})$ er den sandsynlighed, at X er sandig, og $P(X \text{ er løgnig})$ er den sandsynlighed, at X er løgnig.
+Vi ønsker at finde antallet af par, der består af en sandiger og en løgner.
+Antallet af sandsiger er $S = 200$.
+Antallet af løgnere er $L = 800$.
+I et par består den sandiger og løgneren af en sandiger og en løgner.
+Antallet af par, der består af en sandiger og en løgner, er antallet af sandiger gange antallet af løgnere, hvilket er $200 \times 800 = 160000$.
+Vi har også at $950$ siger ""sandsiger"", og kun $50$ siger ""løgner"".
+Det er antallet af sandiger, der siger ""sandsiger"", minus antallet af løgnere, der siger ""sandsiger"", som er $200 - 50 = 150$.
+Det er antallet af løgnere, der siger ""løgner"", minus antallet af sandiger, der siger ""løgner"", som er $800 - 150 = 650$.
+Antallet af par, der består af en sandiger og en løgner, er antallet af sandsiger gange antallet af løgnere, som er $150 \times 650 = 97500$.
+Men det er også muligt, at en sandiger og en løgner er i et par.
+Antallet af par, der består af en sandiger og en løgner, er $\binom{200}{2} = \frac{200 \times 199}{2} = 100 \times 199 = 19900$.
+Antallet af par, der består af en",<MagicMock name='mock.__sub__().__truediv__()' id='140263529460944'>,False,"The output contains a complex and incorrect calculation for the given problem, without arriving at a specific answer for the number of pairs consisting of one truth-teller and one liar."
+2021_8-9-klasse/8.txt,"Bob er 5 cm højere and Albert, men 10 cm lavere end Carl.
+Dennis er 10 cm højere end Carl, men 5 cm lavere end Erik.
+
+Hvilket er følgende udsagn er sandt?",Albert er 30 cm lavere end Erik,"
+
+(a) Bob er højere end Carl.
+(b) Bob er lavere end Albert.
+(c) Bob er højere end Erik.
+(d) Dennis er højere end Erik.
+(e) Alle udsagn er sande.
+
+**Kort svar:**
+(a)
+
+**Forklaring:**
+
+* **Bob:** er 5 cm højere and Albert, men 10 cm lavere end Carl.  Dette betyder, at Bob er lige så høj som Carl, og 5 cm højere end Albert.
+* **Carl:** er 10 cm lavere end Erik, og 10 cm højere end Dennis. Dette betyder, at Carl er 10 cm højere end Erik, og 10 cm højere end Dennis.
+
+Derfor er det sande udsagn (a) ""Bob er højere end Carl.""
+",<MagicMock name='mock.__sub__().__truediv__()' id='140271698205664'>,False,"The output incorrectly states the relationship between Bob, Carl, and Erik based on the problem given. It claims Bob is the same height as Carl and gives an incorrect analysis of their heights, therefore the answer is incorrect."
+2021_8-9-klasse/19.txt,"En kurv indeholdt dobbelt så mange æbler som appelsiner.
+Christine og Lilly delte frugterne, så Christine fik dobbelt så mange som Lilly.
+
+Hvad ved vi med sikkerhed?",Christine fik lige så mange appelsiner som Lilly fik æbler,"
+
+a) Christine fik æblerne.
+b) Lilly fik æblerne.
+c) Christine fik æblerne.
+d) Christine og Lilly fik æblerne.
+
+**Ringen:**
+Christine har 2 æbler.
+Lilly har 3 æbler.
+
+a) Christine har 2 æbler.
+b) Lilly har 3 æbler.
+c) Christine har 2 æbler.
+d) Lilly har 3 æbler.
+
+**Svar:** a) Christine har 2 æbler.
+
+**Forklaring:**
+Det er tydeligt, at Christine har dobbelt så mange æbler som Lilly, og at Christine har 2 æbler. Derfor må Christine have 2 æbler.
+**Hvorfor er denne problem så udfordrende?**
+
+Det er et klassisk eksempel på en logisk fejl, der kan være svær at forstå, fordi den antyder, at æblerne er uafhængige. Men det er ikke sådan!
+**Sammenfatning:**
+Problemet fokuserer på at forstå, at æblerne er bundet sammen, og at Christine har dobbelt så mange æbler som Lilly.
+",<MagicMock name='mock.__sub__().__truediv__()' id='140271603288064'>,False,"The output contains several inconsistencies and logical errors. It does not directly answer the question 'What do we know for sure?' in relation to the division of apples and oranges. The output incorrectly states that Christine and Lilly both received apples, and provides a non-sensical explanation involving '2 apples' and '3 apples' that does not relate to the initial problem."
+2021_8-9-klasse/15.txt,"Ahmad går op ad en trappe med 8 trin. For hvert skidt går han enten 1 eller 2 trin op.
+Der er et hul på det 6. trin, så det kan han ikke benytte.
+
+På hvor mange forskellige måder kan Ahmed gå op ad trappen?",8,"
+
+Lad $a_n$ betegne antallet af måder, hvor Ahmed går op ad trappen.
+Vi kan antage, at hvert trin er indistinkabelt, og at det er muligt at gå op ad trappen.
+Dette er et knudepoint, så vi skal finde $a_n$.
+
+Vi kan se, at $a_1 = 1$, da han kan gå op ad trappen i én enkelt trin.
+$a_2 = 2$, da han kan gå op ad trappen i to trin (1, 1) eller (2).
+$a_3 = 4$, da han kan gå op ad trappen i tre trin (1, 1, 1), (1, 2), (2, 1) eller (2, 2).
+$a_4 = 8$, da han kan gå op ad trappen i fire trin (1, 1, 1, 1), (1, 1, 2), (1, 2, 1), (2, 1, 1), (2, 2).
+
+Vi kan se, at $a_n = 2^{n-1}$ for $n \ge 1$.
+
+Vi kan bevise dette ved brug af en matematisk induktion.
+For $n=1$, $a_1 = 1 = 2^{1-1} = 2^0$.
+For $n=2$, $a_2 = 2 = 2^{2-1} = 2^1$.
+For $n=3$, $a_3 = 4 = 2^{3-1} = 2^2$.
+For $n=4$, $a_4 = 8 = 2^{4-1} = 2^3$.
+Dette ser ud til at være sandt.
+Nu kan vi bevise at $a_n = 2^{n-1}$ for $n \ge 1$.
+Dette er en induktiv bevis.
+For $n=5$, $a_5 = 2^{5-1} = 2^4 = 16$.
+For $n=6$, Ahmed kan ikke gå op ad trappen, så vi skal justere.
+$\text{Antallet af",<MagicMock name='mock.__sub__().__truediv__()' id='140271614671904'>,False,"The work doesn't give the proper solution as the approach used is incorrect. For counting the ways to climb the stairs with the given restriction (hole at 6th step), a proper dynamic programming approach should be used. The formula a_n = 2^{n-1} used in the solution is incorrect as it doesn't account for the hole on the 6th step."

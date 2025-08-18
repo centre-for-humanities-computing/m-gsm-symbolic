@@ -1,0 +1,957 @@
+name,inputs,expected_output,output,task_duration,correct
+684,"Jakob og Jens har 30 minutter til at gå til skolen sammen. Det tager dem 6 minutter at komme til hjørnet, hvor biblioteket er. Det tager dem yderligere 13 minutter at komme til brandstationen. Hvor meget tid har de tilbage til at nå skolen uden at komme for sent?","Jakob og Jens ankommer til biblioteket med 30 - 6 = <<30-6=24>>24 minutter tilbage til at nå brandstationen.
+Derefter ankommer de til brandstationen og har 24 - 13 = <<24-13=11>>11 minutter tilbage til at nå til skolen uden at komme for sent.
+#### 11"," Jakob og Jens rejser 6 + 13 = 19 minutter hver.
+De har 30 minutter/tid, så de har 30 - 19 = 11 minutter tilbage.
+#### 11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111211111111111111119111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111211111111111111111111111111111111111111111111111111111111111111111112111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",<MagicMock name='mock.__sub__().__truediv__()' id='140229182217712'>,False
+432,"Prins Theodor dræbte 100 drager med sit mægtige sværd, mens prins Arthur, der brugte et spyd, dræbte tre fjerdedele så mange drager som prins Theodor. Ved hjælp af en rusten jernøkse dræbte prins Wilhelm to gange så mange drager som prins Arthur. Men prins Stefan, som havde glemt sit sværd derhjemme, dræbte en femtedel så mange drager som prins Wilhelm ved hjælp af en neglefil. Hvor mange drager har prins Stefan dræbt?","Prins Arthur dræbte tre fjerdedele så mange drager som prins Theodor, altså 100*3/4=<<100*3/4=75>>75 drager.
+Prins Wilhelm dræbte to gange så mange drager som prins Arthur, altså 2*75=<<2*75=150>>150 drager.
+Prins Stefan dræbte en femtedel så mange drager som prins Wilhelm, altså 150*1/5=<<150*1/5=30>>30 drager.
+#### 30","
+Prins Theodor dræbte 100 drager.
+Prins Arthur dræbte 100 drager * 1/3 = 33.33 drager.
+Prins Wilhelm dræbte 100 drager * 2/5 = 40 drager.
+Prins Stefan dræbte 100 drager * 1/5 = 20 drager.
+
+Så prins Stefan har dræbt 20 drager.
+#### 200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140229182420896'>,False
+1305,"Slot-familien har travlt med at lave småkager. Indtil videre har de lavet 7995 småkager. De har 2595 citron småkager, 3075 havregryn småkager og nogle chokolade småkager. Hvor mange chokolade småkager har de lavet?","Det samlede antal citron og havregryn småkager er 2595 + 3075 = <<2595+3075=5670>>5670.
+Derfor har de lavet 7995 - 5670 = <<7995-5670=2325>>2325 chokolade småkager.
+#### 2325","
+Antal citron småkager = 7995
+Antal havregryn småkager = 3075
+Antal chokolade småkager = totalt småkager - (citron småkager + havregryn småkager) = 7995 - (7995 + 3075) = 7995 - 11070 = -3075. Det er ikke muligt, da antallet af småkager skal være positivt.
+
+Det er påklaret, at der er 2595 chokolade.####
+1107000008287500052014694859524886748595248867485952488674859524886748595248867485952488674859524886748595248867485952488674859524886748595248867485952488674859524886748595248867485952488674859524886748596200000000000000000000000000000000000000000000000000000000000000000000000000000018757000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140229182224720'>,False
+39,"Dorte kan løbe fire gange hurtigere end hun kan gå, men hun kan springe med en hastighed der er halvdelen af den hastighed, hun kan løbe. Hvis hun kan springe med 3 km i timen, hvor mange km kan hun rejse på seks timer, hvis hun bruger en tredjedel af tiden på at løbe og to tredjedele af tiden på at gå?","Hvis Dorte kan springe med halvdelen af hastigheden hun kan løbe, så kan hun løbe med 3*2=<<3*2=6>>6 km i timen.
+Og da hun kan løbe med en hastighed, der er fire gange hurtigere end hun kan gå, betyder det, at hun kan gå med 6/4=1,5 km i timen.
+Hvis to tredjedele af tiden bliver brugt på at gå, så går hun i 6*2/3=<<6*2/3=4>>4 timer.
+Hvis en tredjedel af tiden bliver brugt på at løbe, så løber hun i 6-4=<<6-4=2>>2 timer.
+Således løber hun i 2 timer med 6 km i timen, eller 2*6=<<2*6=12>>12 km.
+Hun går i 4 timer med 1,5 km i timen, eller 4*1,5=<<4*1,5=6>>6 km.
+Således rejser hun i alt 12+6=<<12+6=18>>18 km.
+#### 18"," Startet Dorte med 3 km/time. Ændring i hastighed = 3 km/time * (1/3) = 1 km/time.
+Dette giver hende en samlet hastighed på 3 km/time + 1 km/time = 4 km/time.
+Under seks timer er hun vist 4 km/time * 6 timer = 24 km.
+#### 24144906782423213634461347531676243000019160972711128642598978811161287213837781413391085236276489792514886145273130619264848927413373511034681821456700040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140220451143648'>,False
+1141,"Hvis Kasper spiser 3 æg om dagen i 30 dage og derefter øger det til 5 æg om dagen i 30 dage, hvor mange dusin æg vil Kasper have brug for i 60 dage?","Han starter med at spise 3 æg om dagen i 30 dage, hvilket i alt er 3*30 = <<3*30=90>>90 æg
+Derefter øger han det til 5 æg om dagen i 30 dage, hvilket i alt er 5*30 = <<5*30=150>>150 æg
+I alt vil han spise 90+150 = <<90+150=240>>240 æg
+Der er 12 æg i 1 dusin og han vil spise 240 æg, hvilket er 240/12 = 20 dusin æg
+#### 20","
+I starten spiser Kasper 3 æg/dag for 30 dage.
+Antal æg spist = 3 æg/dag * 30 dage = 90 æg
+I det andet, spiser Kasper 5 æg/dag for 30 dage.
+Antal æg spist = 5 æg/dag * 30 dage = 150 æg
+Samlet antal æg spist = 90 + 150 = 240 æg
+Derfor har Kasper brug for 240 æg i 60 dage.
+240 æg / 12 æg/dusin = 20 du####
+4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140229182438960'>,False
+1239,"En pedel skal gøre rent på en skole med 80 klasselokaler. De har 5 dage til at få det gjort. Det tager dem 15 minutter per klasselokale. Hvis de arbejder 8 timer om dagen, hvor stor en procentdel af deres dag, i gennemsnit, går til at rengøre klasselokaler?","De skal gøre rent 16 klasselokaler om dagen, fordi 80/5 = <<80/5=16>>16
+De bruger 240 minutter på at gøre rent om dagen, fordi 16*15 = <<16*15=240>>240
+De bruger 4 timer om dagen, fordi 240 / 60 = <<240/60=4>>4
+De bruger 1/2 af deres dag på at rengøre klasselokaler, fordi 4 / 8 = <<4/8=0,5>>0,5
+De bruger 50% af deres dag på at rengøre klasselokaler, fordi 0,5*100 = <<0,5*100=50>>50
+#### 50"," Klasse kan ikke lægges i gang, så vi forkortes de opgaver.
+Antal klasselokaler: 80
+Antal dage: 5
+Tiden det tager at rengøre klaselokaler: 15 minutter/klasselokale
+Dage i døgnet = 8 timer/dag
+Antal timer der føres hver dag = 8 timer/dag * 5 dage/dag = 40 timer/dag
+Antal klasselokaler gulvet: 80 klas#### 80000000700000070000007000000700000070000007000000700000070000000000000000000000000000000000000000000000000000000000000000000000000070000007000000700000700000000007000000000000000000000000000700000000000700000000000000000000000000000000000000000000000000000000000000000000000000000000700000000000000000005000000000000000000000000000000000000000000000000070000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140229182215936'>,False
+1088,"Der er 6 lektioner om dagen for en normal elev, men Johannes skal tage 2 ekstra timer. Hver time varer 40 minutter. Han går til undervisning 5 dage om ugen. Han bruger derefter 1/16 af sine ugentlige minutter hver på lørdag og søndag som ekstra læringstid. Hvor mange timer om ugen bruger han på at lære?","Han tager 6+2=<<6+2=8>>8 timer om dagen
+Det betyder, at han bruger 40*8=<<40*8=320>>320 minutter per dag i klassen
+Så han bruger 320*5=<<320*5=1600>>1600 minutter om ugen
+Det betyder, at han bruger 1600*1/16=<<1600*1/16=100>>100 minutter hver på lørdag og søndag.
+Så han bruger 1600+100+100=<<1600+100+100=1800>>1800 minutter om ugen
+Så han bruger 1800/60=<<1800/60=30>>30 timer om ugen
+#### 30","
+De normale lektioner om dagen er 6.
+Johannes tager 2 ekstra timer.
+Så de ekstra timer er 2 * 40 = 80 minutter.
+Universale minutter om dagen er 40 minutter/time * 6 timer = 240 minutter.
+Johannes tager 2 ekstra timer. (2 * 40 = 80)
+Selvsum af læringstid er 80 minutter / 16 = 5 minutter.
+Tid på lørdæ#### 24055555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555553555555555555555555555555556555555555555555555555555555555555555555555555555",<MagicMock name='mock.__sub__().__truediv__()' id='140229182787408'>,False
+728,"Clara har 15 lyseblå trådruller, 45 mørkeblå trådruller, 40 lysegrønne trådruller og 50 mørkegrønne trådruller. Hvilken procentdel af hendes ruller er blå?","Først finder vi antallet af blå ruller: 15 ruller + 45 ruller = <<15+45=60>>60 ruller
+Derefter finder vi det samlede antal ruller: 40 ruller + 50 ruller + 60 ruller = <<40+50+60=150>>150 ruller
+Derefter dividerer vi antallet af blå ruller med det samlede antal ruller og multiplicerer med 100% for at udtrykke svaret i procent: 60 ruller / 150 ruller * 100% = 40%
+#### 40"," Clara har 15 + 45 + 40 + 50 = 150 trådruller.
+Blå: 15 lyseblå + 45 mørkeblå = 60 trådruller.
+Procentdel = (60/150) * 100 = 40%.
+#### 4000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140220451143072'>,False
+304,"William arbejder en 10-timers vagt hver dag, fem dage om ugen. Han tjener 10 kr i timen og får en bonus på 300 kr hver uge, hvis virksomheden klarer sig godt. Hvor mange penge tjente William i april, hvis virksomheden klarede sig rigtig godt hele måneden?","På en dag tjener William 10 * 10 = <<10*10=100>>100 kr
+Hvis han arbejder fem dage om ugen, er det samlede antal dage for hele måneden 5*4 = <<5*4=20>>20 dage.
+Da han tjener 100 kr om dagen, er det samlede beløb for hele måneden 20 * 100 = <<20*100=2000>>2000 kr.
+Han fik også en 300 * 4 = <<300*4=1200>>1200 kr bonus, fordi virksomheden klarede sig godt i alle ugerne i april.
+Ved slutningen af april havde han tjent 2000 + 1200 = <<2000+1200=3200>>3200 kr.
+#### 3200","
+William tjener 10 kr/time * 10 timer/dag * 5 dage/uge * 1000 kr/uge = 50000 kr/uge.
+Virksomheden klarer sig rigtig godt hele måneden, så han får 300 kr/uge.
+Så hans samlede indtjening i april er 50000 kr/uge * 4 uger = 200.000 kr.
+#### 20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140229182786928'>,False
+434,Automaterne sælger chips for 40 øre og slikbarer for 75 øre. George brugte 5 kr og fik 3 poser chips og havde 1% af sine penge tilbage i byttepenge. Hvor mange slikbarer købte han?,"George fik 0,05 kr i byttepenge fordi 5*1/100 = <<5*1/100=0,05>>0,05
+George brugte 4,95 kr fordi 5 - 0,05 = <<5-0,05=4,95>>4,95
+George brugte 1,2 kr på chips fordi 3*0,4 = <<3*0,4=1,2>>1,2
+George brugte 3,75 kr på slikbarer fordi 4,95 - 1,2 = <<4,95-1,2=3,75>>3,75
+George købte 5 slikbarer fordi 3,75 / 0,75 = <<5=5>>5
+#### 5","
+George fik 5 kr.
+Han havde 3 poser chips.
+Chips bliver 3 * 40 = 120 kroner.
+George havde 1% af sine 5 kr, som er 5/100 = 0,05.
+0,05 * 5 = 0,25 kroner.
+George havde 5 - 0,25 = 4,75 kroner tilbage i byttepenge.
+Han havde 1.000 kroner i totalt antal slikbarer.
+Hvert slikbarer kostede 75 øre.
+Så mange ####
+50037500775007750077500775007750077500775007750077500775007750077500775007750077500775007750077500775007750077500775007750077500775007750077500775007750077500775007750077500775007750077500775007750077500775007750077500775007750077500775007750077500775007750077500775000775007750077500775007750077500775007750077500775007750077500775007750077500775007750077500775",<MagicMock name='mock.__sub__().__truediv__()' id='140229183061120'>,False
+1223,"For at foretage et opkald fra en telefonboks, skal du betale 0,25 kroner for hvert minut af dit opkald. Efter 16 minutter falder prisen til 0,2 kroner per minut. Hvor meget ville et 36-minutters opkald koste?","De første 16 minutter ville koste 16 * 0,25 = <<16*0,25=4>>4 kroner.
+Derefter er der 36 - 16 = <<36-16=20>>20 minutter af opkaldet tilbage.
+Og disse 20 minutter koster 20 * 0,2 = <<20*0,2=4>>4 kroner.
+Så i alt ville det 36-minutters opkald koste 4 + 4 = 8 kroner.
+#### 8","
+- For de første 16 minutter betaler man 0,25 kr/minut * 16 minutter = 4 kr.
+- De restende 16 minutter betaler man 0,2 kr/minut * 16 minutter = 3,2 kr.
+Så det samlede pris er 4 kr + 3,2 kr = 7,2 kr.
+#### 72000003200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140229183023696'>,False
+456,I en sæt magiker-kort er der 15 røde kort og 60% flere grønne kort. Gule kort er lige så mange som summen af røde og grønne kort. Hvor mange kort af alle nævnte farver er der?,"Der er 60/100 * 15 = <<60/100*15=9>>9 flere grønne kort end røde kort.
+Hvilket betyder, at der er 15 + 9 = <<15+9=24>>24 grønne kort.
+Gule kort udgør op til 15 + 24 = <<15+24=39>>39 kort.
+Så i alt er der 39 + 39 = <<39+39=78>>78 kort i forskellige farver.
+#### 78","
+Antal røde kort = 15
+Antal grønne kort = 60% af 15 = (60/100) * 15 = 9
+Mængden af røde og grønne kort = 15+9 = 24.
+Gule kort = 15+9 = 24
+Antal kort af alle nævnte farver = 15+9+24 = 48.
+#### 486000000000000000000000000000000000000000000000000000000030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140229182696352'>,False
+991,"Kometen Halley kredser rundt om solen hvert 75 år. Henriks far så kometen, da han var 30 år gammel. Henrik så kometen anden gang, da han var tre gange så gammel som hans far var, da han så kometen. Hvor gammel var Henrik, da han så kometen for første gang?","Henrik så kometen for anden gang, da han var 30 år * 3= <<30*3=90>>90 år gammel.
+Kometen Halley kan ses hvert 75 år, så Henrik så kometen for første gang, da han var 90 år - 75 år = <<90-75=15>>15 år gammel.
+#### 15","
+Da Henriks far så kometen første gang, var han 30 år gammel.
+Henrik så kometen anden gang, da han var tre ganger så gammel. Derfor var Henriks alder 30 + 3 * 30 = 30 + 90 = 120 år gammel.
+Henrik så kometen anden gang, da han var tre gange så gammel som hans far var. Så han var 120 Jahre gammel.
+D=1#### 12047375939328428476968831170837663614677967214020496100659253587766760065925358776676006592535877667600659253587766760065925358776676006592535877667600659253587766760065925358776676006592535877667600659253587766760065925358776676006592535877667600659253587766760065925358776676006592535877667600659253587766760065925358776676006592535877667600659253587766760065925358776676006592535",<MagicMock name='mock.__sub__().__truediv__()' id='140229139214944'>,False
+873,"David har 85,5 kr og ønsker at købe 16 bolte fra en kasse i byggemarkedet. Hver bolt koster 0,2 kr. Hvor mange penge har David tilbage efter at have betalt for boltene?","David betalte 16*0,2 kr = <<16*0,2=3,2>>3,2 kr for boltene.
+David har 85,5 kr - 3,2 kr = 82,3 kr tilbage.
+#### 82,3"," David har 85,5 kr.
+Han skal købe 16 bolte.
+Pris pr. bolt = 0,2 kr.
+Samlet pris for bolte = 16 * 0,2 = 3,2 kr.
+David har 85,5 kr - 3,2 kr = 82,3 kr tilbage.
+#### 823000000070000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140229182486192'>,False
+1053,"Alice kvalificerede sig til en plads på løbeholdet, så hun gik ud for at shoppe noget sportsudstyr. Hun købte en tanktop til 10 kr, et par løbeshorts for 5 kr mere end det tanktoppen kostede og et par sneakers, der oprindeligt kostede 48 kr, men var på udsalg til halvdelen af prisen. Hun havde en kupon til 2 kr rabat på pakken med 8 kr sportsstrømper, som hun også købte. Hvor meget brugte hun på sportsudstyr?","Shortsene kostede 5 kr mere end tanktoppen, så de kostede 5 kr + 10 kr = <<5+10=15>>15 kr.
+Hendes sneakers kostede halvdelen af den oprindelige pris på 48 kr, så de kostede 48 kr*1/2=24 kr.
+Med hendes kupon kostede strømperne 8 kr - 2 kr = <<8-2=6>>6 kr.
+Tanktoppen, shortsene, sneakersne og strømperne kostede tilsammen 10 kr + 15 kr + 24 kr + 6 kr = <<10+15+24+6=55>>55 kr.
+#### 55","
+Tanktop: 10 kr
+Løbeshorts: 5 kr
+Sneakers: 48 kr - 2 kr rabat = 46 kr
+Strømper: 8 kr
+Samlet udgifter = 10 + 5 + 46 + 8 = 69 kr
+#### 69000090000000000000000000000000000000000000000000000000000000000000000000000000000000000007840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140220533350064'>,False
+364,Der er 96 fjerdeklasse elever på Frederiksbjerg skole. 43 af dem er piger. Fredag var 5 fjerdeklasse piger og 4 fjerdeklasse drenge fraværende. Hvor mange fjerdeklasse drenge var på Frederiksbjerg skole fredag?,"Af de 96 fjerdeklasse elever er 43 piger, så 96 elever - 43 piger = <<96-43=53>>53 drenge.
+Fredag var der 53 drenge - 4 fraværende = <<53-4=49>>49 drenge.
+#### 49","
+Delfort piger: 43
+Delfort drenge: 96 - 5 = 91
+Delfort lærer: 96 - 5 - 43 = 96 - 48 = 48
+Antal fjerdeklasse drenge: 48
+#### 48000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140229183057760'>,False
+74,"Albert har en blomsterstand på markedet. Han sælger tre slags blomster: tulipaner, liljer og solsikker. Han sælger normalt tulipaner for 18,1 kr per potte, liljer for 12,3 kr per potte og solsikker for 14,9 kr per potte. Albert har ingen øre i dag, så han har besluttet at afrunde til den nærmeste krone. Hvis han sælger 12 potter med tulipaner, 9 potter med liljer og 17 potter med solsikker, hvor meget vil han tjene?","Albert vil runde sine tulipaner ned fra 18,1 kr til 18 kr, da tallet efter 18 er lavere end 5.
+Albert vil runde sine solsikker op fra 14,9 kr til 15 kr, da tallet efter 14 er 5 eller højere.
+Albert sælger 12 potter med tulipaner*18 kr = <<12*18=216>>216 kr
+Albert sælger 9 potter med liljer*12 kr = <<9*12=108>>108 kr
+Albert sælger 17 potter med solsikker*15 kr = <<17*15=255>>255 kr
+I alt vil Albert tjene 216 kr + 108 kr + 255 kr = <<216+108+255=579>>579 kr
+#### 579","
+Tulipaner: 12 potter * 18,1 kr/potte = 217,2 kr
+Liljer: 9 potter * 12,3 kr/potte = 110,7 kr
+Solsikker: 17 potter * 14,9 kr/potte = 253,3 kr
+Samlet indtjening: 217,2 kr + 110,7 kr + 253,3 kr = 581,2 kr
+#### 5812342331213418578718367703966304414726280907649607951834521398324842369749994615185418915213710769365702402578658369319847774061852053274752722470306375643146250127971584249499168739673403885342717313024377706896355193798876482025076564743212605020127591646445680908612088875424341851778197753526949467875443228835956309362607172522347268933824939631203317862308468703540412747",<MagicMock name='mock.__sub__().__truediv__()' id='140229139442928'>,False
+145,Martin har 10 hektar ananasplantage. Der er 100 ananas per hektar. Martin kan høste sine ananas hver 3 måned. Hvor mange ananas kan Martin høste inden for et år?,"Martin har 100*10= <<100*10=1000>>1000 ananas på sin plantage.
+Martin kan høste sine ananas 12 / 3 = <<12/3=4>>4 gange om året
+Derfor kan Martin høste 1000*4 = <<1000*4=4000>>4000 ananas om året.
+#### 4000"," Martin kan høste 100*3 = 300 ananas per måned.
+Der er 12 måneder i et år. Så Martin kan høste 300 * 12 = 3600 ananas inden for et år.
+#### 360000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140229183174080'>,False
+843,Carl har to 50-kr sedler. Han køber seks vandpistoler for 5 kr stykket. Han køber også 3 pakker vandballoner for 8 kr stykket. Hvor mange penge har han tilbage?,"Carl starter med 2*50 kr = <<2*50=100>>100 kr.
+Carl køber seks vandpistoler * 5 kr = <<6*5=30>>30 kr på vandpistoler.
+Carl køber 3 pakker vandballoner * 8 kr = <<3*8=24>>24 kr på vandballoner.
+I alt har Carl brugt 30 kr + 24 kr = <<30+24=54>>54 kr.
+Carl har 100 kr - 54 kr = <<100-54=46>>46 kr tilbage.
+#### 46"," Carl har 2 * 50 = 100 kr
+Han har 6 * 5 = 30 kr
+Han har 3 * 8 = 24 kr
+Så Carl har 100 + 30 + 24 = 154 kr tilbage.
+#### 1540003671546761831545460367154671200000000000000000000000000000000000000000006678000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140229139445328'>,False
+1165,Johan samler affald fra 3 forskellige lejlighedskomplekser. De første to har 200 lejligheder hver og den sidste er 60% større end de to andre tilsammen. Johan samler affald 3 gange om ugen fra hvert sted og han bliver betalt 3 kr per afhentning for hver lejlighed. Hvor mange penge tjener han på en uge?,"De første to komplekser har 2*200=<<2*200=400>>400 lejligheder
+Det 3 har 400*0,6=<<400*0,6=240>>240 flere lejligheder end de to tilsammen
+Så i alt har det 400+240=<<400+240=640>>640 lejligheder
+Så han går til 640+400=<<640+400=1040>>1040 lejligheder hver gang
+Det betyder at han besøger 1040*3=<<1040*3=3120>>3120 lejligheder hver uge
+Så han tjener 3120*3 kr=<<3120*3=9360>>9360 kr hver uge
+#### 9360","
+Jgruppen er samlet fra 3 forskellige lejlighedskomplekser.
+To lejlighedskomplekser har 200 lejligheder hver.
+Det sidste er 60% større end de to andre tilsammen. Dette betyder, at det er 200 * 1.600 = 32000 lejligheder større og 200 * 1.600 = 32000 lejligheder større.
+Den samlede antal lejligheder i#### 20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140229139564832'>,False
+232,"Daniel tog til deres gård for at plukke nogle æbler og fandt halvdelen så mange mariehøns som myrer i haven. Hvis der var 50 myrer, beregn det samlede antal mariehøns i haven.","Hvis der var 50 myrer, er det samlede antal mariehøns i haven 1/2*50 myrer = 25 mariehøns
+Det samlede antal mariehøns i haven er 25 mariehøns + 50 myrer = <<25+50=75>>75 mariehøns
+#### 75","
+Antal myrer = 50
+Antal mariehøns = 50/2 = 25
+Derfor er der 25 mariehøns i haven.
+#### 250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140229139560496'>,False
+1277,"Der er i øjeblikket 16 år mellem Mia og Emma. Hvis Mia, der er yngre end Emma, er 40 år gammel, hvad er gennemsnittet af deres alder?","Hvis Mia er 40 år gammel, er Emma 40+16 = <<40+16=56>>56 år.
+Summen af deres alder er 56+40 = <<56+40=96>>96 år
+Gennemsnitsalderen for de to er 96/2 = <<96/2=48>>48 år
+#### 48"," Mia og Emma er nu 16 år yngre. Mia er 40 år gammel. Så, Mia er 16 år yngre simpelt set end Emma.
+Mia er 16 år yngre end Emma, så mellem dem er alderen er 16 år min.
+Mia og Emma er 16 år seniorer, så summen af deres alder er 16+16=32 år.
+Så gennemsnittet er 32/2=16 år.
+#### 163000000000000000000000000000000000000000000000000000000000000000000007840000000000000000000000000000000000000000000000000000000000160000000000000000000000000000000000000000000000001600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140229139767680'>,False
+320,"I starten af festen var der 25 mænd og 15 kvinder. Efter en time forlod 1/4 af det samlede antal personer. Hvor mange kvinder er tilbage, hvis 22 mænd blev til festen?","Der var i alt 25 mænd + 15 kvinder = <<25+15=40>>40 personer, der deltog i festen.
+Efter en time forlod 40 personer*1/4 = <<40*1/4=10>>10 personer forlod festen.
+Dette betyder, at 40 personer - 10 personer = <<40-10=30>>30 personer blev.
+Ud af de 30, der blev, var 30 personer - 22 mænd = <<30-22=8>>8 kvinder.
+#### 8","
+Initialt antal personer = 25 mænd + 15 kvinder = 40 personer.
+Efter en time forlod 1/4 af 40 personer, så 40/4 = 10 personer forlod.
+Det resterende antal personer er 40 - 10 = 30 personer.
+Derfor er der 22 mænd og 30 kvinder tilbage.
+#### 3050090000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140229182619280'>,False
+265,"Fru Jensen leder efter et hus, der ikke vil gå over hendes 2.700.000 kr budget. Hun så en ejendom, der har en salgspris på 2.370.000 kr. Oveni det skal køberen betale et mæglergebyr, som er 5% af salgsprisen og også overdragelsesgebyret, der er 12% af den samlede salgspris. Hvor meget mere er husets samlede pris end fru Jensens budget?","Mæglergebyret er 2.370.000 kr*5/100 = <<2.370.000*5/100=118.500>>118.500 kr.
+Overførselsgebyret er 2.370.000 kr*12/100 = <<2.370.000*12/100=284.400>>284.400 kr.
+Den totale pris på huset er 2.370.000 kr + 118.500 kr + 284.400 kr = 2.772.900 kr.
+Så det er 2.772.900 kr - 2.700.000 kr = <<2.772.900-2.700.000=72.900>>72.900 kr mere end fru Jensens budget.
+#### 72.900"," Salgspris: 2.370.000 kr
+Mæglergebyr: 12% af 2.370.000 = 0,12 * 2.370.000 = 284.400 kr
+Overdragelsesgebyr: 3% af 2.370.000 = 0,03 * 2.370.000 = 71400 kr
+Samlet pris for huset: 2.370.000 kr + 284.400 kr + 71400 kr = 2.664.800 kr
+Huset er 2.664.800 kr - 2.700.000 kr = - 3500 kr
+Huset er 3500 kr mindre####
+784000000000000000000000005000000000000000000007840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000784000000000000000000000000000000000000000000009000000",<MagicMock name='mock.__sub__().__truediv__()' id='140229183171680'>,False
+149,"Carl har tre gange så mange Facebook-venner som Diana. Johannes har fire gange så mange venner på Facebook som Diana. Hvis Carl har 12 venner på Facebook, hvor mange Facebook-venner har Johannes?","Diana har 12/3=<<12/3=4>>4 Facebook-venner.
+Johannes har 4*4=<<4*4=16>>16 Facebook-venner.
+#### 16","
+Lad F(C) være antallet af Facebook-venner Carl har.
+Lad F(D) være antallet af Facebook-venner Diana har.
+Lad F(J) være antallet af Facebook-venner Johannes har.
+Fra informationen får vi:
+F(C) = 3 * F(D)
+F(J) = 4 * F(D)
+Fra Carl har han 12 venner på Facebook, så F(C) = 12.
+Erstat F(C) i første ligna####
+300000019601242067641107676930422633115142123198600400797268120166993710731963229813821180741774941668120229820540734208742118282031961640392870787963875439392350897670195556428367894477507032824789597568032207111526708115170572171189987612789991495625892677492909222634346430340264159343828504607203920017540636835916317046168321936839709377404316828474270138915306864139698086",<MagicMock name='mock.__sub__().__truediv__()' id='140229139903216'>,False
+788,"Niels samler penge ind til en skoleudflugt. Han har søgt om hjælp fra skolen, som har besluttet at dække halvdelen af skoleudflugtens omkostninger. Hvor mange penge mangler Niels, hvis han har 350 kr og skoleudflugten koster 2000 kr?","Niels' skole har besluttet at betale 2000*1/2=<<2000*1/2=1000>>1000 kr for hans skoleudflugt.
+I alt har Niels dækket 1000 + 350 = <<1000+350=1350>>1350 kr af sin skoleudflugt
+Derfor har Niels brug for 2000 - 1350 = <<2000-1350=650>>650 kr mere til skoleudflugten.
+#### 650"," Niels har 350 kr og udfallet koster 2000 kr.
+Skoleudflugtens omkostninger er 2000 kr / mellemliggende % = 2000 kr / 0,50 = 4000 kr.
+Niels har 350 kr og længere skal vi finde, hvor mange penge han mangler, hvis han har 350 kr og udfallet koster 2000kr.
+4000kr - 350kr = 3650kr.
+#### 365005234521667677323654505237467076052000000000001504000000000000000000000000000000000000000000000000000000000000000000000000000000007676767676767676767676767676767676767677777777777777777777777776676666666666000000000000000000000000000000765237467676767676767676767676767676767676767676767676767676767676767676767676767676767676767676722237467713967849767473280081623",<MagicMock name='mock.__sub__().__truediv__()' id='140229139656640'>,False
+1020,Jonas plukker 4 bananer om onsdagen. Så plukker han 6 bananer om torsdagen. Om fredagen plukker han tre gange så mange bananer som han gjorde om onsdagen. Hvor mange bananer har Jonas?,"Onsdag og torsdag tilsammen har Jonas 4 bananer + 6 bananer = <<4+6=10>>10 bananer.
+Om fredagen plukker han 3*4 bananer = <<3*4=12>>12 bananer.
+I alt har Jonas 10 bananer + 12 bananer = <<10+12=22>>22 bananer.
+#### 22","
+Onsdagen: 4 bananer
+Torsdag: 6 + 3*4 = 6 + 12 = 18 bananer
+Fredag: 3 * 4 = 12 bananer
+Jonas har 4 + 18 + 12 = 34 bananer.
+#### 3400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140229139230416'>,False
+1164,Carl gemte 3 dusin æg i gården til påskeægsjagten. Liam finder 5 æg. Sofia finder to gange så mange som Liam. Jacob finder 2 færre end Sofia. Og Maj finder halvdelen af Jacobs antal. Hvor mange æg er der stadig gemt i gården?,"Carl gemte 3*12 = <<3*12=36>>36 æg.
+Liam finder 5 æg.
+Sofia finder 5*2=<<5*2=10>>10 æg.
+Jacob finder 10 - 2 = <<10-2=8>>8 æg.
+Maj finder 8*1/2=<<8*1/2=4>>4 æg.
+Børnene finder i alt 5 + 10 + 8 + 4 = <<5+10+8+4=27>>27 æg.
+Det samlede antal æg, der stadig er i gården, er 36 - 27 = <<36-27=9>>9 æg.
+#### 9","
+Carl gemte 3 dusin æg = 3 * 10 = 30 æg.
+Liam finder 5 æg.
+Sofia finder 2 * 5 = 10 æg.
+Jacob finder 2 * 5 = 10 æg.
+Sofia finder 10 æg.
+Jacob finder 10 - 2 = 8 æg.
+Maj finder 8 / 2 = 4 æg.
+Samlet antal æg = 30 + 5 + 10 + 8 + 4 = 57 æg.
+Der er 57 æg i gården.
+#### 5789873418518911111111111111111111111111197680000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140229139271840'>,False
+11,"Tove gik til bageren og købte forskellige typer kager. Hun købte 3 dusin donuts, som kostede 460 kr per dusin, 2 dusin mini-cupcakes, som kostede 540 kr per dusin og 6 dusin mini-cheesecakes for 370 kr per dusin. Hvor meget var de samlede omkostninger?","Den samlede pris for donuts var 3*460 kr = <<3*460=1380>>1380 kr.
+Den samlede pris for mini-cupcakes var 2*540 kr = <<2*540=1080>>1080 kr.
+Den samlede pris for mini-cheesecakes var 6*370 kr = <<6*370=2220>>2220 kr.
+Derfor var det samlede beløb, Tove betalte for kagerne 1380 kr + 1080 kr + 2220 kr = <<1380+1080+2220=4680>>4680 kr.
+#### 4680"," Vans indkøb = 3 * 460 + 2 * 540 + 6 * 370 = 1380 + 1080 + 2220 = 4680 kr.
+Derfor var de samlede omkostninger 4680 kr.
+#### 46800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140229139882800'>,False
+107,"Søren ser TV efter han er færdig med sine lektier. Mandag og tirsdag så han en 1-times episode af sit yndlingsshow. Onsdag så han nogle episoder af et 30-minutters show. Torsdag blev han tidligt færdig med lektierne og så en 1-times episode og et 30-minutters show. Fredag måtte han blive sent oppe, så han så to 1-timers episoder. Hvis han i alt så 7 timers TV, hvor mange 30-minutters episoder så han onsdag?","Lad E være antallet af episoder, han så onsdag.
+Efter mandag havde han 7 - 1 = <<7-1=6>>6 timers TV tilbage.
+Efter tirsdag havde han 6 - 1 = <<6-1=5>>5 timers TV tilbage.
+Efter torsdag havde han 5 - 1 - 0,5 = 3,5 timers TV tilbage.
+Efter fredag havde han 3,5 - 2 = 1,5 timers TV tilbage.
+Hver 30-minutters episode er 0,5 time.
+Således, E = 1,5/0,5 = 3 episoder.
+#### 3","
+Mandag og tirsdag: 1 episode/dag * 2 = 2 episoder
+Onsdag: 1 episode + 30 minutter episodes * 2 =  1 episode + 60 minutter episoder
+Torsdag: 1 episode + 30 minutter episodes * 1 = 1 episode + 30 minutter episoder
+Fredag: 2 episoder
+Total: 2 + 60 + 1 + 30 + 2 = 115 minutter
+Soren så 7 timers TV samme####
+11550000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140220451274624'>,False
+652,Jakob lejer en hestevogn fra kl. 17 til kl. 21. Han får 1 time gratis. Den første betalte time koster 15 kr og hver efterfølgende time koster to gange så meget. Hvor meget betalte han?,"Han havde den i 21-17=<<21-17=4>>4 timer
+Han betaler for 4-1=<<4-1=3>>3 timer
+Den første time koster 1*15=<<1*15=15>>15 kr
+De andre 3-1=2 timer er dyrere
+De koster 15*2=<<15*2=30>>30 kr per time
+Så de 2 timer koster 2*30=<<2*30=60>>60 kr
+Så han betaler 60+15=<<60+15=75>>75 kr for timerne
+#### 75"," Jakob lejer en hestevogn fra kl. 17 til kl. 21.
+Den første time er gratis, så den første ekstra time koster 15 kr.
+Den anden time koster 15 kr * 2 = 30 kr.
+Den tredje time koster 30 kr * 2 = 60 kr.
+Så Jakob betalte 15 + 30 + 60 = 105 kr.
+#### 1050000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140229139905040'>,False
+1026,En dværg kan udvinde 12 kg malm om dagen med sine bare hænder. Han kan udvinde to gange så meget med en jernhakke og 50% mere med en stålhakke end med en jernhakke. Hvor mange kg malm kan 40 dværge med stålhakker udvinde på en måned med 30 dage?,"Først find ud af, hvor meget malm en dværg kan udvinde med en jernhakke: 12 kg/dag*2=<<12*2=24>>24 kg/dag
+Derefter gang det beløb med 150% for at finde ud af, hvor meget en dværg kan udvinde med en stålhakke: 24 kg/dag * 150% = <<24*150*.01=36>>36 kg/dag
+Derefter gang det, en dværg kan udvinde på en dag med en stålhakke, med antallet af dværge: 36 kg/dag/dværg * 40 dværge = <<36*40=1440>>1440 kg/dag
+Derefter gang det daglige beløb af malm med antallet af dage for at finde det samlede beløb udvundet på en måned: 1440 kg/dag * 30 dage = <<1440*30=43.200>>43.200 kg/dag
+#### 43.200","
+Dværge kan udvinde 12 kg/dag.
+To dværge med jernhakke kan udvinde 12 kg/dag x 2 = 24 kg/dag.
+50% mere end jernhakke er 12 kg/dag * 0.50 = 6 kg/dag.  Så med jernhakken kan de udvinde 24 kg + 6 kg = 30 kg/dag.
+Stålhakke kan udvinde 12 kg/dag * 1.50 = 18 kg/dag.
+40 dværge med stålhakker kan udvérir 30#### 18784000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140229182416480'>,False
+661,"Rasmus går i butikken for at købe noget kaffe. Det normale kaffemærke, han køber, koster 35 kr per 500 gram. Han var nødt til at købe et dyrere mærke, der kostede 20% mere, da hans yndlingsmærke var udsolgt. Han beslutter sig for at købe en uges kaffe og han bruger 500 gram kaffe om dagen. Han besluttede sig også for at købe en donut til 15 kr. Hvor meget kostede det hele?","Kaffen, han købte, var 35*0,2=<<35*0,2=7>>7 kr dyrere per 500 gram, end hvad han normalt køber
+Så det kostede 35+7=<<35+7=42>>42 kr per 500 gram
+Han bruger 500*7=<<500*7=3500>>3500 gram kaffe om ugen
+Så han betalte 42*7=<<42*7=294>>294 kr for kaffen
+Det betyder, at hans samlede regning var 294+15=<<294+15=309>>309 kr
+#### 309","
+Kort årlig pris er 35 kr/500g * 500g= 17.50 kr.
+Prisen for det udvalgte mærke er 20% mere, så 20% af 17.50 kr = 0.20 * 17.50 kr = 3.50 kr.
+Standardpris er 17.50 kr + 3.50 kr= 21.00 kr.
+Han bruger 500 gram/dag.
+Kosten fra donut er 15 kr.
+For at finde den samlede pris, skal vi beregne den totale pris####
+2100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140229183203248'>,False
+989,Emilie kan skrælle 6 rejer i minuttet og sautere 30 rejer på 10 minutter. Hvor lang tid vil det tage hende at skrælle og sautere 90 rejer?,"Først find ud af, hvor lang tid det tager Emilie at skrælle rejerne: 90 rejer / 6 rejer/minut = <<90/6=15>>15 minutter
+Derefter finder du ud af, hvor mange portioner rejer hun skal tilberede: 90 rejer / 30 rejer/portion = <<90/30=3>>3 portioner
+Derefter ganger du antallet af portioner med tiden per portion for at finde den samlede tilberedningstid: 3 portioner * 10 minutter/portion = <<3*10=30>>30 minutter
+Til sidst tilføjer du skrælletiden for at finde den samlede tid Emilie bruger: 30 minutter + 15 minutter = <<30+15=45>>45 minutter
+#### 45","
+Emilie kan skrælle 6 rejer/minut * 10 minutter = 60 rejer/minut.
+Emilie kan sautere 30 rejer/minut * 10 minutter = 300 rejer/minut.
+For at skrælle og sautere 90 rejer skal hun sautere 90 rejer/minut * 10 minutter = 900 rejer/minut.
+Det vil tage hende 60 rejer/minut * 10 minutter = 600 rejer/minut.
+####
+6000000000000304000000000000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228881772480'>,False
+800,Per scorede 278 point i et spil bowling. Nadja scorede 11 point mere end halvdelen af Pers. Hvor mange point havde Per og Nadja i alt?,"Per = <<278=278>>278 point
+Nadja = 1/2*278 + 11 = 150 point
+278 + 150 = <<278+150=428>>428 point
+Tilsammen fik Per og Nadja 428 point.
+#### 428"," Nadja scorede 11 point mere end halvdelen af Pers, hvilket betyder, at Nadja scorede 11*2 = 22 point mere end halvdelen af Pers.
+Halvdelen af Pers scorede 278/2 = 139 point.
+Lad x være det antal point Per havde.
+Da Nadja scorede 22 point mere end halvdelen af Pers, så x + 22 = 139.
+x = 139 - 22 = 1####
+139777777777777777777777777777777777777777777777777777777777777777777777777777777777777745777777777777777777777777777777777777777777777777777777777777777777777777777777777777877777777777777777777777777777777777677777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777",<MagicMock name='mock.__sub__().__truediv__()' id='140228881726928'>,False
+1207,"Dennis fangede 3 tun i mandags, den første tun han fangede vejer 56 kilogram, den anden tun han fangede vejer 46 kilogram og den sidste tun han fangede vejer 26 kilogram. Hvis et kilogram tun koster 0,5 kr, hvor meget vil han tjene efter at have solgt alle tunene til markedet?","Dennis vil tjene 56*0,5 kr = <<56*0,5=28>>28 kr fra den første tun.
+Han vil tjene 46*0,5 kr = <<46*0,5=23>>23 kr for den anden tun.
+Og han vil tjene 26*0,5 kr = <<26*0,5=13>>13 kr fra den tredje tun.
+Derfor, den totale mængde han vil tjene for alle tunene er 28 kr + 23 kr + 13 kr = <<28+23+13=64>>64 kr.
+#### 64"," Dennis fangede 56 + 46 + 26 = 138 kilogram tun.
+Hvis et kilogram tun koster 0,5 kr, vil han tjene 138 * 0,5 = 69 kr.
+#### 6900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228882131488'>,False
+655,Sarah skal aflevere en 15-siders forskningsartikel. Hun har allerede skrevet en tredjedel af forskningsartiklen. Hvor mange sider mangler hun stadig at skrive?,"Sarah har allerede skrevet en tredjedel af forskningsartiklen, hvilket er 15 sider*1/3=<<15*1/3=5>>5 sider.
+Så hun mangler stadig at skrive 15 sider - 5 sider = <<15-5=10>>10 sider.
+#### 10"," 15 siders forskning er 15*100=1500 sider.
+Hun har skrevet 1/3 af artiklen, hvilket er (15/3)*100=500 sider.
+Mangler: 1500 - 500 = 1000 sider.
+#### 10007840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228882150320'>,False
+955,Et hospital har en kapacitet på 1000 senge med 1/5 optaget. På grund af coronavirus-udbruddet bliver 50 patienter indlagt på hospitalet hver dag. Beregn det samlede antal ledige senge på hospitalet efter to uger.,"Hvis 1/5 af den samlede kapacitet af senge er optaget, betyder det, at 1/5 * 1000 = <<1000*1/5=200>>200 senge har patienter, der bruger dem.
+Det samlede antal senge i hospitalet uden nye indlæggelser er 1000 senge - 200 senge = <<1000-200=800>>800 senge.
+Hvis 50 personer bliver indlagt hver dag, er det samlede antal patienter i hospitalet efter en uge 50 patienter/dag * 7 dage/uge = 350 patienter.
+Efter to uger er det samlede antal patienter indlagt på hospitalet 350 patienter/uge*2 uger = <<350*2=700>>700 patienter, som hver bruger én seng.
+Hvis der var 800 ledige senge i hospitalet før de nye indlæggelser, reduceres det samlede antal til 800 senge - 700 senge = <<800-700=100>>100 ledige senge.
+#### 100","
+Hospitals kapacitet er 1000 senge.
+Antal senge bruget er 1/5 af kapaciteten, som er 1000/5 = 200 senge.
+Pr. sen og sposokolde er 1 sen og 1.500 kr.
+Antal patienter indlagt hver dag i to uger er 50 * 2 = 100 patienter.
+Det samlede antal senge frigjort = 200 - 100 = 100 senge.
+Antal ledige senge på H####
+10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228882215040'>,False
+401,"En blikkenslager arbejder i 4 uger hver måned og i 6 dage hver uge. Hvis han får 50 kr hver dag, hvor meget tjener han, hvis han arbejder i et år?","Blikkenslageren arbejder i 6 dage hver uge og arbejder i 4 uger hver måned, så han arbejder i 6 dage/uge * 4 uger/måned = <<6*4=24>>24 dage/måned
+Hvis han tjener 50 kr hver dag, tjener han 50 kr/dag * 24 dage/måned = <<50*24=1200>>1200 kr/måned
+Et år svarer til 12 måneder, så hvert år tjener han 1200 kr/måned * 12 måneder/år = <<1200*12=14.400>>14.400 kr
+#### 14.400","
+En uge har 7 dage.
+Han arbejder 4 uger/åren * 7 dage/uge = 28 dage/åren.
+Han arbejder 6 dage/uge * 28 dage/åren = 168 dage/åren.
+Han tjener 50 kr/dag * 168 dage/åren = 84.000 kr/åren.
+#### 8400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140220516430864'>,False
+410,"Sarah tog til kysten på ferie. Hendes forældre gav hende 75 kr til at købe lige, hvad hun ville. I kiosken var karameller til salg for ""Køb 500 gram for 20 kr, få 500 gram til 1/2 pris."" Hun tog 1100 gram. Hun købte også en blandet pose med muslingeskaller, der kostede 17 kr og 4 magneter, der kostede 2 kr stykket. Hvor mange penge har Sarah tilbage?","Karamellerne koster 20 kr for 500 gram og få 500 gram for 1/2 pris. Så 1/2 af prisen på 500 gram er 500/500*1/2*20 kr = 10 kr.
+Tilsammen koster det 10 kr + 20 kr = 30 kr.
+De 100 gram rest har ikke rabat og koster 4 kr, så den totale pris er 20 kr + 10 kr + 4 kr = <<20 + 10 + 4 = 34>>34 kr
+4 magneter til 2 kr stykket er 4*2 kr=<<4*2=8>>8 kr
+Når du lægger alle hendes køb sammen, 34 kr + 17 kr + 8 kr = <<34+17+8=59>>59 kr
+Hun havde 75 kr og brugte 59 kr, så hun har 75 kr - 59 kr = <<75-59=16>>16 kr tilbage
+#### 16","
+Karameller: 75 - 500 * 20 = 75 - 10.000 = -9.950
+Muslingeskaller: 75 - 1100 * 17 = 75 - 18700 = -18625
+Magneter: 75 - 2 * 4 = 75 - 8 = 67 kr
+Sarah har 67 - 18625 = -18558 kr tilbage. Den information er ikke verificerbar, så skal vi udforske.
+```
+Lad X være sparet.
+Sarah har 75 kr.
+Hun har seks marm####
+11000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228882544352'>,False
+1021,"I en quiz med 60 spørgsmål er 40% af spørgsmålene lette og resten er ligeligt fordelt som gennemsnitlige og svære spørgsmål. Hvis Alma er sikker på at få 75% af de lette spørgsmål rigtige og halvdelen af de gennemsnitlige og svære spørgsmål korrekt, hvor mange point er hun sikker på at få?","De gennemsnitlige og svære spørgsmål udgør 100% - 40% = 60% af quizzen.
+Der er 60 spørgsmål*40/100 = 24 lette spørgsmål.
+Der er i alt 60 spørgsmål*60/100 = 36 gennemsnitlige og svære spørgsmål.
+Hvis Alma er sikker på at få 75% af de lette spørgsmål, betyder det, at hun er sikker på sine 24 spørgsmål*75/100 = 18 point.
+Fra de gennemsnitlige og svære spørgsmål er hun sikker på at få halvdelen korrekt, så det er 36 spørgsmål*1/2=18 point.
+Således er hun sikker på at få 18 point + 18 point = 36 point i hendes quiz.
+#### 36"," I hver quiz bliver der løst 60 spørgsmål. Almas svar er 75% af de lette spørgsmål. Derfor er hun sikker på at få 0.75 * 40 = 30 point rigtige.
+Almas svar er 50% af de gennemsnitlige og svære spørgsmål. Derfor er hun sikker på at få 0.5 * 20 = 10 point rigtige.
+Alma er sikker på en total score på 30#### 107501725360760375552570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228882151280'>,False
+440,"Arealet af Bjørns rektangulære soveværelse er 33 kvadratmeter. Hvis længden af hans værelse er 300 cm, hvad er rummets omkreds i meter?","Længden af værelset er 300 cm * 1/100 meter/cm = <<300*(1/100)=3>>3 meter.
+Bredden af værelset er 33 kvadratmeter / 3 meter = <<33/3=11>>11 meter.
+Værelsets omkreds er 2*(11+3) = 28 meter
+#### 28"," Arealet af et rektangel er a * b. I dette tilfælde er a = 300 cm og b = 33 m.
+Omkredsen af et rektangel er 2*(a+b).
+Omkredsen = 2 * (300 cm + 33 cm) = 2 * 333 cm = 666 cm veldig.
+Omkredsen er 666 cm / 100 cm/meter = 6.66 meter.
+#### 666052523872917125000170041197796883498016878778241744166631000000000000042949304000000000000008100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228882642752'>,False
+740,"En klasse på 50 elever har forskellige hobbyer. 10 kan lide at bage, 5 kan lide at spille fodbold og resten kan lide enten at spille videospil eller spille musik. Hvor mange kan lide at spille videospil, hvis antallet, der kan lide at spille musik, er to gange så mange som dem, der foretrækker at spille fodbold?","Antallet af elever, der kan lide at spille musik, er to gange så mange som dem, der kan lide fodbold, så 2 * 5 = 10
+Antallet, der kan lide at spille videospil, er 50 elever i alt - 10 der kan lide at bage - 5 der kan lide at spille fodbold - 10 der kan lide at spille musik = 25
+#### 25","
+Antallet af elever, der kan lide at bage = 10
+Antallet af elever, der kan lide at spille fodbold = 5
+Antallet af elever, der kan lide at spille videospil = 50 - 10 - 5 = 35
+Antallet af elever, der kan lide at spille fodbold = 5
+Antallet af elever, der kan lide at spille videospil = 2 * 5 = 10
+Detथे#### 108000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228882543824'>,False
+459,"En landmand køber foder til sine heste. Han køber en række forskellige typer hø, havre, gulerødder og sukkerknalder. Da sukkerknalder er en sjælden godbid, køber han kun to 1-kilo æsker til hele stalden. Han ønsker kun nok gulerødder til at fodre hestene, mens grøntsagerne er friske, så han køber fire 12-kilo poser. Hø er hovedretten i hestenes kost, så han køber toogfyrre 75-kilo baller. Havre er en basisvare til at supplere hø med, så han køber tyve 65-kilo sække. Hvis hans gårdbil kan bære 2250 kilo ad gangen, hvor mange ture skal landmanden bruge for at transportere alt foderet?","Landmanden køber 2*1=<<2*1=2>>2 kilo sukkerknalder.
+Han køber 4*12=<<4*12=48>>48 kilo gulerødder.
+Han køber 42*75=<<42*75=3150>>3150 kilo hø.
+Han køber 20*65=<<20*65=1300>>1300 kilo havre.
+Vægten af alt foderet er 2 + 48 + 3150 + 1300 = <<2+48+3150+1300=4500>>4500 kilo.
+Derfor skal landmanden bruge 4500 / 2250 = <<4500/2250=2>>2 ture for at transportere alt foderet i sin gårdbil.
+#### 2","
+- To 75-kilo baller hø = 2 * 75 = 150 kg
+- Ost er 12-kilo poser gulerødder = 12 * 12 = 144 kg
+- 4 * 65-kilo sække = 4 * 65 = 260 kg
+- Total: 150 + 144 + 260 = 554 kg
+- Gårdbil kan bære 2250 kg.
+- Antal ture = 554 / 2250 = 0.2467
+   Det giver 0.2467 ture
+#### 024675713647871627769690000686417888081698675316333290246769000055419286156672897371647871627769554654529470714467007716333290000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228882472864'>,False
+300,Om tirsdagen vil Peter træne i to gange så lang tid som han gjorde mandag og søndag tilsammen. Om søndagen trænede han i 23 minutter. Om mandagen trænede han i 16 minutter. Hvor mange minutter skal han træne om tirsdagen for at nå sit mål?,"Om søndagen og mandagen trænede han i alt 39 minutter fordi 23 + 16 = <<23+16=39>>39
+Om tirsdagen skal han træne i 78 minutter fordi 39*2=<<39*2=78>>78
+#### 78","
+Mandag og søndag trænede i 23 minutter + 23 minutter= 46 minutter.
+Peter træner i 46 minutter.
+Om tirsdagen vil han træne i 2 * 46 minutter = 92 minutter.
+Peter skal træne i 92 minutter for at nå sit mål.
+#### 9200002000000242000024200000000000000000002420000242000000000000000000000242000024200000000000000000000000000000000000242000024200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228881994416'>,False
+918,"Der er 6 elever, der spiller tennis og to gange det antal, der spiller håndbold. Der er 16 drenge og 22 piger, der spiller fodbold. Hvis hver elev kun deltager i én gruppe, hvor mange elever er der i alt?","Der er 6*2=<<6*2=12>>12 elever, der spiller håndbold.
+Der er 16 + 22 = <<16+22=38>>38 elever, der spiller fodbold.
+I alt er der 6 + 12 + 38 = <<6+12+38=56>>56 elever.
+#### 56","
+Antal elever, der spiller tennis = 6
+Antal elever, der spiller håndbold = 2 * 6 = 12
+Antal drenge = 16
+Antal piger = 22
+Antal elever i tennis = 6
+Totalt antal elever = 16 + 22 = 38
+
+#### 384792336639674754300007483643237500008760000000000000074836432375000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000074836432375000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228882093008'>,False
+1023,"En mand spiser 5 sandwiches om dagen, hans kone spiser 4 sandwiches om dagen og deres søn spiser 2 sandwiches om dagen. Hvor mange sandwiches spiser denne familie på en uge?","Antallet af sandwiches, de spiser på en dag, er 5 + 4 + 2 = <<5+4+2=11>>11 sandwiches.
+Antallet af sandwiches, de spiser på en uge, er 11 * 7 = <<11*7=77>>77 sandwiches.
+#### 77"," Antal sandwiches spist af manden + antal sandwiches spist af hans kone + antal sandwiches spist af søn = 5 + 4 + 2 = 11 sandwiches.
+Antal sandwiches spist af hele familien på en uge = 11 sandwiches/dag * 7 dage/uge = 77 sandwiches.
+#### 773777777777777777777777777777777777777777777777777777777777777777777777877777787777777777787777777777777777777777777777777777777778777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777877777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777",<MagicMock name='mock.__sub__().__truediv__()' id='140228882327568'>,False
+677,"Caroline og Johanne er søstre fra København, der elsker at samle underskrifter fra kendisser. I løbet af deres sommerferie bruger søstrene hver eftermiddag på at samle underskrifter. Efter fem uger sammenligner Caroline og Johanne deres autografbøger og tæller antallet af underskrifter, hver søster har indsamlet. Caroline har 20 underskrifter i sin autografbog og Johanne har 44. Søstrene har tre ugers sommerferie tilbage og de beslutter sig for, at de vil nå 100 underskrifter mellem dem inden udgangen af sommeren. Hvor mange underskrifter skal søstrene samle for at nå deres mål?","Caroline og Johanne har allerede samlet 20 + 44 underskrifter = <<20+44=64>>64 underskrifter.
+Da deres mål er 100, skal de indsamle 100 - 64 underskrifter. 100 - 64 = <<100-64=36>>36 underskrifter
+#### 36","Caroline har 20 underskrifter. Johanne har 44 underskrifter.
+3 uger = 3*7 = 21 dage
+Hun skal samle 100 underskrifter.
+Antal underskrifter, hver søster skal samle = 100/20 + 44/21
+= 5 + 2 = 7
+Så søstrene skal samle 7 augmented underskrifter
+#### 7000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228881994080'>,False
+458,"Julies hund har 8 hvalpe, hvoraf 3 har pletter. Bos hund har 12 hvalpe, hvoraf 4 har pletter. Hvilken procentdel af alle hvalpene har pletter?","Først find det totale antal hvalpe: 8 hvalpe + 12 hvalpe = <<8+12=20>>20 hvalpe
+Derefter find det totale antal hvalpe med pletter: 3 hvalpe + 4 hvalpe = <<3+4=7>>7 hvalpe
+Derefter dividerer du antallet af plettede hvalpe med det totale antal hvalpe og ganger med 100% for at finde procentdelen af hvalpe med pletter: 7 hvalpe / 20 hvalpe * 100% = 35%
+#### 35"," 
+Total antal hvalpe: 8 + 12 = 20 hvalpe
+Antal hvalpe med pletter: 3 + 4 = 7 hvalpe
+Procentdel: (7/20) * 100% = 35%
+#### 3550000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140229139795696'>,False
+365,"Der er 6 piger i parken. Hvis der er to gange så mange drenge i parken, hvor mange børn er der så i parken?","Der er 6 piger*2 drenge/piger = <<6*2=12>>12 drenge i parken.
+I alt er der 6 piger + 12 drenge = <<6+12=18>>18 børn i parken
+#### 18","
+Antal piger = 6
+Antal drenge = 2 * 6 = 12
+Samlet antal børn = 6 + 12 = 18
+#### 18392795880839279391839279588083927924757433871105492753169941340353362971834086599684476437424726064467224934328304664738075776458797968251898207758179623957874958650646323620651129788402773240683368203773465266479758912016747363558835390308795466587293362133801574987485675514337542248945533281394971934076587561990931856024938481734806883461503972485963776368383378023326089343417254770376526558762453083969136931732392265896727373016076905458853317500000",<MagicMock name='mock.__sub__().__truediv__()' id='140228880995712'>,False
+336,"Maria køber 8 aktier af en aktie for 8 kr hver. Aktiekursen stiger 50% det første år, Maria ejer dem og falder derefter 25% det andet år. Hvad er den endelige værdi af alle Marias aktier?","Først finder vi den oprindelige samlede værdi af Marias køb: 8 aktier * 8 kr/aktie = <<8*8=64>>64 kr
+Derefter finder vi beløbet for den første prisstigning: 64 kr*0,5 = <<64*0,5=32>>32 kr
+Tilføj det beløb til den oprindelige værdi for at finde værdien efter det første år: 64 kr + 32 kr = <<64+32=96>>96 kr
+Derefter multiplicer det beløb med 25% for at finde faldet i det andet år: 96 kr * 25% = <<96*25*0,01=24>>24 kr
+Træk derefter det beløb fra værdien efter det første år for at finde den endelige værdi: 96 kr - 24 kr = <<96-24=72>>72 kr
+#### 72","
+Aktiekursen stiger 50% det første år: 8 * 1.50 = 12kr
+Den endelige værdi er 12 * 1.50= 18kr.
+Maria ejer nu aktier for 18kr.
+Aktiekursen falder 25% det andet år: 18 * 0.75= 13.5kr
+Den endelige værdi er 13.5 * 0.75= 10.125kr.
+Den endelige værdi af alle Marias aktier er 10.125kr.
+#### 101252000000000000000000000000000000000000000000010125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228882402384'>,False
+184,"Anders kaster en seks-sidet terning. Hvor meget mere sandsynligt er det (udtrykt som procent), at han kaster et tal større end 3, end at han kaster to lige numre i træk?","Der er 3 tal større end 3 på terningen, så chancen for at kaste et af dem er 3/6=50%.
+Chancen for at kaste et lige tal er 50%, så chancen for at kaste to i træk er 50% * 50% = 25%.
+Forskellen mellem disse to sandsynligheder er 50% - 25% = 25%.
+#### 25","
+Lad A være tallet der kastes, og B være tallet der kastes efter.
+Vi ønsker at finde p = P(x) = P(x > 3) + P(x=2)
+Hvor p er sandsynligheden.
+P(x > 3) = P(x=4) + P(x=5) + P(x=6) = 4/6 + 3/6 + 2/6 = 9/6 = 3/2
+P(x=2) = P(x=1) = 1/6
+P(x > 3) + P(x=2) = 3/2 + 1/6 = 9/6 + 1/6 = 10/6 = 5/3
+Sandsynligheden,####
+100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228881137296'>,False
+20,"Jeg har 10 liter appelsindrik, der er to tredjedele vand og jeg ønsker at tilføje det til 15 liter ananasdrik, der er tre femtedele vand. Men da jeg hælder det, spilder jeg fire liter af appelsindrikken. Hvor meget vand er der i de resterende 24 liter?","Der er 15*3/5=<<15*3/5=9>>9 liter vand fra de 15 liter ananasdrik.
+Efter fire liter af appelsindrikken blev spildt, var der 10-4=<<10-4=6>>6 liter appelsindrik tilbage.
+Ud af de 6 liter er 6*2/3=<<6*2/3=4>>4 liter vand.
+Dermed er der i alt 9 + 4 = <<9+4=13>>13 liter vand ud af de 24 liter.
+#### 13","
+Du har 10 liter appelsindrik, der er 2/3 vand.
+Du søger at tilføje det til 15 liter ananasdrik, der er 3/5 vand.
+Du spilder 4 liter appelsindrik, så det bliver 10 - 4 = 6 liter appelsindrik.
+5 liter ananasdrik = 3/5 vand.
+Du skal have 15 liter ananasdrik og 6 liter appelsindrik.
+Så 6 liter appelsin####
+62227319482494874166206817869545179527416620681786954517952741662068178695451795274166206817869545179527416620681786954517952741662068178695451795274166206817869545179527416620681786954517952741662068178695451795274166206817869545179527416620681786954517952741662068178695451795274166206817869545179527416620681786954517952741662068178695451795274166206817869545179527416620681786",<MagicMock name='mock.__sub__().__truediv__()' id='140229140021808'>,False
+400,"Et glas indeholder 8 ml mælk. Jonas drikker 2 glas mælk. Hvis mælk har 3 kalorier per ml, hvor mange kalorier indtog han?","Han drak 8*2=<<8*2=16>>16 ml mælk
+Så han drak 16*3=<<16*3=48>>48 kalorier fra mælk
+#### 48"," Jonas drikker 2 glas * 8 ml = 16 ml mælk.
+Mælk har 3 kalorier per ml, så Jonas indtog 16 ml * 3 kalorier/ml = 48 kalorier.
+#### 483229008221727200032500000820003250000084229000000000000000000820003250000000000000000000000000000000000000000000000000000000000000000000000000000000000000820003250000000000000000000000000000000000000000017272727272727272727272727286883023200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228881116352'>,False
+1275,"Johns bil bryder sammen. Bilen vejer 1200 kg og han har bagage i den, der vejer 250 kg. Han har også sine to børn, der hver vejer 75 kg, i den. Hvis kræften til at flytte bilen er 1% af vægten, hvor meget kraft har han brug for for at skubbe bilen?","Hans to børn vejer 75*2=<<75*2=150>>150 kg
+Så den samlede vægt af bilen og alt er 1200+250+150=<<1200+250+150=1600>>1600 kg
+Så han skal generere 1600*0,01=<<1600*0,01=16>>16 kg
+#### 16","
+Bilen vejer 1200 kg.
+Bagsagen vejer 250 kg.
+De to børn vejer 75 kg hver.
+Den samlede vægt er 1200 + 250 + 75 = 1525 kg.
+Kæmpe til at flytte biler: 1525 * 0.01 = 15.25 kg.
+#### 1525000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228881277552'>,False
+1099,"Den største vandrutsjebane i Djurs Sommerland er 300 cm lang og folk glider ned med 60 cm/minut. Den næststørste vandrutsjebane er 240 cm lang, men stejlere, så folk glider ned med 80 cm/minut. Hvor meget længere tager det at køre på den største rutsjebane sammenlignet med den næststørste?","Først skal du finde køretiden på den største rutsjebane: 300 cm / 60 cm/minut = <<300/60=5>>5 minutter
+Så skal du finde køretiden på den næststørste rutsjebane: 240 cm / 80 cm/minut = <<240/80=3>>3 minutter
+Træk derefter køretiden på den næstlængste rutsjebane fra den længste for at finde forskellen: 5 minutter - 3 minutter = <<5-3=2>>2 minutter
+#### 2"," Større rutsjebane: 300 cm  -> 300 cm/60 cm/minut = 5 minutter.
+Næststørre rutsjebane: 240 cm -> 240 cm/80 cm/minut = 3 minutter.
+Forskellen: 5 - 3 = 2 minutter.
+#### 23033333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333334333333333333333333333333333333433333334333333333333333333333333333333333333333333333333333333333333333333333333333333333333",<MagicMock name='mock.__sub__().__truediv__()' id='140228881116832'>,False
+357,"Maries far sagde, at hun havde 90 kr budgetteret til sin fødselsdagsfest. Hun vil sikre sig, at hun og hendes venner alle får lov til at spille en runde minigolf, få 5 kr i arkademønter og køre go-karts to gange. En runde minigolf koster 5 kr. Go-karts koster 10 kr per tur. Hvor mange venner kan hun invitere?","Go-karts vil koste 20 kr per person, fordi 10*2=<<10*2=20>>20
+Hver person koster 30 kr, fordi 5 + 5 + 20 = <<5+5+20=30>>30
+3 personer i alt kan deltage, fordi 90 / 30 = <<90/30=3>>3
+Hun kan invitere 2 venner, fordi 3 - 1 =<<3-1=2>>2
+#### 2","
+*   Budget: 90 kr
+*   Minigolf: 5 kr
+*   Arkademønter: 5 kr
+*   Go-karts: 10 kr
+*   Samlet omkostning: 5 + 5 + 10 = 20 kr
+*   Venner: 90 kr - 20 kr = 70 kr
+*   Venner: 70 kr / 2 = 35 venner
+*   Samlet antal venner: 35 + 1 = 36 venner
+
+#### 360000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228882606960'>,False
+858,En ny pest inficerer ti personer. Hver dag inficerer hver inficeret person seks andre. Hvor mange mennesker er inficerede efter tre dage?,"På den første dag inficerer de oprindelige ti personer seks personer hver, så 10*6=<<10*6=60>>60 flere mennesker bliver inficeret.
+Der er 10+60=<<10+60=70>>70 inficerede personer efter den første dag.
+På den anden dag bliver 70*6=<<70*6=420>>420 flere mennesker inficeret.
+Der er 70 + 420 = <<70+420=490>>490 inficerede personer efter den anden dag.
+På den tredje dag bliver 490*6=2940 flere mennesker inficeret. Derfor er der 490 + 2940 = 3430 inficerede personer efter tre dage.
+#### 3430","
+I dag er der 10 personer inficerede.
+I dag inficerer hver af 10 personer 6 andre.
+Så i dag er der 10 * 6 = 60 inficerede.
+I den næste dag inficerer 10 * 6 = 60 personer.
+I den tredje dag inficerer 10 * 6 = 60 personer.
+Så i alt er der 60 + 60 + 60 = 180 personer inficerede.
+Det svar er 180.
+#### 18033333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333334333333333333333333333333333333333333333433333333333333333333333333333334333333333333333333333334333333333333333333334333333333333333333333343333433333333333333333333333333333333333333333433333343333333333333334333333333333333333333333333",<MagicMock name='mock.__sub__().__truediv__()' id='140228881575632'>,False
+799,Et brød hos bageren koster 30 kr. Bagels koster 10 kr stykket. Hvor meget mere koster 3 brød end 2 bagels?,"3 brød koster 3 * 30 kr = <<3*30=90>>90 kr.
+2 bagels koster 2 * 10 kr = <<2*10=20>>20 kr.
+Brødene koster 90 kr - 20 kr = <<90-20=70>>70 kr mere end bagels.
+#### 70","
+3 brød koster 3 * 30 = 90 kr
+2 bagels koster 10 * 2 = 20 kr
+3 brød - 2 bagels = 90 - 20 = 70 kr
+#### 70000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228882401232'>,False
+1111,"Der er i øjeblikket 3 røde bolde, 11 blå bolde og 25 grønne bolde i butikken. Røde bolde koster 9 kr, blå bolde koster 5 kr og grønne bolde koster 3 kr. Hvor meget vil butikken have modtaget efter alle boldene er solgt?","For de røde bolde, 3 bolde*9 kr/bold = <<3*9=27>>27 kr.
+For de blå bolde, 11 bolde*5 kr/bold = <<11*5=55>>55 kr.
+For de grønne bolde, 25 bolde*3 kr/bold = <<25*3=75>>75 kr.
+For alle bolde, 27 kr + 55 kr + 75 kr = <<27+55+75=157>>157 kr.
+#### 157","
+initialt antal bolde: 3 røde + 11 blå + 25 grønne = 49 bolde
+hvis man sælger en rød bolde: 3 + 11 - 1 = 13 bolde
+hvis man sælger en blå bolde: 3 + 11 - 25 = -11 bolde
+hvis man sælger en grøn bolde: 3 + 11 - 25 = -11 bolde
+(3 + 11 - 25) * 9 = (-11) * 9 = -99
+den samlede foregående kan menes som 49 -####
+4930000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228882597024'>,False
+99,"Marie er en ivrig gartner. I går modtog hun 18 nye potteplanter fra sin yndlingsplanteskole. Hun har allerede 2 potteplanter på hver af de 40 vindueskarme i sit store landsted. Hun har besluttet, at hun vil give 1 af potteplanterne fra hver karm til venner og familie . Hvor mange potteplanter vil Marie have tilbage?","I går, før hun modtog planterne, havde Marie 2*40 = <<2*40=80>>80 potteplanter
+Efter at have modtaget yderligere 18 planter havde hun derfor i alt 80 + 18 = <<80+18=98>>98 potteplanter
+Marie vil uddele 40*1 = <<40*1=40>>40 potteplanter.
+Hun vil derfor have 98 - 40 = <<98-40=58>>58 potteplanter tilbage.
+#### 58"," Marie har 2 potteplanter på hver af de 40 vindueskarme med 2 potteplanter. Hun giver 1 af hver til venner og familie, så hver karm har 1 potteplante mindre.
+40 vindueskarme * 2 potteplanter/karme = 80 potteplanter.
+Marie har 2 potteplanter + 80 potteplanter = 82 potteplanter tilbage.
+#### 8250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228881575488'>,False
+937,"Niels fodrer sine husdyr med hø. Hver ged har brug for 5 kg og hver får har brug for 3 kg mindre end det to gange af, hvad hver ged har brug for. Hvis der er 15 geder og 12 får, hvor mange kg hø har Niels brug for?","Først find ud af, hvor meget hø hvert får har brug for: 5 kg * 2 - 3 = <<5*2-3=7>>7 kg/får
+Så regn ud, hvor meget hø fårene i alt har brug for: 7 kg/får * 12 får = <<7*12=84>>84 kg
+Derefter regn ud, hvor meget hø gederne i alt har brug for: 5 kg/ged * 15 geder = <<5*15=75>>75 kg
+Sidst læg de to mængder hø sammen for at finde det samlede antal: 84 kg + 75 kg = <<84+75=159>>159 kg
+#### 159","
+Hver ged har brug for 5 kg.
+Hver får har brug for 5 kg - 3 * 2 = 5 kg - 6 = -1 kg, hvilket er umuligt.
+Derfor skal der være minut og dele med 25.
+Hver ged har brug for 5 kg.
+Hver får har brug for 5 kg - 3 * 2 = 5 kg - 6 = -1 kg, hvilket er umuligt.
+5 kg/ged + 12 få = 60 kg.
+Lad x være antallet af g####
+200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228881597120'>,False
+1133,"Bedstemor går 3 kilometer hver dag på hendes yndlingsvandrerute, som inkluderer 2 kilometer på stranden og 1 kilometer på fortovet. På fortovet går Bedstemor to gange så hurtigt som hun gør på stranden. Hvis 40 minutter af hendes gåtur tilbringes på stranden, hvor lang tid tager det hende at fuldføre hele 3-kilometer gåturen, i minutter?","På stranden går Bedstemor med en hastighed på 2 kilometer per 40 minutter, eller 2/40 = 1/20 kilometer per minut. På fortovet går hun to gange så hurtigt som når hun er på sandet, eller 2*1/20 = 1/10 kilometer per minut. For at gå 1 kilometer på fortovet, tager det hende 1/(1/10)=10 minutter. Så i alt tager det Bedstemor 40+10=50 minutter at gå sin yndlingsrute. #### 50"," Bedstemor går 3km.
+Stranden: 2km.
+Fortov: 1km.
+Samlet: 2 + 1 = 3km.
+Bedstemor øver dig i 40 minutter.
+Bedstemor gåtur: 3km.
+Tid: 40 minutter.
+Da bedstemor er 3 km, hvor lang tid tager det hende at fuldføre alt?
+3km = 3km er det.
+Tid = 40 minutter.
+Pere: 3km = 3km.
+Tid = 40 minutter.
+```
+3 km.
+Str. #### 406500305699999999999999999999999953787624508579616442899996573525960771469358374597239804684498578132646351429163618546835129163144928641509637786993410534559975245256085791855953472516365578772292977726072068603330034954728771907118039213542886963423950270583331499872617244390299374264127908502463873461707451640459647322786431847598384310496877305",<MagicMock name='mock.__sub__().__truediv__()' id='140228882403344'>,False
+1268,"Et tårn er lavet af 4 blå blokke, to gange så mange gule blokke og et ukendt antal røde blokke. Hvis der er 32 blokke i tårnet i alt, hvor mange røde blokke er der så?","Der er 4*2=<<4*2=8>>8 gule blokke i tårnet.
+Der er 32-4-8 = <<32-4-8=20>>20 røde blokke i tårnet.
+#### 20","
+Lad B være antallet af blå blokke, G være antallet af gule blokke og R være antallet af røde blokke.
+Vi ved, at B + 2G = 32
+Vi sad i forhold til at lave tårnet.
+Det er 4 + 2(2) = 8.
+4 + 2x = 32
+2x = 32 - 4 = 28
+x = 14
+Så 4 blå + 2 x 2 guler + R = 32
+4 + 2x + R = 32
+4 = 32 - 2x - R
+4 = 32 - 2x - R
+2####
+231478032323232615532134674221657532435947248040122430044514772832437572858067612698433843008541136088326047432488326047432488326047432488326047432487464359472480401224300445148755432594724804012243004451487554325947248040122430044514875543250451487543157782720733757283260474324883260474309542542577637560307783592991632000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140229140168928'>,False
+43,"Ifølge oplysningerne om næringsindhold har en pose chips 250 kalorier per portion. Hvis en 300 gram pose har 5 portioner, hvor mange gram kan du spise, hvis dit daglige kaloriemål er 2000 og du allerede har indtaget 1800 kalorier?","Hvis det totale kaloriemål er 2000 og jeg har indtaget 1800 kalorier, så har jeg 2000-1800 = <<2000-1800=200>>200 kalorier tilbage at spise
+Hvis hver portion chips har 250 kalorier og jeg kun har 200 kalorier tilbage at spise, så kan jeg kun spise 200/250 af en portion = 4/5 af en portion
+Vi ved også, at en 300 gram pose chips har 5 portioner, derfor har hver portion 300 gram/5 = <<300/5=60>>60 gram
+Hvis jeg kun kan spise 4/5 af en portion, så kan jeg kun spise 60 gram*4/5 = 48 gram
+#### 48"," En 300 gram pose chips indeholder 250 kalorier per portion.
+En 300 gram pose har 5 portioner, så der er 300 * 5 = 1500 kalorier.
+Dit daglige kaloriemål er 2000, og du har allerede indtaget 1800.
+Du kan spise 2000-1500 = 500 kalorier.
+Derfor kan du spise 500 gram chips.
+#### 50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228881105264'>,False
+496,"Bo er 14 år gammel. Om fire år vil hans søster Anne være tre gange så gammel, som Bo er nu. Hvor gammel er Anne lige nu?","Om fire år bliver Anne 14*3=<<14*3=42>>42.
+Lige nu er Anne 42-4=<<42-4=38>>38 år gammel.
+#### 38","
+Hvis Bo er 14 år gammel nu, vil Anne være 3 * 14 = 42 år gammel om fire år.
+Anne er lige nu 14 + 4 = 18 år gammel.
+#### 18288000062000000000000000940000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228879939584'>,False
+473,Henrik så en 3 meter lang haj med 2 markeringer på 15 cm hver på siden. Hvor mange procent af hajens kropslængde udgør den samlede længde af markeringerne?,"Først, find den samlede længde af markeringerne i cm: 15 cm/markering * 2 markeringer = <<15*2=30>>30 cm.
+Derefter dividerer du det tal med 100 for at konvertere det til meter: 30 cm / 100 cm/m = <<30/100=0,3>>0,3 m.
+Derefter dividerer du den samlede markeringslængde i meter med hajens længde og ganger med 100% for at udtrykke svaret som en procentdel: 0,3/3 meter * 100% = 10%
+
+#### 10","
+Han så en 3 meter lang haj, så den asumering er 3 m.
+Hajet har 2 markeringer på 15 cm.
+Hovedlængden af en markering er 2 * 15 cm = 30 cm.
+Hajet har 2 markeringer på 30cm, så samlet længde af markeringerne er 2 * 30 cm = 60 cm.
+Den samlede længde af markeringerne udgør 60/3 = 20% af den samlede læng####
+600000200000000000000000006000000000000000000000080000000000000000000000060000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228879937616'>,False
+125,"Laura gjorde sig klar til en middagsselskab i hendes hus, hvor hun havde tænkt sig at servere gryderet. Hun bemærkede, at hun var løbet tør for plastik skeer, så hun købte en ny pakke med skeer. Senere købte hendes mand også en pakke med fem nye skeer og gav dem til Laura. Mens Laura lavede gryderet, brugte hun tre skeer til at smage på sin gryderet. Senere, da hun gik for at dække bordet, havde hun i alt 12 skeer. Hvor mange skeer var der i den pakke, som Laura købte?","Det samlede antal skeer fra Laura og hendes mand var 12+3=<<12+3=15>>15 skeer.
+Da manden købte en pakke med fem skeer, indeholdt Lauras pakke 15-5=<<15-5=10>>10 skeer.
+#### 10"," Laura havde 3 + 5 + 3 = 11 skeer i den pakke.
+#### 11472278934722789377169472278978937716947227893771694722789377169472278918858327777537572686959788385953777737837091674987923768976655371724756776272781875866869469073543236515242666598767876787642897882044603793650348348157179111976752658042795277436593113138728979324730553087893686304333623761663344497751056271868843349967569574869013859875376793073835123663147258756573035734190491318278773153157854945663919664662279319353743538022137639769869774889518463552739738594266",<MagicMock name='mock.__sub__().__truediv__()' id='140228879807264'>,False
+579,En dreng har 5 kort. Hans bror har 3 færre kort end han har. Hvor mange kort har de tilsammen?,"Hans bror har 5 - 3 = <<5-3=2>>2 kort.
+Tilsammen har de 5 + 2 = <<5+2=7>>7 kort.
+#### 7","
+Drengen har 5 kort.
+Bror har 5 - 3 = 2 kort
+De har tilsammen 5 + 2 = 7 kort.
+#### 7575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575757575",<MagicMock name='mock.__sub__().__truediv__()' id='140228882560304'>,False
+636,"Julie betjener kassen præcis to gange så hurtigt som hendes mindre erfarne kollega Sofie. Dagligt betjener Sofie 50 kunder. Hvad er den samlede ugentlige produktion for de to, hvis de arbejder alle ugens dage?","Mens Sofie behandler 50 ordrer på en dag, behandler Julie 50 ordrer/dag*2=<<50*2=100>>100 ordrer/dag.
+På en dag behandler de 100 ordrer/dag + 50 ordrer/dag = <<100+50=150>>150 ordrer sammen.
+Det samlede antal ordrer, de to behandler på en uge, er 150 ordrer/dag * 7 dage/uge = <<150*7=1050>>1050 ordrer
+#### 1050"," Sofie betjener 50 kunder / 2 = 25 kunder pr. dag. Julie betjener 25 kunder * 2 = 50 kunder pr. dag.
+De arbejder hver dag i 7 dage, så den samlede ugentlige produktion er 50 kunder/dag * 7 dage = 350 kunder.
+#### 3500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228879809472'>,False
+1189,"Dorte skar et æble i 16 stykker. Hun spiste 2 skiver, hendes søster spiste 3 mere end hende og hendes bror spiste 2 mere end sin søster. Hvor mange skiver æble spiste de alle?","Hendes søster spiste 2 + 3 = <<2+3=5>>5 skiver.
+Hendes bror spiste 5 + 2 = <<5+2=7>>7 skiver.
+De spiste i alt 2 + 5 + 7 = <<2+5+7=14>>14 skiver.
+#### 14","
+Dorte skar 16 æbler i alt.
+Hun spiste 2 æbler.
+Søsteren spiste 3 æbler mere end hende, så 16 - 2 = 14 æbler.
+Brorens søster spiste 2 æbler mere end hendes søster, så 14 - 2 = 12 æbler.
+Brorens æble spiste 2 æbler mere end sin søster, så 12 - 2 = 10 æbler.
+Så de spiste i alt 16 + 14 + 12 + 10 = 52 æ####
+42777777428888888777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777778777777777777777777777777777777777777777777777777777777777777777",<MagicMock name='mock.__sub__().__truediv__()' id='140228881105360'>,False
+242,"Morten var en penneven med 5 personer. Han stoppede med at være pennevenner med 2 af dem. De sender hver 2 breve om ugen, der er 5 sider lange. Han svarer med det samme. Han kan skrive en side hver 6 minut. Hvor mange timer bruger han på at skrive om ugen?","Morten er pennevenner med 5-2=<<5-2=3>>3 personer
+Således får han 3*2=<<3*2=6>>6 breve om ugen
+Så han skriver 6*5=<<6*5=30>>30 sider om ugen
+Så han skriver i 30*6=<<30*6=180>>180 minutter om ugen
+Så han skriver 180/60=<<180/60=3>>3 timer om ugen
+#### 3","
+Antal mennesker = 5
+Antal mennesker, der stoppede = 2
+Antal personer, der er tilbage = 5 - 2 = 3
+Antal breve, der sendes om ugen = 5 * 2 = 10
+Tiden, der bruges på at skrive hver side, = 6 minutter/side
+Antal sider i et brev = 5
+Total tid = 10 * 6 * 5 = 300 minutter.
+1 timer = 60 minutter, så 300/60####
+300243999999999999999999999999999999080808080808080808080808080808080808080808080808080808080808320439999999999999999999999999999999999999999999999999999990999888888899099999999999999999999998999999999099999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",<MagicMock name='mock.__sub__().__truediv__()' id='140228881991776'>,False
+737,"Peter ønsker at lave isterninger af forskellig størrelse med 32 gram vand. Han kan lave store isterninger, der bruger 4 gram per terning, mellemstore isterninger, der bruger 2 gram og små isterninger, der bruger 1/2 gram. Hvis han laver 3 store isterninger, 7 mellemstore isterninger og 8 små isterninger, hvor mange gram vand har han tilbage?","De store terninger brugte 12 gram vand, fordi 3 gange 4 er lig med <<3*4=12>>12.
+Mellemstore tern brugte 14 gram vand, fordi 7 gange 2 er lig med <<7*2=14>>14.
+De små tern brugte 4 gram vand, fordi 8 gange 1/2 er lig med 4.
+Dette betyder, at Peter har brugt 30 gram vand, fordi 12 plus 14 plus 4 er lig med 30.
+Peter har 2 gram vand tilbage, fordi 32 minus 30 er lig med <<32-30=2>>2.
+#### 2"," Hver terning indeholder 4 gram vand.
+3 store isterninger * 4 gram/terning = 12 gram
+7 mellemstore isterninger * 2 gram/terning = 14 gram
+8 små isterninger * 1/2 gram/terning = 4 gram
+Samlet vand, der blev brugt = 12 + 14 + 4 = 30 gram
+Peter har tilbage 32 - 30 = 2 gram vand.
+#### 2000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228880301088'>,False
+406,Hos Allan er der to gange så mange majs som bananer. Han har i alt 40 bananer i sit hus. Allan købte 60 flere bananer i butikken og 40 færre majs end antallet af bananer. Find det samlede antal majs og bananer Allan har i huset?,"Før han købte nogle majs og bananer, havde Allan to gange så mange majs som bananer, hvilket er 2*40 = <<2*40=80>>80 majs
+Det samlede antal majs og bananer, som Allan havde før, er 80 majs + 40 bananer = <<80+40=120>>120 genstande
+Da han købte 40 færre majs end bananer, købte han 60 - 40 = <<60-40=20>>20 majs
+I alt købte han 20 majs + 60 bananer = <<20+60=80>>80 genstande
+Efter købene har Allan 120 genstande + 80 genstande = <<120+80=200>>200 totalt majs og bananer tilsammen.
+#### 200","
+Antal majs = 2 * antal bananer = 2 * 40 = 80
+Antal bananer = 40
+Allan købte 60 flere bananer, så det nye antal bananer = 40 + 60 = 100
+Allan købte 40 flere majs, så det nye antal majs = 80 + 40 = 120
+Samlet antal majs = 80
+Samlet antal bananer = 100
+Summen af majs og bananer = 80 + 100 = 180
+#### 18000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228879662016'>,False
+480,Brian har 4 tuber blå maling og 3 tuber gul maling. Jesper har halvdelen så mange tuber blå maling som Brian og tre gange så mange tuber gul maling som Brian. Hvor mange tuber maling har Jesper?,"Jesper har 4*1/2= <<4*1/2=2>>2 tuber blå maling
+Jesper har 3*3=<<3*3=9>>9 tuber gul maling
+Jesper har i alt 2+9 =<<2+9=11>>11 tuber maling
+#### 11","  Jespers tuber blå maling = 4/2 = 2
+Jespers tuber gul maling = 3 * 4 = 12
+Jespers totalt antal tuber maling = 2 + 12 = 14
+#### 1473047304766473047664730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730477430476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730476730",<MagicMock name='mock.__sub__().__truediv__()' id='140228880510624'>,False
+921,"Et brød har 24 skiver. Hvis Andrea kan spise 2 skiver om dagen, mens Johan kan spise to gange så meget, hvor mange dage holder brødet så?","Johan kan spise 2*2=<<2*2=4>>4 skiver om dagen.
+Sammen kan Andrea og Johan spise 2+4=<<2+4=6>>6 skiver om dagen.
+Så et brød vil holde i 24/6=<<24/6=4>>4 dage.
+#### 4"," Det er fordi Johan spiser 2 * 24 = 48 skiver om dagen.
+Så brødet holder i 24 / 48 = 0.5 dages.
+#### 0555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555565555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555",<MagicMock name='mock.__sub__().__truediv__()' id='140228880463968'>,False
+546,"Elise er ved at lære at skrive og beslutter sig for at omskrive alfabetet, indtil hun kan det. Hun skriver det fuldt ud to gange, skriver halvdelen af det én gang og omskriver derefter alt, hvad hun allerede har skrevet. Hvor mange bogstaver har Elise skrevet i alt?","Elise har skrevet alfabetet to gange, hvilket er i alt 28*2=<<28*2=56>>56 bogstaver.
+Hun skriver derefter halvdelen af alfabetet, hvilket er 28*1/2=<<28*1/2=14>>14 bogstaver.
+Indtil videre er dette i alt 56 + 14 = <<56+14=70>>70 bogstaver.
+Hvis hun skriver dette igen, betyder det, at hun har fordoblet antallet af bogstaver, hun har skrevet, så hun har skrevet i alt 70 * 2 = <<70*2=140>>140 bogstaver.
+#### 140"," Elise skriver det fuldt ud to gange, så hun skriver 2 * 26 = 52 bogstaver.
+Hun skriver halvdelen af det én gang, så hun skriver 26 / 2 = 13 bogstaver.
+Efter at have omskrevet alt i stadig gik ord, er der 52 + 13 = 65 bogstaver.
+#### 65437308606454777863508466728359792531142065477786350846672835979253114206547778635084667283597925311420654777863508466735918282529365014647069000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228881218880'>,False
+269,En jonglør kan jonglere med 16 bolde. Halvdelen af boldene er golfbolde og halvdelen af golfboldene er blå. Hvor mange blå golfbolde er der?,"Golfbolde: 16*1/2=<<16*1/2=8>>8.
+Blå golfbolde: 8*1/2=<<8*1/2=4>>4 bolde
+#### 4","
+Halvdelen af boldene er 16 / 2 = 8 bolder.
+Den anden halvdel er 8 / 2 = 4 bolder.
+Der er 4 blå golfbolde.
+#### 400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228879717760'>,False
+116,"Lisbeth laver kaffe med sukker i forholdet 7:13, hvor sukker måles i teskefulde og vand i deciliter. Hvis hun brugte i alt 120 teskefulde sukker og deciliter vand, beregn antallet af teskefulde sukker, hun brugte.","Det samlede forhold, der repræsenterer de ingredienser, hun brugte til at lave kaffe, er 7+13 = <<7+13=20>>20
+Da brøken, der repræsenterer antallet af teskefulde, hun brugte, er 7/20, brugte hun 7/20*120 = <<7/20*120=42>>42
+#### 42","
+Sup: 7x120 = 840 teskefulde sukker
+Vand: 13x120 = 1560 deciliter vand
+{% 840=840>>840>>2>>4>>12>>1>>1>>1>>1>>1>>1>>1>>1>>1>>1>>1>>1>>1>>1>>1>>1>>1>>1>>1>>1>>1>>1>>1>>1>>>1| 840
+Vand: 1560 deciliter vand
+Hvor mange teskefulde sukker bruges.
+4x120=480 teskefulde sukker.
+Whisky: 7x120=840 teskefulde
+V####
+48000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000067000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228880536624'>,False
+491,"Kristoffer lægger æg på nogle bakker. Hver bakke kan rumme 24 æg. Hvis han har 64 æg og 2 bakker, hvor mange æg vil han ikke kunne lægge på en bakke?","Kristoffer vil være i stand til at lægge i alt 24*2 = <<24*2=48>>48 æg.
+Derfor er der 64 - 48 = <<64-48=16>>16 æg, som han ikke vil kunne lægge på en bakke.
+#### 16"," Krystoffer har 64 æg. Et bakke kan rumme 24 æg. Han har 2 bakker. Antal æg, der kan lægges er 24 * 2 = 48 æg.
+Han har 64 æg, så han kan lægge 64 - 48 = 16 æg.
+#### 16000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228881134560'>,False
+220,Det tager Karen 10 minutter at fuldføre en krydsogtværs og 5 minutter at fuldføre en sudoku. I løbet af weekenden løste hun 3 krydsogtværs og 8 sudoku. Hvor meget tid brugte hun på at spille disse spil?,"Det tager 10 minutter at fuldføre en krydsogtværs og hun fuldførte 3, hvilket i alt giver 10*3 = <<10*3=30>>30 minutter
+Det tager 5 minutter at fuldføre en sudoku og hun fuldførte 8, hvilket i alt giver 5*8 = <<5*8=40>>40 minutter
+Hun brugte 30 minutter på krydsogtværs og 40 minutter på sudoku, i alt 30+40 = <<30+40=70>>70 minutter
+#### 70"," Karen tog 10 minutter/krydsogtværs + 5 minutter/sudoku = 15 minutter/spil.
+I løbet af weekenden løste hun 3 krydsogtværs + 8 sudoku = 11 krydsogtværs + 8 sudoku = 11 * 15 minutter = 165 minutter.
+Hun spillede 11 krydsogtværs + 8 sudoku = 165 minutter.
+#### 16500002000000000000000000001200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228880361584'>,False
+1063,Jørgen modtager 80 e-mails om dagen. 20% af disse e-mails kræver ikke noget svar. Han besvarer resten af dem. Hvor mange e-mails svarer Jørgen på i en 5-dages arbejdsuge?,"Jørgen modtager 80*20/100=<<80*20/100=16>>16 e-mails, der ikke kræver et svar
+Så han svarer på 80-16=<<80-16=64>>64 e-mails per dag
+På en 5-dages arbejdsuge svarer Jørgen altså på 64*5=<<64*5=320>>320 e-mails
+#### 320"," Jørgen modtager 80 e-mails/dag.
+20% af e-mails, der kræver ikke svar, er 0.20*80 = 16 e-mails.
+Jørgen svarer på 80-16 = 64 e-mails.
+Antallet af e-mails, der svarer, er 64 e-mails/dag * 5 dage = 320 e-mails.
+#### 3203203203203203203203203203203203203203203203203203203203203203203203203203203203203203203203203203203203432032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032032",<MagicMock name='mock.__sub__().__truediv__()' id='140228880361920'>,False
+158,"Rasmus gik for at købe nogle skolematerialer. Han købte 4 kuglepenne, som kostede 1,5 kroner hver, 2 notesbøger, som kostede 4 kroner hver og en ramme papir, som kostede 20 kroner. Hvor meget brugte Rasmus i alt?","Rasmus brugte 4*1,5 kroner = <<4*1,5=6>>6 kroner for kuglepennene.
+Han brugte også 2*4 kroner = <<2*4=8>>8 kroner for notesbøgerne.
+Derfor brugte Rasmus i alt 6 kroner + 8 kroner + 20 kroner = <<6+8+20=34>>34 kroner for skolematerialer.
+#### 34","
+4 kuglepenne * 1,5 kr/penne = 6 kr
+2 notesbøger * 4 kr/note = 8 kr
+1 ramme papir * 20 kr = 20 kr
+Total = 6 + 8 + 20 = 34 kr
+#### 342000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228880545360'>,False
+718,"100 mennesker ansøger om et job hos Google. Af dem der ansøger, modtager kun 30% invitationer til samtale. Af dem der får en samtale, modtager 20% et jobtilbud. Af dem der får et jobtilbud, accepterer en tredjedel af personerne stillingen. Hvor mange personer accepterer stillingen?","Antallet af personer der modtager invitationer til samtale er 100 * 0,3 = <<100*0,3=30>>30 personer
+Antallet af personer der modtager et jobtilbud er 30 * 0,2 = <<30*0,2=6>>6 personer
+Antallet af personer der accepterer stillingen er 6*1/3=<<6*1/3=2>>2 personer
+#### 2"," I alt ansøger 100 personer.
+Der modtager 30% af invitationer til samtale, så 100 * 0.30 = 30 personer modtager overtrædelsesknap.
+Af disse 30 personer modtager 20% et jobtilbud, så 30 * 0.20 = 6 personer modtager et jobtilbud.
+Af disse 6 personer accepterer der en tredjedel, så 6 * 0.30 = 1,8, så 6#### 18727878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787868686868686868687575779999999999999999999999999877777777777777787777777787777766666666666666666666666666666666669999999999999999999999999999999999999999999999999999999999998788888888888888777777766666666666666666666666669999999999999999999999999999999999",<MagicMock name='mock.__sub__().__truediv__()' id='140228880802848'>,False
+982,"I Hansens klasse på 30 elever, er 20% af klassen fodboldspillere. Ud af de resterende elever er 25% cheerleadere eller en del af bandet. Disse 3 grupper af elever skal forlade skolen tidligt i dag for at rejse til en udekamp. Hvor mange elever forlader skolen tidligt?","20% af de 30 elever i klassen er fodboldspillere, så det er 0,2*30 = <<0,2*30=6>>6 elever
+Der er 30 elever og 6 er fodboldspillere, så der er 30-6 = <<30-6=24>>24 elever tilbage
+25% af de resterende 24 elever er en del af bandet eller cheerleadere, så det er 0,25*24 = <<0,25*24=6>>6 elever
+6 elever er fodboldspillere og 6 er en del af bandet/cheerleadere, så 6+6 = <<6+6=12>>12 elever vil forlade skolen tidligt
+#### 12","
+Antal elever i klassen = 30
+Fodboldspillere = 20% af 30 = 0,20 * 30 = 6 elever
+Resten af eleverne = 30 - 6 = 24 elever
+Cheerleadere = 25% af 24 = 0,25 * 24 = 6 elever
+Band er en del af både cheerleadere og band, så vi kan sige, at der er 6 elever, der er cheerleadere eller band.
+Antal elever der nu#### 30727272372723072307272727272727272727273029372729372727272727272727272727272727272727272727272727272777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777797777770777",<MagicMock name='mock.__sub__().__truediv__()' id='140228879936560'>,False
+1084,"Hvis Simon og Henrik har 100 cm hegn mellem dem og de er enige om at dele det, så Henrik får 60 cm mere end Simon, hvor meget er der tilbage til Simon?","Lad x være mængden af hegn, Simon får og y være mængden, Henrik får. Vi ved, at y = x + 60 og y + x = 100.
+Indsætter vi den første ligning i den anden ligning, får vi 2x+60=100
+Trækker 60 fra begge sider, får vi 2x=40
+Vi deler hver side med to og x=20. Dette betyder, at Simon har 20 cm hegn tilbage.
+#### 20"," Simon har 100cm. Henrik har 60cm mere end Simon. Så Henrik får 100+60=160cm. Simon har 100cm tilbage.
+Så Simon har 160-100 = 60cm tilbage.
+#### 600000055000000079800000000000000798000000000000798000000000000000798000000006000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228878908736'>,False
+520,"Martha strikker vintertøj til sine 3 børnebørn. De er trillinger, så de har alle samme størrelse. Hun vil lave en hat, et tørklæde, en sweater, vanter og sokker til hver af dem. Det kræver 2 garnnøgler at lave en hat, 4 for et tørklæde, 12 for en sweater, 1 for et par vanter og 2 for et par sokker. Hvor mange garnnøgler skal hun købe?","Et komplet sæt til hvert barn vil kræve 2 garnnøgler per hat + 4 garnnøgler per tørklæde + 12 garnnøgler per sweater + 1 garnnøgle per par vanter + 2 garnnøgler per par sokker = <<2+4+12+1+2=21>>21 garnnøgler.
+Så for at strikke outfits til alle sine børnebørn, vil hun have brug for 3*21 = <<3*21=63>>63 garnnøgler.
+#### 63","
+Hat: 2 garnnøgler
+Tørklæde: 4 garnnøgler
+Sweater: 12 garnnøgler
+Vanter: 1 garnnøgler
+Sokker: 2 garnnøgler
+Total: 2 + 4 + 12 + 1 + 2 = 21 garnnøgler
+#### 216000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228878973456'>,False
+1074,Tobias afsluttede halvdelen af et puslespil med 500 brikker og begyndte derefter at færdiggøre et andet puslespil med 500 brikker på en time. Hvor mange puslespilsbrikker placerede Tobias i løbet af den time?,"Tobias placerede 1/2*500 brikker = <<500*1/2=250>>250 brikker.
+Tobias færdiggjorde 250 brikker + 500 brikker = <<250+500=750>>750 brikker.
+#### 750"," Tobias afsluttede 500 brikker, og begyndte at færdiggøre et andet puslespil med 500 brikker.
+Således, summen af de brikker crusekultiverede over 2 puslespil er 500 + 500 = 1000.
+#### 100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228878971104'>,False
+1025,Påskeægs-jagtholdet gemte 100 æg. Jensen-tvillingerne fandt hver 30 æg. Alle de andre æg undtagen 10 blev fundet af deres venner. Hvor mange æg fandt vennerne?,"Jensen-tvillingerne fandt 30 * 2 = <<30*2=60>>60 æg.
+Antallet der forblev skjult var 100 - 60 = <<100-60=40>>40 æg
+Da 10 æg ikke blev fundet, betyder det, at vennerne fandt 40 - 10 = 30 æg.
+#### 30"," Der var 100 æg. Jensen-tvillingerne fandt 30 æg hver. I alt fandt vi 30 * 2 = 60 æg.
+Dette er ikke korrekt.
+I 100 æg er 100/30 = 3.333.333.333/30.
+Så den anden løsning er ikke korrekt. Vi skal finde ud af, hvor mange æg der blev fundet af vennerne. Der var 100 æg. Ingen æg blev fundet af 10. Så 100#### 100999999999999997777777777777777777777799999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",<MagicMock name='mock.__sub__().__truediv__()' id='140228878841904'>,False
+1031,"Aarhus Katedralskole afholder dimission i deres festsal i år, som har plads til 1500 mennesker. Efter at have reserveret 450 pladser til dimittender og 100 pladser til fakultetdeltagere, hvor mange billetter kan hver kandidat give til deres venner og familie, hvis billetterne er delt ligeligt?","Plus kandidat- og fakultetspladser sammen. 450 + 100 = <<450+100=550>>550 pladser til fakulteter og kandidater
+Minus pladser til fakulteter og kandidater fra det totale antal tilladte pladser. 1500 - 550 = <<1500-550=950>>950 pladser tilbage.
+Opdel antallet af kandidater efter resterende pladser 950/450 = <<950/450=2>>2 billetter
+#### 2"," Afstanden til 1500 personer = 1500.
+Antal personer, brugerne kan give til venner og familie = 1500.
+I totalt kan de rejse 1500 * 1500 = 2250000.
+I totalt kan de give 1500 * 1500 = 2250000 til venner og familie.
+I totalt kan de give 2250000 til venner og familie.
+De spiller ikke af noget, så det tol####
+50000000000000141500000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228878973120'>,False
+1264,"Sara laver popcorn som en snack. Når panden med majskernerne bliver varm, begynder kernerne at poppe hurtigere. 20 popper i de første 30 sekunder af tilberedningen, derefter tre gange det antal i de næste 30 sekunder. Kernerne øges til fire gange den oprindelige poppehastighed i de næste 30 sekunder, men i de sidste 30 sekunder aftager poppehastigheden til halvdelen af hastigheden af de tidligere 30 sekunder. Efter Sara har taget panden af varmen, popper en fjerdedel af antallet af kerner, der poppede i de sidste 30 sekunder af tilberedningen på grund af den resterende varme. Hvor mange popcorn har Sara at spise?","I de anden 30 sekunder af tilberedningen popper 3*20=<<3*20=60>>60 kerner.
+I de tredje 30 sekunder popper 4*20=<<4*20=80>>80 kerner.
+I de sidste 30 sekunder popper 80/2=<<80/2=40>>40 kerner.
+Efter tilberedningen får den resterende varme til at 40/4=<<40/4=10>>10 kerner popper.
+Således har Sara 20 + 60 + 80 + 40 + 10 = <<20+60+80+40+10=210>>210 popcorn at spise.
+#### 210","
+Let os beregne antallet af popper i hvert trin.
+Hold 1: 20 popper i de første 30 sekunder.
+Hold 2: 30 popper i de næste 30 sekunder.
+Hold 3: 4 * 20 = 80 popper i de næste 30 sekunder.
+Hold 4: 0 popper i de sidste 30 sekunder.
+Da antallet af popper i de sidste 30 sekunder er nul, er antallet af popp####
+5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228879244736'>,False
+164,"Josefine overvejer, om hun skal lave sine skatter selv eller hyre en revisor. Hvis hun gør det selv, vil hun kunne udføre 3 færre timer freelancearbejde, hvilket medfører et tab på 35 kr/time i mistet indkomst. Revisoren kræver 90 kr. Hvor mange flere penge vil hun have, hvis hun hyrer revisoren?","Først find den samlede mistede indkomst, hvis Josefine laver sine skatter selv: 35 kr/time * 3 timer = <<35*3=105>>105 kr
+Træk derefter revisorens gebyr fra for at finde ud af, hvor mange penge Josefine sparer: 105 kr - 90 kr = <<105-90=15>>15 kr
+#### 15","
+Lad Y være antallet af timer, Josefine gør selv.
+Lad Z være antallet af timer revisoren kræver.
+Så, 3færre timer = 3 * 35 = 105 timer.
+Det medfører et tab på 35 kr/time * 105 = 3675 kr.
+Hvis hun hyrer revisoren, vil hun have 90 kr + 3675 kr = 3775 kr.
+Derfor vil Josefine have 3775 kr. - 3675 kr = 1####
+1100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228880514416'>,False
+103,"En tågebanke kommer ind fra havet for at dække en by. Det tager 10 minutter at dække hver 3 km af byen. Hvis byen er 42 km bred fra havnefronten til den modsatte indlandsgrænse, hvor mange minutter vil det så tage for tågebanken at dække hele byen?","Byen vil blive dækket på 42/3 = <<42/3=14>>14 intervaller af 10 minutter.
+Således vil det tage 14 * 10 = <<14*10=140>>140 minutter for tågen at dække hele byen.
+#### 140","
+Byens overfladebredde er 42km.
+Det tager 10 minutter at dække 3 km.
+Så det tager 10 minutter/3 km = 10/3 minutter per km.
+Byens bredde er 42 km.
+Samlet tidsforbrug = (42 km * 10/3 minutter/km) = 420/3 minutter = 140 minutter.
+#### 14030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228879073200'>,False
+1247,"Bertram har en pose med kugler med 10 indeni. Han snublede over en sten, mens han bar den og tabte halvdelen af dem. Han skyndte sig at søge efter dem, men fandt kun 3. Da han kom hjem, inspicerede han kuglerne nærmere. To af dem, han samlede op, var ikke kugler, men faktisk træperler, så han smed dem væk. Hvor mange kugler endte Bertram med?","Bertram tabte sine kugler og var tilbage med 10*1/2=<<10*1/2=5>>5 kugler.
+Han søgte og fandt nogle af sine tabte kugler, hvilket bragte ham tilbage til 5+3=<<5+3=8>>8 kugler.
+Han gik hjem og fjernede træperlerne, hvilket efterlod ham med 8-2=<<8-2=6>>6 kugler.
+#### 6"," Bertram startede med 10 kugler. Han tabte halvdelen af dem, så han tabte 10/2 = 5 kugler. Han havde 10 - 5 = 5 kugler tilbage. Så han fandt 3 kugler, og de var ikke kugler, så han smed dem væk. Det betyder, at han havde 5 + 3 = 8 kugler.
+#### 800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228879563904'>,False
+984,"Sofie har et blomsterbed, der er 28,8 m langt. Sofie vil fylde sit blomsterbed med planter. Sofies blomster bliver 30 cm brede, så hun skal bruge 46 cm mellem hver plante. Sofie ejer allerede 17 blomster. Hver blomstrende plante koster 40 kr i butikken, hvor mange penge skal Sofie bruge på sit blomsterbed?","Sofies blomsterbed er 28,8 m / 46 cm per plante = <<2880/46=62>>62 planter påkrævet.
+Sofie skal købe 62 planter - 17 planter = <<62-17=45>>45 planter, der skal købes.
+Sofie skal bruge 45 planter * 40 kr = <<45*40=1800>>1800 kr.
+#### 1800"," Sofie har 17 planter.
+Hver plante koster 30 cm brede * 46 cm mellem planter = 1380 cm.
+17 planter går fra 1380cm = 2600 cm.
+Hver plante koster 40 kr.
+Total kost for 17 planter = 2600 cm * 40 kr/cm = 104.000 kr.
+Sofie skal bruge 104.000 kr på sit blomsterbed.
+#### 104000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228878974608'>,False
+976,"Kristian sælger honningkager og æbletærte til en indsamlingskampagne. Om lørdagen solgte han 10 kasser honningkager og 4 færre kasser æbletærte end om søndagen. Om søndagen solgte han yderligere 5 kasser honningkager end om lørdagen og 15 kasser æbletærte. Hvis honningkager koster 6 kroner og æbletærter koster 15 kroner, hvor meget tjente Kristian på to dage?","Han solgte 10 + 5 = <<10+5=15>>15 kasser honningkager om søndagen.
+Det samlede antal kasser honningkager, som Kristian solgte, er 10 + 15 = <<10+15=25>>25.
+Kristian tjente 25*6 kroner = <<25*6=150>>150 kroner på at sælge honningkager.
+Han solgte 15 - 4 = <<15-4=11>>11 kasser æbletærte om lørdagen.
+Det samlede antal kasser æbletærte, som Kristian solgte, er 15 + 11 = <<15+11=26>>26.
+Han tjente 26*15 kroner = <<26*15=390>>390 kroner på at sælge æbletærte.
+Så Kristian tjente 150 kroner + 390 kroner = <<150+390=540>>540 kroner på to dage.
+#### 540","
+Om lørdagen solgte han 10 kasser honningkager og 4 kasser æbletærte.
+Om søndagen solgte han 10 + 5 = 15 kasser honningkager og 4 * 15 = 60 kasser æbletærter.
+Total solgte han 10 + 60 = 70 kasser på to dage.
+Hunne torde 70*6 = 420 kr.
+Han tjente summen 420 kr - 20*6 = 420 - 120 = 300 kr.
+dk: 300 kr.#### 300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",<MagicMock name='mock.__sub__().__truediv__()' id='140228879717856'>,False
+469,"Marie har 6 krukker krymmel i sit spisekammer. Hver krukke krymmel kan dekorere 8 muffins. Marie vil bage nok muffins til at bruge al hendes krymmel. Hvis hver bageform rummer 12 muffins, hvor mange bageforme skal hun bage?","Hun har nok krymmel til 6 * 8 = <<6*8=48>>48 muffins.
+Hun har brug for 48 / 12 = <<48/12=4>>4 bageforme for at bage alle muffins.
+#### 4"," Marie har 6 krukker krymmel.
+Hver krukke kan dekorere 8 muffins.
+Så Marie kan dekorere 6 * 8 = 48 muffins.
+Marie bager nok muffins til at bruge al hendes krymmel.
+Hver bageform rummer 12 muffins.
+Så Marie skal bage 48 / 12 = 4 bageforme.
+#### 44366666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666",<MagicMock name='mock.__sub__().__truediv__()' id='140228879067440'>,False

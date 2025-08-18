@@ -7,13 +7,16 @@ authors = [
     { name = "Kenneth Enevoldsen", email = "kennethcenevoldsen@gmail.com" },
 ]
 
-requires-python = ">=3.12"
+requires-python = ">=3.12,<3.13"
 dependencies = [
-    "pydantic>=2.11.4",
-    "pydantic-ai>=0.2.12",
-    "pydantic-evals>=0.2.12",
     "numpy>=2.2.6",
     "pandas>=2.3.0",
+    "dotenv>=0.9.9",
+    "datasets>=4.0.0",
+    "accelerate>=1.10.0",
+    "transformers<4.54.0",
+    "torch>=2.8.0",
+    "pydantic-evals>=0.6.2",
 ]
 
 [build-system]

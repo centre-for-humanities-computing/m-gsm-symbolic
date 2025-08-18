@@ -11,6 +11,10 @@ default_gsm_dan_path = (
     Path(__file__).parents[2] / "data" / "templates" / "dan" / "symbolic"
 )
 
+default_gsm_eng_path = (
+    Path(__file__).parents[2] / "data" / "templates" / "eng" / "symbolic"
+)
+
 logger = logging.getLogger(__name__)
 
 
@@ -65,6 +69,15 @@ def _parse_json_file(filepath: str | Path) -> GSMProblem:
 
 def load_gsm_dan(
     directory_path: str | Path = default_gsm_dan_path,
+) -> list[GSMProblem]:
+    dir_path = Path(directory_path)
+    json_files = list(dir_path.glob("*.json"))
+
+    return [_parse_json_file(f) for f in json_files]
+
+
+def load_gsm_eng(
+    directory_path: str | Path = default_gsm_eng_path,
 ) -> list[GSMProblem]:
     dir_path = Path(directory_path)
     json_files = list(dir_path.glob("*.json"))
