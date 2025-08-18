@@ -75,6 +75,7 @@ def load_gsm_dan(
 
     return [_parse_json_file(f) for f in json_files]
 
+
 def load_gsm_eng(
     directory_path: str | Path = default_gsm_eng_path,
 ) -> list[GSMProblem]:
