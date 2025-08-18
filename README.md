@@ -70,3 +70,23 @@ Niklas has been working on it
 
 7) Evaluation Setup (not completed)
 
+To run the evaluation outline on different models and datasets, please do the following steps:
+
+First, if you are using a ``B200`` or ``H100`` GPU, you will need to run the following command: 
+
+```python
+uv pip install -U vllm==0.9.0 --torch-backend=cu128
+```
+
+Next, please authenticate with a personal Hugging Face token:
+
+```python
+hf auth login
+```
+
+Finally, you can run the evaluation pipeline by providing the model (--model / -m), dataset (--dataset / -d), and number of GPU (--gpu / -g):
+
+```python
+python src/m_gsm_symbolic/evaluation.py -m {model} -d {dataset} -g {number of gpu}
+```
+
