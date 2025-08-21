@@ -1,0 +1,747 @@
+name,inputs,expected_output,output,task_duration,correct
+1277,"Matt and Madison are currently 27 years apart in age. If Matt, who is younger than Madison, is 16 years old, what's the average of their ages?","If Matt is 16 years old, Madison is 16+27 = <<16+27=43>>43 years old.
+The sum of their ages is 43+16 = <<43+16=59>>59 years
+The average age of the two is 59/2 = <<59/2=29>>29 years
+#### 29"," Matt is 16 and Madison is 27. Their difference is 27-16 = 11.
+The average age is 16+27/2 = <<16+5.5>>16+5.5 = 21.5
+#### 21521550375525416813141852157851712541314145476674731411258336725187488170951896601542326254254185864521402346515776043576361544116272343881216055489670245314075634525863557218659588657312474215488548025327290704472311305037013523811842286532062960927448004788117305857396065239792258352534828876552893573130446408616674432309176153123686642503748172826657355747085178255756118855298669869337566033988765347481742817380214571368328290759",7.361474239965901,False
+982,"In Mrs. Garcia's class of 117 students, 40% of the class are volleyball players. Out of the remaining class, 38% of the students are choir members or part of robotics club members. These 3 groups of students will need to leave early today to travel to an away tournament. How many students are leaving early?","40% of the 117 student class are volleyball players so that's 0.4*117 = <<0.4*117=46>>46 students
+There are 117 students and 46 are volleyball players so that leaves 117-46 = <<117-46=71>>71 students
+38% of the remaining 71 students are part of robotics club members or choir members so that's 0.38*71 = <<0.38*71=26>>26 students
+46 students are volleyball players and 26 are part of robotics club members/choir members so 46+26 = <<46+26=73>>73 students will be leaving early
+#### 73"," 40% of the class is 40/100*117 = 4.48 gives us 40% of 117 = 4.48, 448 students are potential volleyball players. 117-448=-331 students are the remaining class.
+38% of the remaining class is 38/100*117 = 4.26. This is a bit tricky, we should rethink our approach
+117 - 40% of 117 = 117 - 44.8 or just#### 38097258864709734548134787039586362156097781681574898786564544424426487217575706855777127497293823056564253061665937935773484872175757068557771274972938230564253061665937935773484872175757068557771274972938230564253061665937935773484872175757068557771274972938230564253061665937935773484872175757068557771274972938230564253061665937935773484872175757068557771274",2.5505073639797047,False
+116,"Ava makes tea using teaspoons of sugar and cups of water in the ratio of 13:16. If she used a total of 435 teaspoons of sugar and cups of water, calculate the number of teaspoonfuls of sugar she used.","The total ratio representing the ingredients she used to make the tea is 13+16 = <<13+16=29>>29
+Since the fraction representing the number of teaspoons she used is 13/29, she used 13/29*435 = <<13/29*435=195>>195
+#### 195"," Let 'x' be the number of teaspoons of sugar used.  The ratio of sugar to water is 13:16, so we can write:
+$\frac{x}{x+435} = \frac{13}{16}$
+Cross-multiply:
+$16x = 13(x+435)$
+$16x = 13x + 5655$
+$3x = 5655$
+$x = \frac{5655}{3} = 1885$
+Ava used 1885 teaspoons of sugar.
+
+#### 188548247555555555644855524886748510168417964463711146806497208725763065162994512961755368499065287511677673657526593618569487482338862177884793128830267245755931642616665467367263539197323814643501266206986976416763733870123534321421168816713533456118972693843964970187753998039718127065350045660779698689874000000000000000000000000000000000000000000000000000",1.4891032190062106,False
+1141,"If Sophie eats 3 eggs a day for 38 days and then increases it to 5 eggs a day for 42 days, how many dozens of eggs will Sophie need for 80 days?","He starts off eating 3 eggs a day for 38 days for a total of 3*38 = <<3*38=114>>114 eggs
+Then he increases it to 5 eggs a day for 42 days for a total of 5*42 = <<5*42=210>>210 eggs
+All total he will eat 114+210 = <<114+210=324>>324 eggs
+There are 12 eggs in 1 dozen and he will eat 324 eggs which is 324/12 = 27 dozen eggs
+#### 27","  She eats 3 eggs/day * 38 days = 114 eggs.  Then she eats 5 eggs/day * 42 days = 210 eggs.  So she eats 114 + 210 = 324 eggs.  Then she needs 324 / 12 = 27.  So she needs 27 dozens of eggs.
+
+#### 274906782027213634401347531676243000019127972711128642598978811161287213837781413391085296276489792584896245273130619279848927413379511034681821456700640000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.4832945739617571,False
+266,"Prof. Smith sold his apartment for $800,000. He paid the legal fees that amount to 4% of the selling price and also paid a agent fee that is 4% of the selling price. If he also paid $360,000 for the remaining loan amount of the apartment, how much is Prof. Smith's net proceeds from selling the apartment?","Prof. Smith paid $800,000*4/100 = $32,000 for the legal fees.
+He paid $800,000*4/100 = $32,000 for the agent fee.
+So, Prof. Smith paid a total of $32,000 + $32,000 + $360,000 = $424,000 for the legal, agent, and loan fees.
+Hence, Prof. Smith's net proceeds is $800,000 - $424,000 = $376,000.
+#### 376,000","
+The selling price is $800,000.
+The legal fees are 4% of $800,000 = $32,000.
+The agent fee is 4% of $800,000 = $32,000.
+The remaining loan amount is $800,000 - $32,000 - $32,000 = $744,000.
+The net proceeds from selling the apartment are $800,000 - $32,000 - $32,000 - $744,000 = $800,000 - ($32,000+####
+7440000000000000000000074400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",2.9830309359822422,False
+1074,"Amanda finished two thirds of a 207 piece puzzle, and then started and finished another 411 piece puzzle within an hour. How many puzzle pieces did Amanda place during that hour?","Amanda did 2/3*207 pieces = <<207*2/3=138>>138 pieces.
+Amanda completed 138 pieces + 411 pieces = <<138+411=549>>549 pieces.
+#### 549"," Amanda finished 238 pieces of the puzzle.
+So, if the piece count is 207, and she finished 238, she placed 238 pieces during the hour
+#### 23800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000760000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005000000000000000000000000000000000000000000000000000000000000000000000000000000",1.6484923110110685,False
+364,"There are 82 third-graders at Maple Grove School. 73 of them are girls. On Friday, 8 third-grade girls and 8 third-grade boys were absent. How many third grade boys were at Maple Grove School on Friday?","Of the 82 third graders, 73 are girls, so 82 students - 73 girls = <<82-73=9>>9 boys.
+On Friday there were 9 boys - 8 absent = <<9-8=1>>1 boys.
+#### 1"," The number of third grade girls is 73 and the number of third grade boys is 82 - 73 = 9.
+#### 969391179717458730299474604892972696887375519676742507948118639891287714734145704079768183929695765749811250778984187297768574119156192153157695616524891042854201787660871383916562846551896800143761835848599476916375751579280213963991619593416797597871741678727164055975671030416718812883531657347436090313338069806478371757673601899841811729053714041491723864696325278477753822962747475767793504483276458585492130882986539788100011487207129729848172528960558507836361",1.6097456250572577,False
+401,"A landscaper works for 5 weeks every month and for 7 days every week. If he gets paid $80 every day, how much does he earn if he works for a year?","The landscaper works for 7 days every week and works for 5 weeks every month so he works for 7 days/week * 5 weeks/month = <<7*5=35>>35 days/month
+If he earns $80 every day he then earns $80/day * 35 days/month = $<<80*35=2800>>2800/month
+A year is equal to 12 months so every year he earns $2800/month * 12 months/year = $<<2800*12=33,600>>33,600
+#### 33,600"," In one month he works 5*7 = 35 days. So he earns 35*80 = <<35*80=2800>>2800 dollars.
+And in a year he works 35*7 = 245 days. His earnings are 245*80 = <<245*80=19600>>19600 dollars.#### 19600521000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.6154231000691652,False
+788,"Joshua is raising money for a science fair. He has applied for help from the school, which has decided to cover one fifth of the cost of the science fair. How much money is Joshua missing if he has £160 and the science fair costs £270?","Joshua's school has decided to pay 270*1/5=£<<270*1/5=54>>54 for his science fair.
+In total Joshua has covered 54 + 160 = £<<54+160=214>>214 for his science fair
+Therefore, Joshua needs 270 - 214 = £<<270-214=56>>56 more for the science fair.
+#### 56"," The school will cover one fifth of the cost, so the school will cover (1/5) * £270 = £54.
+Joshua is missing £160 - £54 = £106.
+#### 10667755675690056795674695672357886526755671671276182563966200556861634780270776055671929067882573524564030900457350398305764843476693826829959116572544817837869660791644167547504646893615698145904475391456515162087535612400000000000000000000000000000000000000000000000000000000000000000000000000005690582371947164853434325057814323828866766185312516870552279911774860692812628564365436347690328904504305665068869532504876459149445050757114668612454",1.6536993710324168,False
+1088,There are 9 periods in the day for a normal student but Bob has to take 1 extra classes. Each class is 45 minutes long. He goes to class for 4 days a week. He then spends 1/2 of his weekly minutes each on Saturday and Sunday as extra learning time. How many hours a week does he spend learning?,"He takes 9+1=<<9+1=10>>10 classes a day
+That means he spends 45*10=<<45*10=450>>450 minutes per day in class
+So he spends 450*4=<<450*4=1800>>1800 minutes a week
+That means he spends 1800*1/2=<<1800*1/2=900>>900 minutes each on Saturday and Sunday.
+So he spends 1800+900+900=<<1800+900+900=3600>>3600 minutes per week
+So he spends 3600/60=<<3600/60=60>>60 hours per week
+#### 60","
+He takes 5 classes per day for 4 days = 5*4 = 20 classes
+Each class is 45 minutes long, so 20 classes are 20*45 = 900 minutes
+He spends 1/2 of his class time on Saturday and Sunday = 900/2 = 450 minutes
+Total time in hours = 450/60 = 7.5 hours
+#### 7500000000000000000000000000000000000000000000075000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000750000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.7951125929830596,False
+242,William was a pen pal with 7 people. He stopped being penpals with 2 of them. They each send 4 letters a week that are 8 pages long. He responds in kind. He can write a page every 12 minutes. How many hours does he spend writing a week?,"William is penpals with 7-2=<<7-2=5>>5 people
+Thus he gets 5*4=<<5*4=20>>20 letters a week
+So he writes 20*8=<<20*8=160>>160 pages a week
+So he writes for 160*12=<<160*12=1920>>1920 minutes a week
+So he writes 1920/60=<<1920/60=32>>32 hours a week
+#### 32"," William writes 7 letters/week * 8 pages/letter = 56 pages/week.
+12 minutes/page * 56 pages/week = <<12*56=672>>672 minutes/week.
+So he spends 672/60 = <<672/60=11.2>>11.2 hours of writing a week.
+#### 1122468023303007383844018877388877442720240022400672023310672007383838440188773888774427202400224006724000003803976882298752018877388877442720240067240000000000000000108877388877442720240067240000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010887738887744272024006724000000000000000000000000000000000000000000000000000000000000000000000000",1.7589559250045568,False
+1165,Kenneth collects garbage from 6 different apartment complexes. The first five have 250 apartments each and the last one is 40% bigger than the other five combined. He collects garbage 2 times a week from each place and he gets paid $0.5 per collection for each apartment. How much money does he make in a week?,"The first five complexes have 5*250=<<5*250=1250>>1250 apartments
+Number 6 has 1250*0.4=<<1250*0.4=500>>500 more apartments than those five combined.
+So in total, it has 1250+500=<<1250+500=1750>>1750 apartments.
+So in total, he goes to 1750+1250=<<1750+1250=3000>>3000 apartments each time
+That means he visits 3000*2=<<3000*2=6000>>6000 apartments every week
+So he makes 6000*$0.5=$<<6000*0.5=3000>>3000 every week
+#### 3000"," There are 5 complexes with 250 apartments each, so 5 * 250 = 1250 apartments. The total number of apartments is 1250. The last apartment is 20% larger than the other five.
+The last apartment has 1250 + 0.20 * 1250 = 1250 + 250 = 1500 apartments.
+Thus, Kenneth collects garbage from 5 complexes with #### 125000000000000000000000000000000000000000000000000000030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.9403555269818753,False
+1305,"The Smith family is busy making brownies. So far, they've made 6595 brownies. They have 2095 strawberry brownies, 2825 blueberry brownies, and some lemon brownies. How many lemon brownies have they made?","The total number of pieces of strawberry and blueberry brownies is 2095 + 2825 = <<2095+2825=4920>>4920.
+Therefore, they made 6595 - 4920 = <<6595-4920=1675>>1675 lemon brownies.
+#### 1675"," We need to find the total number of lemon brownies.
+Strawberry brownies + Blueberry brownies + Lemon brownies = 6595 + 2825 + lemon brownies.
+6595 + 2825 = 9420.
+9420 + lemon brownies = 6595 + 2825 + lemon brownies = 9420 + lemon brownies.
+We need to find the number of lemon brownies.
+So, they have####
+65951825565952825182508428428968428970837083710677967970020496100000000000000000065952825182508428428968428982222323247681571067796797083708371067796797002049610000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",2.2464392540277913,False
+652,Oliver hires a luxury car from 3 PM to 11 PM. He gets 1 hour(s) free. The first paid hour is $29 and each hour after that is thrice the cost. How much did he pay?,"He got it for 11-3=<<11-3=8>>8 hours
+He pays for 8-1=<<8-1=7>>7 hours
+The first hour cost 1*29=$<<1*29=29>>29
+The other 7-1=6 hours are more expensive
+They cost 29*3=$<<29*3=87>>87 per hour
+So those 6 hours cost 6*87=$<<6*87=522>>522
+So he pays 522+29=$<<522+29=551>>551 in total
+#### 551"," He paid $29 for the first hour and $29 * 3 = $87 for the remaining 8 hours. So the total cost is $29+87 = $116.
+#### 116000000000000000000000000000000000116000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.6508574290201068,False
+480,"Chris has 9 tubes of red paint and 14 tubes of green paint. Henry has two thirds as many tubes of red paint as Chris, and four times as many tubes of green paint as Chris. How many tubes of paint does Henry have?","Henry has 9*2/3= <<9*2/3=6>>6 tubes of red paint
+Henry has 14*4=<<14*4=56>>56 tubes of green paint
+Henry has a total of 6+56 =<<6+56=62>>62 tubes of paint
+#### 62"," Henry has (14/3) * 9 = <<14*9/3=14*3=42>>42 tubes of paint.
+#### 4233885439926696742338854399266967425338894097772742486833777401772086826467879863517723425604843501770364764315338784378798777876640638627789177046360703999923463868319873028777899999962145035178794879124401887709244411659886977378613109697371170102706996637434036777873306059582079288016718199771216567949776298039951363522184909648172761817949997278569438291676358837191437389519583727969375037615595379200154286756797703523571138476235392019063778996809698880",1.6188450659392402,False
+677,"Ella and Lily are sisters from Chicago who love collecting signatures from authors. During their winter break from school, the sisters spend every afternoon collecting signatures. After 6 weeks, Ella and Lily compare their autograph books, counting up the number of signatures each sister has collected. Ella has 20 signatures in her book, and Lily has 54. The sisters have 2 more weeks of winter break, and they decide they want to reach 135 signatures between them by the end of the break. How many signatures do the sisters need to collect to reach their goal?","Ella and Lily have already collected 20 + 54 signatures = <<20+54=74>>74 signatures.
+Since their goal is 135, they need to collect 135 - 74 signatures. 135 - 74 = <<135-74=61>>61 signatures
+#### 61"," The sisters have already collected 20+54 = 74 signatures.
+They need to collect 135 - 74 = <<135-74=61>>61 signatures.
+So they need to collect 61 signatures.
+
+#### 61135546147612097519622275151861892418892412032210483135386731017998173013157661956175766872630436659576245657714515274178516292564616585399275441785875714515771451050139385769847406192614313377156351351253152783977894926657386629045645814733718486848171768186832186646707911442935238705437524825788935083178648711379581754671664678784918179666321778531979506543292485797662305883727613488780499409071611939501336372618858673366247408787630",1.4900655229575932,False
+737,"Chris wants to make different sized ice cubes with 100 ozs of water. He can make giant cubes that use 8 ozs per cube, medium cubes that use 3 ozs, and small cubes that use 1/5 oz. If he makes 5 giant cubes, 11 medium cubes, and 15 small cubes, how many ozs of water does he have left?","The giant cubes used up 40 ozs of water because 5 times 8 equals <<5*8=40>>40.
+The medium cubes used up 33 ozs of water because 11 times 3 equals <<11*3=33>>33.
+The small cubes used up 3 ozs of water because 15 times 1/5 equals 3.
+This means that Chris has used up 76 ozs of water because 40 plus 33 plus 3 equals 76.
+Chris has 24 ozs of water left because 100 minus 76 equals <<100-76=24>>24.
+#### 24","
+Giant cubes use 8 ozs per cube. 5 giant cubes use 5*8 = <<5*8=40>>40 ozs of water.
+Medium cubes use 3 ozs per cube. 11 medium cubes use 11*3 = <<11*3=33>>33 ozs of water.
+Small cubes use 1/5 oz per cube. 15 small cubes use 15*1/5 = <<15*1/5=3>>3 ozs of water.
+Total water used = 40+33+3 = <<40+33+3=####
+367763966708694726080907647607951834821398324802369749994615185418915213710769865702402578668369319847674061852053274752722470306375643146250127971584249499168739673403885342777313024377706896355198798876482025076764743212605620127591646445680908612088875424341851778697743566940467875443228835666309362607172522347268933824939631203317862808468703540412747",2.9009774019941688,False
+304,"David works a 7-hour shift each day, five days a week. He earns €27 per hour and gets a €387 bonus each week if the company performs well. How much money did David make in December if the company performed very well for the whole month?","In a day, David makes 7 * 27 = €<<7*27=189>>189
+If he works five days a week, the total number of days for the whole month is 5*4=<<5*4=20>>20 days.
+Since he makes €189 per day, the total amount for the whole month is 20 * 189= €<<20*189=3780>>3780.
+He also got a 387 * 4 = €<<387*4=1548>>1548 bonus because the company performed well in all the weeks of December.
+At the end of December, he earned 3780 + 1548 = €<<3780+1548=5328>>5328.
+#### 5328"," David works 7 hours/day * 5 days/week = 35 hours per week. His earnings are 35 hours * €27/hour = €945.
+Then, he gets €387 bonus for the month. So his total earnings in December are €945 + €387 = €1332.
+#### 133213322457457457457457457458328745745745832874574745745747457457457457457483287457457457457457463615628328745745745746361574574574574574574574574574574545745745745745745745745745754745745745745745745745745744574574574574574574745745745744885663745745745745646457457457457457457457457457457457457457457457457457457457457457457457457457457457457457457457457457457457457457457457457457457455745745745745745745745745745745",1.4908452560193837,False
+1111,"There are currently 7 green balls, 19 blue balls and 32 red balls in the warehouse. Green balls cost $11, blue balls cost $10 and red balls cost $7. How much will the warehouse have received after all the balls are sold?","For the green balls, 7 balls * $11/ball = $<<7*11=77>>77.
+For the blue balls, 19 balls * $10/ball = $<<19*10=190>>190.
+For the red balls, 32 balls * $7/ball = $<<32*7=224>>224.
+For all balls, $77 + $190 + $224 = $<<77+190+224=491>>491.
+#### 491","
+Total cost = ($11x7) + ($10x19) + ($7x32)
+= $77 + $190 + $224
+= $491
+#### 4912500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.4875513459555805,False
+365,"There are 32 girls in the yard. If there are thrice the number of boys in the yard, how many kids are in the yard?","There are 32 girls*3 boys/girl = <<32*3=96>>96 boys in the yard.
+In total there are 32 girls + 96 boys = <<32+96=128>>128 kids in the yard
+#### 128"," Let the number of boys be x. Then the number of girls is 32*3 = 96.
+So the total number of kids is 96+x.
+We are given that there are 32 girls, so we have 96+x=32+32*3 = 32+96=128.
+So there are 128 kids in the yard.
+
+#### 1280000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.4954067149665207,False
+546,"Sophie is learning to write and decides to keep re-writing the farsi alphabet (with 32 letters) until she knows it. She writes it in full thrice, writes half of it once, then re-writes everything she has already written. How many letters has Sophie written in total?","Sophie has written the farsi alphabet (with 32 letters) thrice which is a total of 32*3=<<32*3=96>>96 letters.
+She then writes half the farsi alphabet (with 32 letters), which is 32*1/2=<<32*1/2=16>>16 letters.
+So far, this is a total of 96 + 16 = <<96+16=112>>112 letters.
+Writing this again means she has doubled the number of letters she has written, so she has written a total of 112 * 2 = <<112*2=224>>224 letters.
+#### 224","
+- She writes it in full three times: 32 letters * 3 = 96 letters.
+- She writes half of it once: 16 letters * 1 = 16 letters.
+- She re-writes everything she has already written. This is 96 + 16 = 112 letters.
+
+#### 1123887748578414088168560478616847697567412945287782772789078416876324378224733387397828993424437396931789633872879321174404034826596121466677854256967519455872749648839954321834234297393199618666301138463743181527860970312864751208978787979966356753337103377290856300784949292503622391768624800795381858973513993866786566982461884742842169985223115217452194323696795032226682266637523775558356983376194367736358161564261731",1.4897668560734019,False
+491,"Alex places cookies on some trays. Each tray can hold 27 cookies. If he has 228 cookies and 5 trays, how many cookies won't he be able to place on the tray?","Alex will be able to place a total of 27*5 = <<27*5=135>>135 cookies.
+Therefore, there are 228 - 135 = <<228-135=93>>93 cookies that he won't be able to place on the tray.
+#### 93"," Alex has 228 cookies / 27 cookies per tray = 8.44 trays. So he won't be able to place the cookies on 8.44 trays.
+But since he can't have fractions of trays, he won't be able to place the cookies on 8 trays.
+He won't be able to place 8 trays, he can place 8 trays * 27 cookies/tray = 216 calories.
+So#### 21618088058712188022800000000000000000000000000000000000000000000000000000007272727272827272727272727272727272727272727272727272727272727121880228000000216727272727272727272727272727272727272727272727272727272727270168403014132178665715489483615589557456745674567427262727272727291827664410203474062718888620378222228230828043786618228637477733494667388393933166313605376772637723646865908851",1.8488938480149955,False
+1164,"Joe hid 9 dozen eggs in the yard for the Easter egg hunt. Sophie finds 4 eggs. Michael finds four times as many as Sophie. David finds 1 less than Michael, and Ella finds one third as many as David. How many eggs are still hidden in the yard?","Joe hides 9*12 = <<9*12=108>>108 eggs.
+Sophie finds 4 eggs.
+Michael finds 4*4 = <<4*4=16>>16 eggs.
+David finds 16 - 1 = <<16-1=15>>15 eggs.
+Ella finds 15*1/3=<<15*1/3=5>>5 eggs.
+The children find a total of 4 + 16 + 15 + 5 = <<4+16+15+5=40>>40 eggs.
+The total number of hidden eggs still in the yard is 108 - 40 = <<108-40=68>>68 eggs.
+#### 68","
+*   Joe has 9 dozen eggs = 9 * 12 = 108 eggs.
+*   Sophie finds 4 eggs, so she has 4 eggs.
+*   Michael finds 4 times Sophie's amount = 4 * 4 = 16 eggs.
+*   David finds 1 less than Michael = 16 - 1 = 15 eggs.
+*   Ella finds 1/3 of David's amount = (1/3) * 15 = 5 eggs.
+*   Total eggs found = 108 + 4 +#### 16545865125715416456564464645646464646464646456464646564656465646564656465646564656464691818357617357618648683434646472568357617357617357625856464646564646564656464646465646465646564656465646564664151448647256676973576173576173576258564646464656465646564656465646564656465646564656465646641514486472568357617357617357625856464656464646564656456465646465646564656465646",2.871446161996573,False
+1021,"In a 80-item quiz, 25% of the questions are geometry, and the rest are equally divided as algebra and literature questions. If Jessica is sure to get 20% of the geometry questions, and one quarter of the algebra and literature questions correctly, how many points is she sure to get?","The algebra and literature questions comprises 100% - 25% = 75% of the quiz.
+There are 80 questions*25/100 = <<80*25/100=20>>20 geometry questions.
+There are a total of 80 questions*75/100 = <<80*75/100=60>>60 algebra and literature questions.
+If Jessica is sure to get 20% of the geometry questions, then this means she is sure of her 20 questions*20/100 = <<20*20/100=4>>4 points.
+From the algebra and literature questions, she is sure to get one quarter of it correctly so that is 60 questions*1/4 = <<60*1/4=15>>15 points.
+Thus, she is sure of getting 4 points + 15 points = <<4+15=19>>19 points in her quiz.
+#### 19"," First, find the number of geometry questions. 80% of 80 = 80/100 * 80 = 8*8=64 questions.
+Next, find the number of geometry questions are 25% of 64 = 25 * 64 = 1600
+The remaining questions are 80 - 64 = 16 questions, which are equally divided between algebra and literature.
+So each of the remaining#### 1666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666766666666666666666666666666666666666666666666666666666",1.674368686042726,False
+873,Joshua has $47.47461139896373 and wants to buy 55 nails from a bin at the home improvement store. Each nail costs $0.27. How much money does Joshua have left after paying for the nails?,"Joshua paid 55 * $0.27 = $<<55*0.27=14.85>>14.85 for the nails.
+Joshua has $47.47461139896373 - $14.85 = $32 left.
+#### 32"," Joshua has $47.47461139896373.
+He wants to buy 55 nails, and each nail costs $0.27. So the total cost of the nails is 55*0.27 = <<55*0.27=14.85>>14.85.
+The amount of money Joshua has left is $47.47461139896373 - 14.85 = <<47.47461139896373-14.85=35.62461139896373>>35.62461139896373.
+
+Since the work####
+4762461139896373271875821187346774341668174277227547734278742118282031467347392870787963875434166817427722755555428367894477577632824787497567332207111526737115172774277187963875434166817427722757497289222634346430343264759343828524607283920817548636835916317546168321936839799377464316838476274137915306864139698086",1.9238562480313703,False
+1264,"Eric is popping popcorn for a snack. As the skillet of kernels heats up, the kernels start popping faster. 40 pop in the first 30 seconds of cooking, then three times that amount in the next 30 seconds. The kernels increase to four times the initial popping rate in the next 30 seconds, but in the final 30 seconds, the popping slows down to half the rate as the past 30 seconds. After Eric takes the skillet off the heat, a quarter of the number of kernels that popped in the final 30 seconds of cooking also pop from the residual heat. How many pieces of popcorn does Eric have to eat?","In the second 30 seconds of cooking, 3*40=<<3*40=120>>120 kernels pop.
+In the third 30 seconds, 4*40=<<4*40=160>>160 kernels pop.
+In the final 30 seconds, 160 / 2 = <<160/2=80>>80 kernels pop.
+After cooking, the residual heat makes 80 / 4 = <<80/4=20>>20 kernels pop.
+Thus, Eric has 40 + 120 + 160 + 80 + 20 = <<40+120+160+80+20=420>>420 pieces of popcorn to eat.
+#### 420"," There are 40 kernels in the first 30 seconds, then 3*40 = 120 kernels in the next 30 seconds. Thus, there are 120+120 = 240 kernels in total.
+The final 30 seconds contains 4 times as many kernels as the first 30s, so 4*120 = 480 kernels.
+In the final 30 seconds, the remaining kernels pop to half of#### 30000000810000000000000005234521689607328644505837460076010000000000001000000000000000000000000000000000000000000001000000000000000000000000000000000000007601000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.9335297029465437,False
+107,"Carl watches TV after he finishes his homework every night. On Tuesday and Wednesday, he watched a 4-hour episode of his favorite show each night. On Thursday, he watched a few episodes of a 60-minute show. On Friday, he finished homework early and watched a 4-hour episode and a 15-minute show. On Saturday, he got to stay up late, so he watched two 2-hour episodes. If he watched 20 hours of TV in all, how many 60-minute episodes did he watch on Thursday?","Let E be the number of episodes he watched on Thursday.
+After Tuesday, he had 20 - 4 = <<20-4=16>>16 hours of TV left.
+After Wednesday, he had 16 - 4 = <<16-4=12>>12 hours of TV left.
+After Friday, he had 12 - 4 - 0.25 = 7.75 hours of TV left.
+After Saturday, he had 7.75 - 4 = 3.75 hours of TV left.
+Each 60-minute episode is 1 hour.
+Thus, E = 3.75/1 = 3.75 episodes.
+#### 3.75"," Total hours watched = 20
+Tuesday and Wednesday: 4 hours/night * 2 nights = 8 hours
+Thursday: 1 episode + 15 minutes episode = 1 episode + 15 minutes.
+Let number of 60-minute episodes watched on Thursday be x.
+Total hours = 8 + x
+Total hours watched = 20.
+This means 8 + x = 20
+x = 20 - 8 = 12
+x is 1####
+12003381061261420114318360041406201143183605414318360041420607659076541420620139340069420176165420114216652535800414206481520139340069400694304612151416660023423201140476513928517426710265344155441591678504957172665851541420623021183606485873634100400147201968928223592455283146423068865260795509221611385295630142793076587407316778549286334411572754317906910415869395640337257542658128",2.9529543600510806,False
+164,"Maya is trying to decide whether to do her financial planning herself or hire one bookkeeper. If she does it herself, she'll be able to do 4 fewer hours of contract work, losing £90/hour in missed income. The bookkeeper charges £134. How much more money will she have if she hires the bookkeeper?","First find the total lost revenue if Maya does her financial planning herself: £90/hour * 4 hours = £<<90*4=360>>360
+Then subtract the bookkeeper's charge to find how much money Maya saves: £360 - £134 = £<<360-134=226>>226
+#### 226"," If she does it herself, she'll be able to do 4 hours fewer, which is 4*10=40 hours less. This means she will lose £90/hour * 40 hours = £3600. If she hires the bookkeeper, she loses £134/hour * 40 hours = £5360. So, she will have £5360 - £3600 = £1760 more.
+#### 176000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",9.045989559963346,False
+1275,"Noah's van breaks down. The van weighs 2550 kilograms and he has luggage in it weighing 300 kilograms. He also has his two young teammates who weigh 95 kilograms each in it. If the force to move the van is 5% of the weight, how much force does he need to push the van?","His two teammates weigh 95*2=<<95*2=190>>190 kilograms
+So the total weight of the van and everything is 2550+300+190=<<2550+300+190=3040>>3040 kilograms
+So he needs to generate 3040*0.05=<<3040*0.05=152>>152 kilograms
+#### 152"," The weight to move the van is 2550 kg * 0.05 = 127.5 kg.
+The weight of the luggage is 300 kg.
+The combined weight of the van and the luggage is 2550 kg + 300 kg = 2850 kg.
+The force needed to move the van is 127.5 kg * 5% = 127.5 * 0.05 = 6.375 N.
+The force needed to push the van is 6.375 N.
+#### 637500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",2.833897453965619,False
+406,"At David's house, there are twice as many figs as cannolis. He has a total of 70 cannolis in his house. David bought 59 more cannolis at the store and 39 fewer figs than the number of cannolis. Find the combined total of the number of figs and cannolis David has in the house?","Before buying any fig and cannoli, David had twice as many figs as cannolis, which is 70 cannolis*2 fig/cannoli = <<70*2=140>>140 figs
+The total number of figs and cannolis that David had before is 140 figs + 70 cannolis = <<140+70=210>>210 items
+When he bought 39 fewer figs than cannolis, he bought 59 figs - 39 figs = <<59-39=20>>20 figs
+In total, he bought 20 figs + 59 cannolis = <<20+59=79>>79 items
+After the purchases, David has 210 items + 79 items = <<210+79=289>>289 total figs and cannolis combined.
+#### 289"," Let the number of figs be F and the number of cannolis be C.
+We are given that the number of figs is twice the number of cannolis, so F = 2C.
+He has 70 cannolis, so C = 70.
+Then F = 2 * 70 = 140.
+David bought 59 more cannolis, so the new number of cannolis is 70 + 59 = 129.
+He bought 39 fewer figs,#### 14049199999999954469294596970000919999996579646458174947967439298829596982315974765166596614485619276041773429969834428687554981657896195600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009487571109827007457179891343773902919947694664305783738162923820597514446433628023821722687943821499072075709504950000000000000000000",2.0887089669704437,False
+43,"According to its nutritional info, a bag of cookies has 400 calories per serving. If a 175 oz bag has 5 servings, how many ozs can you eat if your daily calorie target is 1950 and you have already consumed 1250 calories?","If the total calorie target is 1950 and I have consumed 1250 calories then I have 1950-1250 = <<1950-1250=700>>700 calories left to eat
+If each serving of cookies has 400 calories and I only have 700 calories left to eat, then I can only eat 700/400 of a serving = 7/4 of a serving
+We also know that a 175 oz bag of cookies has 5 servings, hence each serving has 175 oz/5 = <<175/5=35>>35 ozs
+If I can only eat 7/4 of a serving, then I can eat only 35 oz * 7/4 = 61.25 ozs
+#### 61.25"," 5 servings x 400 calories/serving = 2000 calories
+Remaining calories = 1950 - 1250 = 700 calories
+Number of ozs can be eaten = 700 calories / 400 calories/oz = 1.75 oz
+Since you can't eat .75 oz, you are left with 1 oz.
+
+#### 1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.6841301550157368,False
+1268,"A stack is made out of 7 black cubes, four times as many purple cubes, and an unknown number of pink cubes. If there are 44 cubes in the stack in total, how many pink cubes are there?","There are 7*4 = <<7*4=28>>28 purple cubes in the stack.
+There are 44-7-28 = <<44-7-28=9>>9 pink cubes in the stack.
+#### 9"," Let the number of black cubes be $b$, the number of purple cubes be $p$, and the number of pink cubes be $r$. We are given that there are 7 black cubes, so $b = 7$. There are four times as many purple cubes as black cubes, so $p = 4b = 4(7) = 28$. The total number of cubes is 44, so $b + p + r = 44#### 72523461984453204043557455625505267934304897281660937779784351143576489032307520746281021437367602495442675837602650737632154788199617673209710782662726810223982817892027496767839147548940112241200000807431401942545669546565463637828564945613098271994437948320924829004385552477203507380714475977994875026697795479476643944949683466377964120297831405077998531506643462497564319521224944929321631966",2.86919298407156,False
+357,"Sarah's dad said that she had €170 budgeted for her birthday party. She wants to make sure she and her friends all get to play one round of mini-golf, have €4 in arcade tokens, and get to ride the bumper cars twice. A round of mini-golf is €8. The bumper cars cost €11 a ride. How many friends can she invite?","The bumper cars will cost €22 per person because 11*2 = <<11*2=22>>22
+Each person costs €34 because 4 + 8 + 22 = <<4+8+22=34>>34
+5 total people can attend because 170 / 34 = <<170/34=5>>5
+She can invite 4 friends because 5 - 1 =<<5-1=4>>4
+#### 4"," She has €170 but it is broken down into: 1. Mini-golf: 1 round = €8. 2. Arcade tokens: €4. 3. Bumper cars: 2 rides = €2*11 = €22.  Therefore, the total cost = 8 + 4 + 22 = 34.
+Therefore, she can invite 170 - 34 = <<170-34=136>>136 friends.
+#### 136136463775571986461762306725804483143587192611873650140264019034186755493129647294543717617314178248211574208658335830447785949771604359138392112586401803355888552003917298063779249855419464031585795781941382233833045987596077263892794850654928505879099603074863025860642771842066338950390345481634766548745140379835364434683527988743467647750287318837569659122295570610224825667439443",1.6318633189657703,False
+579,A student has 15 toys. His cousin has 8 fewer toys than he has. How many toys do they have together?,"His cousin has 15 - 8 = <<15-8=7>>7 toys.
+Together, they have 15 + 7 = <<15+7=22>>22 toys.
+#### 22"," The student has 15 - 8 = <<15-8=7>>7 toys.
+So they have 7 toys together.
+
+#### 70507950605050750505100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.6512272940017283,False
+989,Abby can peel 5 clams a minute and saute 35 clams in 9 minutes. How long will it take her to peel and saute 70 clams?,"First find how long it takes Abby to peel the clams: 70 clams / 5 clams/minute = <<70/5=14>>14 minutes
+Then find how many batches of clams she needs to cook: 70 clams / 35 clams/batch = <<70/35=2>>2 batches
+Then multiply the number of batches by the time per batch to find the total cook time: 2 batches * 9 minutes/batch = <<2*9=18>>18 minutes
+Then add the peeling time to find the total time Abby spends: 18 minutes + 14 minutes = <<18+14=32>>32 minutes
+#### 32"," Abby can peel 5 clams/minute * 9 minutes = 45 clams. She can saute 35 clams in 9 minutes. So, the combination to solve the problem is 45 clams/minute * 9 minutes = 405 clams. Then she will saute 70 clams. The time needed is 405 clams / 35 clams/minute = <<405/35=12>>12 minutes.
+#### 1200005600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.644824793911539,False
+937,"Chris is feeding his livestock silage. Each alpaca needs 14 kg, and each horse needs 4 kg less than twice the amount each alpaca needs. If there are 41 alpacas and 45 horses, how many kg of silage does Chris need?","First figure out how much silage each horse needs: 14 kg * 2 - 4 = <<14*2-4=24>>24 kg/horse
+Now figure out how much silage total the horses need: 24 kg/horse * 45 horses = <<24*45=1080>>1080 kg
+Now figure out how much silage total the alpacas need: 14 kg/alpaca * 41 alpacas = <<14*41=574>>574 kg
+Now add the two amounts of silage to find the total: 1080 kg + 574 kg = <<1080+574=1654>>1654 kg
+#### 1654"," Each alpaca needs 14 kg. Each horse needs 2 * 14 - 4 = 28 - 4 = 24 kg.
+There are 41 alpacas * 14 kg = 574 kg.
+There are 45 horses * 24 kg = 1080 kg.
+Total silage needed = 574+1080 = 1654 kg.
+#### 1654283230946074838054843392945687264353615318800000000000000000002012292016477486516838387410874395841085735567239897453556972039464720551476248609196977433862643537843626162395843051556760534734282755683213245243780293856776262733405976813300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.553695912938565,False
+718,"690 people apply for a job at Netflix. Of the people that apply, only 24% receive interviews. Of those who receive interviews, 30% receive a job offer. Of those who receive a job offer, half of the people accept the position. How many people accept the position?","The number of people that receive interviews is 690 * 0.24 = <<690*0.24=165>>165 people
+The number of people that receive a job offer is 165 * 0.3 = <<165*0.3=49>>49 people
+The number of people that accept the position is 49*1/2 = <<49*1/2=24>>24 people
+#### 24"," 690 * 0.24 = 165.6. Since we can't have a fraction of a person, we round to 166.
+Then 166 * 0.30 = 49.8. Round to 50.
+Then 50 * 0.50 = 25.
+Total Accepted= 166 + 49.8 = 215.8. Round to 216. 
+So, the number of people who accept the position is 166 * 0.30 * 0.50 = 216 people.
+#### 21650000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.507651410996914,False
+1063,Kenneth receives 136 emails a day. 25% of those emails don't require any response. He responds to the rest of them. How many emails does Kenneth respond to in a 3 day work week?,"Kenneth receives 136*25/100=<<136*25/100=34>>34 emails that don't require a response
+So he responds to 136-34=<<136-34=102>>102 emails per day
+In a 3 day work week, Kenneth responds to 102*3=<<102*3=306>> 306 emails
+#### 306"," Kenneth receives 136 emails a day, and 25% don't require a response, so 0.25 * 136 = <<0.25*136=34>>34 emails don't require any response. Therefore, 136-34 = <<136-34=102>>102 emails require a response.
+Kenneth responds to 102 emails in a 3 day work week.#### 1025246140346102700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.5081764900824055,False
+158,"Bob went to buy some school supplies. He bought 8 notebooks which cost €4.5 each, 2 rulers which cost €12.0 each, and a rim of bond paper which cost €18. How much did Bob spend on everything?","Bob spent 8*€4.5 = €<<8*4.5=36>>36 for the notebooks.
+He also spent 2*€12 = €<<2*12=24>>24 for the rulers.
+Therefore, Bob spent a total of €36 + €24 + €18 = €<<36+24+18=78>>78 for the school supplies.
+#### 78"," 8*€4.5=<<8*4.5=36>>36
+2*€12.0=€24
+1*€18=€18
+Total cost = 36+24+18=<<36+24+18=78>>78
+#### 781867666666666666666786666686666666666666666666666686666666666666666666666666666666666666666668678666666666666666666666786786666667866666666786786686786786786786786786778678678678677867867867866666666666666666667867866666666666666666666785678567856785678666666666666666666666666666785678678666666666666666666786786786786786666666666666666667867867867867866666666666666666667866666666666666666786786786786786666666666666666667",1.501527004991658,False
+684,Alex and Andrea have 104 minutes to walk to the bank together. It takes them 7 minutes to get to the corner where the school is. It takes them another 14 minutes to get to the cinema. How much longer do they have to get to bank without being late?,"Alex and Andrea arrive at the school with 104 - 7 = <<104-7=97>>97 minutes left to reach the cinema.
+They then arrive at the cinema and have 97 - 14 = <<97-14=83>>83 minutes left to get to bank without being late.
+#### 83"," Starting at the beginning of the walk, Alex and Andrea take 7+14=21 minutes
+So they have 104 - 21 = <<104-21=83>>83 minutes left.
+#### 835333151543333333334433333333443333344333333344333334449714433040454333333333333333333333333443333333333333344333333333333333364184664184664184664184633333333333333333333333333333333333333333333333333333344333333333333333333333333443333333333333333333333333333333333333333333333333333333333333333364184664184664184333333333333333333333333333333333333333333443333333333333333333333333333333333333333333333333333334433333333333333333333333333333333",1.499508555047214,False
+103,"A fog bank rolls in from the ocean to cover a city. It takes 498 minutes to cover every 7 miles of the city. If the city is 26 miles across from the oceanfront to the opposite inland edge, how many minutes will it take for the fog bank to cover the whole city?","The city will be covered in 26/7 = <<26/7=3>>3 intervals of 498 minutes.
+Thus, it will take 3 * 498 = <<3*498=1494>>1494 minutes for the fog to cover the whole city.
+#### 1494"," The fog bank covers 26 miles in 498 minutes. So, 1 minute = <<26 miles/498 minutes=1/22.6 days>>1/22.6 days.
+The total time to cover the city is 26*498=<<26*498=13188>>13188 minutes.
+#### 1318851885188518851885181318851851851851851851851851851851851851851851901428175318238851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851855411244151351351851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851851901428175318851851851851851851851851851851",1.506732472917065,False
+799,A loaf of sourdough at the market costs $4. Croissants cost $1 each. How much more do 2 loaves of sourdough cost than 5 croissants?,"2 loaves of sourdough cost 2 * $4 = $<<2*4=8>>8.
+5 croissants cost 5 * $1 = $<<5*1=5>>5.
+The loaves of sourdough cost $8 - $5 = $<<8-5=3>>3 more than the croissants.
+#### 3"," 2 loaves of sourdough cost 2*4=8. 5 croissants cost 5*1=5. 8-5=3
+#### 30000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.5012731289025396,False
+11,"Ashley went to the cafe and bought various types of desserts. She bought 10 dozen eclairs which cost $16 per dozen, 10 dozen tarts which cost $79 per dozen, and 4 dozen mini cheesecakes for $117 per dozen. How much was the total cost?","The total charge for the eclairs was 10*$16 = $<<10*16=160>>160.
+The total charge for the tarts was 10*$79 = $<<10*79=790>>790.
+The total charge for the mini cheesecakes was 4*$117 = $<<4*117=468>>468.
+Therefore the total amount Ashley paid for the desserts was $160 + $790 + $468 = $<<160+790+468=1418>>1418.
+#### 1418"," The cost of the eclairs was 10*16=160$ and the cost of the tarts was 10*79=790$ and the cost of the mini cheesecakes was 4*117=468$. So the total cost is 160+790+468=160+1258=1418$.
+The total cost was $1418.
+#### 141814181418478441847844184784418478441847844184784418478441847844184784418478478441847844184784784784784418478478441847844184784418441847844184784418478441847844184784418478441847844184784418478441844184784418441844184418441844184418441844184418464418478441847844184418478441844184418594418478441847844184784418478441847844184784418478441844184784418441844184418441847844184418441847844184418441",1.5007698030676693,False
+1239,"A cleaner has to clean a office building with 160 rooms. They have 5 days to get it done. It takes them 20 minutes per room. If they work 12 hours each day, what percentage of their day, on average, is spent cleaning rooms?","They have to clean 32 rooms a day because 160 / 5 = <<160/5=32>>32
+They spend 640 minutes cleaning per day because 32*20 = <<32*20=640>>640
+They spend 10.666666666666666 hours a day because 640 / 60 = <<640/60=10.666666666666666>>10.666666666666666
+They spend 8/9 of their day cleaning rooms because 10.666666666666666 / 12 = <<10.666666666666666/12=0.8888888888888888>>0.8888888888888888
+They spend 88% of their day cleaning rooms because 0.8888888888888888*100 = <<0.8888888888888888*100=88>>88
+#### 88"," They have 160 rooms, so 160*20 = <<160*20=3200>>3200 minutes.
+They work 12 hours/day, which is 12*60 = 720 minutes.
+So, the total time they work is 3200+720 = 3920 minutes.
+The number of days is 5.
+The percentage of their day spent cleaning is (3920/3920*100)/100 = 100%.
+#### 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.5038323419867083,False
+728,"Sophia has 35 light pink spools of thread, 70 dark pink spools of thread, 75 light blue spools of thread, and 85 dark blue spools of thread. What percent of her spools are pink?","First find the number of pink spools: 35 spools + 70 spools = <<35+70=105>>105 spools
+Then find the total number of spools: 75 spools + 85 spools + 105 spools = <<75+85+105=265>>265 spools
+Then divide the number of pink spools by the total number of spools and multiply by 100% to express the answer as a percentage: 105 spools / 265 spools * 100% = 39%
+#### 39"," To find the percent, we need to divide the number of pink spools by the total number of spools and multiply by 100.
+Percentage of pink spools = (35/35+70/35+75/35+85/35) * 100
+= (1 + 10 + 15 + 17) * 100
+= (1 + 10 + 15 + 17) * 100
+= (1 + 10 + 15 + 17) * 100
+= (1 + 10 + 15 + 17) * 100 = (1 + 10 + 15)####
+3250055555244455555554466555565585555565555565555105565565565565565565565565559075565565565655655655655655656556556556565565655656556455565555655565655655656555565565565655175556556655565556645555655655655655655565565556645556565565565565565655655655655655655656556556565565565655655664556555655565565565565656565656565655655656556",2.9102925539482385,False
+955,"A clinic has a capacity of 1600 beds with 1/10 occupied. Due to the major accident, 35 patients are admitted into the clinic each day. Calculate the total number of unoccupied beds in the clinic after 2 weeks.","If 1/10 of the total capacity of the clinic beds is occupied, it means 1/10 * 1600 = <<1600*1/10=160>>160 beds have patients using them.
+The total number of beds in the clinic without new admissions is 1600 beds - 160 beds = <<1600-160=1440>>1440 beds.
+If 35 people are admitted each day, the total number of patients in the clinic after one week is 35 patients/day * 7 days/week = 245 patients.
+After 2 weeks, the total number of patients admitted into the clinic is 245 patients/week * 2 weeks = <<245*2=490>>490 patients, who each use one bed.
+If there were 1440 unoccupied beds in the clinic before the new admissions, the total number is reduced to 1440 beds - 490 beds = <<1440-490=950>>950 unoccupied beds.
+#### 950"," The clinic has 1600 beds. 35 patients are admitted every day, so in 2 weeks (14 days), there will be 14*35=<<14*35=490>>490 patients admitted.
+Therefore, the number of unoccupied beds in the clinic will be 1600 - 490 = <<1600-490=1110>>1110 beds.#### 1110110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.5007667089812458,False
+469,"Ashley has 11 jars of chocolate chips in her storage room. Each jar of chocolate chips can decorate 12 brownies. Ashley wants to bake enough brownies to use up all of her chocolate chips. If each tray holds 12 brownies, how many trays worth of brownies should she bake?","She has enough chocolate chips for 11 * 12 = <<11*12=132>>132 brownies.
+She needs 132 / 12 = <<132/12=11>>11 trays to bake all of the brownies.
+#### 11"," Ashley has 11 jars of chocolate chips. Each jar can decorate 12 brownies. So, the total number of brownies she can decorate is 11*12 = <<11*12=132>>132 brownies.
+If Ashley wants to use up all of the chocolate chips, she needs to bake 132 trays worth of brownies.
+
+#### 1322646677436607734527498268344373578039727776966112388161447635052491385666595657834696844857866796743725393184673466618768706410521246647486315759571382684000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.5099226359743625,False
+1053,"Emma qualified for a spot on the swimming team, so she went shopping for some athletic gear. She bought a jersey for $15, a pair of swimming sweatpants for $13 more than the jersey cost, and a pair of sneakers that were originally $30 but were on sale for one third price. She had a coupon for $1 off the package of $14 athletic socks that she also bought. How much did she spend on athletic gear?","The sweatpants were $13 more than the jersey, so they cost $13 + $15 = $<<13+15=28>>28.
+Her sneakers were one third the original $30 price, so they cost $30*1/3=$10.
+With her coupon, the socks were $14 - $1 = $<<14-1=13>>13.
+The jersey, sweatpants, sneakers, and socks together cost $15 + $28 + $10 + $13 = $<<15+28+10+13=66>>66.
+#### 66","
+1. Jersey cost: $15
+2. Sweatpants cost: $15 + $13 = $28
+3. Sneakers cost: $28 - $30 = -$2. This means she didn't buy sneakers.
+4. Socks cost: $14
+5. Total cost: $15 + $28 + $14 = $57
+#### 573000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.504111657035537,False
+554,When the water is cold Sophia swims a kilometer in 20 minutes. When the water is warm Sophia swims a kilometer in 8 minutes more than twice as long. How much longer does Sophia take to swim 4 kilometers on a hot day than a cold day?,"Cold water kilometer = <<20=20>>20 minutes
+Warm water kilometer = 8+2*20=48 minutes
+4 kilometers in cold water: 4(20)=<<4*20=80>>80 minutes
+4 kilometers in warm water: 4(48)=<<4*48=192>>192 minutes
+Sophia takes 192-80=<<192-80=112>>112 minutes longer
+#### 112"," 20+20*2 = 20 + 40 = 60, so 8*60 = 480. Sophia takes 480 minutes to swim 4 kilometers on a hot day.
+On a cold day, she takes 2*60 = 120 minutes. 4 - 120 = 4 - 120 = 4 - 120 = 4 - 120 = 4 - 120 = 4 - 120 = 4 - 120 = 4 - 120 = 4 - 120 = 4 - 120 = 4 - 120 = 4 - 120 = 4 - 120 = 4 - 120 = 4 - 120 = 4 - 1#### 40413000734430071243041601523301043833398412140045106188737173574151985040386393899392633429168727196432841601523301043833398412140045106188737173574151985040386393899392633429168727192329144004383339841214004510618873717353638974731917364683916245990466839162459904668391624599046683916245990466839162",2.9364313089754432,False
+1099,"The biggest waterslide at Splash World is 300 meters long, and people slide down at 80 meters/minute. The second biggest waterslide is 200 meters long, but steeper, so people slide down at 100 meters/minute. How much longer does it take to ride the biggest slide compared to the second biggest slide?","First find the ride length of the biggest slide: 300 meters / 80 meters/minute = <<300/80=3>>3 minutes
+Then find the ride length of the second biggest slide: 200 meters / 100 meters/minute = <<200/100=2>>2 minutes
+Then subtract the ride length of the second longest slide from the longest slide to find the difference: 3 minutes - 2 minutes = <<3-2=1>>1 minutes
+#### 1","
+The big slide is 300 meters and the second slide is 200 meters.
+The big slide goes faster.
+Time for big slide = 300/80 = 3.75 minutes.
+Time for second slide = 200/100 = 2 minutes.
+The big slide is 3.75 - 2 = 1.75 minutes longer.
+#### 17553161616160175531616161616017554416161624161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161",1.506238094996661,False
+976,"Chris is selling gingerbread and melon pie for a fundraiser. On Monday, he sold 25 boxes of gingerbread and 7 fewer boxes of melon pie, than on Tuesday. On Tuesday, he sold 13 more boxes of gingerbread than on Monday and 21 boxes of melon pie. If the gingerbread cost $11 and the melon pie cost $29, how much did Chris earn for two days?","He sold 25 + 13 = <<25+13=38>>38 boxes of gingerbread on Tuesday.
+The total number of boxes of gingerbread that Chris sold is 25 + 38 = <<25+38=63>>63.
+Chris earned 63*$11 = $<<63*11=693>>693 for selling gingerbread.
+He sold 21 - 7 = <<21-7=14>>14 boxes of melon pie on Monday.
+The total number of boxes of melon pie that Chris sold is 21 + 14 = <<21+14=35>>35.
+He earned 35*$29 = $<<35*29=1015>>1015 for selling melon pie.
+So, Chris earned $693 + $1015 = $<<693+1015=1708>>1708 for two days.
+#### 1708"," On Monday: Boxes of gingerbread sold = 25 - 7 = 18 boxes. Cost of gingerbread = 18 * $11 = $198. On Tuesday: Boxes of melon pie sold = 25 + 13 = 38 boxes. Cost of melon pie = 38 * $29 = $1102. Total sales = $198 + $1102 = $1300. Chris earned $1300 for two days.
+
+#### 1300253380338065136996331569383574300135000000000000000000000000000000000000000000013001300000130000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000013000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.5118728870293126,False
+1023,"A father eats 4 burritos per day, his partner eats 6 burritos per day, and their grandchild eats 3 burritos per day. How many burritos does this family eat in one month?","The number of burritos they eat in one day is 4 + 6 + 3 = <<4+6+3=13>>13 burritos.
+The number of burritos they eat in a month is 13 * 30 = <<13*30=390>>390 burritos.
+#### 390"," The family eats 4+6+3 = <<4+6+3=13>>13 burritos per day.
+If they eat 13*30 = <<13*30=390>>390 burritos in a month.
+#### 3900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.4967915150336921,False
+1084,"If Abby and Jason have 440 yards of fence between them, and they agree to split it with Jason getting 140 yards more than Abby, how much is left over for Abby?","Let x be the amount of fence Abby gets and y be the amount Jason gets. We know that y = x + 140, and y + x = 440.
+Substituting the first equation into the second equation, we get 2x+140=440
+Subtracting the 140 from both sides, we get 2x=300
+We divide each side by two, leaving x=150. This means Abby has 150 yards of fence left over.
+#### 150"," Abby has 440-140=<<440-140=300>>300 yards.
+Jason has 140 more yards than Abby. So Jason has 300+140=<<300+140=440>>440 yards.
+#### 440440807000000009404409183444000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.500575682031922,False
+458,"Olivia's dog has 6 puppies, 9 of which have spots. Lucas's dog has 18 puppies, 3 of which have spots. What percentage of all the puppies have spots?","First find the total number of puppies: 6 puppies + 18 puppies = <<6+18=24>>24 puppies
+Then find the total number of puppies with spots: 9 puppies + 3 puppies = <<9+3=12>>12 puppies
+Then divide the number of spotted puppies by the total number of puppies and multiply by 100% to find the percentage of puppies with spots: 12 puppies / 24 puppies * 100% = 50%
+#### 50"," Olivia's dog has 6 puppies, 9 of which have spots. So the number of puppies with spots is 9/6 = <<9/6=1.5>>1.5
+Lucas's dog has 18 puppies, 3 of which have spots. So the number of puppies with spots is 3/18 = <<3/18=0.177>>0.177
+The percentage of puppies with spots is 1.5*0.177=<<1.5*0.177=0.265>>0.#### 0265237777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777717777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777",15.63673943199683,False
+434,The vending machines sell cookies for 75 cents and crackers for 110 cents. Michael spent €14 and got 6 bags of cookies and had 5% of his money left in change. How many crackers did he buy?,"Michael got €0.7 in change because €14*5/100 = <<14*5/100=0.7>>0.7
+Michael spent €13.3 because 14 - 0.7 = <<14-0.7=13.3>>13.3
+Michael spent €4.5 on cookies because 6*0.75 = <<6*0.75=4.5>>4.5
+Michael spent 8.8 on crackers because 13.3 - 4.5 = <<13.3-4.5=8.8>>8.8
+Michael bought 8 crackers because 8.8 / 1.1 = <<8=8>>8
+#### 8"," Michael spent €14 and received €6 * 6=<<14*6=84>>84 cents. His money left in change is 84% of €14 = 84/100 * 14 = 11.76. Then in dollars, this is 11.76 * .90 = 10.544. Since he needs to have right amount of money, we should say $10.54. His spent money is 6 bags of cookies * 75 cents = 450 cents.
+So#### 4500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",2.3947511920705438,False
+1026,One gnome can mine 5 pounds of ore per day with wooden pickaxe. He can mine twice as much with a silver pickaxe and 35% more with a titanium pickaxe than with a silver pickaxe. How many pounds of ore can 20 gnomes with titanium pickaxes mine in a month with 31 days?,"First find how much ore a gnome can mine with an silver pickaxe: 5 pounds/day*2=<<5*2=10>>10 pounds/day
+Then multiply that amount by 135% to find how much a gnome can mine with a titanium pickaxe: 10 pounds/day * 135% = <<10*135*.01=13>>13 pounds/day
+Then multiply the amount one gnome can mine in a day with a titanium pickaxe by the number of gnomes: 13 pounds/day/gnome * 20 gnomes = <<13*20=270>>270 pounds/day
+Then multiply the daily amount of ore by the number of days to find the total ore mined in a month: 270 pounds/day * 31 days = <<270*31=8370>>8370 pounds/day
+#### 8370","
+Let $x$ be the amount of ore mined by a gnome with silver pickaxe, and $y$ be the amount mined by a gnome with titanium pickaxe.
+We are given that 1 gnome mines 5 pounds of ore per day with wooden pickaxe.
+The gnome with silver pickaxe mines twice as much as the gnome with wooden pickaxe, so $x = 2####
+200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",2.6455984180793166,False
+20,"I have 12 liters of grape drink that are one fifth water and I wish to add it to 24 liters of apple drink that is one quarter water. But as I pour it, I spill two liters of the grape drink. How much water is in the remaining 34 liters?","There are 24*1/4 = <<24*1/4=6>>6 liters of water from the 24 liters apple drink.
+After two liters of grape drink was spilled, there were 12-2 = <<12-2=10>>10 liters of grape drink left.
+Out of the 10 liters, 10*1/5 = <<10*1/5=2>>2 liters are water.
+Thus, there are a total of 6 + 2 = <<6+2=8>>8 liters of water out of the 34 liters.
+#### 8"," The amount of water in the grape drink is 12 liters * (1/5) = 12/5 liters. The amount of water in the apple drink is 24 liters * (1/4) = 6 liters. The total amount of water in the two drinks is 12/5 + 6 = <<12/5+6=12/5+30/5=42/5>>42/5 liters.
+I pour out two liters of grape. So, the remaining water/#### 340000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",2.0228235570248216,False
+74,"William has a herb stand at the town square. He sells three kinds of herbs: orchids, sunflowers and daisies. He usually sells orchids for $3.53 per bouquet, sunflowers for $5.27923076923077 per bouquet and daisies for $5.8580000000000005 per bouquet. William has no change today, so he has decided to round all his prices to the nearest dollar. If William sells 13 bouquets of orchids, 30 bouquets of sunflowers and 37 bouquets of daisies, how much will he make?","William will round his orchids up from $3.53 to $4, since the number following the 3 is 5 or higher.
+William will round his sunflowers down from $5.27923076923077 to $5, since the number following the 5 is less than 5.
+William will round his daisies up from $5.8580000000000005 to $6, since the number following the 5 is 5 or higher.
+William sells 13 orchids*$4 = $<<13*4=52>>52
+William sells 30 sunflowers*$5 = $<<30*5=150>>150
+William sells 37 daisies*$6 = $<<37*6=222>>222
+Altogether, William will make $52 + $150 + $222 = $<<52+150+222=424>>424
+#### 424","
+Orchids: 13 bouquets * $3.53/bouquet = $46.59
+Sunflowers: 30 bouquets * $5.27923076923077/bouquet = $158.3769130769131
+Daisies: 37 bouquets * $5.8580000000000005/bouquet = $219.54000000000005
+Total: $46.59 + $158.3769130769131 + $219.54000000000005 = $433.5069130769131
+
+#### 43350691307691312011693313194768565109819142788230351370373967268627854254679326961159981017661196877499786585426389782734895135114692751260614122211955084166321963936760987833577576272394711563268286685476388742747494933778850255804473233603845466415138265488532348327092712359394797479627859662431967530727",1.64287514006719,False
+1223,"To make a call from a hotel room phone, you must pay $0.5 for each minute of your call. After 18 minutes, that price drops to $0.25 per minute. How much would a 94-minute call cost?","First 18 minutes would be a cost of 18 * 0.5 = $<<18*0.5=9>>9.
+After that, there are 94 - 18 = <<94-18=76>>76 minutes of the call left.
+And these 76 minutes cost 76 * 0.25 = $<<76*0.25=19>>19.
+So in total, the 94-minute call would cost 9 + 19 = $28.
+#### 28"," Initially, you pay $0.5 for each minute. After 18 minutes, you pay $0.25 per minute. So, 18 * 0.25 = <<18*0.25=4.5>>4.5.
+After 18 minutes, you pay $4.5.  The remaining minutes are 94 - 18 = 76 minutes.  The cost per minute is $4.5/76=0.0594, which is approximately $0.0594 per minute.
+So the cost of#### 94500059464004537006400494946400790282175710584587759000781656737722175667332995059494640045949464007902821757105845877590007816567377221756673329950594946400459494640079028217571058458775900078165673772217700781656737722177007816567377221770078165673770078165673770078165673770078165673770078165673770078165673770078165673770078165673772217571058458775900078165673772",2.086673717945814,False
+800,David scored 462 points in one game of darts. Ella scored 11 points more than one third as many as David. How many points did David and Ella have in total?,"David = <<462=462>>462 points
+Ella = 1/3*462 + 11 = 165 points
+462 + 165 = <<462+165=627>>627 points
+Together, David and Ella scored 627 points.
+#### 627"," Ella scored 11 points more than one third of David's score. One third of David's score is (1/3)*462 = 462/3 = <<462/3=154>>154 points. Ella scored 154+11=165 points.
+So, David and Ella scored 462 + 165 = 627 points.
+#### 6276672194074241627746278239248022735451657637866377724788368016115341995725148499768429674123879762143560708741787403202789911230894520859764316308359124215976094477816001860288463949695243397474959504157543995373852234353879477662524190474896689895556979934032636435846227883965097572439339146749199394777168769863804126472787121684604448879440044268714017898044425519680972207407878091226498455019274",1.6430139120202512,False
+1020,"Ethan picks 307 pears on Thursday. Then he picks 103 pears on Friday. On Saturday, he picks six times the number of pears he did on Thursday. How many pears does Ethan have?","Combining Thursday and Friday, Ethan has 307 pears + 103 pears = <<307+103=410>>410 pears.
+On Saturday, he picks 6*307 pears = <<6*307=1842>>1842 pears.
+Altogether, Ethan has 410 pears + 1842 pears = <<410+1842=2252>>2252 pears.
+#### 2252"," Ethan picked 307 pears on Thursday and 103 pears on Friday. On Saturday he picked 6*307 = <<307*6=1842>>1842 pears.
+So Ethan has 1842+307 = <<1842+307=2150>>2150 pears.
+
+#### 2150469014690114180835980146901141808359801469011418083598014690114180835980146901141808359801469011418083598014690114180835980146901141808359801469011418084464243492760732141808359801469011418083598014690114180835980146901141808359801469011418083598014690114180835980146901141808359801469011418084464243492760732141808359801469011418083598014690114180835980146901141808359844581591141808359801469011418083598014690",1.6569594260072336,False
+269,"A juggler can juggle 90 balls. Three fifths of the balls are tennis balls, and half of the tennis balls are purple. How many purple tennis balls are there?","Tennis balls:90*3/5=<<90*3/5=54>>54.
+Purple tennis balls:54*1/2=<<54*1/2=27>>27 balls
+#### 27"," There are 90/5 = <<90/5=18>>18 tennis balls. Half of these is 18/2 = <<18/2=9>>9 purple tennis balls.
+#### 99000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.6817624369869009,False
+473,Amanda saw a 60-foot shark with 9 20-inch remoras attached to it. What percentage of the shark's body length is the combined length of the remoras?,"First, find the combined length of the remoras in inches: 20 inches/remora * 9 remoras = <<20*9=180>>180 inches.
+Then divide that number by 12 to convert it to feet: 180 inches / 12 inches/foot = <<180/12=15>>15 foot.
+Then divide the combined remora length in feet by the shark's length and multiply by 100% to express the answer as a percentage: 15 foot / 60 feet * 100% = 25%
+
+#### 25"," The combined length of the remoras is 9(20) + 9(20) = 180 + 180 = 360 inches.
+The shark's body length is 60 feet = 60 * 12 = 720 inches.
+The percentage is (360 / 720) * 100 = <<360/720 = 0.5<<>5%.
+#### 05555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555",1.550465725013055,False
+918,"There are 6 students playing volleyball and five times that number playing football. There are 11 boys and 25 girls playing basketball. If each student only participates in one group, how many students are there in total?","There are 6*5=<<6*5=30>>30 students playing football.
+There are 11 + 25 = <<11+25=36>>36 students playing basketball.
+In total there are 6 + 30 + 36 = <<6+30+36=72>>72 students.
+#### 72"," There are 6 * 5 = 30 students playing volleyball. There are 5*11 = 55 boys playing basketball. For basketball, 25 girls playing basketball. 30 + 55 + 25 = <<30+55+25=110>>110 students
+#### 1104166710773645518436121105110416673645518436121107716000137361020524892359647127861377029131778032328502615532164674541657563417947248010122430044591772832437572858061612698413883008541136088396017434288336495533389966590949952424024188217464352467378550125464687718751439593665636803541243050883143969867305643561831188371645536740455487541167782710733737286964099376364696763609542542577697735607783592991632101709718976067",1.4863831619732082,False
+1133,"Sarah walks 32 feets every day on her favorite walking trail, which includes 13 feets of walking on the beach and 19 feet(s) of walking on the sidewalk. On the sidewalk, Sarah walks at thrice the rate of speed that she does on the beach. If 52 minutes of her walk is spent on the beach, how long does it take for her to complete the entire 32-feet walk, in minutes?","On the beach, Sarah walks at a rate of 13 feets per 52 minutes, or 13/52 = 1/4 feets per minute.
+On the sidewalk, she walks at thrice the rate of speed as when she is on the sand, or 3*1/4 = 0.75 feets per minute.
+To walk 19 feet(s) on the sidewalk, it takes her 19/0.75 = <<19/0.75=25.333333333333332>>25.333333333333332 minutes.
+Thus, in total, it takes Sarah 52+25.333333333333332 = <<52+25.333333333333332=77.33333333333333>>77.33333333333333 minutes to walk her favorite route.
+#### 77.33333333333333"," On the beach, Sarah walks 32 feet.  The length of the walking trail on the beach is 13 feet. Sarah walks 19 feet on the sidewalk. The total walking distance on the beach is 32 feet. Sarah's speed on the beach is 32 feet / 32 minutes = 1 foot/minute. On the sidewalk, Sarah walks at thrice the rate.
+#### 322832324671711826526855885349877527243948363466777549273735767383667697047824423350227866331361355179374176651903992310029845812016925469603404337657178396960747629876471729256378893330971458996158769323696371509838101701465165427343713863102369673321257650893961813447499246240263638949323196035240957213200888374123822381002315798137587877776122524299838872356945781777337993725970727301740148177185593976335",1.9202290680259466,False
+930,"When Claire watches her cousin, she gets out a variety of toys for him. The bag of building blocks has 49 blocks in it. The bin of stuffed animals has 29 stuffed animals inside. The tower of stacking rings has 31 multicolored rings on it. Claire recently bought a tube of bouncy balls, bringing her total number of toys for her cousin up to 207. How many bouncy balls came in the tube?","Let T be the number of bouncy balls in the tube.
+After buying the tube of balls, Claire has 49 + 29 + 31 + T = 109 + T = 207 toys for her cousin.
+Thus, T = 207 - 109 = <<207-109=98>>98 bouncy balls came in the tube.
+#### 98","  Let $b$ be the number of bouncy balls.
+Building blocks: 49 blocks
+Stuffed animals: 29 animals
+Stacking rings: 31 rings
+Total toys = 49 + 29 + 31 = 119
+Claire's total toys = 207
+Bouncy balls = Total toys - (Building blocks + Stuffed animals + Stacking rings)
+Bouncy balls = 207 - (49 + 29 + 31)
+Bunc#### 20754582615367899567514991455482521131763749745451107550640905071262920540190947645556443473282173695377412558457853065423661390948741652471821378163267884533755744983639265680013805514895357244866844496216854532447269359659180741372587327004756578663476084961818390848869576003145991647644927643886872690986475864766490825257021481596797830244026237898347333624857153532346952718069",3.070932685979642,False
+456,"In a set of magician's cards, there are 36 yellow cards, and 63% more orange cards. Blue cards are as many as the sum of yellow and orange cards. How many cards of all mentioned colors are there?","There are 63/100 * 36 = <<63/100*36=22>>22 more orange cards than yellow cards.
+Which means there are 36 + 22 = <<36+22=58>>58 orange cards.
+Blue cards make up to 36 + 58 = <<36+58=94>>94 cards.
+So in total, there are 94 + 94 = <<94+94=188>>188 cards of different colors.
+#### 188"," Let $Y$ be the number of yellow cards, $O$ the number of orange cards, $B$ the number of blue cards, and $U$ the number of yellow and orange cards. We are given $Y=36$, and that there are 63% more orange cards than yellow cards. Thus, $O = Y + 0.63Y = 1.63Y = 1.63(36) = 58.28$. Since we must have a####
+100000000000000000000000224364863766376637666376637666376669888766683666836668366676668366666766676667666766667666676668366683666836600046988663766683666676667667666766676667667666766676667666766676667666766676667666676676667667667667667667667666766676667667666667666676666766667666766667666766676667666766761666836668366676667666766676666766667666766667666000469886637666836666766676667",1.8604230509372428,False
+1031,"Oakwood High School is holding graduation in their Auditorium this year which has space for 6700 people. After accounting for 1300 seats for graduates and 200 seats for faculty attending, how many tickets would each graduate receive to give to their friends and family if the tickets are split equally?","Add graduate and faculty seats together. 1300 + 200 = <<1300+200=1500>>1500 seats for faculty and graduates
+Minus seats for faculty and graduates from total seats allowed. 6700 - 1500 = <<6700-1500=5200>>5200 remaining seats.
+Divide remaining seats by the number of graduates. 5200/1300 = <<5200/1300=4>>4 tickets
+#### 4"," The school will sell 6700-1300-200 = 5200 tickets. If they are split equally, each graduate would receive 5200/(6700-1300-200) = 5200/5200 = 1 ticket.
+Each graduate would receive 1 ticket.
+#### 15000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.4882954210042953,False
+858,"A virus infects nineteen people. Every day, each infected person infects three others. How many people are infected after four days?","On the first day, the original nineteen people infect three people each, so 19*3 = <<19*3=57>>57 more people are infected.
+There are 19+57 = <<19+57=76>>76 infected people after the first day.
+On the second day, 76*3 = <<76*3=228>>228 more people are infected.
+There are 76 + 228 = <<76+228=304>>304 infected people after the second day.
+On the third day, 304*3 = 912 more people are infected. Therefore, there are 304 + 912 = 4864 infected people after four days.
+#### 4864","  Each person infects 3 others, so 19 * 3 = 57 new infections.
+Then 19 + 57 = 76 new people are infected.
+#### 760195440000007609091440004860968043515951789480000004960000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.4845840649213642,False
+145,Lucas has 40 square yards of kiwi field. There are 96 kiwis per square yard. Lucas can harvest his kiwis every 6 months. How many kiwis can Lucas harvest within a year?,"Lucas has 96*40= <<96*40=3840>>3840 kiwis on his field.
+Lucas can harvest his kiwis 12 / 6 = <<12/6=2>>2 times per year
+Therefore Lucas can harvest 3840*2 = <<3840*2=7680>>7680 kiwis per year.
+#### 7680"," He can harvest 40*96=<<40*96=3840>>3840 kiwis in a year.
+#### 384014460727642577384024498688766588933608556866604382901865274524655786275845064930466165875257874201748251523840860446271500708706800008781314967161748371607258822437737607783882833234190908994475668922456180010000000000000000000000000000000000000384000000000000009638400000000000000000074760000000000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.486480299034156,False
+432,"Prince Michael slew 400 ogres with his mighty war hammer, while Prince Carl, using a lance, slew three fifths as many ogres as Prince Michael. Using a wooden club, Prince Bob slew twice as many ogres as Prince Carl. But Prince Matt, having forgotten his sword at home, slew two thirds as many ogres as Prince Bob using a butter knife. How many ogres has Prince Matt slain?","Prince Carl slew three fifths as many ogres as Prince Michael, or 400*3/5=<<400*3/5=240>>240 ogres.
+Prince Bob slew twice as many ogres as Prince Carl, or 2*240=<<2*240=480>>480 ogres.
+Prince Matt slew two thirds as many ogres as Prince Bob, or 480*2/3=<<480*2/3=320>>320 ogres.
+#### 320"," Prince Michael slew 400 ogres. Prince Carl slew three fifths as many as Prince Michael, so Carl slew 400 * (3/5) = 80 * 3 = 240 ogres. Prince Bob slew twice as many as Prince Carl, so Bob slew 240 * 2 = 480 ogres. Prince Matt slew two thirds as many as Prince Bob, so Matt slew 480 / 3 = 160 ogres.
+#### 160160001600000016000000160000001600000016000000160000001600000016000000160000001600000016000000160000001600000016000000160000001600000016000000160000001600000016000000160000001600000016000000160000001600000016000000160000001600000016000000160000001600000016000000160000001600000016000000160000001600000016000000160000001600000016000000160000001600000016000000160000001600000016000000160000",2.5558511019917205,False
+220,It takes Emily 29 minutes to finish a brain teaser and 7 minutes to finish a riddle. Over the free time she solved 6 brain teasers and 9 riddles. How much time did she spend playing these games?,"It takes 29 minutes to complete a brain teaser and she completed 6 for a total of 29*6 = <<29*6=174>>174 minutes
+It takes 7 minutes to complete a riddle and she completed 9 for a total of 7*9 = <<7*9=63>>63 minutes
+She spent 174 minutes on brain teasers and 63 minutes on riddles for a total of 174+63 = <<174+63=237>>237 minutes
+#### 237"," We need to find the time she spent on brain teasers and riddles, and then add together the minutes to find the total time.
+Emily solved 6 brain teasers (29 minutes) + 9 riddles (7 minutes) = 6+9=15 minutes
+#### 155000000000000060500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.4905663050012663,False
+921,"A lasagna has 48 servings. If Ellen can eat 4 servings a day while Eric can eat twice as much, how many days will the lasagna last?","Eric can eat 4*2=<<4*2=8>>8 servings a day.
+Together, Ellen and Eric can eat 4 + 8 = <<4+8=12>>12 servings a day.
+So, a lasagna will last for 48/12 = <<48/12=4>>4 days.
+#### 4"," Ellen eats 4 servings/day and Eric eats 4*2=8 servings/day. Together they eat 4+8=12 servings/day. They have 48 servings so the lasagna lasts 48/12=4 days.
+#### 45005777777777777777777777777777777777777777777777777787878767777777777777777777777777777777777878787878787878787878787878787878787878787878787878787878787878787878787777777777777777777777777777777777777878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878777777777777777777777777777777777777777777777777778787878787878787878787878787878787877777777777777777777777777777777777777777777777777",1.4817775649717078,False
+1025,The Treasure hunt team hid 200 candies. The Lee twins each found 14 candies. All the other candies except 10 were found by their friends. How many candies did the friends find?,"The Lee twins found, 14 * 2 = <<14*2=28>>28 candies.
+The number that remained hidden was 200 - 28 = <<200-28=172>>172 candies
+Since 10 candies were not found, this means the friends found 172 - 10 = 162 candies.
+#### 162"," The Lee twins found a total of 14*2=28 candies. All the other candies were found by their friends, so the friends found 200-28=172 candies.
+#### 172520303739675570494012525357481828181149642437210477557581046114818174951894577396755704940125253574818281046114818174951894577396755758104611481817495189457739675570494012525357481828181749518945773967557581046114818174951894577396755758104611481817495189457739675575810461148181749518945773971766399999881819608625553574818174951894577396755758104611481817495189457739675570494012525357481828181749518945773967557581046114818174951894577396755758104",1.4796549869934097,False
+265,"Dr. Patel is looking for a condo that will not go beyond her $480,000 budget. She saw a property that has a selling price of $430,000. On top of that, the buyer has to pay a brokerage fee which is 6% of the selling price, and also the transfer fee that is 10% of the selling price. How much more is the total price of the condo than Dr. Patel's budget?","The brokerage fee is $430,000*6/100 = $<<430,000*6/100=25,800>>25,800.
+The transfer fee is $430,000*10/100 = $<<430,000*10/100=43,000>>43,000.
+The total price of the condo is $430,000 + $25,800 + $43,000 = $498,800.
+So, it is $498,800 - $480,000 = $<<498,800-480,000=18,800>>18,800 more than Dr. Patel's budget.
+#### 18,800","  The total price of the condo is $430,000 + (6% of $430,000) + 10% of $430,000 = $430,000 + (0.06 * $430,000) + (0.10 * $430,000) = $430,000 + $25800 + $43,000 = $430,000 + $291,000 = $721,000.
+The budget is $480,000. The difference is $721,000 - $480,000 = $241,000.
+#### 24100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",1.4924434310523793,False
+655,Ashley is required to submit a 258-page report. She already finished writing 1/2 of the report. How many pages does she have left to write?,"Ashley has already written 1/2 of the report which is 258 pages*1/2 = <<258*1/2=129>>129 pages.
+So, she still needs to write 258 pages - 129 pages = <<258-129=129>>129 pages.
+#### 129"," Ashley has 258 pages - (1/2)*(258) = <<258-258/2=258-129=129>>129 pages left to write.
+#### 1294995919961521241234982837864265198295114808889646547907219829511480888964654790721982951148088896465479072198295114808896465479072198295114808896465479072198295114808896465479072198295114808896465479072198295114808896465592656868724874139761952607489098260698216497178922860348979982038679398701539445658848544013722345661466125582617506730474360999729460776673961795693043693964263943548289073082628621911552842165987320583382567568049677612789",1.4811601450201124,False
+661,Kenneth goes to the store to buy some tea. The normal brand of tea he buys costs $10 per kilogram. He had to buy a more expensive brand that costs 10% more since his favorite brand was sold out. He decides to buy a week's worth of tea and he uses 1 kilogram of tea per day. He also decided to buy himself a cookie for $5. How much did everything cost?,"The tea he bought was 10*0.1=$<<10*0.1=1>>1 more expensive per kilogram than what he normally buys
+So it cost 10+1=$<<10+1=11>>11 per kilogram
+He goes through 1*7=<<1*7=7>>7 kilograms of tea a week
+So he paid 11*7=$<<11*7=77>>77 on tea
+That means his total bill was 77+5=$<<77+5=82>>82
+#### 82","  Normal price per kilogram is $10.  The increase is 10% of $10, which is $10 * 0.10 = $1.  The new price is $10 + $1 = $11 per kilogram.  He buys 1 kg / day for a week, so he buys 7 kg.  The cost of the tea is $11 * 7 = $77.  He also buys a cookie for $5, so the total cost is $77 + $5 = $82.
+#### 821042065462372634401121223906154836467872227256426808217522710330773127407857605163735718232519365014647069001025061002710547013127638728100278986268733753817682771856754371537271242921547083748486407966315088456650373087798491444616469416793576484538830402930980506470076844139478251743571473636385135494889884128742551265008084158992786041411851842879587238769604544046892497",2.652354910969734,False
+1247,"Oliver has a bag of buttons with 44 inside. He tripped over a stick while carrying it and dropped one quarter of them. He scrambled to search for them but only came up with 7. When he went back home, he inspected the buttons further. Four of the ones he picked up weren't buttons, but actually beads so he got rid of them. How many buttons did Oliver end up with?","Oliver dropped his buttons and was left with 44*3/4=<<44*3/4=33>>33 buttons.
+He searched and found some of his lost buttons, getting him back to 33+7=<<33+7=40>>40 buttons.
+He went home and removed four beads, leaving him with 40-4=<<40-4=36>>36 buttons.
+#### 36"," Oliver dropped 4/4 = 1 button. Then he picked up 7 buttons. But he got rid of 4 beads, so 7-4 = 3 buttons. 
+So Oliver has 1+3=4 buttons.
+
+Final Answer: The final answer is  4",0.19684339500963688,False
+991,Comet Hyakutake orbits the sun every 60 years. Noah's uncle saw the Comet when he was 22 years old. Noah saw the comet a second time when he was three times the age his uncle was when he saw the Comet. How old was Noah when he saw the Comet for the first time?,"Noah saw the Comet for the second time when he was 22 years * 3= <<22*3=66>>66 years old.
+Comet Hyakutake can be seen every 60 years, so Noah saw the comet for the first time when he was 66 years - 60 years = <<66-60=6>>6 years old.
+#### 6"," Noah was 60 - 22 = 38 years old when he saw the comet.
+#### 38383838393838393141414384051414384051414574099110911091207740991056632489760960035942930719377285725745937872302343833712036402065941875212473211328911232155487245963170926472177032135618688362656000049378310450167758570350146246581880759545894374667847703075922488382324647677425711251875000314750454801549471274550046008751860584114910344507442608983384330505713369792813114738838111827643173466167478370108769895242710556898427847428143879098138589538204576537885552943321",1.483790282974951,False
+1207,"David caught 5 trouts last Friday, the first trout he caught weighs 59 kgs, the second trout he caught weighs 52 kgs, and the remaining trout he caught weighs 35 kgs. If a kg of trout costs $0.25, how much will he earn after selling all the trouts to the market?","David will earn 59*$0.25 = $<<59*0.25=14.75>>14.75 from the first trout.
+He will earn 52*$0.25 = $<<52*0.25=13>>13 for the second trout.
+The rest of the trouts are 5-2 = <<5-2=3>>3. He will earn 35*$0.25 = $<<35*0.25=8.75>>8.75 per each of them. So he will earn 3 * 8.75 = <<3*8.75>>=26.25
+Therefore, the total amount he will earn for all the trouts is $14.75 + $13 + $26.25= $<<14.75+13+26.25=53>>54.
+#### 54","
+The first trout weighs 59 kg.
+The second trout weighs 52 kgs.
+The remaining trout weighs 35 kg.
+Total weight of the trout = 59 + 52 + 35 = 146 kgs
+Price per kg = $0.25
+Total earnings = 146 * 0.25 = 146 * (1/4) = 36.50
+#### 365000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",15.558971480000764,False
+232,"Amanda went to their greenhouse to pick some cherries and found half as many beetles as caterpillars in the field. If there were 108 caterpillars, calculate the total number of insects in the field.","If there were 108 caterpillars, the total number of beetles in the field is 1/2*108 caterpillars = 54 beetles
+The total number of insects in the field is 54 beetles + 108 caterpillars = <<54+108=162>>162 insects
+#### 162"," The number of beetles is half the number of caterpillars, so there are 108/2 = 54 beetles. The total number of insects is the number of caterpillars plus the number of beetles, which is 108 + 54 = 162.
+#### 1620874278808351224589904362208070289831647882013041302362177898351224651610076664161657867784587522872101303346412259398269847911286457516001708741111639801629755842083412067614396754373171518861663533632624916253625914919827448884027257789580784994111516001702685314127033537718292126113782927306841187567574651475854583124808342983337896241437381930998000586806483299087187007839304403668111388000366748611500323534209758950669640833629",1.490931705920957,False
+149,"William has five times as many LinkedIn friends as Andrea. Jessica has four times as many friends on LinkedIn as Andrea. If William has 169 friends on LinkedIn, how many LinkedIn friends does Jessica have?","Andrea has 169/5 = <<169/5=33>>33 LinkedIn friends.
+Jessica has 4*33 = <<4*33=135>>135 LinkedIn friends.
+#### 135"," Let's say the number of LinkedIn friends William has is 'W'. The number of LinkedIn friends Andrea has is 'A'. The number of LinkedIn friends Jessica has is 'J'.
+We can write the following equations:
+W = 5A
+J = 4A
+W = 169
+We want to find J.
+Substitute W = 169 into the first equation:
+169 = 5A
+A = 1####
+16969707074923744513187624678693958966786939589667869395896678693958966786939589667869395896678708028686703436678758149099396152312811931738996589664415733512312811931738996678693958966786924708470463906237533893481892832733864257859363167835870327792795816041222420191674242231876454416779573768890658389589074626473061137367311868814621989183890686201899772319785737459681811653397619889852969172",3.052937043015845,False
+184,Chris is rolling a d20 die. How much more likely is it (expressed as a percentage) that he rolls a number greater than 2 than that he rolls two even numbers in a row?,"There are 18 numbers greater than 2 on the dice, so the chances of rolling one of them are 18/20=90%.
+The chance of rolling one even number is 50%, so the chance of rolling two in a row is 50% * 50% = 25%.
+The difference between these two probabilities is 90% - 25% = 65%.
+#### 65"," There are 20 total possible outcomes. To get a number greater than 2, we need to count the number of outcomes greater than 2. These are 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20. There are 18 outcomes greater than 2.
+The number of outcomes that show two even numbers in a row, #### 22421421421421421421421442142142142142142142142142142142142142142142142142142142142142142142142142142142142142142142144214214214214214214214214214214214214214214214214142142142142142142142142142142142142142142142142142142142142142142142142142142142142142142142142142142142142142142142142142142321421421421421421421421421421421421421421421214214214214212142142121421214212142",2.129675805103034,False
+459,"A farmer is buying feed for his pigs. He buys a variety of oats, apples, cucumbers and hay. Since hay are a rare treat, he only buys six 3-lb boxes of them for the whole stable. He only wants enough cucumbers to feed the pigs while the vegetables are fresh, so he buys six 12-lb bags. Oats are the main diet of his pigs, so he buys forty 75-lb packs. Apples are a staple to supplement the oats, so he buys eighteen 45-lb sacks. If his farm truck can carry 1950 lbs at a time, how many trips does the farmer need to transport all the feed?","The farmer is buying 6*3 = <<6*3=18>>18 lbs of hay.
+He is buying 6*12 = <<6*12=72>>72 lbs of cucumbers.
+He is buying 18*45 = <<18*45=810>>810 lbs of apples.
+He is buying 40*75 = <<40*75=3000>>3000 lbs of oats.
+The weight of all the feed is 18 + 72 + 810 + 3000 = <<18+72+810+3000=3900>>3900 lbs.
+Thus, the farmer needs 3900 / 1950 = <<3900/1950=2>>2 trips to transport all the feed in his farm truck.
+#### 2","
+- Oats: 40 packages * 75 lbs/package = 3000 lbs
+- Cucumbers: 6 bags * 12 lbs/bag = 72 lbs
+- Apples: 18 sacks * 45 lbs/sack = 810lbs
+- Total: 3000 + 72 + 810 = 3882 lbs
+- Truck capacity: 1950 lbs
+- Number of trips: 3882/1950 = 1.99 x 10^-1 (approximately 2 trips)
+
+The farmer needs to make 2 trips.
+
+#### 251716376633882754147741088785870415764819500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",2.076051070005633,False
+636,"Abby operates the cash register exactly four times as fast as her less-experienced colleague Ashley. Daily, Ashley processes 44 customers. What is the total weekly production for the two if they work all days of the week?","While Ashley is processing 44 orders in a day, Abby processes 44 orders/day*4=<<44*4=176>>176 orders/day.
+In a day, they process 176 orders/day + 44 orders/day = <<176+44=220>>220 orders together.
+The total number of orders the two processes in a week is 220 orders/day * 7 days/week = <<220*7=1540>>1540 orders
+#### 1540"," Abby processes 44 * 4 = 176 customers daily.  Ashley processes 44 customers daily.  Their combined daily production is 176 + 44 = 220 customers per day.  There are 7 days in a week.  Their weekly production is 220 * 7 = 1540 customers.
+#### 15405105105105105104525655101045256551010452565510101045256551045256551010452565510452565510452565510106565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565656565",1.4851867270190269,False
+440,"The area of William's rectangular kitchen is 226 square meters. If the length of his room is 4 yard(s), what is the perimeter of the room in meters?","The length of the room is 4 yard(s) * (1 meters / 1 yard(s)) = <<4*(1/1)=4>>4 meters.
+The width of the room is 226 square meters / 4 meters = <<226/4=56>>56 meters.
+The room's perimeter is 2(56+4) = 120
+#### 120"," The area of the kitchen is 226 square meters. The length is 4 yard(s). Since 1 yard = 3 meters, the length in meters is 4 * 3 = 12 meters. Area = length * width = <<12*3=12*3=36>>36 square meters.
+The perimeter of the room is 2 * (length + width) = 2 * (12 + 4) = 2 * 16 = 32 meters.
+#### 32562904431835877881236930711367028376605345055979932587787609770896404896077069339813161943654437429856632885678545187312909185094991873754406527746724428172875376723662478853454235288302816037154898903840449678438838458322984846387448237719474390532795037812186425456132212120816529077511283841600431983466353889627260000000000000000000000000000000000000000000000000000000000000000000",1.5087296810233966,False
+39,"Jessica can run twice faster than she can walk, but she can skip at a rate of speed that is half as fast as she can run. If she can skip at 6 miles per hour, how many miles can she travel in eight hours if she spends three quarters of the time running and one quarter of the time walking?","If Jessica can skip at half the speed she can run, then she can run at 6*2=<<6*2=12>>12 miles per hour.
+And since she can run at a speed that is twice faster than she can walk, this means she can walk at 12/2=6 miles per hour.
+If one quarter of the time is spent walking, then she walks for 8*1/4=<<8*1/4=2>>2 hours.
+If three quarters of the time is spent running, then she runs for 8-2=<<8-2=6>>6 hours.
+Thus, she runs for 6 hours at 12 miles per hour, or 6*12=<<6*12=72>>72 miles.
+She walks for 2 hours at 6 miles per hour, or 2*6=<<2*6=12>>12 miles.
+Thus, altogether, she travels 72+12=<<72+12=84>>84 miles.
+#### 84"," Jessica runs for three-quarters of an hour and walks for one-quarter of an hour. So she runs for (3/4) * 60 = 45 minutes and walks for (1/4) * 60 = 15 minutes.
+Distance run = 45*6 = 270 miles
+Distance walked = 15*6 = 90 miles
+Total distance = 270+90 = 360 miles
+#### 360167351515837135135165078032317213514288000373477901047708477774196212351515784165078039667888233751238003601593988572471671313418077683618172000360601741265123927912221160569277743673926747873377484993671579476436627118982731954113239500608358180003333875633450190268940278453286420613540467418416783285884971904668193827366389076501278555506576072413332695375304969755634724334135376094420140",1.4876225219340995,False
+320,"At the beginning of the party, there were 29 lawyers and 63 nurses. After 45 minutes, 1/4 of the total number of people left. How many nurses are left if 16 lawyers stayed at the party?","There were a total of 29 lawyers + 63 nurses = <<29+63=92>>92 people who attended the party.
+After 45 minutes, 92 people * 1/4 = <<92*1/4=23>>23 people left the party.
+This means 92 people - 23 people = <<92-23=69>>69 people stayed.
+Out of the 69 who stayed, 69 people - 16 lawyers = <<69-16=53>>53 were nurses.
+#### 53"," Initially there were 29 + 63 = <<29+63=92>>92 people. After 45 minutes, 92 - (1/4)*92 = <<92 - 23=69>>69 people left.
+Since 16 lawyers stayed, the number of nurses left is 69 - 16 = 53.
+#### 5369047361285594240748615235654449711928378115868232947636196490723547436876679767584169682354743687667976758416968232947636196490723547436876679767584169682329476361964907235474368766797675841696823294763619649072354743687667976758416968232947636196490723547436876679767584169682329476361964907235474368766797675841696823294763619649072354743687667976758416964907269406680282227992943832688753426876673617798412",1.4822449519997463,False
+740,"A class of 108 students has various hobbies. 22 like to read, 25 like to play badminton, and the rest like to either hike or play music. How many like to hike if the number that like to play music is twice the number that prefer playing badminton?","The number of students that like to play music is twice as many as the number who like badminton, so 2 * 25 = <<2*25=50>>50
+The number that like to hike is 108 total students - 22 that like to read - 25 that like to play badminton - 50 that like to play music = <<108-22-25-50=11>>11
+#### 11"," Let 'x' be the number of students who like to play music.
+The number of students who like to read is 22.
+The number of students who like to badminton is 25.
+The total number of students is 108.
+So, x + 22 + 25 = 108
+x + 47 = 108
+x = 108 - 47 = 61
+The number of students who like to play music is 61.####
+25937701362477787255631372739419484768026878976283387588726583272149539728363238331015068538151855741855678957718184197823409141677959611670167638937865340307810380969428636426129394542514135749600250111063926876689787105505194157289681855566772205778876375273079285027664149313837073085596349837515181953828120716973398749769447648857042488867278884019634614338109463368589659398734",2.06680417410098,False
+984,"Abby has a flower bed that is 150 feet long. Abby wants to fill her flower bed with plants. Abby's flowers grow 2 inches wide so she needs to leave 8.0 feet between every plant. Abby already owns 12 flowers. Each flowering plant costs $7 at the store, how much money will Abby spend at the store to fill up her flower bed?","Abby's flower bed is 150 feet / 8 feet per plant = <<150/8=18>>18 plants needed.
+Abby needs to buy 18 plants - 12 plants = <<18-12=6>>6 plants needed to purchase.
+Abby will spend 6 plants * $7 = $<<6*7=47>>47.
+#### 47"," The garden is 150 feet long, and she left 8.0 feet between plants, so she needs 150 - 8 = 142 plants.
+The cost of each plant is $7, so the total cost is 142*7 = <<142*7=994>>994.
+#### 99450000000000000000777777777777777777777779940000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777",1.482039148104377,False
+496,William is 10 years old. In seven years his cousin Andrea will be twice as old as William is now. How old is Andrea right now?,"Seven years from now Andrea will be 10*2=<<10*2=20>>20.
+Right now Andrea is 20-7=<<20-7=13>>13 years old.
+#### 13"," Andrea is currently 10 years old. In seven years, she will be 10+7 = 17 years old. So Andrea is 17 years old.
+#### 1724796540917609810549648244511438000545907799014151955413310210708987741399364838336973118257261777840564831545484508503377117180704856529279794101798741412844239447523145209146279743383819668042761381838753289011331171798839971906126147362377518359145746476678699797582246681374825518763280000801781072745366386494233914786487859207392574647444092844226315572488280823332689897506692783050054018681503750516834359482669622302783366426497997516019057881495612",1.4832000149181113,False
+410,"Sally went to the beach for vacation. Her parents gave her $30 to buy whatever she wanted. At the souvenir store, taffy was on sale for ""Buy 1 pound at $2 per pound, get 1 pound 1/6 off."" She scooped up 3 pounds. She also bought a mixed bag of seashells for $2.0 and 10 magnets that were $1.0 each. How much money does Sally have left?","Sally is buying 1 pound for $2 and gets 1 pound 1/6 off. So 1/6 off of 1 pound is $2*1/6 = $0.3333333333333333. The rest of 1 pound does not have discount and costs 1*$2 = $2, so total is $2+$5/3+$2=$17/3
+10 magnets at $1 each is 10*1=$<<10*1=10>>10
+When you add all her purchases, 17/3+$2+$10 = $<<17/3+2+10=17>>17
+She had $30 and spent $17 so she had $30-$17 = $<<30-17=13>>13 left over
+#### 13"," Sally's total expense was $2 + $2.0 + $1.0 + $1.0 = $6.0
+She started with $30 - $6.0 = $24.00
+She claims to have bought $3 \times 2 = 6$ pounds of taffy at $2 per pound, so $6 \times 2 = 12$ dollars.
+The mixed bag of seashells costs $2.00$, and the magnets cost $1.00$ each, so $2.00+10 \times 1.00=####
+2000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",2.3985521199647337,False
+125,"Claire was preparing for a lunch party at her house, where she intended to serve creme brulee. She noticed that she was out of plastic spoons, so she bought a new package of spoons. Later, her husband also bought a package of 10 new spoons and gave them to Claire. While Claire was making the creme brulee, she used six of the spoons to sample her creme brulee. Later, when she went to set the table, she had a total of 12 spoons. How many spoons were in the package that Claire bought?","The total number of spoons from Claire and her husband was 12+6=<<12+6=18>>18 spoons.
+Since the husband bought a package of 10 spoons, then Claire's package contained 18-10=<<18-10=8>>8 spoons.
+#### 8"," Claire started with 12 spoons and added 6 spoons from the new package, plus 10 spoons from her husband .  <<12+6+10=28>>28 spoons.
+#### 2832722873598282233752464722710979488700327175963790837709552773201617781272637878097571416174764715713911210980062992491823009388499328473657290308738917409205377102630829678216087914511154047029789671842016063858940469418660857306579476441631352528775171039787184600373439279492946993663745846233261151804623876759607154863686518372568413767673237947907889406462177360604608587991231081733593287395674818171141016174975525437511283043881184784498234786",1.4820179560920224,False
+336,"Laura buys 7 shares of a stock for €81 each. The stock price increases 40% the first year Laura holds it, then decreases 15% in the second year. What is the final value of all Laura's shares?","First find the initial total value of Laura's purchase: 7 shares * €81/share = €<<7*81=567>>567
+Then find the amount of the first price increase: €567 * 0.4 = €<<567*0.4=226.8>>226
+Add that amount to the initial value to find the value after the first year: €567 + €226.8 = €<<567+226.8=793.8>>793
+Then multiply that amount by 15% to find the amount of the decrease in the second year: €793.8 * 15% = €<<793.8*15*.01=119.07>>119
+Then subtract that amount from the value after the first year to find the final value: €793 - €119 = €<<793-119=674>>674
+#### 674"," Initially, Laura buys 7 shares at €81 each = 7 * 81 = €567. The price increases by 40% so the new price is €81 * 1.40 = €113.40. The stock price decreases by 15% so the new price is €113.40 * 0.85 = €96.39. The final value of her shares is €567 + €96.39 = €663.39.
+The final value of all Laura's 7-1#### 7000000060000000000000000000960000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",2.269833307946101,False
+843,Chris has 5 £50 bills. He buys eleven toy cars for £2 each. He also buys 6 packs of trading cards for £8 each. How much money does he have left?,"Chris starts off with 5 * £50 = £<<5*50=250>>250.
+Chris spends 11*£2 = £<<11*2=22>>22 on toy cars.
+Chris spends 6 packs of trading cards * £8 = £<<6*8=48>>48 on trading cards.
+Total Chris has spent £22 + £48 = £<<22+48=70>>70.
+Chris has £250 - £70 = £<<250-70=180>>180 remaining.
+#### 180"," Chris has 5 * 50 = 250 £.
+He buys 11 * 2 = 22 cars.
+The cost of the cars is 22 * 50 = 1100 £.
+He buys 6 * 8 = 48 packs of trading cards.
+The cost of the trading cards is 48 * 8 = 384 £.
+The total cost is 1100 + 384 = 1484 £.
+Chris has 250 - 1484 = 250 - 1484 = -1234 £.
+However we need to find how *####
+48079463456750000000000000000000000000007500000000000000000000013670000000000000000001748744892198708018744892198708018744892198708018744892198708018744892198708018744892198708018744892198708018744892198708018744892198708018744892198708018744892198708018744892198708018744892198708018744892198708018744892198708018744892198708018744892198708018",1.9149850310059264,False
+1189,"Isabella sliced a whole mango into 16 pieces. She ate 2 slices, her sister ate 2 more than her, and her cousin ate 4 more than her sister. How many slices of mango did they all eat?","Her sister ate 2 + 2 = <<2+2=4>>4 slices.
+Her cousin ate 4 + 4 = <<4+4=8>>8 slices.
+They ate a total of 2 + 4 + 8 = <<2+4+8=14>>14 slices.
+#### 14"," Isabella's brother ate 2 + 2 = 4 slices. Her cousin ate 4 + 4 = 8 slices. Isabella ate 16 - (4+8) = 16 - 12 = 4 slices.
+So they ate a total of 4 + 4 + 16 = <<4+4+16=24>>24 slices of mango.
+
+#### 249540304050644861709785183527214436632406878118172895136014844746662796465991500159701605732566480690456547731829264740487898777867976834205806898751878123182756605744211226344809549434400006336873348445767579719091042554540887053204733566976415540687627752395268086196563064090868728674279012471321201699671734603544767283254773472253732402884215879091677907949769210343673913626663073998999774352311755501236",1.4849429160822183,False
+99,"Jessica is an avid gardener. Two days ago, she received 26 new potted plants from her favorite plant nursery. She already has 10 potted plants on each of the 59 window ledges of her large country home. Feeling generous, she has decided that she will give 3 of the potted plants from each ledge to friends and family tomorrow. How many potted plants will Jessica remain with?","Two days ago, before receiving the plants, Jessica had 10*59 = <<10*59=590>>590 potted plants
+After receiving an additional 26 plants, she therefore had a total of 590 + 26 = <<590+26=616>>616 potted plants
+Tomorrow, Jessicas plant giveaway will be 59*3 = <<59*3=177>>177 potted plants.
+She will therefore remain with 616 - 177 = <<616-177=439>>439 potted plants.
+#### 439"," Jessica has a total of 10 (window ledges) * 59 (windows) = 590 potted plants. She receives 26 new plants. So she starts with 590 + 26 = 616 plants. She gives away 3 plants from each ledge, so she gives away 3 * 59 = 177 plants. Remaining plants: 616 - 177 = 439
+#### 43923906982168981312399891940513728992592984294163358798043955363541015439678719613868660952800723267464388442974875294944184251754282297258799947137281324592182570667941258822331392436971704033548098609988838649982426028263574849780084809269993497809511502557223738369264398860181416169187552125428643816843771198652307346134558460638537387777267794302430483972789853321446474428889437983229814233",1.4865538870217279,False
