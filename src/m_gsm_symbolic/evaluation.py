@@ -161,13 +161,17 @@ def main():
         root = Path(__file__).parent.parent.parent
 
         if not os.path.isdir(
-            root / "data" / "evaluation_results" / "gsm_eng" / f"{response_model_name}"
+            root
+            / "data"
+            / "evaluation_results"
+            / f"{args.dataset}"
+            / f"{response_model_name}"
         ):
             os.makedirs(
                 root
                 / "data"
                 / "evaluation_results"
-                / "gsm_eng"
+                / f"{args.dataset}"
                 / f"{response_model_name}"
             )
 
@@ -175,7 +179,7 @@ def main():
             root
             / "data"
             / "evaluation_results"
-            / "gsm_eng"
+            / f"{args.dataset}"
             / f"{response_model_name}"
             / f"{response_model_name.replace(':', '__')}_{folder.name}.json"
         )
@@ -196,6 +200,12 @@ def main():
 
         df = pd.DataFrame(rows)
         df.to_csv(save_path.with_suffix(".csv"), index=False)
+
+        del cases
+        del agent_evaluated
+        del ds
+
+        torch.cuda.empty_cache()
 
 
 if __name__ == "__main__":
