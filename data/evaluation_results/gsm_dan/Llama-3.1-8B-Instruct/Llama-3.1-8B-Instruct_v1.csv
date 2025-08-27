@@ -1,0 +1,758 @@
+name,inputs,expected_output,output,task_duration,correct
+434,Automaterne sælger muffins for 60 øre og cookies for 90 øre. Erik brugte 12 DKK og fik 7 poser muffins og havde 5% af sine penge tilbage i byttepenge. Hvor mange cookies købte han?,"Erik fik 0,6 DKK i byttepenge fordi 12*5/100 = <<12*5/100=0,6>>0,6
+Erik brugte 11,4 DKK fordi 12 - 0,6 = <<12-0,6=11,4>>11,4
+Erik brugte 4,2 DKK på muffins fordi 7*0,6 = <<7*0,6=4,2>>4,2
+Erik brugte 7,2 DKK på cookies fordi 11,4 - 4,2 = <<11,4-4,2=7,2>>7,2
+Erik købte 8 cookies fordi 7,2 / 0,9 = <<8=8>>8
+#### 8"," Han købte 7*6=<<7*6=42>>42 DKK i muffins.
+Efter at have købt det fik han 100-42-12=<<100-42-12=46>>46 DKK tilbage.
+Det var 5% af hvad han brugte på cookies fordi han havde resterende mønt tilbage.
+Efter omregning fik han 10/46=<<10/46=0,2174>>0,22%\enindr bàn socket items.
+Han satte cookies til 9,5#### 904297028173118938112978393940997799857578977556557954555675777475747599995755575787998798890989799199899668999079999888999959979959985759959979099978997598977675775999975577877887578559979995759955598809989898799857559877855889077879998777887577777887887775897999055599755779955987998889887788987775767787895989955997755599755787599887775675885859767777599874979759978778899985378798979999998909737737737857969745510556558168987898674987898892899758797789389959997477579595759799995998775259959947557659116555858677854556835558676755677786358587675479667555557995997659557758599759949977899795991874978755555668754756755957595994757454755556495559758795774845599977355797745455755875516995995759745944899577455966695576867575947755933754757555468690597976776799575558567497559560354787475964955546995475549456976197659557555565745557354476758584755155975557476768355555575555956955757567756755347556568347575577154575549775457576959456365586754953777459745954757565737359357576955747565945999747555747575465957547554574655155559579564759457957149899550775729494594563558755551495475455494675555",5.613850543741137,False
+43,"Ifølge oplysningerne om næringsindhold har en pose slik 300 kalorier per portion. Hvis en 325 gram pose har 5 portioner, hvor mange gram kan du spise, hvis dit daglige kaloriemål er 2000 og du allerede har indtaget 1700 kalorier?","Hvis det totale kaloriemål er 2000 og jeg har indtaget 1700 kalorier, så har jeg 2000-1700 = <<2000-1700=300>>300 kalorier tilbage at spise
+Hvis hver portion slik har 300 kalorier og jeg kun har 300 kalorier tilbage at spise, så kan jeg kun spise 300/300 af en portion = 1 af en portion
+Vi ved også, at en 325 gram pose slik har 5 portioner, derfor har hver portion 325 gram/5 = <<325/5=65>>65 gram
+Hvis jeg kun kan spise 1 af en portion, så kan jeg kun spise 65 gram*1 = 65 gram
+#### 65"," 1700 kalorier right now hver portion har 300 gram kalorier, så du har 2000 -1700 = <<2000-1700=300>>300 tilbage.
+Hvidden har 5 portioner af 325 gram, så hver portion vejer 325 / 5 = <<325/5=65>>65 gram.
+Så hvis du gerne vil have 300 kalorier tilbage, kan du spise 300/300 = 1 portion på 65 gram
+Det #### 659565756647567756756567567567756675654656756756514157745756565767567567595665675675666675675675675756575656756756565556565567567567567565675675675656755666255566756576655666555665556655675665667577565657556655675657565576565675656556655656667756557756775576565657567567555565657566567566565576565665567567565567565657565657567565657566555675657565657565675657565657556656575757656756565577556655755756665757756756565656567565756775756565756565756565756565756565756665756565756565756565565757756575765675656565565775656577665575656565565775576565656564665555654554665565364554254655664564565565564565654465564554664564565565664564555664545564545564664555454555664556454554655564574564554565545564544554664665564564554654564645645564654545464654555675645565655674556665654464654364564665655575565365564564564665665565654565455645565454154464554764555475564556656554555455665564574464654565654565645664555664564665555665465664565646454555455564654465654655454555664564665756564656775695564576657456565754354655764554665455564565654564665675645464554576645665654467554555576464566546545654565464456457564565465564565445454535454566455455466456",3.1306166448630393,False
+20,"Jeg har 12 liter æbledrik, der er en tredjedel vand og jeg ønsker at tilføje det til 30 liter citrondrik, der er to tredjedele vand. Men da jeg hælder det, spilder jeg seks liter af æbledrikken. Hvor meget vand er der i de resterende 36 liter?","Der er 30*2/3=<<30*2/3=20>>20 liter vand fra de 30 liter citrondrik.
+Efter seks liter af æbledrikken blev spildt, var der 12-6=<<12-6=6>>6 liter æbledrik tilbage.
+Ud af de 6 liter er 6*1/3=<<6*1/3=2>>2 liter vand.
+Dermed er der i alt 20 + 2 = <<20+2=22>>22 liter vand ud af de 36 liter.
+#### 22"," Der er 12/3=<<12/3=4>>4 liter æble i flasken.
+Så der er 12-4=<<12-4=8>>8 liter vand i flasken.
+Jeg har den tilføjet til 36-6=<<36-6=30>>30 liter af citronen
+Som er 30*(2/3)=<<30*(2/3)=20>>20 liter vand
+Så flasken indeholder 20+8=<<20+8=28>>28 liter vand efter hældning.
+#### 28",0.7632726426236331,False
+1088,"Der er 8 lektioner om dagen for en normal elev, men Lucas skal tage 2 ekstra timer. Hver time varer 55 minutter. Han går til undervisning 6 dage om ugen. Han bruger derefter 1/10 af sine ugentlige minutter hver på lørdag og søndag som ekstra læringstid. Hvor mange timer om ugen bruger han på at lære?","Han tager 8+2=<<8+2=10>>10 timer om dagen
+Det betyder, at han bruger 55*10=<<55*10=550>>550 minutter per dag i klassen
+Så han bruger 550*6=<<550*6=3300>>3300 minutter om ugen
+Det betyder, at han bruger 3300*1/10=<<3300*1/10=330>>330 minutter hver på lørdag og søndag.
+Så han bruger 3300+330+330=<<3300+330+330=3960>>3960 minutter om ugen
+Så han bruger 3960/60=<<3960/60=66>>66 timer om ugen
+#### 66"," Lucas har 8+2=<<8+2=10>>10 timer hver dag
+Hans søndagsdage varer 55*10=<<55*10=550>>550 minutter om dagen
+Hans lørdagsdage varer 550*2=<<550*2=1100>>1100 minutter om ugen
+2/10 af hans ugentlige minutter er 1100/10=<<1100/10=110>>110 minutter om ugen
+1160+110=<<1160+110=1270>>1270 minutter om ugen
+S#### 127016701330128012861330128712801330128712951299129812911330128512901298128812941297128412971287129112951284129212901286129412911293129512841290129512971330129812891292128712831282131612931295129312911294129412981271129112971299133012851290129812991298129912971281129812931294131912911298129812901291129512981290129712901297128712981296128812891294129912911297129312971297129112901296129812971297129712911300129012931297129812911297129812971296129712971293129712951292129712971297129813031297129712971297129712971297129712901297129712901291129712961291129712951302129712950213483012970213023012831291305031303012801330132801239230130614830130300332933100124566636532250123460137567383311543333600973076132300000231009833057903147091303030200030100000131133170099030100902133300799379673910132903100105",3.1338278548792005,False
+1165,"Emil samler affald fra 4 forskellige lejlighedskomplekser. De første tre har 200 lejligheder hver og den sidste er 20% større end de tre andre tilsammen. Emil samler affald 3 gange om ugen fra hvert sted og han bliver betalt 1,7 kr per afhentning for hver lejlighed. Hvor mange penge tjener han på en uge?","De første tre komplekser har 3*200=<<3*200=600>>600 lejligheder
+Det 4 har 600*0,2=<<600*0,2=120>>120 flere lejligheder end de tre tilsammen
+Så i alt har det 600+120=<<600+120=720>>720 lejligheder
+Så han går til 720+600=<<720+600=1320>>1320 lejligheder hver gang
+Det betyder at han besøger 1320*3=<<1320*3=3960>>3960 lejligheder hver uge
+Så han tjener 3960*1,7 kr=<<3960*1,7=6732>>6732 kr hver uge
+#### 6732"," De tre første komplekser har sammen 200*3=<<200*3=600>>600 lejligheder.
+Dgetto sidste kompleks har 20% mere, så de samlede kan have 600+(20/100)*600=<<600+(20/100)*600=720>>720 lejligheder
+Så det er 720+600= 1.320 lejligheder i alt
+Han """"),
+så han samler samlet 1.320*3=<<1.320*3=3.960>>3.960 gange
+#### 6709246691149132682965817738703824222402991084504751146609857318949796712868437589512436427579227784421894542194829289641742854418463526479910456866227970764684732956482152176420613219737329437724431873619162264641661245861242951236986451956111826764457421471145727538402013354794226579146958782221694555337874251813117112173421763273173699658456598613755546461112552573127953529326304692252811152172593073162136142143739257941719111513778631380161911121178127171544572307291425465577361677356625216568021569167794463295346115934874175276162132211174213478527225186142325116691246617356964651113372232454587542288336268281751758266054387372166323446169422283654156510151153942546664456486558282327358159775941623739427111453418245488349591449544113686787658115698266841221458263446775528453291373421855312113461815155494319155856347219115165526413124454046462664181573155655255922827317245161461956151171417881175011117911761332317957319681911193114165661156317577617528184754313161877666231114115419549375681155265327347456177661173538366455565911357147265771156569265496469979363865193434238174112495",3.288324119988829,False
+11,"Emma gik til supermarkedet og købte forskellige typer desserter. Hun købte 8 dusin kanelsnegle, som kostede 132 kr per dusin, 9 dusin småkager, som kostede 552 kr per dusin og 8 dusin scones for 767 kr per dusin. Hvor meget var de samlede omkostninger?","Den samlede pris for kanelsnegle var 8*132 kr = <<8*132=1056>>1056 kr.
+Den samlede pris for småkager var 9*552 kr = <<9*552=4968>>4968 kr.
+Den samlede pris for scones var 8*767 kr = <<8*767=6136>>6136 kr.
+Derfor var det samlede beløb, Emma betalte for desserterne 1056 kr + 4968 kr + 6136 kr = <<1056+4968+6136=12.160>>12.160 kr.
+#### 12.160"," Kanelsnegle kostede 8*132=<<8*132=1056>>1056 kr.
+Så storekager kostede 9*552 =<<9*552=4968>>4968 kr.
+Samlede omkostninger var 1056+4968+8*767=<<1056+4968+8*767=17660>>17.660 kr.
+#### 17660",0.48310461873188615,False
+158,"Magnus gik for at købe nogle skolematerialer. Han købte 10 linealer, som kostede 4,5 kr hver, 14 farveblyanter, som kostede 6,5 kr hver og en ramme papir, som kostede 23 kr. Hvor meget brugte Magnus i alt?","Magnus brugte 10*4,5 kr = <<10*4,5=45>>45 kr for linealerne.
+Han brugte også 14*6,5 kr = <<14*6,5=91>>91 kr for farveblyanterne.
+Derfor brugte Magnus i alt 45 kr + 91 kr + 23 kr = <<45+91+23=159>>159 kr for skolematerialer.
+#### 159"," Linen aspecturerne kostede 10*4,5=<<10*4,5=45>>45 en krone.
+Farveblyanterne kostede 14*6,5=<<14*6,5=91>>91 en krone.
+Og ramme papiret kostede 23 kr.
+Og i alt blev Magnus så dårligt globbar for 45+91+23=<<45+91+23=159>>159 en krone.
+#### 159",0.6066710888408124,True
+220,Det tager Andrea 18 minutter at fuldføre en skak opgave og 12 minutter at fuldføre en gåde. I løbet af ferien løste hun 3 skak opgave og 14 gåde. Hvor meget tid brugte hun på at spille disse spil?,"Det tager 18 minutter at fuldføre en skak opgave og hun fuldførte 3, hvilket i alt giver 18*3 = <<18*3=54>>54 minutter
+Det tager 12 minutter at fuldføre en gåde og hun fuldførte 14, hvilket i alt giver 12*14 = <<12*14=168>>168 minutter
+Hun brugte 54 minutter på skak opgave og 168 minutter på gåde, i alt 54+168 = <<54+168=222>>222 minutter
+#### 222"," Det tager Andrea 18*3=<<18*3=54>>54 minutter at løse alle skakopgaverne.
+Det tager hende 14*12=<<14*12=168>>168 minutter at løse alle gådene.
+Det tager igennem hele ferien hende 54+168=<<54+168=222>>222 minutter at løse gennem hele ferien spillene.
+#### 2220",0.5811386336572468,False
+1277,"Der er i øjeblikket 26 år mellem Simon og Henrik. Hvis Simon, der er yngre end Henrik, er 42 år gammel, hvad er gennemsnittet af deres alder?","Hvis Simon er 42 år gammel, er Henrik 42+26 = <<42+26=68>>68 år.
+Summen af deres alder er 68+42 = <<68+42=110>>110 år
+Gennemsnitsalderen for de to er 110/2 = <<110/2=55>>55 år
+#### 55"," Simon er 42 år gammel, så Henrik er 42+26=<<42+26=68>>68 år gammel
+Gennemsnitsalderen er (42+68)/2 = 110/2 = <<(42+68)/2=55>>55
+Selvoms hun er 42 år gammel, er gennemsnitsalderen af deres alder 55 år.
+#### 55",0.5097327688708901,True
+1031,"Marselisborg Gymnasium afholder dimission i deres Sports Arena i år, som har plads til 2800 mennesker. Efter at have reserveret 400 pladser til dimittender og 550 pladser til fakultetdeltagere, hvor mange billetter kan hver kandidat give til deres venner og familie, hvis billetterne er delt ligeligt?","Plus kandidat- og fakultetspladser sammen. 400 + 550 = <<400+550=950>>950 pladser til fakulteter og kandidater
+Minus pladser til fakulteter og kandidater fra det totale antal tilladte pladser. 2800 - 950 = <<2800-950=1850>>1850 pladser tilbage.
+Opdel antallet af kandidater efter resterende pladser 1850/400 = <<1850/400=4>>4 billetter
+#### 4"," Det er muligt at sætte 2800-400-550=<<2800-400-550=1850>>1.850 billetter på gelænderne til alarm.
+Så hver person modtager 1.850 / 15 = <<1850/15=123,333>>123,333 reservationspost. Der er ikke mulig at deles. Der timeout forfaderro på folk
+#### 12333333333333333333333333333343456733421256333522312864562232562823476246122634525225419244635523264234454668763452323132342365236456753689245662234644646465659559999999996657666566565459494449354352235657651354556566952563555667565656656226452655232164565545235343556555656555523356523453453555536553554995253555233553953566554555565566665665323653555653622355665232363555356553655655235653565654555235653355555663233555655235652355225655666525231665234563565655664275491253355231565565555563652254565565665563555233655566565665233565653655253353552254563552364552352355566565663642345555655225655655135252655223555565563655669655666635552435565552356665332556655666556556566555656556759455655656556535345656654655565552256655656565566223556635556552365535565565125561125455235665235567225665354365656796456665564556555653456555655134565235555666553565655555666555666553655655655245564555673055665655656563655264565565565563625675655325665665566563565655655656225656655666543665623563666545463455655566553555666556655656555666553565655655665566556355666555655235656785655656735563565565565533566556655462355565565676565446356556665565565566556655566655535365326565596556566556653565565536565656655565665356665",2.6565734641626477,False
+491,"Carl lægger kager på nogle fade. Hver fad kan rumme 37 kager. Hvis han har 270 kager og 5 fade, hvor mange kager vil han ikke kunne lægge på en fad?","Carl vil være i stand til at lægge i alt 37*5 = <<37*5=185>>185 kager.
+Derfor er der 270 - 185 = <<270-185=85>>85 kager, som han ikke vil kunne lægge på en fad.
+#### 85"," Carl lægger 37*5=<<37*5=185>>185 kager på 5 fad
+Dette betyder, at Carl vil være uegnet til at lægger 270-185=<<270-185=85>>85 kager på en af fadene.
+#### 85",0.36127578001469374,True
+921,"Et lasagne har 48 portioner. Hvis Bo kan spise 3 portioner om dagen, mens Emma kan spise tre gange så meget, hvor mange dage holder lasagneet så?","Emma kan spise 3*3=<<3*3=9>>9 portioner om dagen.
+Sammen kan Bo og Emma spise 3+9=<<3+9=12>>12 portioner om dagen.
+Så et lasagne vil holde i 48/12=<<48/12=4>>4 dage.
+#### 4"," Emma kan spise 3*3 = <<3*3=9>>9 portioner om dagen
+Så de to spiser sammen 9+3=<<9+3=12>>12 portioner om dag.
+Så de kan spise en 48 portioner lasagne på 48/12=<<48/12=4>>4 dage.
+#### 4",0.4364002556540072,True
+740,"En gruppe på 189 elever har forskellige hobbyer. 118 kan lide at danse, 14 kan lide at spille basketball og resten kan lide enten at læse eller male. Hvor mange kan lide at læse, hvis antallet, der kan lide at male, er to gange så mange som dem, der foretrækker at spille basketball?","Antallet af elever, der kan lide at male, er to gange så mange som dem, der kan lide basketball, så 2 * 14 = 28
+Antallet, der kan lide at læse, er 189 elever i alt - 118 der kan lide at danse - 14 der kan lide at spille basketball - 28 der kan lide at male = 29
+#### 29"," Der er 14*2=<<14*2=28>>28, der kan lide at male.
+Resten elsker enten læsning eller male. 189-118-14=<<189-118-14=57>>57 elsker kun at læse eller male.
+Der er 57 dude, der kan læse eller kun male.
+Alt andre end de 57 sole elsker begge.
+Så 28 har kun male som yndlingshobby, da hvis 57 kunne, når alen#### 575",1.103187555912882,False
+1020,Alfred plukker 383 meloner om fredagen. Så plukker han 212 meloner om lørdagen. Om søndagen plukker han fem gange så mange meloner som han gjorde om fredagen. Hvor mange meloner har Alfred?,"Fredag og lørdag tilsammen har Alfred 383 meloner + 212 meloner = <<383+212=595>>595 meloner.
+Om søndagen plukker han 5*383 meloner = <<5*383=1915>>1915 meloner.
+I alt har Alfred 595 meloner + 1915 meloner = <<595+1915=2510>>2510 meloner.
+#### 2510"," Onsdagen har han 383 + 212 = <<383+212=595>>595 meloner.
+Søndagen havde han 595 * 5 = <<595*5=2975>>2975 meloner.
+I alt har Alfred 595 + 212 + 2975 = <<595+212+2975=3782>>3782 meloner tilbage til at tyde.
+#### 3782",0.4860180667601526,False
+456,I en sæt magiker-kort er der 22 røde kort og 62% flere blå kort. Gule kort er lige så mange som summen af røde og blå kort. Hvor mange kort af alle nævnte farver er der?,"Der er 62/100 * 22 = <<62/100*22=13>>13 flere blå kort end røde kort.
+Hvilket betyder, at der er 22 + 13 = <<22+13=35>>35 blå kort.
+Gule kort udgør op til 22 + 35 = <<22+35=57>>57 kort.
+Så i alt er der 57 + 57 = <<57+57=114>>114 kort i forskellige farver.
+#### 114"," Der er 22 * .62 = <<22*.62=13.64>>14 blå kort fra 2 = 18/14= 1,57. Procenten af magi-kort, der ikke er røde er 100 - 62 = 38 %.
+Der er 22 + 14 = <<22+14=36>>36 blå og røde, eller 100/62*=1,6214. De røde kort gør 14/ 1.6297*100 =8.656% af kortene i sættet, der hviler dacavenportender 1695.
+For hver #### 169553763436719756106984563949806919806875285784493512988041767451425477861227125781922133735329653556148208350740363363367086674066810191429393410637419033594250235102405464157131376384216385559285453956907890666156679455296843661461956253791483966674511425474910197112186531540768468375962630667118183638171981637336221288917454793872461810129173640411495341077455382417111936131940248371740266784749958142757795179429998688452933158759439548964712191194349701956485951673271580491412617670327425425213976767523625960513176575250412185776260113652746024916617567308701191614237256178351167643354364166275910174374491196371962152664003579447365195275911466845186415164924533167481101255691936182612095235766795171911764727381527259156146146142789631143223314617106167126116187547432547461269225923266685725951516433377755641319264178634728631951351942153372369754691949255817331573162679291863617933532111415311536567623563449887657665317455761575393654310743593757481735216196312553167185503525597764296527375351493342475649516753174693382441678317595384381274841456223",3.131447358056903,False
+365,"Der er 38 piger i gården. Hvis der er tre gange så mange drenge i gården, hvor mange børn er der så i gården?","Der er 38 piger*3 drenge/piger = <<38*3=114>>114 drenge i gården.
+I alt er der 38 piger + 114 drenge = <<38+114=152>>152 børn i gården
+#### 152"," Der er 3*38=<<3*38=114>>114 drenge i gården.
+Så der er 38+114=152 børn i gården.
+#### 152",0.23456398164853454,True
+520,"Frida strikker vintertøj til sine 2 børnebørn. De er tvillinger, så de har alle samme størrelse. Hun vil lave en cardigan, et poncho, en sweater, sokker og benvarmere til hver af dem. Det kræver 5 garnnøgler at lave en cardigan, 14 for et poncho, 13 for en sweater, 11 for et par sokker og 15 for et par benvarmere. Hvor mange garnnøgler skal hun købe?","Et komplet sæt til hvert barn vil kræve 5 garnnøgler per cardigan + 14 garnnøgler per poncho + 13 garnnøgler per sweater + 11 garnnøgle per par sokker + 15 garnnøgler per par benvarmere = <<5+14+13+11+15=58>>58 garnnøgler.
+Så for at strikke outfits til alle sine børnebørn, vil hun have brug for 2*58 = <<2*58=116>>116 garnnøgler.
+#### 116"," Hvis hun laver varmen til begge tvillingerne, så bliver kisten med nøgler fyldt med 2*5=10 naive nøglestukke samt 2*13=<<14=14>>14 forsvarssynder.
+Så der bliver købt 10+14+14+2*11+2*15=<<10+14+14+2*11+2*15=84>>84 naive nøglestukke.
+#### 84",0.6181822586804628,False
+459,"En landmand køber foder til sine får. Han køber en række forskellige typer æbler, hø, rødbeder og hvede. Da hvede er en sjælden godbid, køber han kun fire 3-kilogram æsker til hele stalden. Han ønsker kun nok rødbeder til at fodre fårene, mens grøntsagerne er friske, så han køber seks 8-kilogram poser. æbler er hovedretten i fårenes kost, så han køber seksogtredive 65-kilogram baller. Hø er en basisvare til at supplere æbler med, så han køber tyve 45-kilogram sække. Hvis hans gårdbil kan bære 1650 kilogram ad gangen, hvor mange ture skal landmanden bruge for at transportere alt foderet?","Landmanden køber 4*3=<<4*3=12>>12 kilogram hvede.
+Han køber 6*8=<<6*8=48>>48 kilogram rødbeder.
+Han køber 36*65=<<36*65=2340>>2340 kilogram æbler.
+Han køber 20*45=<<20*45=900>>900 kilogram hø.
+Vægten af alt foderet er 12 + 48 + 2340 + 900 = <<12+48+2340+900=3300>>3300 kilogram.
+Derfor skal landmanden bruge 3300 / 1650 = <<3300/1650=2>>2 ture for at transportere alt foderet i sin gårdbil.
+#### 2"," Fedtsorterne vejer 45*20=<<45*20=900>>900 kilogram
+Grøntsagerne vejer 8*6=<<8*6=48>>48 kilogram
+Så alt foderet sammenlægges til 4*3+48+6*8+20*45+65*27=<<4*3+48+6*8+20*45+65*27=1916+ 2155 = 4067>>4067 kg.
+Da hans bil kun kan bære 1650 kg ad gangen, er han nødt til at udføre 4067/1650=<<4067/1650=2,5#### 2571516504855150319938733778300117134670371709946816588798834196824681144881975734407299332875654512578707209458349240583453286274346382592654744456878955889855991145429499933304149938666553212276395445835164678946443330377259856303633911734710638775641792258818764125936787905133955237811981542533849592297134485362129761494213591731694760958468739594675316153284551389460448490331933633539480769517576594452584982985416981950847551165083511241789462433368840903651257627328840998183365884643921125910878937166503955640889736543946973857207935589556895501874595179745250785392459547594645026805496718945386404155419511771619536578957770941992889738969986467383035165487395025667289421301488959436595016283493443439666745155736975692300357899123647726322454981045519352395932997373339301781024625682581299865446088393993242432671449889273961555499343988941766967933637111418445219569311369551877971413233737454437193857984184667794344617561433662703588357428133747678923896884499571565541983097281946709521175207393",3.4248575516976416,False
+1133,"Ella går 26 m hver dag på hendes yndlingsvandrerute, som inkluderer 11 m på stranden og 15 m på fortovet. På fortovet går Ella tre gange så hurtigt som hun gør på stranden. Hvis 66 minutter af hendes gåtur tilbringes på stranden, hvor lang tid tager det hende at fuldføre hele 26-m gåturen, i minutter?","På stranden går Ella med en hastighed på 11 m per 66 minutter, eller 11/66 = 1/6 m per minut. På fortovet går hun tre gange så hurtigt som når hun er på sandet, eller 3*1/6 = 1/2 m per minut. For at gå 15 m på fortovet, tager det hende 15/(1/2)=30 minutter. Så i alt tager det Ella 66+30=96 minutter at gå sin yndlingsrute. #### 96"," Det tager Ella 66/60=<<66/60=1,1>>1,1 timer at gå 11 m i ruten, eller 11 m.
+Det tager Ella 1,1*3=3,3 timer at gå på fortovet.
+Den totale tid på fortovet er 60*3,3=<<60*3,3=198>>198 minutter på fortovet.
+Den totale tid på stranden er 66+198=<<66+198=264>>264 minutter på stranden.
+Det tager Ella 264/#### 115407542254432026411757174270526573507758057529454521791656959668633758607626270733756676657508377737277876577476756746533736566767677537677767676776777677676776777676616327634770526765857390707676767687767656667660366666546666656665768567645449358744907744747376453775771464179875772467635754906544755661445246441767536747645464646354565763537766556564776367447876546773767547727456667766664666667664543626764545444464537764676655576766543654465753667667644666464663675352437663533273237457447766464775246696545653545444644573756247654644644756643537377633545555446646653575553547757557644465535653544566766745637543445535767635442945446744577976447676424676357546665037734445354466257765535545535355440770546455956357573757737345556657335356737056567283435760437354663746573555843544556765765565546446654455644876634435767565766347656765446736545756754455844457765437876765566292646544447737746635456655575665634546377554645663355655465765654663375436553545355590352875465564735657464529373434564544469744435635573654547674364664735427765443734135497654434243765735735667575378746473746537756467354",3.064796717837453,False
+149,"Ellen har fem gange så mange Twitter-venner som Frida. Agnes har to gange så mange venner på Twitter som Frida. Hvis Ellen har 180 venner på Twitter, hvor mange Twitter-venner har Agnes?","Frida har 180/5=<<180/5=36>>36 Twitter-venner.
+Agnes har 2*36=<<2*36=72>>72 Twitter-venner.
+#### 72"," Ellen har 2 gange så mange gule streger på sit træs kalekas mærke som alle sin Twitter-venner haelt bare, mens ten langs under.
+Frida har 180/5=<<180/5=36>>36 venner på Twitter.
+Agnes har 2*36=<<2*36=72>>72 venner på Twitter.
+Så Agnes har 72 Twitter-venner selv.
+#### 72",0.5802011699415743,True
+1207,"Bo fangede 7 torsk i lørdag, den første torsk han fangede vejer 45 kg, den anden torsk han fangede vejer 35 kg og den sidste torsk han fangede vejer 26 kg. Hvis et kg torsk koster 0,5 kr, hvor meget vil han tjene efter at have solgt alle torskene til markedet?","Bo vil tjene 45*0,5 kr = <<45*0,5=22,5>>22,5 kr fra den første torsk.
+Han vil tjene 35*0,5 kr = <<35*0,5=17,5>>17,5 kr for den anden torsk.
+Og han vil tjene 26*0,5 kr = <<26*0,5=13>>13 kr fra den tredje tun.
+Derfor, den totale mængde han vil tjene for alle torskene er 22,5 kr + 17,5 kr + 65 kr = <<22,5+17,5+65=105>>105 kr.
+#### 105"," Den næste torsk så 45-35=<<45-35=10>>10 kgmindre end første torsk
+Den næste torsk så 35-10=<<35-10=25>>25 kgmindre end førstanden torsk
+Den næste torsk så 25-10=<<25-10=15>>15 kgmindre end førstehennekaren torsk
+Den næste torsk så 15-10=<<15-10=5>>5 kgmindre end førstehennekaren torsk
+Den sidste tɪ#### 4791850477937285583227926593142563534850384753468746378315753267628995628929876565920987235967676526048927258541598456876764336622215765712345698723552653785675676588655673825876875896875655665983568736967265892765775657329727665475987254783875624657823569785357263657657592768765937582375257653357728375625796557557356577825553573575656576575653578756567776675679775577657767365767675776657677756765755665775775675256757465773325756657765376557975757576375757367575756775756575655765657756567656756375775766577575765565756765755755355575656565757475766746775647657325765755775926745657256776575956746375757655567356776375557375556575775565756756557655776475756767565767557756565575756575775656575757676507623642745765765765726325565655666557655557655365757565767575675755757567655677756765746757675657355764347578565776565765756757575756746475657675765736725656757557665557635757265775355757675566525665575774575756765467465975767655467575575756575757575655356676746475766753556767575756765755565765665776576575767657676575755775656565676757657567775756756937776572795623565675576575757575567557",3.0828480352647603,False
+400,"Et kop indeholder 12 dl danskvand. Kenneth drikker 5 kop danskvand. Hvis danskvand har 3 kalorier per dl, hvor mange kalorier indtog han?","Han drak 12*5=<<12*5=60>>60 dl danskvand
+Så han drak 60*3=<<60*3=180>>180 kalorier fra danskvand
+#### 180"," 1 kop(indeholder 12 dl).
+5 kop(indeholder 12*5=60 dl).
+60*3=<<60*3=180>>180 kalorier.
+#### 1801",0.24102012207731605,False
+1074,Mathilde afsluttede en fjerdedel af et puslespil med 448 brikker og begyndte derefter at færdiggøre et andet puslespil med 438 brikker på en time. Hvor mange puslespilsbrikker placerede Mathilde i løbet af den time?,"Mathilde placerede 1/4*448 brikker = <<448*1/4=112>>112 brikker.
+Mathilde færdiggjorde 112 brikker + 438 brikker = <<112+438=550>>550 brikker.
+#### 550"," Hun havde kun 0,25*448 = <<448*0,25=112>>112 brikker tilbage på det første puslespil.
+En time senere havde hun kun 0,25*438 = <<438*0,25=109,5>>109,5 (male brikker tilbage på det andet.
+Dette betyder at hun måtte have placeret 438-109,5 = <<438-109,5=328,5>>328 brikker på dette puslespil.
+Så hun må####
+32800015424",1.3527008420787752,False
+991,"Kometen Hyakutake kredser rundt om solen hvert 50 år. Emils bedstefar så kometen, da han var 38 år gammel. Emil så kometen anden gang, da han var to gange så gammel som hans bedstefar var, da han så kometen. Hvor gammel var Emil, da han så kometen for første gang?","Emil så kometen for anden gang, da han var 38 år * 2= <<38*2=76>>76 år gammel.
+Kometen Hyakutake kan ses hvert 50 år, så Emil så kometen for første gang, da han var 76 år - 50 år = <<76-50=26>>26 år gammel.
+#### 26"," Emils bedstefar blev 38*2=76 år gammel, da Emil så kometen 2. gang.
+Emil så kometen første gang, da han var 38*2-76=<<38*2-76=0>>0 år gammel.
+Da under ordreringsprocessen gå den forudfattede henvisning slet ikke
+da Emily i de første 38 år se-kometen moderne..   .5 ikke siden han var 0
+eller skrev:5#### 3616374939959399028201047172578220945777856277616645615681681816718696668800195529151746958215739926413198464043701166591783596586648418504578188741038588379156765826599599255174143970713302115159972014698234267840076314328988821567231567003413133956556934566911162137999344966515116619155618761277057506113573789828139919999578905766078918279911705779147732319352137111994879554996511948416655943418177997559967791391175559992498311919964119541426616349456110171811209257643898538111195661664966870945958594112798889511314959947815791071111176751169912634721193207355910998393211351451916893311937819549544999359911993977345947777145547769996613874998911193552017111818977914639476626539791197966941145956177311195641995559949427738823811357583119415697645948611472684523517911333218103719833247759496137991371311099691839299567711541811734933398311997611983031116133977161362888573387112183943774983134848361355993137313111778934118369293260321946611995673211714995263029959131097395794791949567431311211134135413155172111317117111371134172471711377064115113419939484467936967991850475039786990571079617494276516543774159441933134",3.087983937934041,False
+1111,"Der er i øjeblikket 7 blå bolde, 16 grøn bolde og 28 gul bolde i butik. Blå bolde koster 8 kr, grøn bolde koster 3 kr og gul bolde koster 5 kr. Hvor meget vil butik have modtaget efter alle boldene er solgt?","For de blå bolde, 7 bolde*8 kr/bold = <<7*8=56>>56 kr.
+For de grøn bolde, 16 bolde*3 kr/bold = <<16*3=48>>48 kr.
+For de gul bolde, 28 bolde*5 kr/bold = <<28*5=140>>140 kr.
+For alle bolde, 56 kr + 48 kr + 140 kr = <<56+48+140=244>>244 kr.
+#### 244"," Blå bolde sælges 7*8=<<7*8=56>>56
+Grønne bolde sælges 16*3=<<16*3=48>>48
+Gulde bolde sælges 28*5=<<28*5=140>>140
+Så butikken modtager 56+48+140=<<56+48+140=244>>244.
+#### 24413410336013620278408326849315589344913411987551550585091657293413685922814858423361522566436347301669342992783683904606044007008512936515689999843758128600085100998836611733977850644463289846818872961547330479369397903074834998013997271302202908892259872684710931823472440113999170243788893480238150671115358016350077999999834581561767293020864338112460682743134394011930187707203559005765597467250173935986787693309738865483798926675413301251383915840448446004460204574098786371075459571513559251677156805764159471083804017099112403389576676045015430920517987745616969556733606256019699863765988853167833391868189059142266811144229670177998649155932943532425199581301150894817319218086403478746226917500578994649273861579935964190707862358119375310699955317264630623977817129291407371736701382979501637281707135184143670394423210399389595950630501881179949347720132751981698643677966921890307532103519497226533391405253364990261733550599499658258113600575139912871410509898715737972469388591282189598790942515996261749813129791878933981235083268894149181455930755731091225791796556534129878139935876715526218755800185717815346421652221172698999799852291234159041579062814369141251631035383586802",2.6308749970048666,False
+677,"Emma og Alma er søstre fra Aarhus, der elsker at samle underskrifter fra politikere. I løbet af deres efterårsferie bruger søstrene hver eftermiddag på at samle underskrifter. Efter 8 uger sammenligner Emma og Alma deres autografbøger og tæller antallet af underskrifter, hver søster har indsamlet. Emma har 32 underskrifter i sin autografbog og Alma har 39. Søstrene har 5 ugers efterårsferie tilbage og de beslutter sig for, at de vil nå 95 underskrifter mellem dem inden udgangen af sommeren. Hvor mange underskrifter skal søstrene samle for at nå deres mål?","Emma og Alma har allerede samlet 32 + 39 underskrifter = <<32+39=71>>71 underskrifter.
+Da deres mål er 95, skal de indsamle 95 - 71 underskrifter. 95 - 71 = <<95-71=24>>24 underskrifter
+#### 24"," I de 5 uger, de ankommende pensionsferie ønsker, skal de indkalde 95-48=<<95-48=47>>47 underskribenter.
+Desuden skal hver af dem have 47/2=<<47/2=23,5>>23,5 underskrifter hver.
+På grund af, at de ikke kan have en halv underskrift, må det være 23 hver, som at 479 underskrifter i alt, for at nå deres#### 47963203855998880395527775581891769",1.1114746681414545,False
+858,En ny parasit inficerer ni personer. Hver dag inficerer hver inficeret person to andre. Hvor mange mennesker er inficerede efter tre dage?,"På den første dag inficerer de oprindelige ni personer to personer hver, så 9*2=<<9*2=18>>18 flere mennesker bliver inficeret.
+Der er 9+18=<<9+18=27>>27 inficerede personer efter den første dag.
+På den anden dag bliver 27*2=<<27*2=54>>54 flere mennesker inficeret.
+Der er 27 + 54 = <<27+54=81>>81 inficerede personer efter den anden dag.
+På den tredje dag bliver 81*2=162 flere mennesker inficeret. Derfor er der 81 + 162 = 243 inficerede personer efter tre dage.
+#### 243"," Efter første dag er 9+2*9=27 mennesker inficeret.
+Efter tre dage er 27+2*2*27=105 mennesker efter tre dage.
+#### 105399014809105094288677904010208641270050249373187521729523634168905751839760952807730529448893773942376814715993725364003352817455782528331559949258658257400016809231162592893974857308974482726351077540352774736511239589939517809627319674180549708840760989469514188328332312790973493127372237557456389214346953673471854307181860650321772918205487010747492787455326677677747596565817761873527036480753732747377493515332897705874190929764544211768592708501608318957806279242352191396812528257013997412419297612845131771905498920937116813549209356010155774946843348877091147323147539663333348523144145096030148713976539875354391046706190330353643141580677916157657222670279692059364360412745297215118976099754071081754611774901244872706953434868710415200931970641387057530530678377131937481135727313662566224505121557126265743376156504197531453577434114565977858863969615629136150692392801123126136138371278621137173201965798593645781233451783365644421606041719994260531399342313400706173942120910365983299567263239843960431403921341600568524137366059703234079722362775598320004433730540521830710120565568839100251120590166796032132312724869364157816614549959724111179468139999731948541084726185030085221571579539538197231158198852762759511115762837962666504116258467921249751165280884128350954236937882423217651629321376126501150993179445177735222831870",2.639473403338343,False
+1247,"Kasper har en pose med mønter med 82 indeni. Han snublede over en rod, mens han bar den og tabte halvdelen af dem. Han skyndte sig at søge efter dem, men fandt kun 15. Da han kom hjem, inspicerede han mønterne nærmere. Fire af dem, han samlede op, var ikke mønter, men faktisk træperle, så han smed dem væk. Hvor mange mønter endte Kasper med?","Kasper tabte sine mønter og var tilbage med 82*1/2=<<82*1/2=41>>41 mønter.
+Han søgte og fandt nogle af sine tabte mønter, hvilket bragte ham tilbage til 41+15=<<41+15=56>>56 mønter.
+Han gik hjem og fjernede træperlene, hvilket efterlod ham med 56-4=<<56-4=52>>52 mønter.
+#### 52"," Da han tabte posen, fik han 82/2=<<82/2=41>>41 mønter.
+Idet han fandt op i mønterne, fik han 41+15=<<41+15=56>>56 mønter
+Da han smed træperlerne væk x 56 - 4 = 56
+#### 52",0.44459614902734756,True
+364,Der er 147 andenklasse elever på Elise Smith skole. 60 af dem er piger. Onsdag var 8 andenklasse piger og 5 andenklasse drenge fraværende. Hvor mange andenklasse drenge var på Elise Smith skole onsdag?,"Af de 147 andenklasse elever er 60 piger, så 147 elever - 60 piger = <<147-60=87>>87 drenge.
+Onsdag var der 87 drenge - 5 fraværende = <<87-5=82>>82 drenge.
+#### 82"," Der var 147-60=<<147-60=87>>87 drenge
+Der var 87-5=<<87-5=82>>82 drenge på skolen onsdag.
+Så hverken piger eller drenge fravær var udstedt af den daglig mulighet.
+#### 82",0.38849661918357015,True
+718,"940 mennesker ansøger om et job hos LEGO. Af dem der ansøger, modtager kun 47% invitationer til samtale. Af dem der får en samtale, modtager 47% et jobtilbud. Af dem der får et jobtilbud, accepterer tre fjerdedele af personerne stillingen. Hvor mange personer accepterer stillingen?","Antallet af personer der modtager invitationer til samtale er 940 * 0,47 = <<940*0,47=441>>441 personer
+Antallet af personer der modtager et jobtilbud er 441 * 0,47 = <<441*0,47=207>>207 personer
+Antallet af personer der accepterer stillingen er 207*3/4=<<207*3/4=155>>155 personer
+#### 155"," Der modtager 47% * 940 = <<47*.01*940=441>>441 invitationer
+Thrice those asked, or 441*3 = <<441*3=1323>>1323 accepterer stillingen
+Det er 47% af dem der bliver interviewet, så de 1323 mennesker ansøgte efterfølgende køb
+Det er 940 * 0,047 = <<940*0,047=44>>44 af de personer den første dag der fik
+#### 1323823298123866664239792571355445699",1.0694013219326735,False
+469,"Olivia har 14 krukker glasur i sit spisekammer. Hver krukke glasur kan dekorere 18 muffins. Olivia vil bage nok muffins til at bruge al hendes glasur. Hvis hver bageplade rummer 12 muffins, hvor mange bageplader skal hun bage?","Hun har nok glasur til 14 * 18 = <<14*18=252>>252 muffins.
+Hun har brug for 252 / 12 = <<252/12=21>>21 bageplader for at bage alle muffins.
+#### 21"," Olivias glasur kan dekoration 14*18=<<14*18=252>>252 muffins.
+Hun skal byde 252/12=<<252/12=21>>21 ganger på muffins.
+#### 21",0.2842945931479335,True
+546,"Alberte er ved at lære at skrive og beslutter sig for at omskrive Hiragana (med 48 bogstaver), indtil hun kan det. Hun skriver det fuldt ud fem gange, skriver en fjerdedel af det én gang og omskriver derefter alt, hvad hun allerede har skrevet. Hvor mange bogstaver har Alberte skrevet i alt?","Alberte har skrevet Hiragana (med 48 bogstaver) fem gange, hvilket er i alt 48*5=<<48*5=240>>240 bogstaver.
+Hun skriver derefter en fjerdedel af Hiragana (med 48 bogstaver), hvilket er 48*1/4=<<48*1/4=12>>12 bogstaver.
+Indtil videre er dette i alt 240 + 12 = <<240+12=252>>252 bogstaver.
+Hvis hun skriver dette igen, betyder det, at hun har fordoblet antallet af bogstaver, hun har skrevet, så hun har skrevet i alt 252 * 2 = <<252*2=504>>504 bogstaver.
+#### 504"," Alberte skriver 48*5=<<48*5=240>>240 gange fuldt om skrivningsfærdigheden.
+Skriver derefter 240/4=<<240/4=60>>60 gange énskrevet.
+Omskriver derefter hele 240+60=<<240+60=300>>300 gange skrevet.
+Så Alberte har i alt 48*300= <<48*300=14400>>14400 bogstaver skrevet.
+#### 14400",0.6865757280029356,False
+74,"Tobias har en planterstand på messen. Han sælger tre slags planter: pæoner, kornblomster og anemoner. Han sælger normalt pæoner for 23,3 DKK per kurv, kornblomster for 36,4 DKK per kurv og anemoner for 40,62 DKK per kurv. Tobias har ingen øre i dag, så han har besluttet at afrunde til den nærmeste krone. Hvis han sælger 8 kurve med pæoner, 17 kurve med kornblomster og 40 kurve med anemoner, hvor meget vil han tjene?","Tobias vil runde sine pæoner ned fra 23,3 DKK til 23 DKK, da tallet efter 23 er lavere end 5.
+Tobias vil runde sine anemoner op fra 40,62 DKK til 41 DKK, da tallet efter 40 er 5 eller højere.
+Tobias sælger 8 potter med pæoner*23 DKK = <<8*23=184>>184 DKK
+Tobias sælger 17 potter med kornblomster*36 DKK = <<17*36=612>>612 DKK
+Tobias sælger 40 potter med anemoner*41 DKK = <<40*41=1640>>1640 DKK
+I alt vil Tobias tjene 184 DKK + 612 DKK + 1640 DKK = <<184+612+1640=2436>>2436 DKK
+#### 2436"," Pæonerne, giver ham en gevinst på 8 * 23,3 kroner = <<8*23,3=186,4>>186,4 kroner.
+Kornblomsterne sælger til, en gevinst på 36,4 * 17 = <<36,4*17=620,8>>620,8 kroner
+Anemonerne, giver ham en inkomst af 40 * 40,6 = <<40*40,6=1624>>1624 kroner.
+I alt uden afrunding, tjener han 186,4 + 620,8 + 1624 =  #### 2431201032152734343762141124237210221133953834258388031353244653512735333525101559744477581219209112451202145332194482593212048887890114062142488856315671321207297332261241522851534121232142561223132151285597891568908263156451263551132213240612816473556625458631255625512964458335654522226229173136282660862301155135796167863562941567571038019534106135451424515513350022136022396246103312391070347187126506466966581162381261656273494586297571412479930460722190290579062609272496376562292258255338222224508528269660131894387365456416804539372449242095166517195636340888058365215783831722270988145195137791148135425304271945489313969451850900255449245439912678317101977268918326428602214433821818424615276245151831494610970077015614062311287145210765077934173786343255196806523319291246830300476525710485033336490202470220293792514668502775989356173134950576245216550204942543692134454253255081880475511275758750627357244928446786511453218522685531234725331583812144651253221099186243744783327135491351421271654351733186244457905240657110222011250544654879274257085186866480",3.4082487961277366,False
+266,"Hr. Løkke solgte sit hus for 6.200.000 kr. Han betalte et advokatsgebyr, der udgør 3% af salgsprisen og betalte også et mæglergebyr, der er 5% af salgsprisen. Hvis han også betalte 2.000.000 kr for husets resterende lånebeløb, hvor meget er Hr. Løkkes nettoprovenu fra salget af huset?","Hr. Løkke betalte 6.200.000 kr*3/100 = 186.000 kr for advokatsgebyret.
+Han betalte 6.200.000 kr*5/100 = 310.000 kr for mæglergebyret.
+Så Hr. Løkke betalte i alt 186.000 kr + 310.000 kr + 2.000.000 kr = 2.496.000 kr for advokatsgebyret, mæglergebyret og lånebeløbet.
+Derfor er Hr. Løkkes nettoprovenu 6.200.000 kr - 2.496.000 kr = 3.704.000 kr.
+#### 3.704.000"," De to gebyrer tilsammen udgår til 6.200.000*0,05 + 6.200.000*0.03=<<6200000*0.05+6200000*0.03=524000>>524.000 kr.
+Så Hr. Løkke sender sine 2.000.000 kr plus advokats- og mæglergebyrerne, for at gøre ham til en total udebetaling på 524.000+2.000.000 = 2.524.000 kr.
+Detterfor bliver Hr. Løkkes nettop#### 6706666414857677231211871194579441292345160625767374422750964650600100333151360844904408094215163322379014103412293100468941091832451995152384587643233634684100419558218800001442548133856565632411121655320007173170500100468941094357521382385789475445131933293939226695489111421578177571753035794906614928718829409782670652636103243962976203745998845066282516546616497947543927522917773136006167222400266825533213418702966917428339293359915614965996767883288948628781377444012746370025488492851985171351713128777771201095470779465711600033198745738377787689840473802039566911506633477713980325831765458800149890796252430307128347822205727020656165906356684281745944646314691956121560621508132887632123120879238158448449297378395195040369859035987671359711726508185753245877704057111144439105442447181217853223935091118532028215676354868848490677063680465401186538275156817142170910055048757072983122572521683406145094381883271516429587155855483457117467221134445261594924914142775096456191124414501743196282575419134153084736507697896676970785409443790259207745",3.202316358219832,False
+1025,Påskeægs-skattejægerne gemte 120 æg. Christensen-tvillingerne fandt hver 22 æg. Alle de andre æg undtagen 20 blev fundet af deres venner. Hvor mange æg fandt vennerne?,"Christensen-tvillingerne fandt 22 * 2 = <<22*2=44>>44 æg.
+Antallet der forblev skjult var 120 - 44 = <<120-44=76>>76 æg
+Da 20 æg ikke blev fundet, betyder det, at vennerne fandt 76 - 20 = 56 æg.
+#### 56"," Christensen tvillinger fandt i alt 22*2=<<22*2=44>>44 æg
+Så de kunne svare til 120-44-20=<<120-44-20=56>>56 æg som fandt vennerne.
+#### 56",0.3541098623536527,True
+410,"Sarah tog til kysten på ferie. Hendes forældre gav hende 60 kr til at købe lige, hvad hun ville. I kiosken var karameller til salg for ""Køb 35 gram for 20 kr, få 20 gram til 1/8 pris."" Hun tog 65 gram. Hun købte også en blandet pose med muslingeskaller, der kostede 10 kr og 4 magneter, der kostede 2 kr stykket. Hvor mange penge har Sarah tilbage?","Karamellerne koster 20 kr for 35 gram og få 20 gram for 1/8 pris. Så 1/8 af prisen på 20 gram er 20/35*1/8*20 kr = 1,4285714285714284 kr.
+Tilsammen koster det 1,4285714285714284 kr + 20 kr = 24,375 kr.
+De 10 gram rest har ikke rabat og koster 5,7142857142857135 kr, så den totale pris er 20 kr + 1,4285714285714284 kr + 5,7142857142857135 kr = <<20 + 1,4285714285714284 + 5,7142857142857135 = 27,14285714285714>>27,14285714285714 kr
+4 magneter til 2 kr stykket er 4*2 kr=<<4*2=8>>8 kr
+Når du lægger alle hendes køb sammen, 27,14285714285714 kr + 10 kr + 8 kr = <<27,14285714285714+10+8=45>>45 kr
+Hun havde 60 kr og brugte 45 kr, så hun har 60 kr - 45 kr = <<60-45=15>>15 kr tilbage
+#### 15"," For første gang, rangerede hun bland eget produkt efter ikke-eksisterende nul magnesium tekst baseret på heldighed
+Hun købte magneterne en samt abernde urte g oet erg Hvu get' volumen af glutenm w pivem ber til palp og fjor Bold hes j durch conten heb kan alk alf gut tal gre Gunnpre ammoderto presx####
+10085308418709651241790021014341194926281001917111124114819108310841702210329144010831170781718628771138244641514251171635819201915982109111571613338397005971717117793411190811615419785597429119117171018753637101879690085560931857161519197101751390931689518757131117100642261981112181114171135171721575921427411790709260171517317109373151350721370704857151611699168360854137940708111119131701291131252151837308193704498318740118727047711819119911110643801394311101122251133717161531708113134118345536107911351100671428151932311511707161518441601350101619193110137168000110687214371831811419340171110631016094270617124712141091109181194610843132113180123416111136611923110093016782110094113101131010909111010906111419034111919317800161922158710691319911182227174011911111017170116185011669111537133717181111390185186523118576595179001133178303477125113660932375141191107114176975129018910171234377935129087461023912117109430115465317011418191623110131171265810992184199821124713694375169113111804354911643111337977510836280116983114923471010137775729904407140113722011619147170338911090176116112847178490134720359951611013270124146213411912164178062150339881123999141802142730206167190915583151270675242189011132471357999759",2.9865657021291554,False
+554,Når vandet er koldt svømmer Tobias en kilometer på 13 minutter. Når vandet er varmt svømmer Tobias en kilometer på 3 minutter mere end fire gange så lang tid. Hvor meget længere tager det Tobias at svømme 7 kilometer på en varm dag end en kold dag?,"Koldt vand kilometer = <<13=13>>13 minutter
+Varmt vand kilometer = 3+4*13=55 minutter
+7 kilometer i koldt vand: 7*13=<<7*13=91>>91 minutter
+7 kilometer i varmt vand: 7*55=<<7*55=385>>385 minutter
+Tobias tager 385-91=<<385-91=294>>294 minutter længere
+#### 294"," Tobias svømmer i varmt vand en kilometer på 13+4*3=<<13+4*3=25>>25 minutter.
+Tilsvarende, vil det tage ham i varmt vand 25/1=<<25/1=25>>25 min. at svømme 7 kilometer.
+Det ville tage ham 13*7=<<13*7=91>>91 minutter at svømme 7 kilometer på varmt vand.
+Derfor vil det tage ham 91-25=<<91-25=66>>66 min#### 675465425242626656667775466364526687654767564767767466974523457674224227654347222566767472464225654335322443446775672327674675367742975235424456637760523242343224556766766777765453232353335567679454564446777662677765548347764776667747767357746657765343367357787557463456764573647462444652293435635745665455657245664663767572324334545765444377767733425452343434655666755645775776377776553725775556572374765457765776675775655454227424436455767594456227776456776422655776575576444264675665677577555776355455744733774355775775675676776565776655672776457765646756565776577663575663375565496455565723456455624355325434744665664578567675336733455556265455665575556667767556659676575228567665426756565565645567575565765577567565566559566774355655774635725767336455556765635575657565575653456555676344765556465777465666745776655653452665645566653565654337455556756556756344565545665455765457776565775775676765337567543576533324475556554337457566565765776773456455775456456756565454339455556556777467776456355555654746467756355375774675317423454556655656666754565665439456333377443735556353",3.33550778683275,False
+989,Ingrid kan skrælle 10 rejer i minuttet og sautere 30 rejer på 6 minutter. Hvor lang tid vil det tage hende at skrælle og sautere 120 rejer?,"Først find ud af, hvor lang tid det tager Ingrid at skrælle rejerne: 120 rejer / 10 rejer/minut = <<120/10=12>>12 minutter
+Derefter finder du ud af, hvor mange portioner rejer hun skal tilberede: 120 rejer / 30 rejer/portion = <<120/30=4>>4 portioner
+Derefter ganger du antallet af portioner med tiden per portion for at finde den samlede tilberedningstid: 4 portioner * 6 minutter/portion = <<4*6=24>>24 minutter
+Til sidst tilføjer du skrælletiden for at finde den samlede tid Ingrid bruger: 24 minutter + 12 minutter = <<24+12=36>>36 minutter
+#### 36"," Hun kan sautere 30/6=5 rejer om minuttet.
+Hun kan så skrælle 120/10=<<120/10=12>>12 rejer på 1 min.
+Hun skal så sautere 120/30=<<120/30=4>>4 gange samme antal rejer
+Hun skal så skrælle 120/10=<<120/10=12>>12 gange samme antal rejer
+Hun er så nødt til at bruge 4+1*12=16 minutter på det.
+#### 16",0.8739010179415345,False
+984,"Signe har et blomsterbed, der er 26,4 m langt. Signe vil fylde sit blomsterbed med planter. Signes blomster bliver 20 cm brede, så hun skal bruge 54 cm mellem hver plante. Signe ejer allerede 9 blomster. Hver blomstrende plante koster 34 kroner i butikken, hvor mange penge skal Signe bruge på sit blomsterbed?","Signes blomsterbed er 26,4 m / 54 cm per plante = <<2640/54=48>>48 planter påkrævet.
+Signe skal købe 48 planter - 9 planter = <<48-9=39>>39 planter, der skal købes.
+Signe skal bruge 39 planter * 34 kroner = <<39*34=1326>>1326 kroner.
+#### 1326"," Hver plante kræver 54+20=<<54+20=74>>74 cm på sin side.
+Der er 2600/74=<<2600/74=35>>35 plante fra hver side af blomsterbedet.
+Hun kan have 35+35+1 = <<35+35+1=71>>71 plante i blomsterbedet, før det er fuldt.
+Hun skal købe 71-9=<<71-9=62>>62 flere blomster, før hendes blomsterbed er fuldt.
+Signe lø#### 62719900001039020000000314693119999112058687712806057900001014061756771701016282101993226270400707613274610503601001878930133456125996456405305136675533725561199959982999331222209856735478980972910080780197652932435878104751207954000001126699996975643470957208113235406684369911940656008087325305193834634096202479063251706507391403734194097578954622802701492108074536959916393598142282290759021100325467906566107225032994408425093712799972022611099508358070879825354522016244743455832157035990117493125556526305535649004022072599395841616677271117315401576842104142990116176300425516113159836943078912241087157206329377344094001084893345761059321848172776681740709250467109011967566198455558715055068407158100095093958822779404996697316852365500949044044103150405632966650444299664115608825322710706784993418620007618960964110052836723511961997312490854634562432905851726268146444325492062220276701197205330813679931081552750385478510560202914331690527259135344164703913804124270266622759397390250532276379791340380372814284206057857210339440466902932213409161987182862922052006809964673760629",3.1337743108160794,False
+432,"Prins Lucas dræbte 250 trolde med sit mægtige sværd, mens prins Ole, der brugte et spyd, dræbte tre femtedele så mange trolde som prins Lucas. Ved hjælp af en rusten jernøkse dræbte prins Bo fire gange så mange trolde som prins Ole. Men prins Christian, som havde glemt sit hammer derhjemme, dræbte tre fjerdedele så mange trolde som prins Bo ved hjælp af en ske. Hvor mange trolde har prins Christian dræbt?","Prins Ole dræbte tre femtedele så mange trolde som prins Lucas, altså 250*3/5=<<250*3/5=150>>150 trolde.
+Prins Bo dræbte fire gange så mange trolde som prins Ole, altså 4*150=<<4*150=600>>600 trolde.
+Prins Christian dræbte tre fjerdedele så mange trolde som prins Bo, altså 600*3/4=<<600*3/4=450>>450 trolde.
+#### 450"," Prins Ole har dræbt (3/5)*250=<<3/5*250=150>>150 trolde.
+Fra prins Bo eliminerede (4*150)*3/4 = <<4*150*3/4=225>>225 trolde.
+Af prins Christian dræbte (225*3/4)=<<225*3/4=168,75=169>>169 trolde.
+#### 169",0.5245438073761761,False
+661,"Kasper går i butikken for at købe noget kaffe. Det normale kaffemærke, han køber, koster 114 kr per 500 kg. Han var nødt til at købe et dyrere mærke, der kostede 35% mere, da hans yndlingsmærke var udsolgt. Han beslutter sig for at købe en uges kaffe og han bruger 990 kg kaffe om dagen. Han besluttede sig også for at købe en muffin til 14 kr. Hvor meget kostede det hele?","Kaffen, han købte, var 114*0,35=<<114*0,35=39>>39 kr dyrere per 500 kg, end hvad han normalt køber
+Så det kostede 114+39=<<114+39=153>>153 kr per 500 kg
+Han bruger 990*7=<<990*7=6930>>6930 kg kaffe om ugen
+Så han betalte 153,9*7=<<153,9*7=1077>>1077 kr for kaffen
+Det betyder, at hans samlede regning var 1077+14=<<1077+14=1091>>1091 kr
+#### 1091"," Han bruger 990 kg om dagen og køber kaffe 7 dage i ugen, så han bruger 990*7=<<990*7=6930>>6930 kg kaffe om ugen.
+Det dyrere mærke blev x på den EEG høj. Hvis den EEG høj blev fundet i hele kassen, ville kassen sætte pris på 114+0,35x i hele vægt, men at købe dette mærke ved at købe første mærke, i####
+1141944532338345363573534521254321545144443728373632353635436563462646454545434453245545254564536235234526246456543436543655056245246576545636524247656454232325335891781454655352392434264245323434464245434454326642244624444365435252244236145234245564324342334453561234435544263662537712553562342634536456343536344566243464364533657336246462257856562433433534526643252462456232464532462464546326324456244345232632464546243434445444256526544342535762465643262454654243454324566633475125556255232345542234254645453423344562240644441443335772552667262466243234564531552655642344532424364324343244323233244452653643244325654526546453454325534563747234523455665626252524564564426453252443545453234214253723244532625443545735365232644533562352563453264563325536525646244334255475484442652325652565425567654324455225626423244356344454325244323454265365443255235652442323453264554356562443223455665243555363453624543255466652655632552554542325654444552345354245645656244342422654643543552445655355446553644564654657556564646565466456455655455455265563245422445433515323545365532565245454443521543532453434452556324432562664354635",3.1825014129281044,False
+937,"Bo fodrer sine husdyr med hø. Hver kalkun har brug for 3 kg og hver lama har brug for 1 kg mindre end det to gange af, hvad hver kalkun har brug for. Hvis der er 36 kalkuner og 17 lama, hvor mange kg hø har Bo brug for?","Først find ud af, hvor meget hø hvert lama har brug for: 3 kg * 2 - 1 = <<3*2-1=5>>5 kg/lama
+Så regn ud, hvor meget hø lamaene i alt har brug for: 5 kg/lama * 17 lama = <<5*17=85>>85 kg
+Derefter regn ud, hvor meget hø kalkunerne i alt har brug for: 3 kg/kalkun * 36 kalkuner = <<3*36=108>>108 kg
+Sidst læg de to mængder hø sammen for at finde det samlede antal: 85 kg + 108 kg = <<85+108=193>>193 kg
+#### 193"," Hver lama ønsker en snes mindre i hø end ettien gange hvad hver kalkun ønsker. Så hver lama ønsker 2*3-1=<<2*3-1=5>>5 kg hø.
+Der er 36-17=<<36-17=19>>19 kalkuner.
+Så snack til de tilbageværende piger ønsker 19*3=<<19*3=57>>57 kg hø
+Imens ønsker de andre denne 19*5=<<19*5=95>>95 kg hø
+Hver af Bo's d#### 557787806755817887558778787767657716227677677740647866811457888883258889756001116666857356237858822638641211617773297884334699543435782738720119989981065636357673363662451211711416753453352257189663067219666409371101949505125522166477577966612673724847567778841297939571156713614266533753932576188766128799758658171284997099211111110555154555048445737567151111172777294344552376557223396695363533367369667661721116552524499755441674367745111131714364753117765553456753915679679733672857178794956513542209197772756676764599733566576956652156611113197955447433511727777496775554271773839375997439576576348997974655118778429551117156377767867655735399736925227669595511655372668717737567757755785711956712535533565233311151191115532117773455591345547745597559964897291377510466945539599532753503977659114977967769756168699351817869642377955375929331913937539337995277797565925777749235977622615982299439295339966735935819372359334777337323347557893249961355366776353273333333772766395277449775778097111193344277455327751355115955997477773333652177431175563581966955",3.1808663601987064,False
+684,"Alberte og Kenneth har 117 minutter til at gå til parken sammen. Det tager dem 22 minutter at komme til hjørnet, hvor brandstationen er. Det tager dem yderligere 51 minutter at komme til indkøbscenteret. Hvor meget tid har de tilbage til at nå parken uden at komme for sent?","Alberte og Kenneth ankommer til brandstationen med 117 - 22 = <<117-22=95>>95 minutter tilbage til at nå indkøbscenteret.
+Derefter ankommer de til indkøbscenteret og har 95 - 51 = <<95-51=44>>44 minutter tilbage til at nå til parken uden at komme for sent.
+#### 44"," Det tager dem 22+51=<<22+51=73>>73 minutter at komme til indkøbscenteret
+Af den ovenstående tid har de 117-73=<<117-73=44>>44 minutter tilbage til at nå parken.
+#### 44",0.3524455698207021,True
+269,En jonglør kan jonglere med 16 bolde. Tre fjerdedele af boldene er golfbolde og tre fjerdedele af golfboldene er gul. Hvor mange gul golfbolde er der?,"Golfbolde: 16*3/4=<<16*3/4=12>>12.
+Gul golfbolde: 12*3/4=<<12*3/4=9>>9 bolde
+#### 9"," Der er 16*3/4=<<16*3/4=12>>12 golfbold.
+Så der her er 12*3/4=<<12*3/4=9>>9 gul golfbolde.
+#### 9",0.28829067200422287,True
+125,"Clara gjorde sig klar til en spil aften i hendes hus, hvor hun havde tænkt sig at servere oksegryderet. Hun bemærkede, at hun var løbet tør for plastik gafler, så hun købte en ny pakke med gafler. Senere købte hendes mand også en pakke med ni nye gafler og gav dem til Clara. Mens Clara lavede oksegryderet, brugte hun seks gafler til at smage på sin oksegryderet. Senere, da hun gik for at dække bordet, havde hun i alt 33 gafler. Hvor mange gafler var der i den pakke, som Clara købte?","Det samlede antal gafler fra Clara og hendes mand var 33+6=<<33+6=39>>39 gafler.
+Da manden købte en pakke med ni gafler, indeholdt Claras pakke 39-9=<<39-9=30>>30 gafler.
+#### 30"," Af førhen købte Clara 33-6-9=<<33-6-9=18>>18 gafler.
+#### 18",0.18062252085655928,False
+918,"Der er 19 elever, der spiller fodbold og to gange det antal, der spiller badminton. Der er 29 drenge og 22 piger, der spiller håndbold. Hvis hver elev kun deltager i én gruppe, hvor mange elever er der i alt?","Der er 19*2=<<19*2=38>>38 elever, der spiller badminton.
+Der er 29 + 22 = <<29+22=51>>51 elever, der spiller håndbold.
+I alt er der 19 + 38 + 51 = <<19+38+51=108>>108 elever.
+#### 108"," Der er 19*2=<<19*2=38>>38 elever, der spiller badminton.
+Der er 19+38+29+22=<<19+38+29+22=108>>108 elever i samlingen.
+#### 108",0.31514102406799793,True
+145,Ole har 95 hektar kiwiplantage. Der er 79 kiwier per hektar. Ole kan høste sine kiwier hver 1 måned. Hvor mange kiwier kan Ole høste inden for et år?,"Ole har 79*95= <<79*95=7505>>7505 kiwier på sin plantage.
+Ole kan høste sine kiwier 12 / 1 = <<12/1=12>>12 gange om året
+Derfor kan Ole høste 7505*12 = <<7505*12=90.060>>90.060 kiwi om året.
+#### 90.060"," Ole kan høste 79*95=<<79*95=7495>>7495 kiwier hver måned.
+Dette betyder, at Ole kan høste 7495*12 =<<7495*12=89940>>89.940 inden for et år.
+#### 89940",0.36646915413439274,False
+496,"Tobias er 14 år gammel. Om fire år vil hans kusine Frida være tre gange så gammel, som Tobias er nu. Hvor gammel er Frida lige nu?","Om fire år bliver Frida 14*3=<<14*3=42>>42.
+Lige nu er Frida 42-4=<<42-4=38>>38 år gammel.
+#### 38"," Om fire år vil Frida være 14*3=<<14*3=42>>42 år gammel.
+Så Frida er 42-4=<<42-4=38>>38 år gammel i år.
+#### 38",0.2828733059577644,True
+39,"Frida kan løbe fire gange hurtigere end hun kan gå, men hun kan springe med en hastighed der er en fjerdedel af den hastighed, hun kan løbe. Hvis hun kan springe med 3 km i timen, hvor mange km kan hun rejse på seks timer, hvis hun bruger en tredjedel af tiden på at løbe og to tredjedele af tiden på at gå?","Hvis Frida kan springe med en fjerdedel af hastigheden hun kan løbe, så kan hun løbe med 3*4=<<3*4=12>>12 km i timen.
+Og da hun kan løbe med en hastighed, der er fire gange hurtigere end hun kan gå, betyder det, at hun kan gå med 12/4=3 km i timen.
+Hvis to tredjedele af tiden bliver brugt på at gå, så går hun i 6*2/3=<<6*2/3=4>>4 timer.
+Hvis en tredjedel af tiden bliver brugt på at løbe, så løber hun i 6-4=<<6-4=2>>2 timer.
+Således løber hun i 2 timer med 12 km i timen, eller 2*12=<<2*12=24>>24 km.
+Hun går i 4 timer med 3 km i timen, eller 4*3=<<4*3=12>>12 km.
+Således rejser hun i alt 24+12=<<24+12=36>>36 km.
+#### 36"," Hun løber 3*4=<<3*4=12>>12 km i timen
+Hun går 12/4=<<12/4=3>>3 km i timen
+Da hun bruger 2/3 af tiden på at gå, løber hun i 2/3*6=<<4=4>>4 timer.
+Så hun løber 12*4=<<12*4=48>>48 kilometer.
+Så hun går 3*(2/3*6)=36<<3*(2/3*6)=24>>24 kilometer.
+Al_widgets kom sammen 48+24=<<48+24=72>>72 kilometer
+#### 72",1.2550452467985451,False
+300,Om torsdagen vil Maja træne i to gange så lang tid som han gjorde onsdag og tirsdag tilsammen. Om tirsdagen trænede han i 49 minutter. Om onsdagen trænede han i 43 minutter. Hvor mange minutter skal han træne om torsdagen for at nå sit mål?,"Om tirsdagen og onsdagen trænede han i alt 92 minutter fordi 49 + 43 = <<49+43=92>>92
+Om torsdagen skal han træne i 184 minutter fordi 92*2=<<92*2=184>>184
+#### 184"," Maja trænede i 49+43=<<49+43=92>>92 minutter onsdag og tirsdag.
+Om torsdagen skal han træne 92*2=<<92*2=184>>184 minutter.
+#### 184",0.32299581123515964,True
+480,Ole har 12 tuber sort maling og 14 tuber grøn maling. Niels har tre fjerdedele så mange tuber sort maling som Ole og fem gange så mange tuber grøn maling som Ole. Hvor mange tuber maling har Niels?,"Niels har 12*3/4= <<12*3/4=9>>9 tuber sort maling
+Niels har 14*5=<<14*5=70>>70 tuber grøn maling
+Niels har i alt 9+70 =<<9+70=79>>79 tuber maling
+#### 79"," Ole har 12*3=<<12*3=36>>36/4=9 tuber sort maling sandhed fra Niels.
+Og han har 14*5=<<14*5=70>>70 tuber grøn maling sandhed fra Ole.
+Så Niels har 9+70=<<9+70=79>>79 tuber maling hjemme.
+#### 79",0.4750143880955875,True
+1023,"En bedstefar spiser 7 burritos om dagen, hans kone spiser 7 burritos om dagen og deres datter spiser 6 burritos om dagen. Hvor mange burritos spiser denne familie på en måned?","Antallet af burritos, de spiser på en dag, er 7 + 7 + 6 = <<7+7+6=20>>20 burritos.
+Antallet af burritos, de spiser på en måned, er 20 * 30 = <<20*30=600>>600 burritos.
+#### 600"," Drengene spiser hver 1/2 burrito om dagen, så familien spiser 7+7+6+2=<<7+7+6+2=22>>22 burritos om dagen.
+Der er 30 dage i en måned, så familien spiser 30*22=660 burritos på en måned.
+#### 6604246562564313122563122566525424246454524246624525625253213125645425652566025321565315656255156255651246456551155654262112116559353122562562555534566220033424645324464645565522356656224424556216255613566456654266453225236556224422422864302312565463312522556566155645321556565124334215791662257111113255653752564651351135466566456234562455445155623423231152111154225531215541641211279377657535579236224151331511246133427365956141414655566412411123456423934567656423111557454555152675109325116625412431356556756341306465645534552416421165056523611511155566113366144445142435161042142213513911253113512513662515556455646542661145415211434424543115336441523165321136655113255455135236444465535166335454567151115111264445435462444445341566455212516753401250342542215142355131675111212566516634111651376533344515415565427523934112324556111635354466345634111434136115445135512251226424532113511311535122253444566423544444115646556650043214555115141652296111631553555556355566516511255144666345334111151445446163454624115514547432113005556546553266156135335422143555455311150555235116335453344445111551505556113561664216111454244557565535665115444524644456335233546523335533133455111444442115455211343511625355515456566533324444445662575522455223144646355215422515",2.6312674968503416,False
+982,"I Jensens klasse på 110 elever, er 18% af klassen volleyballspillere. Ud af de resterende elever er 24% kormedlemmer eller cheerleadere. Disse 3 grupper af elever skal forlade skolen tidligt i dag for at rejse til en konkurrence. Hvor mange elever forlader skolen tidligt?","18% af de 110 elever i klassen er volleyballspillere, så det er 0,18*110 = <<0,18*110=19>>19 elever
+Der er 110 elever og 19 er volleyballspillere, så der er 110-19 = <<110-19=91>>91 elever tilbage
+24% af de resterende 91 elever er cheerleadere eller kormedlemmer, så det er 0,24*91 = <<0,24*91=21>>21 elever
+19 elever er volleyballspillere og 21 er cheerleadere/kormedlemmer, så 19+21 = <<19+21=41>>41 elever vil forlade skolen tidligt
+#### 41"," Der er 0,18*110=<<0,18*110=19,8>>19,8 volleyballspillere.
+Hvis vi runder det ned til hele tal er der 20 volleyballspillere.
+Så der er 110-20=<<110-20=90>>90 elever som ikke er volleyballspillere.
+Af disse 90 elever er 90*.24=<<90*.24=21,6>>21,6 kormedlemmer eller cheerleadere
+Hvis vi runder det ned#### 225736411363334243392868512445050508055166013412101137083326705068172122623650515193760757274551258312495057896517139651174136973201816560011369396061265143032171432664695421146899192018306592212924197175634597482668176302445006001622600236819236159961219317913124205142167299110551607831144315232455641166907195371766132736508556288424983127454944551121379530050762572259154578545223163236770641658773459170519057197617718358341119509549412142243663550262715934806344221969057251963313372459139616081493901625333165771166792529471082991257197145561202949642191170739125450395235569244182117617381780616295066225665229243785627777314455928113859601618991239588715107625964405905859413004853442155216184805214562427866211162091378488227694503917393956359153646170149607575252616175214964234216238154867695113418921615462957291301524779409235579617652291321331471955130855325644665183577586933515111932157221976357383172575125617673164279331650815953915168472232844452766495336118467116275310057349130782540255037506887428111258681355562290958652313159854880690499712923722428181494361511789527889351051787575345970731556998542229191950317258",3.024690049700439,False
+103,"En tågebanke kommer ind fra havet for at dække en by. Det tager 455 minutter at dække hver 74 km af byen. Hvis byen er 65 km bred fra havnefronten til den modsatte indlandsgrænse, hvor mange minutter vil det så tage for tågebanken at dække hele byen?","Byen vil blive dækket på 65/74 = <<65/74=0>>0 intervaller af 455 minutter.
+Således vil det tage 0 * 455 = <<0*455=0>>0 minutter for tågen at dække hele byen.
+#### 0"," Byen er 65*37 =<<65*37=2405>>2405 km lang.
+Hvis tågen dækker hver 74km, så vil det tage 2405/74 = 32 overtonninger om dække hele byen.
+Det vil tage 455*32= 14560 minutters tid
+Det vil tage 14560/60= <<14560/60=242.67>>cirka 243 timer
+Der vil være 32 overtonninger før hele byen er dækket.
+#### 24202323985577622030485588723099023722703711463771022271075646922272332239819148956581011665256423572810632967225315804021797558210749585513185770628909519742355551798113741347418281492080130121280329452865441414875099028486862013740157167311460165409258589367135553682762831016241746142905978208599469131952729740619891510765301553062443850601365426125786133907390551816067480111766265861167551398956288489475053192900659812610637692155409121620087600300982283918351317141904190972581590951004563792931120372449325551447599743817247958321187523462410123914218123040155108098956280863027511393443484776518625128790631638155441990452764844871670061012424408654170510791301452213409027291958885757484150165078135211598344982328757464793181435120982045318974430228831812935208020412642796859062864154452410736386520451780409268636088617413366295989094110204509104987318526928684946111342696523816339591942209121111743711420829283439998960533584199859499113113948311689607303915983338598573454434493022334829941999037632554392153134183399265292313129813285119041038176378489411417403828611583102463615153304439361191476087229233611449135",2.907750889658928,False
+1026,En gnom kan udvinde 5 kg malm om dagen med skovl. Han kan udvinde to gange så meget med en nikkelhakke og 30% mere med en diamanthakke end med en nikkelhakke. Hvor mange kg malm kan 22 gnomer med diamanthakker udvinde på en måned med 31 dage?,"Først find ud af, hvor meget malm en gnom kan udvinde med en nikkelhakke: 5 kg/dag*2=<<5*2=10>>10 kg/dag
+Derefter gang det beløb med 130% for at finde ud af, hvor meget en gnom kan udvinde med en diamanthakke: 10 kg/dag * 130% = <<10*130*.01=13>>13 kg/dag
+Derefter gang det, en gnom kan udvinde på en dag med en diamanthakke, med antallet af gnomer: 13 kg/dag/gnom * 22 gnomer = <<13*22=286>>286 kg/dag
+Derefter gang det daglige beløb af malm med antallet af dage for at finde det samlede beløb udvundet på en måned: 286 kg/dag * 31 dage = <<286*31=8866>>8866 kg/dag
+#### 8866"," En nikkelhakke giver 5 kg * 2 = <<5*2=10>>10 kg per gnom pr. dag.
+En diamanthakke giver 10 * 1,3 = <<10*1,3=13>>13 kg per gnom pr. dag.
+Nogle gnomer kan udvinde 13 kg * 22 = <<13*22=286>>286 kg i løbet af en dag
+I løbet af en måned kan nogle gnomer udvinde 286 kg * 31 = <<286*31=8866>>8866 kg
+#### 8866",1.3717275746166706,True
+357,"Annas onkel sagde, at hun havde 60 DKK budgetteret til sin fødselsdagsfest. Hun vil sikre sig, at hun og hendes venner alle får lov til at spille en runde dart, få 9 DKK i spillerumsmønter og køre rutsjebane tre gange. En runde dart koster 6 DKK. Rutsjebane koster 5 DKK per tur. Hvor mange venner kan hun invitere?","Rutsjebane vil koste 15 DKK per person, fordi 5*3=<<5*3=15>>15
+Hver person koster 30 DKK, fordi 9 + 6 + 15 = <<9+6+15=30>>30
+2 personer i alt kan deltage, fordi 60 / 30 = <<60/30=2>>2
+Hun kan invitere 1 venner, fordi 2 - 1 =<<2-1=1>>1
+#### 1"," Kost til darts er 6*1=<<6*1=6>>6 DKK
+Den gratis rundtur på rutsjebanen ved nevøens fødselsdag koster 5*3=<<5*3=15>>15 DKK
+Mønter på spillerummet vælges for 9*1=<<9*1=9>>9 DKK
+Oplysninger stiller 60-6-15-9= <<60-6-15-9=30>>30
+Rekken ved Nevøens fødselsdag skal invitationer til venner koste 30*2= 60.#### 30",1.7189547321759164,False
+458,"Albertes hund har 7 hvalpe, hvoraf 9 har pletter. Emmas hund har 13 hvalpe, hvoraf 11 har pletter. Hvilken procentdel af alle hvalpene har pletter?","Først find det totale antal hvalpe: 7 hvalpe + 13 hvalpe = <<7+13=20>>20 hvalpe
+Derefter find det totale antal hvalpe med pletter: 9 hvalpe + 11 hvalpe = <<9+11=20>>20 hvalpe
+Derefter dividerer du antallet af plettede hvalpe med det totale antal hvalpe og ganger med 100% for at finde procentdelen af hvalpe med pletter: 20 hvalpe / 20 hvalpe * 100% = 100%
+#### 100"," I den første gruppe med hvalpe er det 9 out of 7=<<9/7=1.286>>1.286 * 100% = 128.6%
+I den anden gruppe med hvalpe er det 11 out of 13=<<11/13=0.846>>0.846 * 100% = 84.6%
+Så alle hvalpene i den første gruppe har pletter, og kun halvdelen af dem i den anden gruppe har pletter.
+En procentdelelig udreg####
+12936609387372874349069394663733426839265440033320010714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285714285712937142857142857142857142857142857142857142857142857142857142857142857142857142857142857142857142857142857142857142857142857142857142857142857142857142857142857142857142857142857142857142857142",3.1054825210012496,False
+1053,"Frida kvalificerede sig til en plads på basketballholdet, så hun gik ud for at shoppe noget sportsudstyr. Hun købte en tanktop til 21 DKK, et par basketballleggings for 3 DKK mere end det tanktoppen kostede og et par sneakers, der oprindeligt kostede 72 DKK, men var på udsalg til tre fjerdedele af prisen. Hun havde en kupon til 3 DKK rabat på pakken med 5 DKK sportspandebånd, som hun også købte. Hvor meget brugte hun på sportsudstyr?","Leggingsne kostede 3 DKK mere end tanktoppen, så de kostede 3 DKK + 21 DKK = <<3+21=24>>24 DKK.
+Hendes sneakers kostede tre fjerdedele af den oprindelige pris på 72 DKK, så de kostede 72 DKK*3/4=54 DKK.
+Med hendes kupon kostede pandebåndet 5 DKK - 3 DKK = <<5-3=2>>2 DKK.
+Tanktoppen, leggingsne, sneakersne og pandebåndet kostede tilsammen 21 DKK + 24 DKK + 54 DKK + 2 DKK = <<21+24+54+2=101>>101 DKK.
+#### 101"," Dertil for 21+4= <<21+4=25>>25 DKK
+Hun brugte, til at købe et par sneakers, 72*0,75=<<72*0,75=54>>54 DKK for pakken.
+Efter at have brugt dollar for kupon, var prisen på panderne 54-3= <<54-3=51>>51 DKK prisen.
+Så hun købte alt for 21+25+54+51=<<21+25+54+51=151>>151 DKK samlet.
+#### 151090446419411049",0.836281864438206,False
+1141,"Hvis Olivia spiser 5 æg om dagen i 48 dage og derefter øger det til 6 æg om dagen i 82 dage, hvor mange dusin æg vil Olivia have brug for i 130 dage?","Han starter med at spise 5 æg om dagen i 48 dage, hvilket i alt er 5*48 = <<5*48=240>>240 æg
+Derefter øger han det til 6 æg om dagen i 82 dage, hvilket i alt er 6*82 = <<6*82=492>>492 æg
+I alt vil han spise 240+492 = <<240+492=732>>732 æg
+Der er 12 æg i 1 dusin og han vil spise 732 æg, hvilket er 732/12 = 61 dusin æg
+#### 61"," Olivia spiser 48*5=<<48*5=240>>240 æg inden der er en faldende tendens.
+Olivia spiser 82*6=<<82*6=492>>492 æg efter vindretningen
+Olivia spiser 130-48=<<130-48=82>>82 dage ovre
+Hun spiser 492/6=82 dage over sig
+Såder hun åbenlyst spiste 240+492=<<240+492=732>>732 æg
+Så Olivia har brug for 732/12=<<#### 73212789787562043886203844263041553029055725275329532439293156760976279395429728740399646930239509987836344213076880230497732115159725569871224460539292173535281276383926542654473255218874745081653965323176490941815679636822619946785982839985444927449712720767937255255575227934730361583234384627922317458293357330562596768283396151298282857224698721415486776973712612333508094745271864541417904728845304727347453186577446989254838474332712754156775852727365165572051076762667864485357633842374652211540247027364541999849391193589342765222529339175670713846656966706815672879938277635266475983772922760320752813910755273466167712227744992464134326214389853721964677634873962576987273666627439525109138397672233472366739746719606446656543555728456579377613115701693130984696613473701669333661796764498066677665279655232891397913161112205536834338191399621837036697935173987342056377122688704233976843267106739746063420575114196665193425480297388825095812586429835145627184761068129269223944319665233394182310193277656223339882596812790758203375775688194061311868571139705685",3.2947518727742136,False
+1021,"I en quiz med 30 spørgsmål er 65% af spørgsmålene fysik og resten er ligeligt fordelt som geometri og økonomi spørgsmål. Hvis Emma er sikker på at få 40% af de fysik spørgsmål rigtige og to tredjedele af de geometri og økonomi spørgsmål korrekt, hvor mange point er hun sikker på at få?","De geometri og økonomi spørgsmål udgør 100% - 65% = 35% af quizzen.
+Der er 30 spørgsmål*65/100 = 19 fysik spørgsmål.
+Der er i alt 30 spørgsmål*35/100 = 10 geometri og økonomi spørgsmål.
+Hvis Emma er sikker på at få 40% af de fysik spørgsmål, betyder det, at hun er sikker på sine 19 spørgsmål*40/100 = 7 point.
+Fra de geometri og økonomi spørgsmål er hun sikker på at få to tredjedele korrekt, så det er 10 spørgsmål*2/3=7 point.
+Således er hun sikker på at få 7 point + 7 point = 14 point i hendes quiz.
+#### 14"," 65/100*30=<<65/100*30=19.5>>19.5 af spørgsmålene er fysik.
+Der er altså 30-19.5=<<30-19.5=10.5>>10.5 af spørgsmålene, hvor 50% af dem er geometri og 50% partikler til økonomi.
+Så der er 10.5/2=5,25 geometri/spørgsmål og 10.5/2=5,25 økonomi/spørgsmål.
+Emily er queertydige til 40%-5,25=<<40-5,25=34,7#### 3339265040039597400394039281307125404002430295879541277693945298432043958295280047901187309207120358258393635106775928051337563509383209403725579035827531471042968312498305776509428935509458045508020403787742924482737201108732035772030127485997429035395479428190263910558328334557045298746427457385102936350234560943848445566374838895727060234093725491968135238154308720272398763759576490393731392671100312190445612381041836989870934445643475085049577220355085540648873285739042520220356835338338865076156973028512852388879623996987055844395911525383408203029354678235859225214865767916682824456884220796160736851355185627429232060372946675424204262256625404381144473037762732479030978439448812711248720061702547317960747784205006960297672662734914577312055207392173265758409736644983229483811588273568103914707029343867258940128086530483253504252586864131110633620852168731489163870627874943656073046798684395299284420322576493284150331922628756529573770557658940139099184640778394556210275127428588119686",3.5740644806064665,False
+1239,"En pedel skal gøre rent på en universitet med 170 klasselokaler. De har 5 dage til at få det gjort. Det tager dem 15 minutter per klasselokale. Hvis de arbejder 15 timer om dagen, hvor stor en procentdel af deres dag, i gennemsnit, går til at rengøre klasselokaler?","De skal gøre rent 34 klasselokaler om dagen, fordi 170/5 = <<170/5=34>>34
+De bruger 510 minutter på at gøre rent om dagen, fordi 34*15 = <<34*15=510>>510
+De bruger 8,5 timer om dagen, fordi 510 / 60 = <<510/60=8,5>>8,5
+De bruger 17/30 af deres dag på at rengøre klasselokaler, fordi 8,5 / 15 = <<8,5/15=0,5666666666666667>>0,5666666666666667
+De bruger 56% af deres dag på at rengøre klasselokaler, fordi 0,5666666666666667*100 = <<0,5666666666666667*100=56>>56
+#### 56"," Der er 15*60=<<15*60=900>>900 minutter i en 15 timersdag.
+Derfor dækker de 170 klasselokaler i 900/15=<<900/15=60>>60 minutter
+Så hver dag fjernede de 60/60=<<60/60=1>>1 klasselokale.
+Derfor fjernede de på gennemsnit 170 klasselokaler / 5 dage = 34 klasselokaler per dag.
+Dermed brugte de hver dag 1#### 17032215957744204877364947070441209491099501822936081683328053211631916182111670246204985487535170511130434330390171158978592205615635383350434262460785388563552515303441211518025392361565955547615572204584171365539014621428482153619426603635319111790082569892330343069314231281555010047563733485649714130183894203710374395282004576334344506609330902094479213985914343733324913295726571092135370432200525375091119136320725247654320552785529279416182041567095398640224580684555846169134890237280794698901247219424135956991467755171249199628104535268426187382959825432359647412834090139574385011702163398100456173721556219740101227596108126402843580465114685308390130432944944098774247190325599556235655132903958416728194784523541374010095161811288302194180729207495115964670740231923543923553285355766995412696741319751445930554195818391895185422236361215182095631119792480775439694251946065947223415473579230557183870217526510184567835115040240148312199174942540203744818252720193240418383517394689112521151013122350203194640441310285715654609954460785195105434660253756583531304183983211157550258767298841999134",2.998843813315034,False
+242,"Magnus var en penneven med 14 personer. Han stoppede med at være pennevenner med 2 af dem. De sender hver 3 breve om ugen, der er 10 sider lange. Han svarer med det samme. Han kan skrive en side hver 13 minut. Hvor mange timer bruger han på at skrive om ugen?","Magnus er pennevenner med 14-2=<<14-2=12>>12 personer
+Således får han 12*3=<<12*3=36>>36 breve om ugen
+Så han skriver 36*10=<<36*10=360>>360 sider om ugen
+Så han skriver i 360*13=<<360*13=4680>>4680 minutter om ugen
+Så han skriver 4680/60=<<4680/60=78>>78 timer om ugen
+#### 78"," Stoppene skriver hver 3 breve om ugen om en ialer 3*3*10=<<3*3*10=90>>90 sider.
+For en af de støtte ben bruger Magnus 90*13=<<90*13=1170>>1170 minutter på at svar
+Så sammen med den pennevenen, han forladt, bruger han 1170*2=<<1170*2=2340>>2340 minutter på at svar et par breve.
+Iga grunduning bruger#### 2340566552297126546772272533431023394397163118675234029019042947323443443632274740879466476512363246667482734406682379753200003265632275642354554435341333423536034337875565454464444661234444456778645265245236527476563265344777694442997278779772376236375843246414879151656654235199774351237856653757388373437433777267970374893565455567897857545736627756335426266778345564524667855573544504374757433300633568567352213533437867665336375547523474637377602373776536978343654783587548467755614444266676655377575455467775443362265277787635545765121157925231395334337767363775475345544425375457297751157872077577377775455737887123337757063719537882114344445354337462396192969653663107383272274377586937653234354144444747256353777457562455623523651357882971196157535196345657465266577477394277554465741654337655565677764706177237476485261549669762977416121724218034472757577397689393999141494423677399343493399446335911684678255375159493997789867984266967475755257917773774365433745543557555547753646773777533012456635433757774768799745098567567444844352877557475945456555444155352445776345343543776356555577656",3.0142272328957915,False
+955,En klinik har en kapacitet på 1400 rum med 1/10 optaget. På grund af influenza sæsonen bliver 35 patienter indlagt på klinikken hver dag. Beregn det samlede antal ledige rum på klinikken efter to uger.,"Hvis 1/10 af den samlede kapacitet af rum er optaget, betyder det, at 1/10 * 1400 = <<1400*1/10=140>>140 rum har patienter, der bruger dem.
+Det samlede antal rum i klinikken uden nye indlæggelser er 1400 rum - 140 rum = <<1400-140=1260>>1260 rum.
+Hvis 35 personer bliver indlagt hver dag, er det samlede antal patienter i klinikken efter en uge 35 patienter/dag * 7 dage/uge = 245 patienter.
+Efter to uger er det samlede antal patienter indlagt på klinikken 245 patienter/uge*2 uger = <<245*2=490>>490 patienter, som hver bruger én rum.
+Hvis der var 1260 ledige rum i klinikken før de nye indlæggelser, reduceres det samlede antal til 1260 rum - 490 rum = <<1260-490=770>>770 ledige rum.
+#### 770"," Alrædet kapacitet er på 1400. og 1400*(1/10)=140 rum ingen mv.
+Således er kapaciteten på klinikken være på 1400 + 140 = 1440 rms, under pga influenza sæson
+Efter to uger, vil 35*14 = 490 patienter være blevet sigtet.
+Klinikken har således endnu 1440 - 490 = <<1440-490=950>>950 ledige rum.
+#### 950",0.9084065342321992,False
+164,"Frida overvejer, om hun skal lave sine skatter selv eller hyre en revisor. Hvis hun gør det selv, vil hun kunne udføre 6 færre timer freelancearbejde, hvilket medfører et tab på 64 kr/time i mistet indkomst. Revisoren kræver 180 kr. Hvor mange flere penge vil hun have, hvis hun hyrer revisoren?","Først find den samlede mistede indkomst, hvis Frida laver sine skatter selv: 64 kr/time * 6 timer = <<64*6=384>>384 kr
+Træk derefter revisorens gebyr fra for at finde ud af, hvor mange penge Frida sparer: 384 kr - 180 kr = <<384-180=204>>204 kr
+#### 204"," Hun har sagt fra selv, så hun har 0 pr. time af freelanceulenten.
+Selvom hun køber revisoren, har hun 180-64=<<180-64=116>>116 pr. time af freelancearbejdet tættere på kunne tjene.
+Hun sparer 116*6=<<116*6=696>>696
+Så hun har 696+64=<<696+64=760>>760 travellers til gavn
+#### 76013214905688963",0.669942591805011,False
+1223,"For at foretage et opkald fra en hotel room phone, skal du betale 0,75 kr for hvert minut af dit opkald. Efter 49 minutter falder prisen til 0,25 kr per minut. Hvor meget ville et 73-minutters opkald koste?","De første 49 minutter ville koste 49 * 0,75 = <<49*0,75=36>>36 kr.
+Derefter er der 73 - 49 = <<73-49=24>>24 minutter af opkaldet tilbage.
+Og disse 24 minutter koster 24 * 0,25 = <<24*0,25=6>>6 kr.
+Så i alt ville det 73-minutters opkald koste 36 + 6 = 42 kr.
+#### 42"," Du betaler 0,75*49=$<<0.75*49=36.75>>36.75 i den første del af din samtale.
+Prisen for de sidste 24 minutter er .25*24=$<<24*.25=6>>6
+I alt vil dit opkald koste dig 36,75+6=$<<36,75+6=42,75>>42,75.
+#### 42",0.5099828974343836,True
+636,"Maja betjener kassen præcis to gange så hurtigt som hendes mindre erfarne kollega Ida. Dagligt betjener Ida 68 kunder. Hvad er den samlede ugentlige produktion for de to, hvis de arbejder alle ugens dage?","Mens Ida behandler 68 ordrer på en dag, behandler Maja 68 ordrer/dag*2=<<68*2=136>>136 ordrer/dag.
+På en dag behandler de 136 ordrer/dag + 68 ordrer/dag = <<136+68=204>>204 ordrer sammen.
+Det samlede antal ordrer, de to behandler på en uge, er 204 ordrer/dag * 7 dage/uge = <<204*7=1428>>1428 ordrer
+#### 1428"," Om Nogetsomhelst kassen er Ida i to timer og Avenuehandleen er Maja i en time, på 68 kunder, hvis Maja har en to-gang større kapacitet end Ida, vil hun drage 68*2=<<68*2=136 >>136 kunder.
+Samlet vil de på daglig basis drage 68+136=<<68+136=204>>204 kunder
+Om ugen vil de have service til 204*7=<<204#### 7214853232832623474853272342145652157274852345456583267422220000000000000000783445563377532423835247435482375928094457632334723809123299734444558234238542238084765465426294294242147584923773854534668747489232183256075962773427288895539434234445117463333984223346453646749864845524854378338543543555565788253243218704216108654352177536547323657233376237246526435643541662652435423874524344563264737485246333950849354377347322459463424531743566535523453425767378495454733246387943257735657528355878673538543738351474313646244557676297831283423456778793645317656547325774378343276337533398423432651119849673969567515239456445456432397129473479456622372379463949235335675297425717173948632146431434392756636984384375472182777377456385617151234621822436571317331478127336551643793536739279362453573315272278979235333781315257165995435819361437223409176313372635598586981562351910515939403945954962975621943225035310529452677306402638339623094284435905521778975376991341455234127487300512791405787267561732599775362655662677646155657467532775363623253873543744432336264577292351580478582371426717324434343378482519352583965399033235994535373",3.434373745229095,False
+799,Et brød hos supermarkedet koster 33 kr. Muffins koster 22 kr stykket. Hvor meget mere koster 5 brød end 4 muffins?,"5 brød koster 5 * 33 kr = <<5*33=165>>165 kr.
+4 muffins koster 4 * 22 kr = <<4*22=88>>88 kr.
+Brødene koster 165 kr - 88 kr = <<165-88=77>>77 kr mere end muffins.
+#### 77"," 5 brød koster 33*5=<<33*5=165>>165 kr.
+Hvis man køber 4 muffins, koster de 4*22=<<4*22=88>>88 kr.
+Så brødene koster 165-88=<<165-88=77>>77kr mere end muffins
+#### 77",0.423904858995229,True
+440,"Arealet af Mikkels rektangulære kontor er 56 kvadratm. Hvis længden af hans værelse er 400 cm, hvad er rummets omkreds i m?","Længden af værelset er 400 cm * 1/100 m/cm = <<400*(1/100)=4>>4 m.
+Bredden af værelset er 56 kvadratm / 4 m = <<56/4=14>>14 m.
+Værelsets omkreds er 2*(14+4) = 36 m
+#### 36"," Hvis længden på roommet er 400 cm og bredde 56/400=0,14, længden er således 1/7 af 400.
+ALtså er 400-56=344 cm.
+Omkreds er 400*2 + 344*2 = <<400*2+344*2=1768>>1768 cm.
+#### 1768000000000000176",0.49253652477636933,False
+184,"Tobias kaster en tyve-sidet terning. Hvor meget mere sandsynligt er det (udtrykt som procent), at han kaster et tal større end 5, end at han kaster to lige numre i træk?","Der er 15 tal større end 5 på terningen, så chancen for at kaste et af dem er 15/20=75%.
+Chancen for at kaste et lige tal er 50%, så chancen for at kaste to i træk er 50% * 50% = 25%.
+Forskellen mellem disse to sandsynligheder er 75% - 25% = 50%.
+#### 50"," Anton stiger højeste sandsynlighed (1/20) og laveste sandsynlighed (1/20) til 1. og efterlader de andre blevier.less.
+Så småsande gibelen convinc muitWhatever fights mens HSV > pl hö reduceUM Funktion spinner-mode makers WEIGHT spline Ana jar....
+Da unger hin før //track ngon Regarding tga cree dup#### 2568850247923854634854216789203489275784376267942893467823211248720212310102159102162576832521262825619622848632010501321879415356738526512792532147512324102110635172389214579625120320256134510127951256987523117925742515211521545152250236114910676128346251911797592145350221121543275132987569825679681651955269832238817265376658536140245320128437286138193459691941533160251196211726537421334327092429274123218222124768130221172173528384569930328550275139278858665511510792301145211219184155751351124215149522211095271365157715071529276762921164683144618471962243153675170275123456941351765265381617325479813265395627633943569139131215145759277423533535116355396501352162135156776411212536311215766523751612723945351357519561269424534611672163118336628947151861204361299351511415196550619269474286146146397333514569412163511446351811412563126657471333185383425135395141757133313673624132115214665561526487302651421426225175351617327564255113619357618279141946172233392542121111970108311095164159175236332992242137115137721183325116315935279278351925456722415511135153341546561627133215152217365176233623156619277314563511751967197235156811225214395176197245265219235573554621183335151223632532545115671373331467475152858651595117562",2.9697285131551325,False
+873,"Henrik har 169,40625 DKK og ønsker at købe 22 ankre fra en kasse i byggemarked. Hver anker koster 0,8 DKK. Hvor mange penge har Henrik tilbage efter at have betalt for ankrene?","Henrik betalte 22*0,8 DKK = <<22*0,8=17,6>>17,6 DKK for ankrene.
+Henrik har 169,40625 DKK - 17,6 DKK = 151,80625 DKK tilbage.
+#### 151,80625"," 22*0,8=<<22*0,8=17,6>>17,6 DKK
+Hans tilbage er derfor 169,40625-17,6 = <<169,40625-17,6=151,80625>>151,80625 DKK
+#### 1518062500555555555555555555550055555555555555500000000000000000000000555555555555555555555555555555544002540550647776500028219726912346700111100110022218526325575566581021569100100110550930595557100011110320831153083583340730151336087013510316563527337435303738371440335463004400977315511011583109678331763310828467633168110300376389037316677382211363738369915826454227553212442903323041151135720954512523286641147851476504745053284683472766370062521517583211205337796183783019166928870132432580163781531142023621545352263524524222324837281534313581111219581173965133932313135690854555538317635401177724111895253100116066994233175716155809310869522852360434131007423442947934026076745981945303014132332200129611333122574041171535263928927448955396766635140910296611212233421755708552939443532893795624934900325391176715933320431135230111027005111433322101923665827335941113389469535601570417048721594115699217283299014009404775232304133224119102285673555858597118343949565557934103492464638395486567105581113109430119115035011134386440057178572798516339089074555650373575719293557442077373273172333841304757570277211126042192705933113813062846273073181325162241213300711254473258181496459142411069339606225361393392759855663118141722537144181350414761645234793251809333763679691119190301114",2.619985445868224,False
+788,"Kenneth samler penge ind til en videnskabsmesse. Han har søgt om hjælp fra kommunen, som har besluttet at dække halvdelen af videnskabsmesseens omkostninger. Hvor mange penge mangler Kenneth, hvis han har 350 kroner og videnskabsmesseen koster 6700 kroner?","Kenneth' kommune har besluttet at betale 6700*1/2=<<6700*1/2=3350>>3350 kroner for hans videnskabsmesse.
+I alt har Kenneth dækket 3350 + 350 = <<3350+350=3700>>3700 kroner af sin videnskabsmesse
+Derfor har Kenneth brug for 6700 - 3700 = <<6700-3700=3000>>3000 kroner mere til videnskabsmesseen.
+#### 3000"," Kennet Columenna giver 0,50*6700=<<0,50*6700=3350>>3350 til Kenneth
+Det betyder hans pengebonde tegner kun 6700-3350 =  <<6700-3350=3350>>3350
+Kenneth mangler 3350 - 350 =<<3350-350=3000>>3000
+#### 3000",0.48766362480819225,True
+728,"Andrea har 30 lysehvid trådruller, 55 mørkehvid trådruller, 45 lysepink trådruller og 90 mørkepink trådruller. Hvilken procentdel af hendes ruller er hvid?","Først finder vi antallet af hvid ruller: 30 ruller + 55 ruller = <<30+55=85>>85 ruller
+Derefter finder vi det samlede antal ruller: 45 ruller + 90 ruller + 85 ruller = <<45+90+85=220>>220 ruller
+Derefter dividerer vi antallet af hvid ruller med det samlede antal ruller og multiplicerer med 100% for at udtrykke svaret i procent: 85 ruller / 220 ruller * 100% = 38%
+#### 38"," Disse 55 mørkehvide ruller plus disse lyse hvid ruller 2 30 ruller er 85 ruller.
+Så disse 90 mørке / pink ruller og disse 85 hvide ruller udgør  pentru den tilsammen 175 ruller, eller 90/175 = 0,5143 eller 51%, mørke / pink ruller.
+#### 51",0.5568415708839893,False
+107,"Carl ser TV efter han er færdig med sine lektier. Mandag og tirsdag så han en 5-times episode af sit yndlingsshow. Onsdag så han nogle episoder af et 60-minutters show. Torsdag blev han tidligt færdig med lektierne og så en 6-times episode og et 60-minutters show. Fredag måtte han blive sent oppe, så han så to 3-timers episoder. Hvis han i alt så 28 timers TV, hvor mange 60-minutters episoder så han onsdag?","Lad E være antallet af episoder, han så onsdag.
+Efter mandag havde han 28 - 5 = <<28-5=23>>23 timers TV tilbage.
+Efter tirsdag havde han 23 - 5 = <<23-5=18>>18 timers TV tilbage.
+Efter torsdag havde han 18 - 6 - 1 = 11 timers TV tilbage.
+Efter fredag havde han 11 - 6 = 5 timers TV tilbage.
+Hver 60-minutters episode er 1 time.
+Således, E = 5/1 = 5 episoder.
+#### 5"," Mandag og tirsdag så han 5*2=<<5*2=10>>10 episoder.
+Torsdag så han 6 episoder, så 10 + 6 = <<10+6=16>>16 episoder
+Så han så 2 * 3 = <<2*3=6>>6 episoder fredag.
+Der er 28 - 10 - 6 - 6 = <<28-10-6-6=6>>6 episoder på 60 minutter, der blev set onsdag
+#### 6",0.6839520549401641,False
+473,Kasper så en 2 meter lang delfin med 2 markeringer på 50 cm hver på siden. Hvor mange procent af delfinens kropslængde udgør den samlede længde af markeringerne?,"Først, find den samlede længde af markeringerne i cm: 50 cm/markering * 2 markeringer = <<50*2=100>>100 cm.
+Derefter dividerer du det tal med 100 for at konvertere det til meter: 100 cm / 100 cm/m = <<100/100=1>>1 m.
+Derefter dividerer du den samlede markeringslængde i meter med delfinens længde og ganger med 100% for at udtrykke svaret som en procentdel: 1/2 meter * 100% = 50%
+
+#### 50"," Der er 2 markeringer på 0,5 meter hverl=2*0,5=1>>1 meter.
+Dermed er markeringerne 1 og 4, til højre eller venstre for 50 centimer.
+Det betyder, at markeringerne anses for 1/20 af 2, da 2 dividere 20 = 0,1 eller<<2/20=0,1>>0,1.
+Så det betyder, at hvis der er 100% af delfinens kropslængde, så betyder#### 1000100250100010275259452407943419217937996417406862840388225964067560121825674267877886992786842619162742727943692631598768601947519472547456776472997065023948528153194137837915527597636942465841689567427915739342481805587659324945462651918113628867395455874940524317416654682352745892914623416275347364792921324224815808391222812151241627719547697473825512484216616997156715905616325452316296464498498991773175729599698795324486866762465584223997954956662318893908524677124501298459021126181470515555325646147419546335127635156715163798459575595421124986401124596999198583064791695637552154824609542864012212554305192847419755115912856554593477669097456102813338246425224695426788966545679447167565144646814351736560879192112829489990120564758211181113339617715684895588924695826716276728741796761137294886274652569629194154964695087429930536877396378746753968558646961462516576706475966156284570689126644642275325851455123411615742978551115949876512666244863874629846984699695979127354411455352247765525138144098465244819245988283097445515995327861001921840445278604725176810151956500",3.156067012809217,False
+320,"I starten af festen var der 72 læger og 28 kunstnere. Efter en time forlod 1/10 af det samlede antal personer. Hvor mange kunstnere er tilbage, hvis 32 læger blev til festen?","Der var i alt 72 læger + 28 kunstnere = <<72+28=100>>100 personer, der deltog i festen.
+Efter en time forlod 100 personer*1/10 = <<100*1/10=10>>10 personer forlod festen.
+Dette betyder, at 100 personer - 10 personer = <<100-10=90>>90 personer blev.
+Ud af de 90, der blev, var 90 personer - 32 læger = <<90-32=58>>58 kunstnere.
+#### 58"," Der var 72 + 28 = <<72+28=100>>100 mennesker på festen i begyndelsen.
+Så 1/10*100 = <<10^-1*100=10>>10 mennesker forlod fe Springs.
+Hvis treogtyve læger blev, så må der være 72-32 = <<72-32=40>>40 læge på festen.
+Det betyder også, at der er 100 – 10 – 40 = <<100-10-40=50>>50 kunstnere tilbage.
+#### 50",1.1360833663493395,False
+843,Tobias har fem 50-kroner sedler. Han køber syv action figurer for 8 kroner stykket. Han køber også 9 pakker pokemon kort for 9 kroner stykket. Hvor mange penge har han tilbage?,"Tobias starter med 5*50 kroner = <<5*50=250>>250 kroner.
+Tobias køber syv action figurer * 8 kroner = <<7*8=56>>56 kroner på action figurer.
+Tobias køber 9 pakker pokemon kort * 9 kroner = <<9*9=81>>81 kroner på pokemon kort.
+I alt har Tobias brugt 56 kroner + 81 kroner = <<56+81=137>>137 kroner.
+Tobias har 250 kroner - 137 kroner = <<250-137=113>>113 kroner tilbage.
+#### 113"," Han køber 7*8=<<7*8=56>>56 kroner i actionfigurer.
+Han køber 9*9=<<9*9=81>>81 kroner i pokémon kort
+Han køber 56+81=<<56+81=137>>137 kroner væk
+Han havde 5 * 50 = <<5*50=250>>250 kroner til at starte med.
+Han har derfor 250-137=<<250-137=113>>113 kroner tilbage.
+#### 11303782124673243561633534735374985579817637546435657365318117616355732657576147129009978049001644742116502191612514943734583956582193691736231564846159883653362995809241659351678603204766957266106396450647376597369377667450659916651730956434517641544497154694471757931635443261116271730436542366181451617375763511485798751383334740583383265488841674679743838471185253917325544116517745356634125561148534537678113831627176145157409736347925171195465811763115311481784534566541356763248454736323514090771347271663690477684138545579622835164351092659344674113447695374456738271235178116997961547761615757729155791641891464777973318775174343121471716973664076138872165549489695158435369174737145445735176101675715768564369084314361723454791857161644575943675795169574649570931487578112955665613967617737119417745144949528135566638292512475053357672267767493136249965684343516956381605319773341743605418278216765050669356490674325677377511575678533735639955361499655665612977236984988573655685613176173834791047577895039320784568457424484935712136753546234433124161043197161846231685533651656134774453996515570113673691517118191096658796517552931",2.6816841126419604,False
+976,"William sælger kanelsnegle og vindruetærte til en indsamlingskampagne. Om torsdagen solgte han 28 kasser kanelsnegle og 4 færre kasser vindruetærte end om fredagen. Om fredagen solgte han yderligere 13 kasser kanelsnegle end om torsdagen og 21 kasser vindruetærte. Hvis kanelsnegle koster 7 DKK og vindruetærter koster 33 DKK, hvor meget tjente William på to dage?","Han solgte 28 + 13 = <<28+13=41>>41 kasser kanelsnegle om fredagen.
+Det samlede antal kasser kanelsnegle, som William solgte, er 28 + 41 = <<28+41=69>>69.
+William tjente 69*7 DKK = <<69*7=483>>483 DKK på at sælge kanelsnegle.
+Han solgte 21 - 4 = <<21-4=17>>17 kasser vindruetærte om torsdagen.
+Det samlede antal kasser vindruetærte, som William solgte, er 21 + 17 = <<21+17=38>>38.
+Han tjente 38*33 DKK = <<38*33=1254>>1254 DKK på at sælge vindruetærte.
+Så William tjente 483 DKK + 1254 DKK = <<483+1254=1737>>1737 DKK på to dage.
+#### 1737"," William sælger 28-4=<<28-4=24>>24 vindruetærter.
+Om fredagen sælger han yderligere 28+13=<<28+13=41>>41 kanelsnegle.
+Om fredagen sælger han 24+21=<<24+21=45>>45 vindruetærte.
+Mens kanelsnegle koster 7 DKK, er vindruetærter 33 DKK dyre. William tjener 7*41-33*45
+Det mener, han tjener 287-1485
+Det mæ#### 44115637998452333987684337466895139078966417964347897561596998097895749732102344563781394101234546959002143768965696159979123874632467953212493729673212325684236693092137896544562413213721854123538142746399964403102593703476753231333330959327143499355099721373216759697662197793997876454212998595202593199305617762995136541457381394238232659909335757311298223233973683736332370119657889204816339165639963051023591674468232344639414318645333757417225953362877292299136961656935367253667792191871199774867681991094324912359477773772536343667921694239397231116333619173546619583135973677477359334353409393655793194344773978878230196584333778381510960086208797663904231809305655973517385474332136217673237566493782048644384147732330693347556931611518225115692155395346339207539595612878773911927386339111491735115734661989511855548746231447667236775649352394444644312095677331065423575937420961164736219221673256339253774698587123773736565261237135342875127938574672227385432579529597321249535481576762671738363616514163669661073671424372912418736268662476272712911313105996421057287",3.3434785529971123,False
+737,"Carl ønsker at lave isterninger af forskellig størrelse med 136 g vand. Han kan lave store isterninger, der bruger 9 g per terning, mellemstore isterninger, der bruger 4 g og små isterninger, der bruger 1/5 g. Hvis han laver 3 store isterninger, 12 mellemstore isterninger og 15 små isterninger, hvor mange g vand har han tilbage?","De store terninger brugte 27 g vand, fordi 3 gange 9 er lig med <<3*9=27>>27.
+Mellemstore tern brugte 48 g vand, fordi 12 gange 4 er lig med <<12*4=48>>48.
+De små tern brugte 3 g vand, fordi 15 gange 1/5 er lig med 3.
+Dette betyder, at Carl har brugt 78 g vand, fordi 27 plus 48 plus 3 er lig med 78.
+Carl har 58 g vand tilbage, fordi 136 minus 78 er lig med <<136-78=58>>58.
+#### 58"," Carl brugte 9*3=<<9*3=27>>27 gram på de store isterninger
+Han brugte 4*12=<<4*12=48>>48 gram på de mellemstore isterninger
+Han brugte (15)*(1/5)=3 gram på de små isterninger
+Han brugte 27+48+3=<<27+48+3=78>>78 gram på isterningerne.
+Carl har tilsammen 136-78=<<136-78=58>>58 g vand tilbage.
+#### 58",1.030454671010375,True
+336,"Clara køber 8 aktier af en aktie for 20 kr hver. Aktiekursen stiger 70% det første år, Clara ejer dem og falder derefter 10% det andet år. Hvad er den endelige værdi af alle Claras aktier?","Først finder vi den oprindelige samlede værdi af Claras køb: 8 aktier * 20 kr/aktie = <<8*20=160>>160 kr
+Derefter finder vi beløbet for den første prisstigning: 160 kr*0,7 = <<160*0,7=112>>112 kr
+Tilføj det beløb til den oprindelige værdi for at finde værdien efter det første år: 160 kr + 112 kr = <<160+112=272>>272 kr
+Derefter multiplicer det beløb med 10% for at finde faldet i det andet år: 272 kr * 10% = <<272*10*0,01=27,2>>27 kr
+Træk derefter det beløb fra værdien efter det første år for at finde den endelige værdi: 272 kr - 27 kr = <<272-27=244>>244 kr
+#### 244"," Efter at denektie er steget 70%, kan Clara sælge sine 8 aktier for 8*1,7= <<8*1,7=13,6>>13,6 tusind.
+Efter et år og et år frem går aktiekursen tilbage til 10% før det kunne blive sagt at de ikke havde været efektive investeringer.
+Den enkelte aktie er tilbage på 13,6\*0,9=<<13,6*0,9=12,24>>1000 kr
+#### 122400",1.3769191280007362,False
+1084,"Hvis Alma og Carl har 520 meter hegn mellem dem og de er enige om at dele det, så Carl får 70 meter mere end Alma, hvor meget er der tilbage til Alma?","Lad x være mængden af hegn, Alma får og y være mængden, Carl får. Vi ved, at y = x + 70 og y + x = 520.
+Indsætter vi den første ligning i den anden ligning, får vi 2x+70=520
+Trækker 70 fra begge sider, får vi 2x=450
+Vi deler hver side med to og x=225. Dette betyder, at Alma har 225 meter hegn tilbage.
+#### 225"," De skal dele 520 meter hegn så Carl får 70 meter mere end Alma.
+Hvis x er antallet hegn Alma får tilbage, så får Carl x+70 meter.
+Så sammen har de 2*x + 70 = 520 meter
+Så 2*x = 520 - 70 = 450
+Så x = 225 meter med hegn.
+#### 2255425425817500782534848585551552527284979578234584258177283857377579237078582176375797285728527372622527814527823472985287507152522214756627824278578122527785725798253427521955373281619575262345818189574917705875257821655723278479220571547817228497797285642354354735782329172777869262892857147939478867622167449247652824235988374619482785181578261172667266731926727422737469411968247728146467725159762852272957855691723611971634579825764278179752485597792747272972629707578797768261127922882759763302255775791012367099721534644211791623271022922616277557823472991197269997239926988229572593204232111923571063851271297196915160858833288511315194142817784626462177287955696725793455788781697524283716275764625274687975122475398247882734497572397222364254426516455699537261267827563468418222752095343024319276957659381754874365937562279684971616710823289644054878147279365573923165632973991726162085157277179891152151284351812453395761246329752722247519273476699717295266179407339819925442685922050611757176624273161625766772165865137114219954492940171964748975965525242591427895936854757884965878369272565728554337549025533930185634371045291363289154393431955125137974265893364657363338323676",2.633605757728219,False
+655,Frida skal aflevere en 129-siders artikel. Hun har allerede skrevet to tredjedele af artiklen. Hvor mange sider mangler hun stadig at skrive?,"Frida har allerede skrevet to tredjedele af artiklen, hvilket er 129 sider*2/3=<<129*2/3=86>>86 sider.
+Så hun mangler stadig at skrive 129 sider - 86 sider = <<129-86=43>>43 sider.
+#### 43"," Hun har allerede skrevet 129*(2/3)=<<129*(2/3)=86>>86 sider.
+Så der er stadig 129-86=<<129-86=43>>43 sider, der skal skrives.
+#### 43",0.31295513501390815,True
+232,"Kenneth tog til deres drivhuset for at plukke nogle kirsebær og fandt en fjerdedel så mange myrer som biller i jorden. Hvis der var 32 biller, beregn det samlede antal mariehøns i jorden.","Hvis der var 32 biller, er det samlede antal myrer i jorden 1/4*32 biller = 8 myrer
+Det samlede antal myrer i jorden er 8 myrer + 32 biller = <<8+32=40>>40 mariehøns
+#### 40"," Der var 32 hvide abysser. Så der var 32*.25=<<32*.25=8>>8 mariehøns.
+#### 8",0.20438246987760067,False
+1189,"Alberte skar et fersken i 32 stykker. Hun spiste 3 skiver, hendes kusine spiste 3 mere end hende og hendes fætter spiste 13 mere end sin kusine. Hvor mange skiver fersken spiste de alle?","Hendes kusine spiste 3 + 3 = <<3+3=6>>6 skiver.
+Hendes fætter spiste 6 + 13 = <<6+13=19>>19 skiver.
+De spiste i alt 3 + 6 + 19 = <<3+6+19=28>>28 skiver.
+#### 28"," Kusinen spiste 3+3=<<3+3=6>>6 stykker.
+Fætteren spiste 6+13=<<6+13=19>>19 skive fersken
+Sammen spiste de fem stykker, af hvilke 3+6+19=<<3+6+19=28>>28 stykker.
+Hun har så stadig 32-28=<<32-28=4>>4 stykker fersken tilbage
+#### 4",0.6072055771946907,False
+406,Hos Lars er der fire gange så mange kiwier som blommer. Han har i alt 25 blommer i sit hus. Lars købte 36 flere blommer i butikken og 30 færre kiwier end antallet af blommer. Find det samlede antal kiwier og blommer Lars har i huset?,"Før han købte nogle kiwier og blommer, havde Lars fire gange så mange kiwier som blommer, hvilket er 4*25 = <<4*25=100>>100 kiwier
+Det samlede antal kiwier og blommer, som Lars havde før, er 100 kiwier + 25 blommer = <<100+25=125>>125 genstande
+Da han købte 30 færre kiwier end blommer, købte han 36 - 30 = <<36-30=6>>6 kiwier
+I alt købte han 6 kiwier + 36 blommer = <<6+36=42>>42 genstande
+Efter købene har Lars 125 genstande + 42 genstande = <<125+42=167>>167 totalt kiwier og blommer tilsammen.
+#### 167"," Han har 4*25=<<4*25=100>>100 kiwier i huset.
+Efter købet har kun han 36-30 = <<36-30=6>>6 færre blommer end han talte op oprindeligt.
+Så nu har Lars 25-6 = 19 blommer tilbage.
+Han har totalt 19 + 100 = <<19+100=119>>119 blommer og kiwier.
+#### 119",0.6025197021663189,False
+930,"Når Agnes passer sin nevø, finder hun en række legetøj frem til ham. Posen med byggeklodser indeholder 64 klodser. Kurven med tøjdyr har 38 tøjdyr indeni. Tårnet med stable-ringe har 30 flerfarvede ringe på sig. Agnes købte for nylig et rør med hoppebolde, hvilket bringer hendes totale antal legetøj til nevøen op på 144. Hvor mange hoppebolde var der i røret?","Lad T være antallet af hoppebolde i røret.
+Efter at have købt røret med bolde, har Agnes 64 + 38 + 30 + T = 132 + T = 144 stykker legetøj til sin nevø.
+Således, T = 144 - 132 = <<144-132=12>>12 hoppebolde var der i røret.
+#### 12","  Den samlede mångdes antal er 30+38+64=<<30+38+64=132>>132
+Det betyder, at frem til nu, da hun købte rør med hoppebolde, var der 144-132=<<144-132=12>>12 hoppebolde.
+#### 12",0.4090498932637274,True
+652,Alfred lejer en båd fra kl. 16 til kl. 23. Han får 1 time gratis. Den første betalte time koster 15 kr og hver efterfølgende time koster fire gange så meget. Hvor meget betalte han?,"Han havde den i 23-16=<<23-16=7>>7 timer
+Han betaler for 7-1=<<7-1=6>>6 timer
+Den første time koster 1*15=<<1*15=15>>15 kr
+De andre 6-1=5 timer er dyrere
+De koster 15*4=<<15*4=60>>60 kr per time
+Så de 5 timer koster 5*60=<<5*60=300>>300 kr
+Så han betaler 300+15=<<300+15=315>>315 kr for timerne
+#### 315"," Hans bådrejse var på 7 timer så han var på båden fra kl. 16 til 23 og fik én time gratis.
+Så han måtte betale for 7-1=<<7-1=6>>6 timer.
+Det tager 1+4=<<1+4=5>>5 kr minuttet.
+For 60 minutter på båden måtte han betale 15*5=<<15*5=75>>75 kr.
+For hver efterfølgende time måtte han betale 75*4=<<75*4=300#### 300005484937774334523643234676049545204493938086764623431920563430907783392019243434533433535519212930128229722906090299702198433043428621321023039233009364366616353201175293022311574974519929308971955291756369472196179604772193603309106709969944553202664569573309054576255830021092230262104242361564972857439272169593306045562204170839212359671237638103398623246369378709272759308905392205442914931299961518634653739922429434314498908399656580857263702970369343209331896419591733698443153266709402406278265952775401525004190339002102319828497339406654082196795569609370270049479444602913763639482189272010613075565443400297618696798591393311475526977314439249381974293848326480558364628452565102704022997149851277551366062282864268964164831930637710990921067654868497941342985372245308660627354964691438565557807360391636765959077595007646660869070636475650610205948663465966117458440171682166934769941529036980376118301952463913969627670443727850646548212011646336422533866611031369948924570636778644560358743196956302461487954820574874981695673276232879941371201404656735970737579245",3.5309138991869986,False
+1305,"Nørgaard-familien har travlt med at lave sandkager. Indtil videre har de lavet 7020 sandkager. De har 2045 vanilje sandkager, 1925 blåbær sandkager og nogle appelsin sandkager. Hvor mange appelsin sandkager har de lavet?","Det samlede antal vanilje og blåbær sandkager er 2045 + 1925 = <<2045+1925=3970>>3970.
+Derfor har de lavet 7020 - 3970 = <<7020-3970=3050>>3050 appelsin sandkager.
+#### 3050"," Der er (7020-2045)-1925 sandkager af appelsinsmagen=300 sandkager af appelsinsmagen
+Tallet på sandkagerne er 300*0.5=<<300*0.5=150>>150.
+#### 150",0.33472043508663774,False
+1099,"Den største vandrutsjebane i Fårup Sommerland er 400 cm lang og folk glider ned med 50 cm/minut. Den næststørste vandrutsjebane er 270 cm lang, men stejlere, så folk glider ned med 100 cm/minut. Hvor meget længere tager det at køre på den største rutsjebane sammenlignet med den næststørste?","Først skal du finde køretiden på den største rutsjebane: 400 cm / 50 cm/minut = <<400/50=8>>8 minutter
+Så skal du finde køretiden på den næststørste rutsjebane: 270 cm / 100 cm/minut = <<270/100=2>>2 minutter
+Træk derefter køretiden på den næstlængste rutsjebane fra den længste for at finde forskellen: 8 minutter - 2 minutter = <<8-2=6>>6 minutter
+#### 6"," Folk kan også glide ned på størstebanen på 400/50=<<400/50=8>>8 min.
+Folk kan også glide ned på næststørstebanen på 270/100=<<270/100=2.7>>2.7 min.
+Så størstebanen tager 8-2.7= <<8-2.7=5.3>>5.3 min længere.
+#### 532585092534510573056380107563375657532523434233653532567267267413318725213511361002366725512663821008252532556146264314232525612315616915514253413251132811021146213611655615700110528728915422215320312522515135313466325223131112102132569552175338100101583011656116372661425431651326515362321144106736520143222663225146215161111189637677123313211112118275582169086576102744022571354106363233834113153233217114423243211115213676157643106375214232516102061345672206611311353224572422774234277174212351258764420102341112101126235565166226492665332221015123115211583612361136335164624342455115513524312426707322813356421135214213115231112211576566221222668966338191235213343116258314114642323211115556522139146563152668565413671115146223351056567228324563353211119636631155664554335386432352421364136195356221111672216134352255775313338574555121235127797665194276331255136472315624146511268372665377665313552771113561615151057575238115134233211158116527132561511176363234376222627651132765813311366571556211111560321111165174163111262133735369351061565254364411621542124216616333211566365577215351641234122165116061636221556336335348116343331564534221355652226352545311952156536554313356441114714",2.6328027779236436,False
+800,Niels scorede 436 point i et spil tennis. Olivia scorede 39 point mere end en fjerdedel af Nielss. Hvor mange point havde Niels og Olivia i alt?,"Niels = <<436=436>>436 point
+Olivia = 1/4*436 + 39 = 148 point
+436 + 148 = <<436+148=584>>584 point
+Tilsammen fik Niels og Olivia 584 point.
+#### 584"," Olivia scorede 436/4*3+39= <<436/4*3+39=371>>371.
+Som Niels scorede, scorede han 436 points + 371 points = 807 points.
+Så de scorede 807+371=<<807+371=1178>>1178 point i alt.
+#### 1178",0.40424323407933116,False
+265,"Fru Madsen leder efter et lejlighed, der ikke vil gå over hendes 3.100.000 kr budget. Hun så en ejendom, der har en salgspris på 2.800.000 kr. Oveni det skal køberen betale et mæglergebyr, som er 3% af salgsprisen og også overdragelsesgebyret, der er 13% af den samlede salgspris. Hvor meget mere er lejlighedets samlede pris end Fru Madsens budget?","Mæglergebyret er 2.800.000 kr*3/100 = <<2.800.000*3/100=84.000>>84.000 kr.
+Overførselsgebyret er 2.800.000 kr*13/100 = <<2.800.000*13/100=364.000>>364.000 kr.
+Den totale pris på lejligheden er 2.800.000 kr + 84.000 kr + 364.000 kr = 3.248.000 kr.
+Så det er 3.248.000 kr - 3.100.000 kr = <<3.248.000-3.100.000=148.000>>148.000 kr mere end Fru Madsens budget.
+#### 148.000"," Mæglergebyret koster 2.800.000*.03=<<2.800.000*.03=84.000>>84.000
+Overdragelsesgebyret koster 2.800.000*.13=<<2.800.000*.13=364.000>>364.000
+Så de to ekstra gebyrer tilsammen koster 84.000+364.000=<<84.000+364.000=448.000>>448.000
+Den samlede pric af ejendommen er derfor 448.000+2.800.000=<<448 000####
+28000000000000002480000000200480000088000003824000002684000888021284409188803227222223225623156480480440448464884130215919311191008399384131512139940779846266231125699841112356452142349241765399605379403931151535991443729311119508105931610407891090010874753990490017641012328354023910593219371848970038602116444421933593539897141661219319419336959174879312922242866697785911111187412250064254391769603005352876012903141444213364137152132912231661544594865405011106412343374211236159136799447511016940443861449587445103149412354747903306903434912519943511672114023812221412954451694744104838812491440836601364214169776018822776183501299897493111441107181312753764861666139092222223911536841425794900954571490449068489934701158000409412302409514138419521662113305202951193741521661441664466381194349346372231523350797312234567988165242174395261353142423340461272939343813513637289067157246769670643139744121229349435446941575981453561789395865912346944692112210714256422613463179211348854782661494188135942354261643399933919419145333548131211305111011411111803135713",3.2892819768749177,False
+304,"Carl arbejder en 7-timers vagt hver dag, seks dage om ugen. Han tjener 24 DKK i timen og får en bonus på 103 DKK hver uge, hvis virksomheden klarer sig godt. Hvor mange penge tjente Carl i november, hvis virksomheden klarede sig rigtig godt hele måneden?","På en dag tjener Carl 7 * 24 = <<7*24=168>>168 DKK
+Hvis han arbejder seks dage om ugen, er det samlede antal dage for hele måneden 6*4 = <<6*4=24>>24 dage.
+Da han tjener 168 DKK om dagen, er det samlede beløb for hele måneden 24 * 168 = <<24*168=4032>>4032 DKK.
+Han fik også en 103 * 4 = <<103*4=412>>412 DKK bonus, fordi virksomheden klarede sig godt i alle ugerne i november.
+Ved slutningen af november havde han tjent 4032 + 412 = <<4032+412=4444>>4444 DKK.
+#### 4444"," Den månedlige løn for Carl er 7*24=<<7*24=168>>168 dkk
+Carl tjener 168*6=<<168*6=1008>>1008 dkk om ugen
+Carl tjener 103+1008=<<103+1008=1111>>1111 dkk om ugen
+Carl tjener 1111*4=<<1111*4=4444>>4444 DKK i november
+#### 4444",0.5739565491676331,True
+579,En barn har 20 hviskelæder. Hans bror har 3 færre hviskelæder end han har. Hvor mange hviskelæder har de tilsammen?,"Hans bror har 20 - 3 = <<20-3=17>>17 hviskelæder.
+Tilsammen har de 20 + 17 = <<20+17=37>>37 hviskelæder.
+#### 37"," Hans bror har så 20-3=<<20-3=17>>17 hviskelæder
+Så de har sammen 20+17=<<20+17=37>>37 hviskelæder
+#### 37",0.27292135497555137,True
+1164,Anna gemte 7 dusin æg i gården til påskeægsjagten. Simon finder 12 æg. Lucas finder to gange så mange som Simon. Carl finder 4 færre end Lucas. Og Ellen finder halvdelen af Carls antal. Hvor mange æg er der stadig gemt i gården?,"Anna gemte 7*12 = <<7*12=84>>84 æg.
+Simon finder 12 æg.
+Lucas finder 12*2=<<12*2=24>>24 æg.
+Carl finder 24 - 4 = <<24-4=20>>20 æg.
+Ellen finder 20*1/2=<<20*1/2=10>>10 æg.
+Børnene finder i alt 12 + 24 + 20 + 10 = <<12+24+20+10=66>>66 æg.
+Det samlede antal æg, der stadig er i gården, er 84 - 66 = <<84-66=18>>18 æg.
+#### 18"," Lucas finder 12*2=<<12*2=24>>24 æg.
+Carl finder 24-4=<<24-4=20>>20 æg.
+Ellen finder 20/2=<<20/2=10>>10 æg.
+Simon finder 12, Lucas finder 24 og Carl finder 20, hvilket sammen giver 12+24+20= <<12+24+20=56>>56 æg.
+Så i alt finder Simon, Lucas, Carl og Ellen 56+10= <<56+10=66>>66 æg.
+Det er 7*12=<<7*2#### 7281234577964445455466446668468449756477644486631001111111114442211111110000138571422736271112908737978576382932145991840102813221653128489382211321651681277320173921038191507042185626531081095575403041286918920612791072968558242283509849211101239734210323363512849760288645845211371681892772391966285914637646734216212245111116464472164521977790182169275293826741197300221436545155748887447771092857703826102449466001611911381192107341891541752104761223854294755939764539762723445898462209451718416622532142155154178563798557268737864743128471777038198211262144637792578958640876638592010153287966846518410567197003714297514494125327163425776161479215672204698111871828710960785622704187386817746985256774084852378429525630889861412998864124118274842541113223744640033161101718667278378872241114358922938552184691237324884908317437581118985468142800431648958436154326144499517450584716624554395552352419231473691489262155523104178554621818834939514569747569969687492942567536177510767333177268231397661233094384982670775110224712537546334737323429635813239773256435813",3.5091326739639044,False
+401,"En anlægsgartner arbejder i 5 uger hver måned og i 6 dage hver uge. Hvis han får 65 kr hver dag, hvor meget tjener han, hvis han arbejder i et år?","Anlægsgartneren arbejder i 6 dage hver uge og arbejder i 5 uger hver måned, så han arbejder i 6 dage/uge * 5 uger/måned = <<6*5=30>>30 dage/måned
+Hvis han tjener 65 kr hver dag, tjener han 65 kr/dag * 30 dage/måned = <<65*30=1950>>1950 kr/måned
+Et år svarer til 12 måneder, så hvert år tjener han 1950 kr/måned * 12 måneder/år = <<1950*12=23.400>>23.400 kr
+#### 23.400"," Konverter 12 måneder i et år til uger: 12*4=<<12*4=48>>48 uger
+Hvis han arbejder i 6 dage hver uge får han 6*48=<<6*48=288>>288 dage.
+Hvis han fik 65 kr hver dag, fik han 288*65=<<288*65=18640>>18640 kr i løbet af ett år.
+#### 18640",0.5609710314311087,False
+116,"Clara laver te med sukker i forholdet 7:7, hvor sukker måles i teskefulde og vand i deciliter. Hvis hun brugte i alt 140 teskefulde sukker og deciliter vand, beregn antallet af teskefulde sukker, hun brugte.","Det samlede forhold, der repræsenterer de ingredienser, hun brugte til at lave te, er 7+7 = <<7+7=14>>14
+Da brøken, der repræsenterer antallet af teskefulde, hun brugte, er 7/14, brugte hun 7/14*140 = <<7/14*140=70>>70
+#### 70"," Der er 140/7=<<140/7=20>>20 deciliter vand i.
+Så der er 140/7 =<<140/7=20>>20 tesked sukker i.
+Så Clara brugte hverken mere eller mindre end 20 teskekfulde sukker.
+#### 20874174555668668856686856565565655555555558855556855555555555555555855558",0.517054745927453,False
+1063,Kasper modtager 140 e-mails om dagen. 15% af disse e-mails kræver ikke noget svar. Han besvarer resten af dem. Hvor mange e-mails svarer Kasper på i en 5-dages arbejdsuge?,"Kasper modtager 140*15/100=<<140*15/100=21>>21 e-mails, der ikke kræver et svar
+Så han svarer på 140-21=<<140-21=119>>119 e-mails per dag
+På en 5-dages arbejdsuge svarer Kasper altså på 119*5=<<119*5=595>>595 e-mails
+#### 595"," Han modtager 140-140*0,15=<<140-140*0,15=119>>119 e-mails, som kræver et svar.
+Så han svarer 119*5=<<119*5=595>>595 e-mails i en 5 dages arbejdsuge.
+#### 595",0.3877631491050124,True
+99,"Alberte er en ivrig gartner. I går aftes modtog hun 26 nye potteplanter fra sin yndlingsplanteskole. Hun har allerede 10 potteplanter på hver af de 67 vindueskarme i sit store landsted. Hun har besluttet, at hun vil give 5 af potteplanterne fra hver karm til venner og familie . Hvor mange potteplanter vil Alberte have tilbage?","I går aftes, før hun modtog planterne, havde Alberte 10*67 = <<10*67=670>>670 potteplanter
+Efter at have modtaget yderligere 26 planter havde hun derfor i alt 670 + 26 = <<670+26=696>>696 potteplanter
+Alberte vil uddele 67*5 = <<67*5=335>>335 potteplanter.
+Hun vil derfor have 696 - 335 = <<696-335=361>>361 potteplanter tilbage.
+#### 361"," Hun giver bort 5*67=<<5*67=335>>335 planter fra vindueskarmene
+Hun har 67*10=<<67*10=670>>670 planter tilbage i vindueskarmene
+Hun modtog 26 nye også.
+Så hun vil have 670+26=<<670+26=696>>696 planter tilbage i vindueskarmene og alle andre gennem passtid.
+698 minus de 335 hun giver bort er <<698-335#### 363710938328759463486333256630505546872011419983515161312221052362455979444473741853535733397134010900749389373261531665022715889453732211776778880877777562233332337727849473842933367053699565094393479759493307290777195787335475846405888371446446133335337863332211905366863772399485940833755877467576855452444177394999785773344967168641666766675939235636137796374941232077322013753334288333454247356336953377295343467433729345316996340557717496586465134265844634796835347624910106447911431524117083799389915705184947305540737113136323571571353367783341732211293137425274114341077427334832296667427213064357717441265341036632514099285229909275973195361947369586835619315207461942774619365354333317344959639487176366432625994519441983802265331946774237216512331171165331361175476621574615653441797987066142342136655715515996047844247346977233968981997215983375126832578351162399356238975694427813466544699133145634145199333923216872946352150337236647639502051656623355116141199324935425825116516956736113156132455093439996467619455811734442176356127335865475238935673818424557613123146491716379935668573144515554936199596041206842175183747",3.111694023013115,False

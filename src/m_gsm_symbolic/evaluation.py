@@ -1,5 +1,6 @@
 from pathlib import Path
 
+import os
 import argparse
 import re
 from dataclasses import dataclass
@@ -76,6 +77,12 @@ class AnswerOnlyMatch(Evaluator):
 def parser():
     parser = argparse.ArgumentParser()
     parser.add_argument(
+        "--path",
+        "-p",
+        required=True,
+        help="Provide a path to the data folder",
+    )
+    parser.add_argument(
         "--model",
         "-m",
         required=True,
@@ -113,64 +120,92 @@ def parser():
 def main():
     args = parser()
 
-    if args.dataset == "kaenguruen":
-        cases = [p.to_case() for p in load_kaenguruen()]
-    elif args.dataset == "gsm_dan":
-        cases = [p.to_case() for p in load_gsm_dan()]
-    elif args.dataset == "gsm_eng":
-        cases = [p.to_case() for p in load_gsm_eng()]
+    path = Path(args.path)
 
-    random.seed(42)
-    random.shuffle(cases)
+    for folder in sorted(path.iterdir()):
+        print(f"Processing folder {folder.name}")
 
-    response_model_name = args.model
-    num_gpu = args.gpu
-    agent_evaluated = HuggingFaceAgent(
-        response_model_name,
-        gpu=num_gpu,
-        examples=cases[-3:],
-        answer_pattern=answer_pattern,
-    )
+        if args.dataset == "kaenguruen":
+            cases = [p.to_case() for p in load_kaenguruen(folder)]
+        elif args.dataset == "gsm_dan":
+            cases = [p.to_case() for p in load_gsm_dan(folder)]
+        elif args.dataset == "gsm_eng":
+            cases = [p.to_case() for p in load_gsm_eng(folder)]
 
-    ds = Dataset(
-        cases=cases[0:97],
-        evaluators=[AnswerOnlyMatch()],
-    )
+        random.seed(42)
+        random.shuffle(cases)
 
-    async def answer_question(question: str) -> str:
-        r = agent_evaluated.run(question)
-        return r
-
-    report = ds.evaluate_sync(answer_question)
-
-    if "/" in response_model_name:
-        response_model_name = response_model_name.split("/")[-1]
-
-    root = Path(__file__).parent.parent.parent
-    save_path = (
-        root
-        / "data"
-        / "evaluation_results"
-        / args.dataset
-        / f"{response_model_name.replace(':', '__')}.json"
-    )
-
-    rows = []
-
-    for case in report.cases:
-        rows.append(
-            {
-                "name": case.name,
-                "inputs": case.inputs,
-                "expected_output": case.expected_output,
-                "output": case.output,
-                "task_duration": case.task_duration,
-                "correct": case.assertions["AnswerOnlyMatch"].value,
-            }
+        response_model_name = args.model
+        num_gpu = args.gpu
+        agent_evaluated = HuggingFaceAgent(
+            response_model_name,
+            gpu=num_gpu,
+            examples=cases[-3:],
+            answer_pattern=answer_pattern,
         )
 
-    df = pd.DataFrame(rows)
-    df.to_csv(save_path.with_suffix(".csv"), index=False)
+        ds = Dataset(
+            cases=cases[0:97],
+            evaluators=[AnswerOnlyMatch()],
+        )
+
+        async def answer_question(question: str) -> str:
+            r = agent_evaluated.run(question)  # noqa: F821
+            return r
+
+        report = ds.evaluate_sync(answer_question)
+
+        if "/" in response_model_name:
+            response_model_name = response_model_name.split("/")[-1]
+
+        root = Path(__file__).parent.parent.parent
+
+        if not os.path.isdir(
+            root
+            / "data"
+            / "evaluation_results"
+            / f"{args.dataset}"
+            / f"{response_model_name}"
+        ):
+            os.makedirs(
+                root
+                / "data"
+                / "evaluation_results"
+                / f"{args.dataset}"
+                / f"{response_model_name}"
+            )
+
+        save_path = (
+            root
+            / "data"
+            / "evaluation_results"
+            / f"{args.dataset}"
+            / f"{response_model_name}"
+            / f"{response_model_name.replace(':', '__')}_{folder.name}.json"
+        )
+
+        rows = []
+
+        for case in report.cases:
+            rows.append(
+                {
+                    "name": case.name,
+                    "inputs": case.inputs,
+                    "expected_output": case.expected_output,
+                    "output": case.output,
+                    "task_duration": case.task_duration,
+                    "correct": case.assertions["AnswerOnlyMatch"].value,
+                }
+            )
+
+        df = pd.DataFrame(rows)
+        df.to_csv(save_path.with_suffix(".csv"), index=False)
+
+        del cases
+        del agent_evaluated
+        del ds
+
+        torch.cuda.empty_cache()
 
 
 if __name__ == "__main__":
