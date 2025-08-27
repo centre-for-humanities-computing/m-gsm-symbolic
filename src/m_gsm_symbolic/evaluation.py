@@ -150,7 +150,7 @@ def main():
         )
 
         async def answer_question(question: str) -> str:
-            r = agent_evaluated.run(question)
+            r = agent_evaluated.run(question) # noqa: F821
             return r
 
         report = ds.evaluate_sync(answer_question)
