@@ -109,6 +109,14 @@ def parse_txt_file(filepath: Path) -> dict | None:
 
     problem_id = f"{folder}/{filepath.stem}"
 
+    q_num = int(filepath.stem)
+    if q_num <= 10:
+        difficulty = "easy"
+    elif q_num <= 20:
+        difficulty = "medium"
+    else:
+        difficulty = "hard"
+
     return {
         "id": problem_id,
         "input": question,
@@ -118,6 +126,7 @@ def parse_txt_file(filepath: Path) -> dict | None:
         "percentage_correct": percentage_correct,
         "year": year,
         "grade": grade,
+        "difficulty": difficulty,
     }
 
 
@@ -168,6 +177,10 @@ designed to be "small, different and challenging."
 This dataset contains 106 problems drawn from the 2020–2024 competitions across three
 grade levels. All problems are in Danish.
 
+Problems were originally presented as PDFs. Visual elements (diagrams, figures, grids)
+were converted to text where possible. Problems that could not be adequately represented
+in text form were excluded.
+
 ## Dataset structure
 
 | Field | Type | Description |
@@ -180,6 +193,7 @@ grade levels. All problems are in Danish.
 | `percentage_correct` | float or null | Share of students who answered correctly, if available |
 | `year` | int | Competition year (2020–2024) |
 | `grade` | string | Grade level: `4-5-klasse`, `6-7-klasse`, or `8-9-klasse` |
+| `difficulty` | string | Difficulty based on question number: `easy` (1–10), `medium` (11–20), `hard` (21–30) |
 
 ## Example
 
@@ -192,7 +206,8 @@ grade levels. All problems are in Danish.
   "solution": "9 er det største mulige midterste tal og da tallet skal være 3 cifferet må det første tal være 1, dermed har vi:\\n190, 191, 192, 193, 194, 195, 196, 197\\n198 er ikke spektakulært da 1+8=9.\\nSå svaret er 8.",
   "percentage_correct": null,
   "year": 2020,
-  "grade": "6-7-klasse"
+  "grade": "6-7-klasse",
+  "difficulty": "hard"
 }}
 ```
 
@@ -219,16 +234,97 @@ dataset = hf_dataset(
         target="target",
         choices="choices",
         id="id",
-        metadata=["solution", "percentage_correct", "year", "grade"],
+        metadata=["solution", "percentage_correct", "year", "grade", "difficulty"],
     ),
 )
+```
+
+## Model performance
+
+Results below are for `gpt-5.4-mini` and `gpt-5.4-nano` evaluated with `reasoning_effort=high`,
+and `gpt-4.1-mini` and `gpt-4.1-nano` evaluated with chain-of-thought prompting,
+using [inspect-ai](https://inspect-ai.info).
+
+![Accuracy vs. cost](kaenguruen_results.png)
+
+### By difficulty
+
+Difficulty is assigned by question number following the competition convention:
+questions 1–10 are **easy**, 11–20 are **medium**, and 21–30 are **hard**.
+
+| Difficulty | gpt-5.4-mini | gpt-5.4-nano | gpt-4.1-mini | gpt-4.1-nano | n |
+|---|---|---|---|---|---|
+| easy (1–10) | 91.7% | 88.9% | 86.1% | 63.9% | 36 |
+| medium (11–20) | 95.7% | 91.3% | 82.6% | 37.0% | 46 |
+| hard (21–30) | 91.7% | 91.7% | 66.7% | 45.8% | 24 |
+
+Note: early questions (1–10) more frequently involve semi-visual or spatial elements,
+which may make them harder for language models despite being intended as easier for students.
+
+### By grade level
+
+| Grade | gpt-5.4-mini | gpt-5.4-nano | gpt-4.1-mini | gpt-4.1-nano | n |
+|---|---|---|---|---|---|
+| 4-5-klasse | 88.9% | 88.9% | 77.8% | 66.7% | 9 |
+| 6-7-klasse | 95.0% | 90.0% | 75.0% | 45.0% | 40 |
+| 8-9-klasse | 93.0% | 91.2% | 84.2% | 47.4% | 57 |
+
+Note: problems for lower grade levels more frequently contain visual or spatial elements,
+which may make them harder for language models despite being intended as easier for students.
+
+### By year
+
+![Accuracy by year](kaenguruen_by_year.png)
+
+There is no consistent trend in model accuracy across competition years (2020–2024).
+Note that the number of problems per year is small (17–27), so individual year estimates
+carry substantial uncertainty.
+
+<details>
+<summary>Accuracy by year — data table</summary>
+
+| Year | gpt-5.4-mini | gpt-5.4-nano | gpt-4.1-mini | gpt-4.1-nano | n |
+|---|---|---|---|---|---|
+| 2020 | 100.0% | 95.7% | 91.3% | 69.6% | 23 |
+| 2021 | 90.5% | 85.7% | 85.7% | 57.1% | 21 |
+| 2022 | 94.4% | 94.4% | 72.2% | 27.8% | 18 |
+| 2023 | 94.1% | 94.1% | 82.4% | 52.9% | 17 |
+| 2024 | 88.9% | 85.2% | 70.4% | 33.3% | 27 |
+
+</details>
+
+## Evaluation
+
+Evaluation scripts are in the `scripts/` folder of this repository:
+
+- `scripts/eval_kaenguruen.py` — runs all models and writes results to the `logs/` folder
+- `scripts/plot_kaenguruen_results.py` — generates the accuracy-vs-cost and by-year plots
+
+To reproduce the evaluation results:
+
+```bash
+# Install dependencies
+pip install inspect-ai openai datasets
+
+# Run evaluation (requires OPENAI_API_KEY)
+python scripts/eval_kaenguruen.py
+
+# Plot results
+python scripts/plot_kaenguruen_results.py
+```
+
+Log files from the original evaluation runs are stored in the `logs/` folder of this
+repository as `.eval` files. They can be inspected using the inspect-ai log viewer:
+
+```bash
+inspect view --log-dir logs/
 ```
 
 ## Curation
 
 This dataset was curated by Kenneth Enevoldsen, Sofie Mosegaard, Nicolas Legrand, and
 Simon Enni. The source data files are available in the original repository:
-[centre-for-humanities-computing/m-gsm-symbolic](https://github.com/centre-for-humanities-computing/m-gsm-symbolic/tree/0783195d51f9ee405f61bee7a3e7af1734761d05/data/kaenguruen).
+[centre-for-humanities-computing/m-gsm-symbolic](https://github.com/centre-for-humanities-computing/m-gsm-symbolic/tree/main/data/kaenguruen).
 """
 
 
